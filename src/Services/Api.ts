@@ -5,12 +5,22 @@ const client = axios.create({
 });
 // "به جای استفاده از یوز افکت از این فانکشن استفاده میکنیم"
 export async function getProducts() {
-  const { data } = await client("/products");
-  return data;
+  try {
+    const { data } = await client("/products");
+    return data;
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    throw error; // یا می‌توانید یک پیام خطا برای کاربر نمایش دهید
+  }
 }
 
 export async function getProduct(id: string | number) {
   const { data } = await client(`/products/${id}`);
+  return data;
+}
+
+export async function getUsers() {
+  const { data } = await client("/users");
   return data;
 }
 
@@ -25,3 +35,11 @@ export async function login(username: string, password: string) {
   });
   return data;
 }
+// const token = localStorage.getItem("token");
+// const { data } = await client({
+//   method: "GET",
+//   url: "/protected-endpoint",
+//   headers: {
+//     Authorization: `Bearer ${token}`,
+//   },
+// });

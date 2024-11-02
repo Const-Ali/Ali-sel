@@ -5,7 +5,6 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { Shop_Card_Pro } from "./Pages/context/Shop_Card_Cont";
 
-// رندر کردن App با BrowserRouter
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>

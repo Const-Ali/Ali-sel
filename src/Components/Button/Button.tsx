@@ -10,6 +10,7 @@ function Button({ children, variant, style, ...rest }: TButton) {
     <button
       {...rest}
       style={{
+        animationDuration: "duration-150",
         borderRadius: "6px",
         padding: "4px 8px",
         ...style,
