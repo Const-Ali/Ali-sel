@@ -35,7 +35,7 @@ function Pro4itemsOne() {
               کیش و قشم)
             </li>
             <li className="flex flex-row-reverse py-2">
-              <h1 className="pl-2 text-xl">-</h1>باربری{" "}
+              <h1 className="pl-2 text-xl">-</h1>باربری
             </li>
           </ul>
           <div className="space-y-4 py-5">
@@ -74,7 +74,7 @@ function Pro4itemsOne() {
             <details className="group [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex  flex-row-reverse cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-200 p-4 text-gray-900">
                 <h2 className="font-medium">
-                  ارسال عادی تکنولایف (برای مناطق 22 گانه شهر تهران){" "}
+                  ارسال عادی تکنولایف (برای مناطق 22 گانه شهر تهران)
                 </h2>
 
                 <svg
@@ -94,14 +94,13 @@ function Pro4itemsOne() {
               </summary>
 
               <p className="mt-4 px-6 py-4 leading-relaxed text-gray-700 text-right bg-gray-100 border border-gray-300 rounded-lg shadow-sm">
-                {" "}
                 سرویس ارسال عادی تکنولایف شامل مشتریان تهران و مناطق 22 گانه
                 است. با انتخاب این روش شما سفارش خود را تا ۲۴ ساعت بعد از ثبت،
                 دریافت خواهید کرد.این وضعیت ممکن است در روزهای تعطیل دستخوش
                 تغییرات شود
               </p>
             </details>
-          </div>{" "}
+          </div>
           <div className="space-y-4 pb-5">
             <details className="group [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex flex-row-reverse cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-200 p-4 text-gray-900">
@@ -124,7 +123,6 @@ function Pro4itemsOne() {
               </summary>
 
               <p className="mt-4 px-6 py-4 leading-relaxed text-gray-700 text-right bg-gray-100 border border-gray-300 rounded-lg shadow-sm">
-                {" "}
                 ماهکس یک سرویس حمل سریع در کشور است که در ۵۵۰ شهر ایران دارای
                 نمایندگی بوده و با توجه به ارسال مستقیم به اکثر این شهرها روشی
                 سریع جهت ارسال مرسوله به حساب می‌آید. در روزهای کاری، چنانچه تا
@@ -134,7 +132,7 @@ function Pro4itemsOne() {
                 می‌شود را مشاهده فرمایید. کد پیگیری مرسوله در قسمت جزئیات سفارش
                 در حساب کاربری شما درج می‌شود. همچنین کد پیگیری مرسوله از طریق
                 پیامک نیز به دست شما خواهد رسید. با استفاده از کد پیگیری ماهکس
-                می‌توانید وضعیت مرسوله خود را از{" "}
+                می‌توانید وضعیت مرسوله خود را از
                 <a
                   className="text-blue-600"
                   href="https://ecourier.mahex.com/tr/"
@@ -148,7 +146,7 @@ function Pro4itemsOne() {
             <details className="group [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex  flex-row-reverse cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-200 p-4 text-gray-900">
                 <h2 className="font-medium">
-                  ارسال توسط پست پیشتاز (برای سراسر کشور){" "}
+                  ارسال توسط پست پیشتاز (برای سراسر کشور)
                 </h2>
 
                 <svg
@@ -168,7 +166,6 @@ function Pro4itemsOne() {
               </summary>
 
               <p className="mt-4 px-6 py-4 leading-relaxed text-gray-700 text-right bg-gray-100 border border-gray-300 rounded-lg shadow-sm">
-                {" "}
                 در روزهای کاری، چنانچه تا ساعت 13:30 (پنج‌شنبه‌ها تا ساعت 11:00)
                 سفارش خود را نهایی کنید، سفارش شما همان روز تحویل مرکز پست خواهد
                 شد. همچنین در هنگام ثبت سفارش می‌توانید زمان و ساعتی که سفارش
@@ -178,16 +175,16 @@ function Pro4itemsOne() {
                 استفاده از کد پیگیری پست پیشتاز می‌توانید وضعیت مرسوله خود را از
                 <a className="text-blue-600" href="https://tracking.post.ir/">
                   سامانه رهگیری ماهکس
-                </a>{" "}
+                </a>
                 پیگیری نمایید
               </p>
             </details>
-          </div>{" "}
+          </div>
           <div className="space-y-4 ">
             <details className="group [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex flex-row-reverse cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-200 p-4 text-gray-900">
                 <h2 className="font-medium">
-                  تیپاکس (سراسر کشور به غیر از کیش و قشم){" "}
+                  تیپاکس (سراسر کشور به غیر از کیش و قشم)
                 </h2>
 
                 <svg
@@ -207,7 +204,6 @@ function Pro4itemsOne() {
               </summary>
 
               <p className="mt-4 px-6 py-4 leading-relaxed text-gray-700 text-right bg-gray-100 border border-gray-300 rounded-lg shadow-sm">
-                {" "}
                 شما می‌توانید برای دریافت سفارش‌تان از روش ارسال با تیپاکس نیز
                 استفاده نمایید. این روش برای تمامی شهرهای کشور به غیر از کیش و
                 قشم فعال است. طبق قوانین تیپاکس درصورت انتخاب این روش، سفارش شما
@@ -239,9 +235,8 @@ function Pro4itemsOne() {
                 ارسال با باربری یکی دیگر از روش‌های ارسال است که شامل کالاهای
                 بزرگ و حجیم می‌شود. برای مثال می‌توانید برای کالاهایی مثل یخچال
                 با ابعاد بالاتر از ۷ فوت و تلویزیون‌های با ابعاد بالاتر از ۶۵
-                اینچ از روش ارسال باربری استفاده کنید.{" "}
+                اینچ از روش ارسال باربری استفاده کنید.
                 <p className="font-bold pt-2">
-                  {" "}
                   پس از تحویل سفارش شما به باربری، هماهنگی‌های لازم جهت تحویل
                   کالا در شهر مقصد با شما انجام خواهد شد
                 </p>

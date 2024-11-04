@@ -48,8 +48,7 @@ const Footer: React.FC = () => {
               <div className="col-span-2 lg:col-span-3 lg:flex lg:items-end">
                 <form className="w-full">
                   <label htmlFor="UserEmail" className="sr-only">
-                    {" "}
-                    Email{" "}
+                    Email
                   </label>
 
                   <div className="border border-gray-100 p-2 focus-within:ring sm:flex sm:items-center sm:gap-4">
@@ -76,8 +75,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      1on1 Coaching{" "}
+                      1on1 Coaching
                     </a>
                   </li>
 
@@ -86,8 +84,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      Company Review{" "}
+                      Company Review
                     </a>
                   </li>
 
@@ -96,8 +93,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      Accounts Review{" "}
+                      Accounts Review
                     </a>
                   </li>
 
@@ -106,8 +102,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      HR Consulting{" "}
+                      HR Consulting
                     </a>
                   </li>
 
@@ -116,8 +111,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      SEO Optimisation{" "}
+                      SEO Optimisation
                     </a>
                   </li>
                 </ul>
@@ -132,8 +126,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      About{" "}
+                      About
                     </a>
                   </li>
 
@@ -142,8 +135,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      Meet the Team{" "}
+                      Meet the Team
                     </a>
                   </li>
 
@@ -152,8 +144,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      Accounts Review{" "}
+                      Accounts Review
                     </a>
                   </li>
                 </ul>
@@ -168,8 +159,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      Contact{" "}
+                      Contact
                     </a>
                   </li>
 
@@ -178,8 +168,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      FAQs{" "}
+                      FAQs
                     </a>
                   </li>
 
@@ -188,8 +177,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      Live Chat{" "}
+                      Live Chat
                     </a>
                   </li>
                 </ul>
@@ -204,8 +192,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      Accessibility{" "}
+                      Accessibility
                     </a>
                   </li>
 
@@ -214,8 +201,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      Returns Policy{" "}
+                      Returns Policy
                     </a>
                   </li>
 
@@ -224,8 +210,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      Refund Policy{" "}
+                      Refund Policy
                     </a>
                   </li>
 
@@ -234,8 +219,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      Hiring Statistics{" "}
+                      Hiring Statistics
                     </a>
                   </li>
                 </ul>
@@ -250,8 +234,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      Marketing Calendar{" "}
+                      Marketing Calendar
                     </a>
                   </li>
 
@@ -260,8 +243,7 @@ const Footer: React.FC = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      {" "}
-                      SEO Infographics{" "}
+                      SEO Infographics
                     </a>
                   </li>
                 </ul>
@@ -399,8 +381,7 @@ const Footer: React.FC = () => {
                     href="#"
                     className="text-gray-500 transition hover:opacity-75"
                   >
-                    {" "}
-                    Terms & Conditions{" "}
+                    Terms & Conditions
                   </a>
                 </li>
 
@@ -409,8 +390,7 @@ const Footer: React.FC = () => {
                     href="#"
                     className="text-gray-500 transition hover:opacity-75"
                   >
-                    {" "}
-                    Privacy Policy{" "}
+                    Privacy Policy
                   </a>
                 </li>
 
@@ -419,8 +399,7 @@ const Footer: React.FC = () => {
                     href="#"
                     className="text-gray-500 transition hover:opacity-75"
                   >
-                    {" "}
-                    Cookies{" "}
+                    Cookies
                   </a>
                 </li>
               </ul>

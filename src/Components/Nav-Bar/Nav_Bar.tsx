@@ -23,12 +23,11 @@ function Nav_Bar() {
       .then((response) => setProducts(response.data))
       .catch((error) => console.error("Error fetching products:", error));
 
-    // درخواست اطلاعات کاربر
     axios
       .get("http://localhost:8001/users")
       .then((response) => {
-        console.log(response.data); // دیباگ ساختار داده
-        setUser(response.data.name); // بررسی اینکه `name` شامل `firstname` و `lastname` است
+        console.log(response.data);
+        setUser(response.data.name);
       })
       .catch((error) => console.error("Error fetching user data:", error));
   }, []);
@@ -54,7 +53,6 @@ function Nav_Bar() {
             <div className="md:flex md:items-center md:gap-12">
               <div className="flex items-center gap-4">
                 {user ? (
-                  // نمایش نام و نام خانوادگی کاربر
                   <div className="flex items-center gap-2 bg-white p-4">
                     <p className="text-xs">
                       <strong className="block font-medium">
@@ -64,7 +62,6 @@ function Nav_Bar() {
                     </p>
                   </div>
                 ) : (
-                  // نمایش دکمه‌های لاگین و ریجستر اگر کاربر لاگین نکرده باشد
                   <div className="sm:flex sm:gap-4">
                     <Link to="/login">
                       <a className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow">

@@ -211,7 +211,7 @@ function CreateAccount() {
                       />
                       {usernameError && (
                         <p className="text-red-500">{usernameError}</p>
-                      )}{" "}
+                      )}
                       {/* نمایش پیام خطا برای نام کاربری */}
                     </div>
                   </div>
@@ -226,7 +226,7 @@ function CreateAccount() {
                       />
                       {phoneError && (
                         <p className="text-red-500">{phoneError}</p>
-                      )}{" "}
+                      )}
                       {/* نمایش پیام خطا برای شماره تلفن */}
                     </div>
                     <div>
@@ -335,12 +335,12 @@ function CreateAccount() {
                     }`}
                     disabled={!isCheckboxChecked}
                   >
-                    ساخت حساب کاربری{" "}
+                    ساخت حساب کاربری
                   </button>
                   <p className="mt-4 text-sm text-gray-500 sm:mt-0">
-                    ! حساب کاربری دارید{" "}
+                    ! حساب کاربری دارید
                     <a href="login" className="text-gray-700 underline">
-                      وارد شوید{" "}
+                      وارد شوید
                     </a>
                   </p>
                 </div>

@@ -38,7 +38,7 @@ const AddUserNot: React.FC<AddUserNotProps> = ({}) => {
 
           <div className="flex-1 p-6 ">
             <strong className="flex justify-center items-center font-medium text-gray-900 text-2xl mb-6">
-              . شما قبلا ثبت نام کردین{" "}
+              . شما قبلا ثبت نام کردین
             </strong>
           </div>
 

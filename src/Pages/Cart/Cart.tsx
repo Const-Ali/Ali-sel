@@ -41,15 +41,15 @@ function Cart() {
 
   const handleApplyDiscount = () => {
     if (discountCode === "Ali10") {
-      setDiscount(100);
+      setDiscount(100000);
     } else if (discountCode === "Ali20") {
-      setDiscount(200);
+      setDiscount(200000);
     } else if (discountCode === "Ali30") {
-      setDiscount(300);
+      setDiscount(300000);
     } else if (discountCode === "Ali40") {
-      setDiscount(400);
+      setDiscount(400000);
     } else if (discountCode === "Ali50") {
-      setDiscount(500);
+      setDiscount(500000);
     } else {
       setDiscount(0);
       alert("کد تخفیف نامعتبر است");
@@ -98,16 +98,14 @@ function Cart() {
               </div>
               <div className="rounded p-6 pl-40">
                 <p className="text-right mb-5">
-                  قیمت کل: {Number(totalPrice.toFixed(2)).toLocaleString()}{" "}
-                  تومان
+                  قیمت کل: {Number(totalPrice.toFixed(2)).toLocaleString()} ريال
                 </p>
 
                 <p className="text-right mb-5">
-                  تخفیف شما: {Number(discount.toFixed(2)).toLocaleString()}{" "}
-                  تومان
+                  تخفیف شما: {Number(discount.toFixed(2)).toLocaleString()} ريال
                 </p>
                 <p className="text-right">
-                  قیمت نهایی: {Number(finalPrice).toLocaleString()} تومان
+                  قیمت نهایی: {Number(finalPrice).toLocaleString()} ريال
                 </p>
               </div>
             </div>

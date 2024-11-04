@@ -16,7 +16,6 @@ function CheckInputs() {
           role="alert"
           className="rounded border-s-4 border-red-500 bg-red-50 p-4"
         >
-          {" "}
           <button
             className="text-gray-500 transition hover:text-gray-600"
             onClick={onClose}
@@ -38,7 +37,7 @@ function CheckInputs() {
             </svg>
           </button>
           <strong className="block text-2xl text-red-800 text-right  pb-5">
-            ! تمامی گزینه ها را پر کنید{" "}
+            ! تمامی گزینه ها را پر کنید
           </strong>
           <p className="mt-2 text-sm text-red-700 text-right pb-2">
             . لطفاً تمام فیلدهای لازم را با اطلاعات صحیح و کامل پر کنید تا

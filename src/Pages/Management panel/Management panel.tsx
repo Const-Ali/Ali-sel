@@ -12,7 +12,7 @@ function ManagementPanel() {
   const [selectedComponent, setSelectedComponent] =
     useState("AddProductComTotal");
   const [selectedGroup, setSelectedGroup] = useState("products");
-  const navigate = useNavigate(); // تعریف useNavigate
+  const navigate = useNavigate();
 
   const renderComponent = () => {
     switch (selectedComponent) {
@@ -214,7 +214,7 @@ function ManagementPanel() {
                   className={`px-4 py-2 rounded ${selectedComponent === "AddProductTotP" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
                 >
                   سفارشات درحال ارسال
-                </button>{" "}
+                </button>
                 <button
                   onClick={() => setSelectedComponent("AddProductTotS")}
                   className={`px-4 py-2 rounded ${selectedComponent === "AddProductTotS" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
@@ -247,7 +247,7 @@ function ManagementPanel() {
           </div>
 
           <div>{renderComponent()}</div>
-        </div>{" "}
+        </div>
       </Container>
     </div>
   );

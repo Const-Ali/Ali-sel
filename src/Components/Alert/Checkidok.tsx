@@ -35,7 +35,7 @@ function Checkidok() {
 
           <div className="flex-1 p-6 ">
             <strong className="flex justify-center items-center font-medium text-gray-900 text-2xl ">
-              . شناسه درست می باشد{" "}
+              . شناسه درست می باشد
             </strong>
           </div>
 

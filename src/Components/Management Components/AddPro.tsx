@@ -102,7 +102,7 @@ function AddPro() {
         rate: parseFloat(ratingRate),
         count: parseInt(ratingCount),
       },
-      createdAt: new Date().toISOString(), // اضافه کردن تاریخ و زمان ایجاد
+      createdAt: new Date().toISOString(),
     };
 
     const isDuplicate = await checkDuplicateProduct(newProduct);
@@ -222,7 +222,7 @@ function AddPro() {
             labelText="نمره محصول"
             value={ratingRate}
             onChange={(e) => setRatingRate(e.target.value)}
-          />{" "}
+          />
           <AddInput
             id="productCount"
             type="number"
@@ -246,16 +246,15 @@ function AddPro() {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
-        </div>{" "}
+        </div>
         <div className="pl-36 pr-36">
-          {" "}
           <AddInput
             id="productUrl"
             type="url"
             labelText="آدرس تصویر محصول"
             value={image}
             onChange={(e) => setImage(e.target.value)}
-          />{" "}
+          />
         </div>
         <div className="pl-36 pr-36">
           <button

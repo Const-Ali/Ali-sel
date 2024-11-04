@@ -39,7 +39,7 @@ const Addok: React.FC<AddokProps> = ({ idset }) => {
 
           <div className="flex-1 p-6 ">
             <strong className="flex justify-center items-center font-medium text-gray-900 text-2xl mb-6">
-              . محصول جدید اضافه شد{" "}
+              . محصول جدید اضافه شد
             </strong>
 
             <p className="flex justify-center items-center mt-1 text-1xl text-gray-700">

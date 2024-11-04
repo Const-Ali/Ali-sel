@@ -16,15 +16,14 @@ function AddProductComTotal() {
   const [search, setSearch] = useState("");
   const [sortOption, setSortOption] = useState("جدیدترین");
 
-  // دریافت محصولات و دسته‌بندی‌ها از سرور
   useEffect(() => {
     const fetchProductsAndCategories = async () => {
       try {
-        const productsData: IProduct[] = await getProducts(); // تایپ داده
+        const productsData: IProduct[] = await getProducts();
         setProducts(productsData);
 
         const uniqueCategories = Array.from(
-          new Set(productsData.map((product: IProduct) => product.category)) // استفاده از نوع IProduct
+          new Set(productsData.map((product: IProduct) => product.category))
         );
         setCategories(uniqueCategories);
       } catch (error) {
@@ -35,7 +34,6 @@ function AddProductComTotal() {
     fetchProductsAndCategories();
   }, []);
 
-  // تابع حذف محصول
   const handleDelete = (id: number) => {
     setSelectedProductId(id);
     setShowModal(true);
@@ -58,7 +56,6 @@ function AddProductComTotal() {
     }
   };
 
-  // تابع ویرایش محصول
   const handleEdit = (id: number) => {
     const productToEdit = products.find((product) => product.id === id);
     setSelectedProduct(productToEdit || null);
@@ -105,7 +102,6 @@ function AddProductComTotal() {
     }
   };
 
-  // تابع مرتب‌سازی محصولات
   const sortedProducts = () => {
     switch (sortOption) {
       case "جدیدترین":
@@ -204,7 +200,7 @@ function AddProductComTotal() {
                 </button>
               </td>
               <td className="border border-gray-300 p-2">
-                {product.inventory}
+                {product.inventory.toLocaleString("fa-IR")}
               </td>
               <td className="border border-gray-300 p-2">{product.price}</td>
               <td className="border border-gray-300 p-2">{product.category}</td>
@@ -227,7 +223,7 @@ function AddProductComTotal() {
                 آیا مطمئن هستید؟
               </h2>
               <p className="text-sm text-gray-500 px-2">
-                آیا می‌خواهید محصول با آیدی <strong>{selectedProductId}</strong>{" "}
+                آیا می‌خواهید محصول با آیدی <strong>{selectedProductId}</strong>
                 را حذف کنید؟ این عملیات قابل بازگشت نیست.
               </p>
             </div>
@@ -253,7 +249,6 @@ function AddProductComTotal() {
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-sm"></div>
           <div className="flex flex-col p-4 relative items-center justify-center bg-gray-800 border border-gray-800 shadow-lg rounded-2xl w-96">
-            {" "}
             {/* عرض مودال را افزایش دادیم */}
             <h2 className="text-xl font-bold py-4 text-gray-200">
               ویرایش محصول
@@ -307,7 +302,7 @@ function AddProductComTotal() {
               <input
                 type="number"
                 name="inventory"
-                value={selectedProduct.inventory}
+                value={selectedProduct.inventory.toLocaleString("fa-IR")}
                 onChange={handleChange}
                 placeholder="موجودی"
                 className="border border-gray-300 p-2 rounded w-80"
@@ -324,7 +319,7 @@ function AddProductComTotal() {
                 className="bg-blue-400 hover:bg-blue-500 px-4 py-1 text-sm font-medium tracking-wider border-2 border-blue-300 hover:border-blue-500 text-white rounded-full transition ease-in duration-300"
                 onClick={handleUpdate}
               >
-                به‌روزرسانی{" "}
+                به‌روزرسانی
               </button>
             </div>
           </div>
@@ -335,59 +330,3 @@ function AddProductComTotal() {
 }
 
 export default AddProductComTotal;
-
-{
-  /* <div className="relative w-96 basis-2/3 p-5 pt-0">
-          <input
-            className="block w-full p-5 mx-10 text-sm text-gray-600 border border-gray-400 rounded-lg"
-            placeholder="جستجوی کاربران"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <div className="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
-            <svg
-              className="w-4 h-4 text-gray-500"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 20"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-              />
-            </svg>
-          </div>
-
-          {search && (
-            <ul className="absolute w-full bg-white border border-gray-400 rounded-md mt-1 max-h-60 overflow-y-auto shadow-lg z-10">
-              {filteredProducts.length > 0 ? (
-                filteredProducts.map((items) => (
-                  <div
-                    className="flex border-2 rounded-lg hover:bg-gray-200 cursor-pointer"
-                    key={items.title}
-                    onClick={() => {
-                      setSearch("");
-                      // Navigate(`/products/${produc}`); // استفاده از navigate به جای Navigate
-                    }}
-                  >
-                    <div className="flex justify-between items-center gap-28">
-                      <li className="p-2 rounded-lg">{items.title}</li>{" "}
-                      <li className="p-2 rounded-lg">
-                        {items.id} : شناسه محصول
-                      </li>
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <li className="p-2 text-gray-500">
-                  کاربری با این نام یافت نشد
-                </li>
-              )}
-            </ul>
-          )}
-        </div> */
-}

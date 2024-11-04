@@ -214,7 +214,7 @@ function EditUser() {
           onClick={loadCheck}
         >
           بررسی
-        </button>{" "}
+        </button>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4 rtl">
@@ -244,74 +244,67 @@ function EditUser() {
 
         <div className="flex flex-col mb-4">
           <div className="pl-36 pr-36">
-            {" "}
             <AddInput
               id="productUrl"
               type="email"
               labelText="ایمیل"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-            />{" "}
+            />
           </div>
         </div>
         <div className="flex justify-center items-center gap-x-10 ">
           <div>
-            {" "}
             <AddInput
               id="productUrl"
               type="text"
               labelText="رمز عبور"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-            />{" "}
+            />
           </div>
           <div>
-            {" "}
             <AddInput
               id="productUrl"
               type="text"
               labelText="نام کاربری"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-            />{" "}
+            />
           </div>
         </div>
         <div className="flex justify-center items-center gap-x-10 ">
           <div>
-            {" "}
             <AddInput
               id="productUrl"
               type="text"
               labelText="شماره تلفن همراه"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-            />{" "}
+            />
           </div>
           <div>
-            {" "}
             <AddInput
               id="productUrl"
               type="text"
               labelText="نام خانوادگی"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-            />{" "}
-          </div>{" "}
+            />
+          </div>
           <div>
-            {" "}
             <AddInput
               id="productUrl"
               type="text"
               labelText="نام"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-            />{" "}
+            />
           </div>
         </div>
 
         <div className="flex flex-col mb-4">
           <div>
-            {" "}
             <AddInput
               id="productUrl"
               type="text"
@@ -323,13 +316,12 @@ function EditUser() {
                   city: e.target.value,
                 }))
               }
-            />{" "}
+            />
           </div>
         </div>
 
         <div className="flex flex-col mb-4">
           <div>
-            {" "}
             <AddInput
               id="productUrl"
               type="text"
@@ -341,13 +333,12 @@ function EditUser() {
                   street: e.target.value,
                 }))
               }
-            />{" "}
+            />
           </div>
         </div>
 
         <div className="flex flex-col mb-4">
           <div>
-            {" "}
             <AddInput
               id="productUrl"
               type="text"
@@ -359,7 +350,7 @@ function EditUser() {
                   zipcode: e.target.value,
                 }))
               }
-            />{" "}
+            />
           </div>
         </div>
 

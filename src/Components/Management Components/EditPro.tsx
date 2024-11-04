@@ -228,7 +228,7 @@ function EditPro() {
           onClick={loadCheck}
         >
           بررسی
-        </button>{" "}
+        </button>
       </div>
       <form onSubmit={handleSubmit} className="space-y-4 rtl">
         <div className="flex flex-col mb-4">
@@ -288,7 +288,7 @@ function EditPro() {
             labelText="نمره محصول"
             value={ratingRate}
             onChange={(e) => setRatingRate(e.target.value)}
-          />{" "}
+          />
           <AddInput
             id="productCount"
             type="number"
@@ -312,17 +312,16 @@ function EditPro() {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
-        </div>{" "}
+        </div>
         <div className="flex flex-col mb-4">
           <div className="pl-36 pr-36">
-            {" "}
             <AddInput
               id="productUrl"
               type="url"
               labelText="آدرس تصویر محصول"
               value={image}
               onChange={(e) => setImage(e.target.value)}
-            />{" "}
+            />
           </div>
         </div>
         <button

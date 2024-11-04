@@ -18,6 +18,7 @@ import Pro4itemsTwo from "./Pages/Product/Pro4itemsTwo";
 import Pro4itemsThree from "./Pages/Product/Pro4itemsThree";
 import Pro4itemsFour from "./Pages/Product/Pro4itemsFour";
 import CreateAccount from "./Pages/Login/CreateAccount";
+import ProCollectionOne from "./Pages/Product/ProCollectionOne";
 
 function App() {
   const { isLogin } = useShop_Card_Cont();
@@ -32,6 +33,8 @@ function App() {
         <Route path="/Pro4itemsTwo" element={<Pro4itemsTwo />} />
         <Route path="/Pro4itemsThree" element={<Pro4itemsThree />} />
         <Route path="/Pro4itemsFour" element={<Pro4itemsFour />} />
+        <Route path="/ProCollectionOne" element={<ProCollectionOne />} />
+        <Route path="/Test" element={<Test />} />
         <Route
           path="/login"
           element={isLogin ? <Navigate to="/" /> : <Login />}
@@ -42,7 +45,6 @@ function App() {
           <Route path="/Checkout" element={<Checkout />} />
           <Route path="/Managementpanel" element={<ManagementPanel />} />
           <Route path="/ManagementUser" element={<ManagementUser />} />
-          <Route path="/Test" element={<Test />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>

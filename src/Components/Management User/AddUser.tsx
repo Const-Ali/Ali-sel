@@ -54,7 +54,7 @@ function AddUser() {
       alert("لطفاً همه فیلدهای ضروری را پر کنید.");
       return;
     }
-    const currentDateTime = new Date().toISOString(); // تاریخ و زمان فعلی به صورت ISO
+    const currentDateTime = new Date().toISOString();
 
     const newUser = {
       category,
@@ -67,7 +67,7 @@ function AddUser() {
       },
       phone,
       address,
-      createdAt: currentDateTime, // افزودن تاریخ و زمان ثبت
+      createdAt: currentDateTime,
     };
 
     try {
@@ -184,74 +184,67 @@ function AddUser() {
 
         <div className="flex flex-col mb-4">
           <div className="pl-36 pr-36">
-            {" "}
             <AddInput
               id="EmailInput"
               type="email"
               labelText="ایمیل"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-            />{" "}
+            />
           </div>
         </div>
         <div className="flex justify-center items-center gap-x-10 ">
           <div>
-            {" "}
             <AddInput
               id="PassInput"
               type="text"
               labelText="رمز عبور"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-            />{" "}
+            />
           </div>
           <div>
-            {" "}
             <AddInput
               id="UserNAInput"
               type="text"
               labelText="نام کاربری"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-            />{" "}
+            />
           </div>
         </div>
         <div className="flex justify-center items-center gap-x-10 ">
           <div>
-            {" "}
             <AddInput
               id="NumInput"
               type="number"
               labelText="شماره تلفن همراه"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-            />{" "}
+            />
           </div>
           <div>
-            {" "}
             <AddInput
               id="UserLNInput"
               type="text"
               labelText="نام خانوادگی"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-            />{" "}
-          </div>{" "}
+            />
+          </div>
           <div>
-            {" "}
             <AddInput
               id="UserFNInput"
               type="text"
               labelText="نام"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-            />{" "}
+            />
           </div>
         </div>
 
         <div className="flex flex-col mb-4">
           <div>
-            {" "}
             <AddInput
               id="CityInput"
               type="text"
@@ -263,13 +256,12 @@ function AddUser() {
                   city: e.target.value,
                 }))
               }
-            />{" "}
+            />
           </div>
         </div>
 
         <div className="flex flex-col mb-4">
           <div>
-            {" "}
             <AddInput
               id="AddressInput"
               type="text"
@@ -281,13 +273,12 @@ function AddUser() {
                   street: e.target.value,
                 }))
               }
-            />{" "}
+            />
           </div>
         </div>
 
         <div className="flex flex-col mb-4">
           <div>
-            {" "}
             <AddInput
               id="ZipCInput"
               type="number"
@@ -299,7 +290,7 @@ function AddUser() {
                   zipcode: e.target.value,
                 }))
               }
-            />{" "}
+            />
           </div>
         </div>
 
@@ -307,7 +298,7 @@ function AddUser() {
           type="submit"
           className="bg-blue-500 text-white px-4 py-2 rounded"
         >
-          اضافه کردن کاربر{" "}
+          اضافه کردن کاربر
         </button>
       </form>
     </Container>

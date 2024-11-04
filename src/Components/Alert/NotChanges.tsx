@@ -15,7 +15,6 @@ function NotChanges() {
         role="alert"
         className="rounded border-s-4 border-red-500 bg-red-50 p-4"
       >
-        {" "}
         <button
           className="text-gray-500 transition hover:text-gray-600"
           onClick={onClose}

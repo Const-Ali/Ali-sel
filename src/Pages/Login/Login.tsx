@@ -76,12 +76,12 @@ function Login() {
               />
             </div>
             <h1 className="text-2xl font-bold sm:text-3xl pt-10">
-              به تکنوسنتر خوش آمدید{" "}
+              به تکنوسنتر خوش آمدید
             </h1>
             <p className="mt-4 text-gray-500">
               با ورود به حساب کاربری خود در تکنو سنتر، از جدیدترین مدل‌های
               موبایل و بهترین لوازم جانبی با خبر شوید و خریدی مطمئن و سریع را .
-              تجربه کنید{" "}
+              تجربه کنید
             </p>
           </div>
 
@@ -157,19 +157,19 @@ function Login() {
                 </span>
               </div>
             </div>
-            {error && <p className="text-red-500">{error}</p>}{" "}
+            {error && <p className="text-red-500">{error}</p>}
             <div className="flex items-center justify-between">
               <p className="text-sm text-gray-500">
                 حساب کاربری ندارید ؟
                 <a className="underline " href="/CreateAccount">
-                  ساخت حساب کاربری{" "}
+                  ساخت حساب کاربری
                 </a>
               </p>
               <button
                 type="submit"
                 className="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
               >
-                ورود{" "}
+                ورود
               </button>
             </div>
           </form>

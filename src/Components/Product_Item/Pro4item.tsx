@@ -25,7 +25,7 @@ function Pro4item() {
             src="https://www.upload.ee/image/17325994/design__2_.png"
           />
           <p className=" text-gray-500 text-sm">ضمانت اصالت کالا</p>
-        </div>{" "}
+        </div>
         <div
           className="cursor-pointer transition transform hover:scale-105 hover:shadow-xl p-4 rounded-lg"
           onClick={() => navigate("/Pro4itemsThree")}
@@ -35,7 +35,7 @@ function Pro4item() {
             src="https://www.upload.ee/image/17325997/design.png"
           />
           <p className=" text-gray-500 text-sm">پرداخت قسطی</p>
-        </div>{" "}
+        </div>
         <div
           className="cursor-pointer transition transform hover:scale-105 hover:shadow-xl p-4 rounded-lg"
           onClick={() => navigate("/Pro4itemsFour")}
@@ -43,13 +43,13 @@ function Pro4item() {
           <img
             className="pl-10"
             src="https://www.upload.ee/image/17325993/design__3_.png"
-          />{" "}
+          />
           <div className="flex justify-end items-center ">
             <p className=" text-gray-500 text-sm"> روز ضمانت بازگشت کالا </p>
             <strong className="text-gray-600 ml-2">7</strong>
           </div>
-        </div>{" "}
-      </div>{" "}
+        </div>
+      </div>
       <div className="flex justify-between items-center text-gray-500 text-sm"></div>
     </div>
   );

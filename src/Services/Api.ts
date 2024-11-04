@@ -10,7 +10,7 @@ export async function getProducts() {
     return data;
   } catch (error) {
     console.error("Error fetching products:", error);
-    throw error; // یا می‌توانید یک پیام خطا برای کاربر نمایش دهید
+    throw error;
   }
 }
 
