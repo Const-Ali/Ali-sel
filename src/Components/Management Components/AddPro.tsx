@@ -91,7 +91,20 @@ function AddPro() {
       return;
     }
 
+    const generateUniqueId = async () => {
+      let uniqueId = Math.floor(1000 + Math.random() * 9000);
+      const response = await axios.get("http://localhost:8001/products");
+      const products: IProduct[] = response.data;
+
+      while (products.some((product) => product.id === uniqueId.toString())) {
+        uniqueId = Math.floor(1000 + Math.random() * 9000);
+      }
+
+      return uniqueId;
+    };
+
     const newProduct = {
+      id: (await generateUniqueId()).toString(),
       title: normalizeSpaces(title),
       price: parseFloat(price),
       description: normalizeSpaces(description),
