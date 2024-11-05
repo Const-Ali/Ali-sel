@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "../../Components/Container/Container";
 
 function Pro4itemsOne() {

@@ -26,10 +26,14 @@ interface IUser {
   address: IAddress;
 }
 
+interface ICategory {
+  category: string;
+}
+
 function AddUser() {
   const [userId, setUserId] = useState<string | null>(null);
   const [category, setCategory] = useState("");
-  const [categories, setCategories] = useState<IUser[]>([]);
+  const [categories, setCategories] = useState<ICategory[]>([]);
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -161,7 +165,7 @@ function AddUser() {
         <div className="flex flex-col mb-4 rounded-md border border-gray-200 p-2 text-right ">
           <label
             htmlFor="HeadlineAct"
-            className=" mb-1  text-sm font-medium text-gray-900 "
+            className=" mb-1 text-sm font-medium text-gray-900 "
           >
             : سطح دسترسی
           </label>
@@ -171,7 +175,7 @@ function AddUser() {
             onChange={(e) => setCategory(e.target.value)}
             name="HeadlineAct"
             id="HeadlineAct"
-            className="text-right mt-1.5  h-10 rounded-lg border-gray-300 text-gray-700 sm:text-sm w-full"
+            className="text-right mt-1.5 h-10 rounded-lg border-gray-300 text-gray-700 sm:text-sm w-full"
           >
             <option value="">انتخاب کنید</option>
             {categories.map((cat, index) => (
@@ -280,8 +284,8 @@ function AddUser() {
         <div className="flex flex-col mb-4">
           <div>
             <AddInput
-              id="ZipCInput"
-              type="number"
+              id="ZipInput"
+              type="text"
               labelText="کد پستی"
               value={address.zipcode}
               onChange={(e) =>
@@ -294,12 +298,14 @@ function AddUser() {
           </div>
         </div>
 
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded"
-        >
-          اضافه کردن کاربر
-        </button>
+        <div className="flex justify-center items-center mt-4 mb-4">
+          <button
+            type="submit"
+            className="rounded-md border border-gray-300 bg-blue-500 py-2 px-4 text-white hover:bg-blue-700"
+          >
+            ثبت کاربر
+          </button>
+        </div>
       </form>
     </Container>
   );

@@ -1,10 +1,10 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import Container from "../Container/Container";
 import { useShop_Card_Cont } from "../../Pages/context/Shop_Card_Cont";
-import { Button } from "@nextui-org/react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { IProduct } from "../../Types/servers_type";
+import Button from "../Button/Button";
 
 function Nav_Bar() {
   const { cartQty, handleLogout } = useShop_Card_Cont();
@@ -184,7 +184,7 @@ function Nav_Bar() {
           </div>
           <div className="flex items-center">
             <Button onClick={handleLogout}>Logout</Button>
-            <Link className="relative" to="/Cart">
+            <Link className="relative " to="/Cart">
               <button>
                 <svg
                   className="w-7 h-7"

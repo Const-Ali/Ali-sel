@@ -41,5 +41,4 @@ export interface IUser {
   name: IName;
   phone: string;
   address: IAddress;
-  __v: number;
 }

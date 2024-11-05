@@ -1,11 +1,24 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { getUsers } from "../../Services/Api";
-import { IUser } from "../../Types/servers_type";
 import TextTitle from "../Text/TextTitle";
-import { useNavigate } from "react-router-dom";
 
 function UserComTotal() {
+  interface IUser {
+    createdAt: Date;
+    category: string | null;
+    id: number;
+    email: string;
+    username: string;
+    password: string;
+    name: {
+      firstname: string;
+      lastname: string;
+    };
+    phone: string;
+    [key: string]: any;
+  }
+
   const [users, setUsers] = useState<IUser[]>([]);
   const [showModal, setShowModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
@@ -13,8 +26,6 @@ function UserComTotal() {
   const [selectedUser, setSelectedUser] = useState<IUser | null>(null);
   const [search, setSearch] = useState("");
   const [sortOption, setSortOption] = useState("جدیدترین");
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     getUsers()
@@ -176,36 +187,24 @@ function UserComTotal() {
             <th className="border border-gray-300 p-2">نام</th>
             <th className="border border-gray-300 p-2">شناسه</th>
             <th className="border border-gray-300 p-2">سطح دسترسی</th>
-            <th className="border border-gray-300 p-2">ردیف</th>
           </tr>
         </thead>
         <tbody>
-          {sortedAndFilteredUsers.map((user, index) => (
-            <tr key={user.id} className="text-center">
-              <td className="border border-gray-300 p-2">
-                <button
-                  className="bg-red-500 text-white px-2 py-1 rounded"
-                  onClick={() => handleDelete(user.id)}
-                >
-                  حذف
-                </button>
-                <button
-                  className="bg-orange-400 text-white px-2 py-1 rounded mx-2"
-                  onClick={() => handleEdit(user.id)}
-                >
-                  ویرایش
-                </button>
+          {sortedAndFilteredUsers.map((user) => (
+            <tr key={user.id}>
+              <td className="border border-gray-300 p-2 flex gap-2">
+                <button onClick={() => handleEdit(user.id)}>ویرایش</button>
+                <button onClick={() => handleDelete(user.id)}>حذف</button>
               </td>
               <td className="border border-gray-300 p-2">{user.password}</td>
               <td className="border border-gray-300 p-2">{user.username}</td>
               <td className="border border-gray-300 p-2">{user.phone}</td>
               <td className="border border-gray-300 p-2">{user.email}</td>
               <td className="border border-gray-300 p-2">
-                {`${user.name.firstname} ${user.name.lastname}`}
+                {user.name.firstname} {user.name.lastname}
               </td>
               <td className="border border-gray-300 p-2">{user.id}</td>
               <td className="border border-gray-300 p-2">{user.category}</td>
-              <td className="border border-gray-300 p-2">{index + 1}</td>
             </tr>
           ))}
         </tbody>

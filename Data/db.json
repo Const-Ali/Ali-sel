@@ -251,6 +251,90 @@
         "count": 22
       },
       "createdAt": "2024-11-04T15:56:47.067Z"
+    },
+    {
+      "id": "3b95",
+      "title": "تبلت",
+      "price": 110,
+      "description": "ق",
+      "inventory": 5,
+      "category": "women's clothing",
+      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
+      "rating": {
+        "rate": 3,
+        "count": 400
+      },
+      "createdAt": "2024-11-05T11:23:46.488Z"
+    },
+    {
+      "id": "87b0",
+      "title": "تبلت",
+      "price": 110,
+      "description": "ق",
+      "inventory": 5,
+      "category": "men's clothing",
+      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
+      "rating": {
+        "rate": 3,
+        "count": 400
+      },
+      "createdAt": "2024-11-05T11:23:52.064Z"
+    },
+    {
+      "id": "a471",
+      "title": "تبلت",
+      "price": 110,
+      "description": "222",
+      "inventory": 5,
+      "category": "Apple-Iphone",
+      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
+      "rating": {
+        "rate": 3,
+        "count": 400
+      },
+      "createdAt": "2024-11-05T11:38:51.407Z"
+    },
+    {
+      "id": "ba75",
+      "title": "تبلتص",
+      "price": 110,
+      "description": "222",
+      "inventory": 5,
+      "category": "Apple-Iphone",
+      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
+      "rating": {
+        "rate": 3,
+        "count": 400
+      },
+      "createdAt": "2024-11-05T11:40:31.759Z"
+    },
+    {
+      "id": "404b",
+      "title": "3تبلتص",
+      "price": 110,
+      "description": "222",
+      "inventory": 5,
+      "category": "Apple-Iphone",
+      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
+      "rating": {
+        "rate": 3,
+        "count": 400
+      },
+      "createdAt": "2024-11-05T11:53:34.397Z"
+    },
+    {
+      "id": "dab1",
+      "title": "تبلت222",
+      "price": 110,
+      "description": "22",
+      "inventory": 5,
+      "category": "electronics",
+      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
+      "rating": {
+        "rate": 3,
+        "count": 400
+      },
+      "createdAt": "2024-11-05T12:53:12.040Z"
     }
   ],
   "users": [

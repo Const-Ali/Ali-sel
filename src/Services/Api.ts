@@ -35,11 +35,3 @@ export async function login(username: string, password: string) {
   });
   return data;
 }
-// const token = localStorage.getItem("token");
-// const { data } = await client({
-//   method: "GET",
-//   url: "/protected-endpoint",
-//   headers: {
-//     Authorization: `Bearer ${token}`,
-//   },
-// });

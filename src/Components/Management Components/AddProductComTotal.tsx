@@ -5,8 +5,12 @@ import { IProduct } from "../../Types/servers_type";
 import TextTitle from "../Text/TextTitle";
 
 function AddProductComTotal() {
+  interface ICategory {
+    category: string;
+  }
+
   const [products, setProducts] = useState<IProduct[]>([]);
-  const [categories, setCategories] = useState<string[]>([]);
+  const [categories, setCategories] = useState<ICategory[]>([]);
   const [showModal, setShowModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
   const [selectedProductId, setSelectedProductId] = useState<number | null>(
@@ -23,8 +27,8 @@ function AddProductComTotal() {
         setProducts(productsData);
 
         const uniqueCategories = Array.from(
-          new Set(productsData.map((product: IProduct) => product.category))
-        );
+          new Set(productsData.map((product) => product.category))
+        ).map((category) => ({ category })); // تبدیل به آرایه اشیاء
         setCategories(uniqueCategories);
       } catch (error) {
         console.error("Error fetching products or categories:", error);
@@ -188,13 +192,13 @@ function AddProductComTotal() {
               <td className="border border-gray-300 p-2">
                 <button
                   className="bg-red-500 text-white px-2 py-1 rounded"
-                  onClick={() => handleDelete(product.id)}
+                  onClick={() => handleDelete(Number(product.id))}
                 >
                   حذف
                 </button>
                 <button
                   className="bg-orange-400 text-white px-2 py-1 rounded mx-2"
-                  onClick={() => handleEdit(product.id)}
+                  onClick={() => handleEdit(Number(product.id))}
                 >
                   ویرایش
                 </button>
