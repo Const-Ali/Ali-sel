@@ -21,6 +21,7 @@ interface IProduct {
     rate: number;
     count: number;
   };
+  createdAt: string;
 }
 
 interface Category {
@@ -131,6 +132,7 @@ function EditPro() {
         rate: parseFloat(ratingRate),
         count: parseInt(ratingCount, 10),
       },
+      createdAt: originalProduct?.createdAt,
     };
 
     const hasChanges =
