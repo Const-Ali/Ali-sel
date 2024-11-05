@@ -159,6 +159,7 @@ function AddPro() {
 
   return (
     <Container>
+      123
       {showAlert && (
         <div
           role="alert"
@@ -178,7 +179,6 @@ function AddPro() {
       <div className="pb-7">
         <TextTitle value="ثبت کالای جدید" />
       </div>
-
       <form onSubmit={handleSubmit} className="space-y-4 rtl">
         <div className="pl-36 pr-36">
           <AddInput
