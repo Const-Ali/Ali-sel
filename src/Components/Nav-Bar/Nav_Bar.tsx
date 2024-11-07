@@ -10,10 +10,7 @@ function Nav_Bar() {
   const { cartQty, handleLogout } = useShop_Card_Cont();
   const [search, setSearch] = useState("");
   const [products, setProducts] = useState<IProduct[]>([]);
-  const [user, setUser] = useState<{
-    firstname: string;
-    lastname: string;
-  } | null>(null);
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -22,14 +19,6 @@ function Nav_Bar() {
       .get("http://localhost:8001/products")
       .then((response) => setProducts(response.data))
       .catch((error) => console.error("Error fetching products:", error));
-
-    axios
-      .get("http://localhost:8001/users")
-      .then((response) => {
-        console.log(response.data);
-        setUser(response.data.name);
-      })
-      .catch((error) => console.error("Error fetching user data:", error));
   }, []);
 
   const filteredProducts = products.filter((item) =>
@@ -45,33 +34,37 @@ function Nav_Bar() {
     return null;
   }
 
+  const token = localStorage.getItem("token");
+  const userLocal = JSON.parse(localStorage.getItem("user") || "null");
+  console.log(userLocal);
+
   return (
-    <div className="h-40 border-b shadow-xl flex items-center">
+    <div className="h-40 border-b shadow-2xlxl flex items-center bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300">
       <Container>
-        <header className="bg-white flex justify-between">
+        <header className="flex justify-between">
           <div className="flex h-24 items-center mr-36">
             <div className="md:flex md:items-center md:gap-12">
               <div className="flex items-center gap-4">
-                {user ? (
+                {token ? (
                   <div className="flex items-center gap-2 bg-white p-4">
                     <p className="text-xs">
                       <strong className="block font-medium">
-                        {user.firstname} {user.lastname}
+                        سلام، {userLocal?.name.firstname}{" "}
+                        {userLocal?.name.lastname}
                       </strong>
-                      <span> {user.firstname}@example.com </span>
                     </p>
                   </div>
                 ) : (
-                  <div className="sm:flex sm:gap-4">
+                  <div className="sm:flex sm:gap-4 ">
                     <Link to="/login">
-                      <a className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow">
-                        Login
+                      <a className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-gray-800 hover:bg-gray-900 text-white rounded-md">
+                        ورود
                       </a>
                     </Link>
                     <div className="hidden sm:flex">
                       <Link to="/register">
-                        <a className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600">
-                          Register
+                        <a className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-gray-800 hover:bg-gray-900 text-white rounded-md">
+                          ثبت نام
                         </a>
                       </Link>
                     </div>
@@ -99,14 +92,15 @@ function Nav_Bar() {
             </div>
           </div>
           <div className="flex items-center">
-            <div className="relative w-96 basis-2/3">
+            <div className="relative w-96 basis-2/3 ">
               <input
-                className="block w-full p-4 pe-10 text-sm text-gray-600 border border-gray-400 rounded-lg"
+                className=" block w-full p-4 pe-10 placeholder:text-slate-950 bg-transparent text-sm border-2 border-gray-600 rounded-lg "
                 placeholder="جستجوی محصولات"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
-              <div className="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
+
+              <div className=" absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
                 <svg
                   className="w-4 h-4 text-gray-500"
                   aria-hidden="true"
@@ -123,7 +117,6 @@ function Nav_Bar() {
                   />
                 </svg>
               </div>
-
               {search && (
                 <ul className="absolute w-full bg-white border border-gray-400 rounded-md mt-1 max-h-60 overflow-y-auto shadow-lg z-10">
                   {filteredProducts.length > 0 ? (
@@ -152,20 +145,22 @@ function Nav_Bar() {
                 </ul>
               )}
             </div>
-            <div className="flex items-center pl-10">
+            <div className="flex items-center pl-10 ">
               <div className="flex p-1">
                 <div className="flex items-center">
-                  <img
-                    src="https://www.upload.ee/image/17269868/_-_Copy__2_-denoised_sharpened_width_400__light-100__wb-25__exposure_correction-removebg-preview.png"
-                    className="h-12"
-                    alt="Logo"
-                  />
+                  <a href="/">
+                    <img
+                      src="https://www.upload.ee/image/17269868/_-_Copy__2_-denoised_sharpened_width_400__light-100__wb-25__exposure_correction-removebg-preview.png"
+                      className="h-12 "
+                      alt="Logo"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </header>
-        <header className="bg-white flex justify-between flex-row-reverse">
+        <header className="flex justify-between flex-row-reverse">
           <div className="flex justify-between flex-row-reverse">
             <ul className="flex">
               <li className="ml-4 font-semibold text-2xl">
@@ -183,7 +178,7 @@ function Nav_Bar() {
             </ul>
           </div>
           <div className="flex items-center">
-            <Button onClick={handleLogout}>Logout</Button>
+            {token && <Button onClick={handleLogout}>Logout</Button>}
             <Link className="relative " to="/Cart">
               <button>
                 <svg

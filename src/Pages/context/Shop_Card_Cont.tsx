@@ -116,7 +116,7 @@ export function Shop_Card_Pro({ children }: Shop_Card_Pro) {
   const handleLogout = () => {
     setIsLogin(false);
     setRole(null);
-    navigate("/login");
+    navigate("/");
     localStorage.removeItem("token");
   };
 

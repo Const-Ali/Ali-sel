@@ -37,6 +37,7 @@ function AddPro() {
   const [showAlert, setShowAlert] = useState(false);
   const [showErrorAlert, setShowErrorAlert] = useState(false);
   const [productId, setProductId] = useState<string | null>(null);
+  const [newCategory, setNewCategory] = useState(""); // دسته‌بندی جدید
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -157,9 +158,20 @@ function AddPro() {
     );
   };
 
+  const addNewCategory = () => {
+    if (
+      newCategory &&
+      !categories.some((cat) => cat.category === newCategory)
+    ) {
+      setCategories([...categories, { category: newCategory }]);
+      setNewCategory("");
+    } else {
+      alert("لطفاً یک دسته‌بندی معتبر وارد کنید یا دسته‌بندی تکراری نباشد.");
+    }
+  };
+
   return (
     <Container>
-      123
       {showAlert && (
         <div
           role="alert"
@@ -228,6 +240,22 @@ function AddPro() {
                 </option>
               ))}
             </select>
+            <div className="flex mt-2 gap-2">
+              <input
+                type="text"
+                placeholder="دسته‌بندی جدید"
+                value={newCategory}
+                onChange={(e) => setNewCategory(e.target.value)}
+                className="w-60 border-gray-300 rounded-lg p-1"
+              />
+              <button
+                type="button"
+                onClick={addNewCategory}
+                className="px-4 py-1 bg-blue-600 text-white rounded-lg"
+              >
+                افزودن دسته‌بندی
+              </button>
+            </div>
           </div>
           <AddInput
             id="productRate"

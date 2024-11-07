@@ -1,3 +1,4 @@
+import Container from "../../Components/Container/Container";
 import HomeComFive from "../../Components/HomeCom/HomeComFive";
 import HomeComFour from "../../Components/HomeCom/HomeComFour";
 import HomeComOne from "../../Components/HomeCom/HomeComOne";
@@ -8,8 +9,9 @@ import ImageSlider from "../../Components/ImageSlider/ImageSlider";
 
 function Home() {
   return (
-    <div className="px-52">
+    <Container>
       <ImageSlider />
+      <div></div>
       <HomeComSix />
       <div className="grid grid-rows-3 grid-flow-col gap-4 h-[1000px] p-20 bg-gray-50">
         <div className="col-span-2 h-[440px] bg-white">
@@ -24,7 +26,7 @@ function Home() {
       </div>
       <HomeComFour />
       <HomeComFive />
-    </div>
+    </Container>
   );
 }
 

@@ -2,6 +2,7 @@ import Container from "../../Components/Container/Container";
 import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Navigate } from "react-router-dom";
 
 interface User {
   username: string;
@@ -57,12 +58,13 @@ function Login() {
     );
 
     if (foundUser) {
+      localStorage.setItem("user", JSON.stringify(foundUser));
       handleLogin(user.username, user.password, foundUser.category || "");
+      return <Navigate to="/" />; // به صفحه اصلی هدایت می‌شود
     } else {
       setError("! نام کاربری، ایمیل یا شماره تماس یا رمز عبور اشتباه است");
     }
   };
-
   return (
     <Container>
       <section className="relative flex flex-wrap lg:h-screen lg:items-center my-10 shadow-2xl ">

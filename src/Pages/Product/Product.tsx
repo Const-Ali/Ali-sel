@@ -65,7 +65,7 @@ function Product() {
     { name: "مشکی", code: "black" },
     { name: "خاکستری", code: "gray-400" },
     { name: "نارنجی", code: "orange-400" },
-    { name: "قرمز", code: "red-400" },
+    { name: "قرمز", code: "red-500" },
   ];
 
   const handleColorSelect = (color: string) => {
@@ -79,7 +79,7 @@ function Product() {
           <Spinner />
         ) : (
           <>
-            <div className="bg-red- flex justify-between ">
+            <div className="bg-red- flex justify-between mt-5">
               <div className="mt-7 ml-7 w-80 h-[500px] bg-gray-100 rounded-lg">
                 <div className="flex flex-col items-end mx-4 mt-7">
                   <div className="flex items-center gap-1">
@@ -169,11 +169,13 @@ function Product() {
                             width={50}
                             height={50}
                             viewBox="0 0 256 256"
-                            onClick={() =>
-                              handleIncreaseProductQty(
-                                parseInt(params.id as string)
-                              )
-                            }
+                            onClick={() => {
+                              if (currentQty <= inventory) {
+                                handleIncreaseProductQty(
+                                  parseInt(params.id as string)
+                                );
+                              }
+                            }}
                             className="cursor-pointer font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring"
                           >
                             <path
@@ -396,25 +398,8 @@ function Product() {
                           ))}
                         </div>
                       </div>
-
-                      <hr className="my-8" />
-
-                      <div className="flex flex-wrap gap-4">
-                        <button
-                          type="button"
-                          className="min-w-[200px] px-4 py-3 bg-gray-800 hover:bg-gray-900 text-white text-sm font-semibold rounded-md"
-                        >
-                          Buy now
-                        </button>
-                        <button
-                          type="button"
-                          className="min-w-[200px] px-4 py-2.5 border border-gray-800 bg-transparent hover:bg-gray-50 text-gray-800 text-sm font-semibold rounded-md"
-                        >
-                          Add to cart
-                        </button>
-                      </div>
                     </div>
-                    <div className="w-full lg:sticky top-0 text-center mb-56">
+                    <div className="w-full lg:sticky top-0 text-center mb-">
                       <div className="lg:h-auto">
                         <img
                           src={product?.image}
@@ -425,19 +410,19 @@ function Product() {
                     </div>
                   </div>
 
-                  <div className="mt-20 max-w-4xl">
+                  <div className=" max-w-4xl ">
                     <ul className="flex border-b">
                       <li className="text-gray-800 font-semibold text-sm bg-gray-100 py-3 px-8 border-b-2 border-gray-800 cursor-pointer transition-all">
-                        Description
+                        توضیحات
                       </li>
                       <li className="text-gray-500 font-semibold text-sm hover:bg-gray-100 py-3 px-8 cursor-pointer transition-all">
-                        Reviews
+                        مشخصات فنی
                       </li>
                     </ul>
 
                     <div className="mt-8">
                       <h3 className="text-xl font-bold text-gray-800">
-                        Product Description
+                        توضیحات محصول{" "}
                       </h3>
                       <p className="text-sm text-gray-500 mt-4">
                         {product?.description}

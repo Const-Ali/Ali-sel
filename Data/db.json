@@ -223,6 +223,48 @@
       },
       "createdAt": "2024-11-05T13:43:15.548Z",
       "id": "9439"
+    },
+    {
+      "id": "8286",
+      "title": "لپتاپ",
+      "price": 2322,
+      "description": "wefdssdvdsvds",
+      "inventory": 333,
+      "category": "jewelery",
+      "image": "https://lh4.googleusercontent.com/proxy/jS_uSlTB7NJt7myAd0SyLhbG-Rlb2hWs37Y-Z_Gd-7jq_xEAlqJ3S3qwFlfipaXaCxKy2AlraOcEp57gRakwmmMB28IsYNp-utIfAhNOKcDnlXhmHtUa9OjxpOgEg0sIPXnAAQ",
+      "rating": {
+        "rate": 32323,
+        "count": 444
+      },
+      "createdAt": "2024-11-06T16:39:19.917Z"
+    },
+    {
+      "id": "8355",
+      "title": "تبلت سامسونگ مدل Galaxy Tab A9 Plus 5G SM-X216 ظرفیت 64 گیگابایت و رم 4 گیگابایت",
+      "price": 18998000,
+      "description": "ابعاد 257.1 در 168.7 در 6.9 میلی‌متر وضوح تصویر 1200 در 1920 پیکسل مدل تراشه Qualcomm SM6375 Snapdragon 695 5G پردازنده مرکزی (CPU) Octa-core (2×2.2 GHz Kryo 660 Gold & 6×1.8 GHz Kryo 660 Silver) تعداد هسته هشت هسته فرکانس ۱.۸ – ۲.۲ گیگاهرتز پردازنده گرافیکی (GPU) Adreno 619 سیستم‌عامل اندروید ورژن سیستم‌ عامل 13 رابط کاربری One UI 5.1 حافظه داخلی 64 گیگابایت حافظه RAM 4 گیگابایت ظرفیت باتری 7040 میلی‌آمپر ساعت نوع باتری لیتیوم پلیمری قابلیت تعویض توسط کاربر ندارد امکان شارژ سریع دارد تعداد سیم‌کارت تک سیم‌کارت نوع سیم‌کارت نانو شبکه مخابراتی 5G، 4G، 3G، 2G بلوتوث نگارش 5.1 مکان‌یاب (GPS) دارد جک 3.5 میلی‌متری صدا دارد درگاه اتصال USB Type-C 2.0 شتاب‌سنج دارد تشخیص اثر انگشت ندارد",
+      "inventory": 2,
+      "category": "Tablet-Samsung",
+      "image": "https://www.upload.ee/image/17356474/samsung-galaxy-tab-a9-plus-7.jpg",
+      "rating": {
+        "rate": 4,
+        "count": 250
+      },
+      "createdAt": "2024-11-06T16:44:14.031Z"
+    },
+    {
+      "id": "7544",
+      "title": "تبلت سامسونگ مدل Galaxy Tab A9 Plus 5G SM-X216 ظرفیت 128 گیگابایت و رم 8 گیگابایت",
+      "price": 29898000,
+      "description": "رنگ خاکستری, نقره ای, سورمه ای کیفیت عکاسی دوربین دوم 5 مگاپیکسل نوع صفحه نمایش TFT LCD وضوح تصویر 1200 در 1920 پیکسل تراکم پیکسلی ~206 پیکسل در اینچ پردازنده مرکزی (CPU) Octa-core (2×2.2 GHz Kryo 660 Gold & 6×1.8 GHz Kryo 660 Silver) تعداد هسته هشت هسته پردازنده گرافیکی (GPU) Adreno 619 سیستم‌عامل اندروید ورژن سیستم‌ عامل 13 حافظه داخلی 128 گیگابایت حافظه RAM 8 گیگابایت تعداد سیم‌کارت تک سیم‌کارت نوع سیم‌کارت نانو شبکه مخابراتی 5G، 4G، 3G، 2G مکان‌یاب (GPS) دارد جک 3.5 میلی‌متری صدا دارد درگاه اتصال USB Type-C 2.0 تشخیص اثر انگشت ندارد",
+      "inventory": 2,
+      "category": "Tablet-Samsung",
+      "image": "https://www.upload.ee/image/17356746/samsung-galaxy-tab-a9-plus-1.jpg",
+      "rating": {
+        "rate": 3,
+        "count": 153
+      },
+      "createdAt": "2024-11-06T17:53:42.514Z"
     }
   ],
   "users": [
@@ -277,6 +319,24 @@
         "street": "پونک بلوار عدل شمالی ",
         "zipcode": "1476874206"
       }
+    },
+    {
+      "id": "83b4",
+      "category": "user",
+      "email": "123opaliop123321@gmail.com",
+      "username": "Ali",
+      "password": "Aa123456",
+      "name": {
+        "firstname": "علی",
+        "lastname": "محمدی"
+      },
+      "phone": "09102479051",
+      "address": {
+        "city": "تهران",
+        "street": "تهران منطقه 5 پونک بلوار عدل بالاتر از میرزابابایی برج نگین عدل واحد393",
+        "zipcode": "1476874206"
+      },
+      "createdAt": "2024-11-07T16:01:27.321Z"
     }
   ]
 }
