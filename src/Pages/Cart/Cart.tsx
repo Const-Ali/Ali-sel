@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Button from "../../Components/Button/Button";
 import Cart_Item from "../../Components/Cart-Item/Cart_Item";
 import Container from "../../Components/Container/Container";
 import { useShop_Card_Cont } from "../context/Shop_Card_Cont";

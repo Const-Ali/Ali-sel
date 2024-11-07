@@ -32,7 +32,7 @@ function ConectUs() {
                 </svg>
                 <a
                   href="javascript:void(0)"
-                  className="text-white text-sm text-gray-500 ml-4"
+                  className=" text-sm text-gray-500 ml-4"
                 >
                   info@example.com
                 </a>
@@ -52,7 +52,7 @@ function ConectUs() {
                 </svg>
                 <a
                   href="javascript:void(0)"
-                  className="text-white text-sm text-gray-500 ml-4"
+                  className=" text-sm text-gray-500 ml-4"
                 >
                   +158 996 888
                 </a>
@@ -76,7 +76,7 @@ function ConectUs() {
                 </svg>
                 <a
                   href="javascript:void(0)"
-                  className="text-white text-sm text-gray-500 ml-4"
+                  className=" text-sm text-gray-500 ml-4"
                 >
                   123 Street 256 House
                 </a>
@@ -191,7 +191,7 @@ function ConectUs() {
                   <input
                     type="number"
                     placeholder="Phone No."
-                    className="px-2 py-3 bg-white text-black w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
+                    className="px-2 py-3 bg-white  w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
                   />
                   <svg
                     fill="#bbb"
@@ -209,7 +209,7 @@ function ConectUs() {
                   <input
                     type="email"
                     placeholder="Email"
-                    className="px-2 py-3 bg-white text-black w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
+                    className="px-2 py-3 bg-white  w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
                   />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -248,7 +248,7 @@ function ConectUs() {
                 <div className="relative flex items-center sm:col-span-2">
                   <textarea
                     placeholder="Write Message"
-                    className="px-2 pt-3 bg-white text-black w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
+                    className="px-2 pt-3 bg-white w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
                   ></textarea>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
