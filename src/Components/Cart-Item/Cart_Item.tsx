@@ -1,4 +1,3 @@
-import Button from "../Button/Button";
 import { useEffect, useState } from "react";
 import { getProduct } from "../../Services/Api";
 import { IProduct } from "../../Types/servers_type";
@@ -13,7 +12,6 @@ interface ICart_Item {
 function Cart_Item({ id, qty }: ICart_Item) {
   const [product, setProduct] = useState<IProduct>();
   const [stockError, setStockError] = useState<string | null>(null);
-  const [isStockError, setIsStockError] = useState(false);
   const {
     handleDecreaseProductQty,
     handleIncreaseProductQty,
@@ -26,10 +24,8 @@ function Cart_Item({ id, qty }: ICart_Item) {
       setProduct(data);
       if (data.inventory < qty) {
         setStockError(`موجودی کافی برای ${data.title} وجود ندارد`);
-        setIsStockError(true);
       } else {
         setStockError(null);
-        setIsStockError(false);
       }
     };
 
@@ -40,14 +36,11 @@ function Cart_Item({ id, qty }: ICart_Item) {
     if (product && qty >= product.inventory) {
       const errorMessage = ` . کافی نمیباشد  ${product.title} موجودی محصول`;
       setStockError(errorMessage);
-      setIsStockError(true);
       setTimeout(() => {
         setStockError(null);
-        setIsStockError(false);
       }, 3000000);
     } else {
       setStockError(null);
-      setIsStockError(false);
       handleIncreaseProductQty(id);
     }
   };

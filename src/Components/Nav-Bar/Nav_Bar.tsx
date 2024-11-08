@@ -4,7 +4,6 @@ import { useShop_Card_Cont } from "../../Pages/context/Shop_Card_Cont";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { IProduct } from "../../Types/servers_type";
-import Button from "../Button/Button";
 
 function Nav_Bar() {
   const { cartQty, handleLogout } = useShop_Card_Cont();
@@ -36,7 +35,6 @@ function Nav_Bar() {
 
   const token = localStorage.getItem("token");
   const userLocal = JSON.parse(localStorage.getItem("user") || "null");
-  console.log(userLocal);
 
   return (
     <div className="h-40 border-b shadow-2xlxl flex items-center bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300">
@@ -46,13 +44,23 @@ function Nav_Bar() {
             <div className="md:flex md:items-center md:gap-12">
               <div className="flex items-center gap-4">
                 {token ? (
-                  <div className="flex items-center gap-2 bg-white p-4">
-                    <p className="text-xs">
-                      <strong className="block font-medium">
-                        سلام، {userLocal?.name.firstname}{" "}
-                        {userLocal?.name.lastname}
-                      </strong>
-                    </p>
+                  <div className="h-16 px-8 max-w-sm mx-auto rounded-xl shadow-2xl border border-gray-500 space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-4 bg-transparent">
+                    <img
+                      className="block h-12 rounded-full sm:mx-0 sm:shrink-0"
+                      src={userLocal?.imguser}
+                    />
+                    <div className="text-center sm:text-left">
+                      <div className="space-y-0.5">
+                        <p className="text-lg text-black font-semibold flex">
+                          {userLocal?.name.lastname}
+                          <p className="ml-2"> {userLocal?.name.firstname}</p>
+                        </p>
+
+                        <p className="text-slate-500 font-medium">
+                          {userLocal?.phone}{" "}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 ) : (
                   <div className="sm:flex sm:gap-4 ">
@@ -62,7 +70,7 @@ function Nav_Bar() {
                       </a>
                     </Link>
                     <div className="hidden sm:flex">
-                      <Link to="/register">
+                      <Link to="/CreateAccount">
                         <a className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-gray-800 hover:bg-gray-900 text-white rounded-md">
                           ثبت نام
                         </a>
@@ -178,7 +186,25 @@ function Nav_Bar() {
             </ul>
           </div>
           <div className="flex items-center">
-            {token && <Button onClick={handleLogout}>Logout</Button>}
+            {
+              token && (
+                <button
+                  onClick={handleLogout}
+                  className="group flex items-center justify-start w-11 h-11 bg-red-600 rounded-full cursor-pointer relative overflow-hidden transition-all duration-200 shadow-lg hover:w-32 hover:rounded-lg active:translate-x-1 active:translate-y-1"
+                >
+                  <div className="flex items-center justify-center w-full transition-all duration-300 group-hover:justify-start group-hover:px-3">
+                    <svg className="w-4 h-4" viewBox="0 0 512 512" fill="white">
+                      <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path>
+                    </svg>
+                  </div>
+                  <div className="absolute right-5 transform translate-x-full opacity-0 text-white text-lg font-semibold transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                    Logout
+                  </div>
+                </button>
+              )
+
+              // <Button onClick={handleLogout}>Logout</Button>
+            }
             <Link className="relative " to="/Cart">
               <button>
                 <svg

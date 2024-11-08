@@ -60,7 +60,7 @@ function Login() {
     if (foundUser) {
       localStorage.setItem("user", JSON.stringify(foundUser));
       handleLogin(user.username, user.password, foundUser.category || "");
-      return <Navigate to="/" />; // به صفحه اصلی هدایت می‌شود
+      return <Navigate to="/" />;
     } else {
       setError("! نام کاربری، ایمیل یا شماره تماس یا رمز عبور اشتباه است");
     }

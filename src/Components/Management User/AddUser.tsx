@@ -59,8 +59,10 @@ function AddUser() {
       return;
     }
     const currentDateTime = new Date().toISOString();
+    const imgUsers = "https://www.upload.ee/image/17363767/name.png";
 
     const newUser = {
+      imguser: imgUsers,
       category,
       email,
       username,

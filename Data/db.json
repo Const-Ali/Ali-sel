@@ -270,6 +270,8 @@
   "users": [
     {
       "category": "User",
+      "imguser": "https://www.upload.ee/image/17363767/name.png",
+
       "email": "kevin@gmail.com",
       "username": "User",
       "password": "User",
@@ -287,6 +289,7 @@
     },
     {
       "category": "AdminUsers",
+      "imguser": "https://www.upload.ee/image/17363767/name.png",
       "email": "iop098aliop098@gmail.com",
       "username": "AdminUsers",
       "password": "AdminUsers",
@@ -303,7 +306,7 @@
       "id": "56a6"
     },
     {
-      "token": "02f1",
+      "imguser": "https://www.upload.ee/image/17363767/name.png",
       "id": "02f1",
       "category": "AdminProducts",
       "email": "iop098aliop0988@gmail.com",
@@ -322,7 +325,8 @@
     },
     {
       "id": "83b4",
-      "category": "user",
+      "imguser": "https://www.upload.ee/image/17363767/name.png",
+      "category": "User",
       "email": "123opaliop123321@gmail.com",
       "username": "Ali",
       "password": "Aa123456",
@@ -337,6 +341,25 @@
         "zipcode": "1476874206"
       },
       "createdAt": "2024-11-07T16:01:27.321Z"
+    },
+    {
+      "id": "e24b",
+      "imguser": "https://www.upload.ee/image/17363767/name.png",
+      "category": "User",
+      "email": "222098aliop098@gmail.com",
+      "username": "Alii",
+      "password": "y6tyhe",
+      "name": {
+        "firstname": "shrshh",
+        "lastname": "shsr"
+      },
+      "phone": "4525425425",
+      "address": {
+        "city": "تهران2",
+        "street": "2525",
+        "zipcode": "1476874204"
+      },
+      "createdAt": "2024-11-08T11:10:11.007Z"
     }
   ]
 }

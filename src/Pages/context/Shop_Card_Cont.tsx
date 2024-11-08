@@ -108,7 +108,7 @@ export function Shop_Card_Pro({ children }: Shop_Card_Pro) {
       } else if (category === "AdminProducts") {
         navigate("/ManagementPanel");
       } else {
-        navigate("/Test");
+        navigate("/");
       }
     });
   };

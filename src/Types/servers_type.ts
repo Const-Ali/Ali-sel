@@ -33,6 +33,7 @@ export interface IName {
 
 export interface IUser {
   createdAt: Date;
+  imguser: URL;
   category: string | null;
   id: number;
   email: string;
