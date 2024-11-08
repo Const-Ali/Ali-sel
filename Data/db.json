@@ -270,16 +270,15 @@
   "users": [
     {
       "category": "User",
-      "imguser": "https://www.upload.ee/image/17363767/name.png",
-
+      "imguser": "https://www.upload.ee/image/17364437/template_0.jpg",
       "email": "kevin@gmail.com",
       "username": "User",
       "password": "User",
       "name": {
-        "firstname": "KEVIN",
+        "firstname": "KEVIN1",
         "lastname": "ryan"
       },
-      "phone": "09354047458",
+      "phone": "093540474583",
       "address": {
         "city": "تهران",
         "street": "تهران تهرانسر بلوار گلها",
