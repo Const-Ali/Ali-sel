@@ -37,7 +37,7 @@ function Nav_Bar() {
   const token = localStorage.getItem("token");
 
   return (
-    <div className="h-40 border-b shadow-2xlxl flex items-center bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300">
+    <div className="h-40 border-b shadow-2xlxl flex items-center bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 sticky top-0 z-50">
       <Container>
         <header className="flex justify-between">
           <div className="flex h-24 items-center mr-36">
