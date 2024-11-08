@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios"; // اطمینان از نصب axios برای درخواست‌ها
+import axios from "axios";
 
 interface User {
   id: number;
@@ -18,11 +18,10 @@ function NavComOne({ onClose }: NavComOneProps) {
 
   useEffect(() => {
     if (userId) {
-      // درخواست به سرور برای گرفتن اطلاعات کاربر بر اساس آیدی
       axios
         .get(`http://localhost:8001/users/${userId}`)
         .then((response) => {
-          setUserData(response.data); // ذخیره اطلاعات کاربر در state
+          setUserData(response.data);
         })
         .catch((error) => {
           console.error("Failed to fetch user data:", error);
@@ -36,7 +35,7 @@ function NavComOne({ onClose }: NavComOneProps) {
         .put(`http://localhost:8001/users/${userId}`, userData)
         .then(() => {
           alert("یک بار خارج و مجددا وارد شوید");
-          onClose(); // بستن مودال پس از ذخیره موفق
+          onClose();
         })
         .catch((error) => {
           console.error("Failed to update user data:", error);

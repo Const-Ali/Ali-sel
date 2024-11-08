@@ -74,8 +74,8 @@ function Cart() {
               </h1>
               <a href="/store">
                 <h1 className="font-mono text-5xl font-bold text-blue-500">
-                  صفحه محصولات{" "}
-                </h1>{" "}
+                  صفحه محصولات
+                </h1>
               </a>
             </div>
           )}
@@ -90,10 +90,10 @@ function Cart() {
               <div className="bg-white rounded-md px-4 py-6 h-max shadow-[0_2px_12px_-3px_rgba(6,81,237,0.3)] mx-20 mt-20">
                 <ul className="text-gray-800 space-y-4">
                   <li className="flex flex-wrap gap-4 text-sm">
-                    قیمت کل سبد خرید{" "}
+                    قیمت کل سبد خرید
                     <span className="ml-auto font-bold">
                       {Number(totalPrice).toLocaleString("fa-IR")}
-                    </span>{" "}
+                    </span>
                     ریال
                   </li>
                   <li className="flex flex-wrap gap-4 text-sm">
@@ -104,21 +104,18 @@ function Cart() {
                     ریال
                   </li>
                   <li className="flex flex-wrap gap-4 text-sm">
-                    مالیات{" "}
+                    مالیات
                     <span className="ml-auto font-bold">
-                      {" "}
                       {Number(totalPrice * 0.1).toLocaleString("fa-IR")}
                     </span>
                     ریال
                   </li>
                   <hr className="border-gray-300" />
                   <li className="flex flex-wrap gap-4 text-sm font-bold">
-                    قیمت نهایی :{" "}
+                    قیمت نهایی :
                     <span className="ml-auto">
                       {Number(
-                        (Number(finalPrice) - Number(totalPrice) * 0.1).toFixed(
-                          0
-                        )
+                        Number(finalPrice) + Number(totalPrice) * 0.1
                       ).toLocaleString("fa-IR")}
                     </span>
                     ریال
@@ -153,7 +150,7 @@ function Cart() {
                     onClick={() => navigate("/store")}
                     className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-transparent hover:bg-gray-100 text-gray-800 border border-gray-300 rounded-md"
                   >
-                    بازگشت به صفحه محصولات{" "}
+                    بازگشت به صفحه محصولات
                   </button>
                 </div>
 

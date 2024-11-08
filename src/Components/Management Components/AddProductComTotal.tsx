@@ -28,7 +28,7 @@ function AddProductComTotal() {
 
         const uniqueCategories = Array.from(
           new Set(productsData.map((product) => product.category))
-        ).map((category) => ({ category })); // تبدیل به آرایه اشیاء
+        ).map((category) => ({ category }));
         setCategories(uniqueCategories);
       } catch (error) {
         console.error("Error fetching products or categories:", error);
@@ -253,7 +253,6 @@ function AddProductComTotal() {
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-sm"></div>
           <div className="flex flex-col p-4 relative items-center justify-center bg-gray-800 border border-gray-800 shadow-lg rounded-2xl w-96">
-            {/* عرض مودال را افزایش دادیم */}
             <h2 className="text-xl font-bold py-4 text-gray-200">
               ویرایش محصول
             </h2>

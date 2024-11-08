@@ -64,10 +64,10 @@ function Cart_Item({ id, qty }: ICart_Item) {
                 <div className="flex flex-col gap-4">
                   <div>
                     <h3 className="text-base font-bold text-gray-800">
-                      {product?.title}{" "}
+                      {product?.title}
                     </h3>
                     <p className="text-sm font-semibold text-gray-500 mt-2 flex items-center gap-2">
-                      Color:{" "}
+                      Color:
                       <span className="inline-block w-5 h-5 rounded-md bg-[#ac7f48]"></span>
                     </p>
                   </div>

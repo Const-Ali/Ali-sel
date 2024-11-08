@@ -28,13 +28,13 @@ function Product_Item({ title, price, description, image }: TProduct_Item) {
           </h3>
 
           <p className="text-gray-600 text-sm mt-2 line-clamp-2">
-            {description}{" "}
+            {description}
           </p>
           <div className="flex items-center mt-4 gap-2 line-clamp-1">
             <h1>ريال</h1>
             <h4 className="text-lg text-gray-800 font-bold ">
               {price.toLocaleString("fa-IR")}
-            </h4>{" "}
+            </h4>
           </div>
         </div>
       </div>

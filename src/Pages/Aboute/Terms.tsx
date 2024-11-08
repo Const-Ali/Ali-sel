@@ -192,7 +192,7 @@ function Terms() {
                 کالا وضعیت آن را بررسی نموده و در صورت مشاهده هرگونه آسیب، مراتب
                 را به تکنو سنتر گزارش دهند.
               </p>
-            </details>{" "}
+            </details>
             <details className="group [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex  flex-row-reverse cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-200 p-4 text-gray-900">
                 <h2 className="font-medium">سرویس مهلت تست ۷ روزه تکنو سنتر</h2>
@@ -219,7 +219,7 @@ function Terms() {
                 قابل اجرا است که کالا بدون آسیب‌دیدگی و با بسته‌بندی اصلی
                 بازگردانده شود.
               </p>
-            </details>{" "}
+            </details>
             <details className="group [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex  flex-row-reverse cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-200 p-4 text-gray-900">
                 <h2 className="font-medium">نظرات کاربران</h2>

@@ -422,7 +422,7 @@ function Product() {
 
                     <div className="mt-8">
                       <h3 className="text-xl font-bold text-gray-800">
-                        توضیحات محصول{" "}
+                        توضیحات محصول
                       </h3>
                       <p className="text-sm text-gray-500 mt-4">
                         {product?.description}

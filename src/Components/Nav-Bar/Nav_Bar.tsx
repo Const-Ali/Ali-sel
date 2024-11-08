@@ -7,7 +7,7 @@ import { IProduct } from "../../Types/servers_type";
 import ProfNav from "./ProfNav";
 
 function Nav_Bar() {
-  const { cartQty, handleLogout } = useShop_Card_Cont();
+  const { cartQty } = useShop_Card_Cont();
   const [search, setSearch] = useState("");
   const [products, setProducts] = useState<IProduct[]>([]);
 

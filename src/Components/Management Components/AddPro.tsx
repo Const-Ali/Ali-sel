@@ -37,7 +37,7 @@ function AddPro() {
   const [showAlert, setShowAlert] = useState(false);
   const [showErrorAlert, setShowErrorAlert] = useState(false);
   const [productId, setProductId] = useState<string | null>(null);
-  const [newCategory, setNewCategory] = useState(""); // دسته‌بندی جدید
+  const [newCategory, setNewCategory] = useState("");
 
   useEffect(() => {
     const fetchCategories = async () => {

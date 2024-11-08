@@ -212,7 +212,6 @@ function CreateAccount() {
                       {usernameError && (
                         <p className="text-red-500">{usernameError}</p>
                       )}
-                      {/* نمایش پیام خطا برای نام کاربری */}
                     </div>
                   </div>
                   <div className="flex justify-center items-center gap-x-10 ">
@@ -227,7 +226,6 @@ function CreateAccount() {
                       {phoneError && (
                         <p className="text-red-500">{phoneError}</p>
                       )}
-                      {/* نمایش پیام خطا برای شماره تلفن */}
                     </div>
                     <div>
                       <AddInput

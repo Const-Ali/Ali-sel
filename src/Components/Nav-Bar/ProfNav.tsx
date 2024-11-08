@@ -5,7 +5,7 @@ import NavComOne from "./NavComOne";
 function ProfNav() {
   const userLocal = JSON.parse(localStorage.getItem("user") || "null");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false); // وضعیت برای نمایش مودال
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { handleLogout } = useShop_Card_Cont();
 
   const toggleMenu = () => {
@@ -41,31 +41,31 @@ function ProfNav() {
                 </strong>
 
                 <a
-                  onClick={openModal} // اضافه کردن رویداد کلیک به حساب کاربری
+                  onClick={openModal}
                   className="cursor-pointer block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
                   role="menuitem"
                 >
-                  حساب کاربری{" "}
+                  حساب کاربری
                 </a>
                 <a
                   href="#"
                   className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
                   role="menuitem"
                 >
-                  سفارشات{" "}
+                  سفارشات
                 </a>
                 <a
                   href="#"
                   className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
                   role="menuitem"
                 >
-                  پیام ها{" "}
+                  پیام ها
                 </a>
               </div>
 
               <div className="p-2">
                 <strong className="block p-2 text-xs font-medium uppercase text-gray-400">
-                  خروج از سایت{" "}
+                  خروج از سایت
                 </strong>
 
                 <button
@@ -98,7 +98,6 @@ function ProfNav() {
         </div>
       </div>
 
-      {/* نمایش مودال NavComOne */}
       {isModalOpen && <NavComOne onClose={closeModal} />}
     </div>
   );
