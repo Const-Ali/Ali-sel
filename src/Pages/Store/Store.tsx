@@ -33,16 +33,19 @@ function Store() {
 
   const sortProducts = (products: IProduct[]) => {
     switch (sortOption) {
-      case "جدیدترین":
-        return [...products].sort((a, b) => (a.id < b.id ? 1 : -1));
-      case "ارزان‌ترین":
+      case "جدید ترین":
+        return [...products].sort((a, b) =>
+          a.createdAt < b.createdAt ? 1 : -1
+        );
+      case "ارزان‌ ترین":
         return [...products].sort((a, b) => a.price - b.price);
-      case "گران‌ترین":
+      case "گران‌ ترین":
         return [...products].sort((a, b) => b.price - a.price);
-      case "پرفروش‌ترین":
-        return [...products].sort((a, b) => b.rating.rate - a.rating.rate);
-      case "پربازدیدترین":
+      case "پرفروش‌ ترین":
         return [...products].sort((a, b) => b.rating.count - a.rating.count);
+      case "پربازدید ترین":
+        return [...products].sort((a, b) => b.rating.rate - a.rating.rate);
+
       default:
         return products;
     }

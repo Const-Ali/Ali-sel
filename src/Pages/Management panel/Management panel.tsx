@@ -5,14 +5,14 @@ import AddProductComTotal from "../../Components/Management Components/AddProduc
 import AddPro from "../../Components/Management Components/AddPro";
 import EditPro from "../../Components/Management Components/EditPro";
 import AddProductTotP from "../../Components/Management Components/AddProductTotP";
-import { useNavigate } from "react-router-dom";
 import Container from "../../Components/Container/Container";
+import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
 
 function ManagementPanel() {
   const [selectedComponent, setSelectedComponent] =
     useState("AddProductComTotal");
   const [selectedGroup, setSelectedGroup] = useState("products");
-  const navigate = useNavigate();
+  const { handleLogout } = useShop_Card_Cont();
 
   const renderComponent = () => {
     switch (selectedComponent) {
@@ -31,11 +31,6 @@ function ManagementPanel() {
       default:
         return null;
     }
-  };
-
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    navigate("/login");
   };
 
   return (

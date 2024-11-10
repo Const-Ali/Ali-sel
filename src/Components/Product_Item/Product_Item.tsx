@@ -31,7 +31,7 @@ function Product_Item({ title, price, description, image }: TProduct_Item) {
             {description}
           </p>
           <div className="flex items-center mt-4 gap-2 line-clamp-1">
-            <h1>ريال</h1>
+            <h1>تومان</h1>
             <h4 className="text-lg text-gray-800 font-bold ">
               {price.toLocaleString("fa-IR")}
             </h4>

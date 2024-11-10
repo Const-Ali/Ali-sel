@@ -3,11 +3,11 @@ import AddUser from "../../Components/Management User/AddUser";
 import EditUser from "../../Components/Management User/EditUser";
 import UserComTotal from "../../Components/Management User/UserComTotal";
 import Container from "../../Components/Container/Container";
-import { useNavigate } from "react-router-dom";
+import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
 
 function ManagementUser() {
   const [selectedComponent, setSelectedComponent] = useState("UserComTotal");
-  const navigate = useNavigate();
+  const { handleLogout } = useShop_Card_Cont();
 
   const renderComponent = () => {
     switch (selectedComponent) {
@@ -20,11 +20,6 @@ function ManagementUser() {
       default:
         return null;
     }
-  };
-
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    navigate("/login");
   };
 
   return (

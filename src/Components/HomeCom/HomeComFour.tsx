@@ -60,7 +60,7 @@ function HomeComFour() {
                   {product.title}
                 </h3>
                 <h4 className="text-base text-gray-500 font-bold mt-2">
-                  {product.price} ريال
+                  {product.price} تومان
                 </h4>
               </div>
             </div>

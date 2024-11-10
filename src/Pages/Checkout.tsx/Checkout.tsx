@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Container from "../../Components/Container/Container";
 import { useNavigate } from "react-router-dom";
+import Container from "../../Components/Container/Container";
 
 function Checkout() {
   const [cartItems, setCartItems] = useState<any[]>([]);
@@ -60,9 +60,12 @@ function Checkout() {
     setIsSubmitting(true);
 
     const orderData = {
-      products: cartItems.map((item) => ({
+      category: "در حال پردازش",
+      products: cartItems.map((item, index) => ({
         id: item.id,
         qty: item.qty,
+        title: productsData[index]?.title,
+        image: productsData[index]?.image,
       })),
       user: {
         firstName,
@@ -88,10 +91,11 @@ function Checkout() {
 
       setTimeout(() => {
         window.location.reload();
-
         navigate("/");
       }, 5000);
+    } catch (error) {
       setErrorMessage("خطا در ثبت سفارش، لطفاً دوباره تلاش کنید.");
+      console.error("Error submitting order:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -134,7 +138,7 @@ function Checkout() {
                 <h4 className="flex flex-wrap gap-4 text-base text-white">
                   مجموع
                   <span className="ml-auto flex ">
-                    <p className="mx-2">ريال</p>
+                    <p className="mx-2">تومان</p>
                     {(
                       productsData.reduce(
                         (total, product, index) =>

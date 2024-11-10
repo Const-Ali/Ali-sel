@@ -148,7 +148,7 @@ function Product() {
                   ) : (
                     <>
                       <div className="flex items-center justify-end">
-                        <p className="font-bold mr-1 text-gray-500">ريال</p>
+                        <p className="font-bold mr-1 text-gray-500">تومان</p>
                         <p className="text-right p-2 mb-2 text-3xl font-extrabold text-gray-700">
                           {((product?.price || 0) * currentQty).toLocaleString(
                             "fa-IR",
@@ -359,7 +359,9 @@ function Product() {
                         </div>
                         <div className="flex flex-col items-end">
                           <div className="flex items-end">
-                            <p className="font-bold mr-1 text-gray-500">ريال</p>
+                            <p className="font-bold mr-1 text-gray-500">
+                              تومان
+                            </p>
                             <p className="text-right p-2 mb-2 text-3xl font-extrabold">
                               {product?.price.toLocaleString("fa-IR", {
                                 minimumFractionDigits: 0,

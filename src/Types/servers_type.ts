@@ -1,5 +1,5 @@
 export interface IProduct {
-  createdAt: Date;
+  createdAt: string;
   id: number | string;
   title: string;
   price: number;
@@ -32,7 +32,7 @@ export interface IName {
 }
 
 export interface IUser {
-  createdAt: Date;
+  createdAt: string;
   imguser: URL;
   category: string | null;
   id: number;
@@ -42,4 +42,37 @@ export interface IUser {
   name: IName;
   phone: string;
   address: IAddress;
+}
+
+export interface IOrders {
+  id: string;
+  category: string;
+  products: {
+    id: number;
+    qty: number;
+    title: string;
+    image: URL;
+  }[];
+  user: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+  };
+  address: {
+    line: string;
+    city: string;
+    state: string;
+    zipCode: string;
+  };
+  orderTime: string;
+  items: IOrderItem[];
+}
+
+interface IOrderItem {
+  productId: number;
+
+  productName: string;
+  quantity: number;
+  price: number;
 }
