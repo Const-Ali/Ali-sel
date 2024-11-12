@@ -38,12 +38,13 @@ function HomeComOne() {
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
           <header className="text-center">
             <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
-              New Collection
+              محصولات جدید{" "}
             </h2>
             <p className="mx-auto mt-4 max-w-md text-gray-500">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
-              praesentium cumque iure dicta incidunt est ipsam, officia dolor
-              fugit natus?
+              ما افتخار می‌کنیم که محصولات جدید خود را به شما معرفی کنیم. این
+              مجموعه با دقت و توجه به جزئیات طراحی شده و با کیفیت بالا در دسترس
+              شما قرار گرفته است. تجربه‌ای نو و متفاوت را با این محصولات تجربه
+              کنید{" "}
             </p>
           </header>
 
@@ -57,19 +58,20 @@ function HomeComOne() {
                     : ""
                 }
               >
-                <a href="#" className="group relative block">
+                <a
+                  href={product.id}
+                  key={product.id}
+                  className="group relative block"
+                >
                   <img
                     src={product.image}
                     alt={product.title}
                     className="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
                   />
-                  <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
-                    <h3 className="text-xl font-medium text-white">
+                  <div className="absolute inset-1 flex flex-col items-start justify-end p-6">
+                    <h3 className="text-xl font-medium text-gray-900 line-clamp-1">
                       {product.title}
                     </h3>
-                    <span className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white">
-                      Shop Now
-                    </span>
                   </div>
                 </a>
               </li>

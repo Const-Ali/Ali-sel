@@ -10,7 +10,7 @@ function Store() {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState("");
-  const [sortOption, setSortOption] = useState("جدیدترین");
+  const [sortOption, setSortOption] = useState("جدید ترین");
   const [selectedCategory, setSelectedCategory] = useState("همه");
 
   useEffect(() => {
@@ -35,7 +35,7 @@ function Store() {
     switch (sortOption) {
       case "جدید ترین":
         return [...products].sort((a, b) =>
-          a.createdAt < b.createdAt ? 1 : -1
+          new Date(a.createdAt) < new Date(b.createdAt) ? 1 : -1
         );
       case "ارزان‌ ترین":
         return [...products].sort((a, b) => a.price - b.price);
@@ -45,7 +45,6 @@ function Store() {
         return [...products].sort((a, b) => b.rating.count - a.rating.count);
       case "پربازدید ترین":
         return [...products].sort((a, b) => b.rating.rate - a.rating.rate);
-
       default:
         return products;
     }
@@ -116,11 +115,11 @@ function Store() {
                   value={sortOption}
                   onChange={(e) => setSortOption(e.target.value)}
                 >
-                  <option value="جدیدترین">جدیدترین</option>
-                  <option value="ارزان‌ترین">ارزان‌ترین</option>
-                  <option value="گران‌ترین">گران‌ترین</option>
-                  <option value="پرفروش‌ترین">پرفروش‌ترین</option>
-                  <option value="پربازدیدترین">پربازدیدترین</option>
+                  <option value="جدید ترین">جدید ترین</option>
+                  <option value="ارزان‌ ترین">ارزان‌ ترین</option>
+                  <option value="گران‌ ترین">گران‌ ترین</option>
+                  <option value="پرفروش‌ ترین">پرفروش‌ ترین</option>
+                  <option value="پربازدید ترین">پربازدید ترین</option>
                 </select>
               </div>
             </form>
