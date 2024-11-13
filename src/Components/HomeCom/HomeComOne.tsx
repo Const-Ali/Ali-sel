@@ -38,13 +38,13 @@ function HomeComOne() {
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
           <header className="text-center">
             <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
-              محصولات جدید{" "}
+              محصولات جدید
             </h2>
             <p className="mx-auto mt-4 max-w-md text-gray-500">
               ما افتخار می‌کنیم که محصولات جدید خود را به شما معرفی کنیم. این
               مجموعه با دقت و توجه به جزئیات طراحی شده و با کیفیت بالا در دسترس
               شما قرار گرفته است. تجربه‌ای نو و متفاوت را با این محصولات تجربه
-              کنید{" "}
+              کنید
             </p>
           </header>
 

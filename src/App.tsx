@@ -21,6 +21,7 @@ import CreateAccount from "./Pages/Login/CreateAccount";
 import ProCollectionOne from "./Pages/Product/ProCollectionOne";
 import ConectUs from "./Pages/Aboute/ConectUs";
 import Terms from "./Pages/Aboute/Terms";
+import CollectionOne from "./Pages/Product/CollectionOne";
 
 function App() {
   const { isLogin } = useShop_Card_Cont();
@@ -38,7 +39,7 @@ function App() {
         <Route path="/ProCollectionOne" element={<ProCollectionOne />} />
         <Route path="/ConectUs" element={<ConectUs />} />
         <Route path="/Terms" element={<Terms />} />
-
+        <Route path="/CollectionOne" element={<CollectionOne />} />
         <Route path="/Test" element={<Test />} />
         <Route
           path="/login"

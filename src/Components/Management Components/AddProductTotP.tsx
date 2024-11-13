@@ -239,7 +239,6 @@ function AddProductTotS() {
             <strong>: نام و نام خانوادگی</strong>
           </p>
 
-          {/* نمایش محصولات */}
           {selectedOrder.products && selectedOrder.products.length > 0 && (
             <div className="mt-4">
               <h4 className="text-xl font-bold text-gray-800 mb-4 text-center">

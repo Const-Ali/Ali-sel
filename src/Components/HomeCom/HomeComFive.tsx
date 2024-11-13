@@ -19,7 +19,9 @@ function HomeComFive() {
               />
             </svg>
             <h3 className="text-white text-4xl font-bold mt-4">400+</h3>
-            <p className="text-gray-400 font-semibold mt-2">Unique Visitors</p>
+            <p className="text-gray-400 font-semibold mt-2">
+              بازدید کنندگان سایت
+            </p>
           </div>
           <div className="text-center bg-gray-700 px-4 py-6 border-b-4 border-orange-600 rounded-md">
             <svg
@@ -35,7 +37,9 @@ function HomeComFive() {
               />
             </svg>
             <h3 className="text-white text-4xl font-bold mt-4">450+</h3>
-            <p className="text-gray-400 font-semibold mt-2">Total Sales</p>
+            <p className="text-gray-400 font-semibold mt-2">
+              مجموع خرید از سایت
+            </p>
           </div>
           <div className="text-center bg-gray-700 px-4 py-6 border-b-4 border-orange-600 rounded-md">
             <svg
@@ -50,9 +54,7 @@ function HomeComFive() {
               />
             </svg>
             <h3 className="text-white text-4xl font-bold mt-4">500+</h3>
-            <p className="text-gray-400 font-semibold mt-2">
-              Customer Satisfaction
-            </p>
+            <p className="text-gray-400 font-semibold mt-2">رضایت مشتری ها </p>
           </div>
           <div className="text-center bg-gray-700 px-4 py-6 border-b-4 border-orange-600 rounded-md">
             <svg
@@ -65,9 +67,9 @@ function HomeComFive() {
                 data-original="#000000"
               />
             </svg>
-            <h3 className="text-white text-4xl font-bold mt-4">600+</h3>
+            <h3 className="text-white text-4xl font-bold mt-4">800+</h3>
             <p className="text-gray-400 font-semibold mt-2">
-              System Uptime (in hours)
+              مدت زمان فعال بودن سیستم (به ساعت)
             </p>
           </div>
         </div>

@@ -4,7 +4,7 @@ function HomeComSix() {
   return (
     <>
       <div className="flex justify-between items-center p-4 h-80 gap-x-5 mx-20">
-        <Link to="/ProCollectionOne">
+        <Link to={`/${encodeURIComponent("CollectionOne")}`}>
           <div className="w-52">
             <div className="cursor-pointer bg-white shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl font-[sans-serif] overflow-hidden mx-auto transition-transform duration-300 transform hover:scale-105 hover:shadow-[0_8px_24px_-5px_rgba(0,0,0,0.4)] relative">
               <div className="absolute top-1 left-6 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-lg transform -rotate-12">
