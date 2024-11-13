@@ -157,12 +157,6 @@ function Nav_Bar() {
           <div className="flex justify-between flex-row-reverse">
             <ul className="flex">
               <li className="ml-4 font-semibold text-2xl">
-                <Link to="/Test">تست</Link>
-              </li>
-              <li className="ml-4 font-semibold text-2xl">
-                <Link to="/aboute">درباره ما</Link>
-              </li>
-              <li className="ml-4 font-semibold text-2xl">
                 <Link to="/store">محصولات</Link>
               </li>
               <li className="ml-4 font-semibold text-2xl">

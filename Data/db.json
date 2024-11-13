@@ -1,230 +1,6 @@
 {
   "products": [
     {
-      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      "price": 109.95,
-      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      "inventory": "5",
-      "category": "men's clothing",
-      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
-      "rating": {
-        "rate": 3.9,
-        "count": 120
-      },
-      "id": "1",
-      "createdAt": "2024-11-01T20:12:15.893Z"
-    },
-    {
-      "title": "آیفون 13 مدل چین ",
-      "price": 119999997.99,
-      "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
-      "inventory": 5,
-      "category": "Apple-Iphone",
-      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
-      "rating": {
-        "rate": 3,
-        "count": 400
-      },
-      "id": "7",
-      "createdAt": "2024-11-01T20:12:15.893Z"
-    },
-    {
-      "id": "8",
-      "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
-      "price": 10.99,
-      "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
-      "category": "jewelery",
-      "inventory": "5",
-      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
-      "rating": {
-        "rate": 1.9,
-        "count": 100
-      },
-      "createdAt": "2024-11-01T20:12:15.893Z"
-    },
-    {
-      "id": "9",
-      "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
-      "price": 64,
-      "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
-      "category": "electronics",
-      "inventory": "5",
-      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
-      "rating": {
-        "rate": 3.3,
-        "count": 203
-      },
-      "createdAt": "2024-11-01T20:12:15.893Z"
-    },
-    {
-      "id": "10",
-      "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
-      "price": 109,
-      "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
-      "category": "electronics",
-      "inventory": "5",
-      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
-      "rating": {
-        "rate": 2.9,
-        "count": 470
-      },
-      "createdAt": "2024-11-01T20:12:15.893Z"
-    },
-    {
-      "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
-      "price": 109,
-      "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable traظظظnsfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
-      "inventory": 5,
-      "category": "men's clothing",
-      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
-      "rating": {
-        "rate": 4.8,
-        "count": 319
-      },
-      "id": "11",
-      "createdAt": "2024-11-01T20:12:15.893Z"
-    },
-    {
-      "id": "12",
-      "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
-      "price": 114,
-      "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
-      "category": "electronics",
-      "inventory": "5",
-      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
-      "rating": {
-        "rate": 4.8,
-        "count": 400
-      },
-      "createdAt": "2024-11-01T20:12:15.893Z"
-    },
-    {
-      "id": "13",
-      "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
-      "price": 599,
-      "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
-      "category": "electronics",
-      "inventory": "5",
-      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
-      "rating": {
-        "rate": 2.9,
-        "count": 250
-      },
-      "createdAt": "2024-11-01T20:12:15.893Z"
-    },
-    {
-      "id": "14",
-      "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
-      "price": 999.99,
-      "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
-      "category": "electronics",
-      "inventory": "5",
-      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
-      "rating": {
-        "rate": 2.2,
-        "count": 140
-      },
-      "createdAt": "2024-11-01T20:12:15.893Z"
-    },
-    {
-      "id": "15",
-      "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
-      "price": 56.99,
-      "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
-      "category": "women's clothing",
-      "inventory": "5",
-      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
-      "rating": {
-        "rate": 2.6,
-        "count": 235
-      },
-      "createdAt": "2024-11-01T20:12:15.893Z"
-    },
-    {
-      "id": "16",
-      "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
-      "price": 29.95,
-      "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
-      "category": "women's clothing",
-      "inventory": "5",
-      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
-      "rating": {
-        "rate": 2.9,
-        "count": 340
-      },
-      "createdAt": "2024-11-01T20:12:15.893Z"
-    },
-    {
-      "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
-      "price": 239.99,
-      "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
-      "inventory": 5,
-      "category": "women's clothing",
-      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
-      "rating": {
-        "rate": 3.8,
-        "count": 679
-      },
-      "id": "17",
-      "createdAt": "2024-11-01T20:12:15.893Z"
-    },
-    {
-      "id": "18",
-      "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
-      "price": 9.85,
-      "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
-      "category": "women's clothing",
-      "inventory": "5",
-      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
-      "rating": {
-        "rate": 4.7,
-        "count": 130
-      },
-      "createdAt": "2024-11-01T20:12:15.893Z"
-    },
-    {
-      "title": "Opna Women's Short Sleeve Moisture",
-      "price": 7.95,
-      "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
-      "inventory": 5,
-      "category": "women's clothing",
-      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
-      "rating": {
-        "rate": 4.5,
-        "count": 146
-      },
-      "id": "19",
-      "createdAt": "2024-11-01T20:12:15.893Z"
-    },
-    {
-      "title": "تبلت222",
-      "price": 110,
-      "description": "ققققvvvvvvv",
-      "inventory": 5,
-      "category": "Apple-Iphone",
-      "image": "https://4kwallpapers.com/images/walls/thumbs_3t/10059.jpg",
-      "rating": {
-        "rate": 3,
-        "count": 400
-      },
-      "createdAt": "2024-11-05T13:43:07.941Z",
-      "id": "7321"
-    },
-    {
-      "id": "8286",
-      "title": "لپتاپ",
-      "price": 2322,
-      "description": "wefdssdvdsvds",
-      "inventory": 333,
-      "category": "jewelery",
-      "image": "https://lh4.googleusercontent.com/proxy/jS_uSlTB7NJt7myAd0SyLhbG-Rlb2hWs37Y-Z_Gd-7jq_xEAlqJ3S3qwFlfipaXaCxKy2AlraOcEp57gRakwmmMB28IsYNp-utIfAhNOKcDnlXhmHtUa9OjxpOgEg0sIPXnAAQ",
-      "rating": {
-        "rate": 32323,
-        "count": 444
-      },
-      "createdAt": "2024-11-06T16:39:19.917Z"
-    },
-    {
       "id": "8355",
       "title": "تبلت سامسونگ مدل Galaxy Tab A9 Plus 5G SM-X216 ظرفیت 64 گیگابایت و رم 4 گیگابایت",
       "price": 18998000,
@@ -293,6 +69,118 @@
         "count": 222
       },
       "createdAt": "2024-11-10T16:39:36.487Z"
+    },
+    {
+      "id": "3356",
+      "title": "گوشی موبایل اپل مدل iPhone 13 Pro CH دو سیم‌ کارت ظرفیت 128 گیگابایت و 6 گیگابایت رم – نات اکتیو",
+      "price": 86888000,
+      "description": "ابعاد 146.7 در 71.5 در 7.7 میلی‌متر وزن ۲۰۴ گرم رنگ آبی, خاکستری, سبز, طلایی, نقره ای نوع صفحه نمایش Super Retina XDR OLED وضوح تصویر 1170 در 2532 پیکسل تراکم پیکسلی ~460 پیکسل در اینچ پردازنده مرکزی (CPU) Hexa-core (2×3.23 GHz Avalanche + 4×1.82 GHz Blizzard) مدل تراشه Apple A15 Bionic (5 nm) پردازنده گرافیکی (GPU) Apple GPU (5-core graphics) تعداد هسته 6 هسته سیستم‌عامل iOS ورژن سیستم‌ عامل iOS 15 حافظه داخلی 128 گیگابایت حافظه RAM 6 گیگابایت پشتیبانی از کارت حافظه ندارد تعداد سیم‌کارت دو سیم‌کارت نوع سیم‌کارت نانو شبکه مخابراتی 5G، 4G، 3G، 2G اتصال به شبکه بی‌سیم (Wi-Fi) Wi-Fi 6 (802.11ax) a/b/g/n/ac/ax درگاه اتصال Lightning جک 3.5 میلی‌متری صدا ندارد نوع باتری لیتیوم یونی ظرفیت باتری 3095 میلی‌آمپر ساعت قابلیت تعویض توسط کاربر ندارد امکان شارژ سریع دارد مشخصات دوربین ها دوربین اصلی: 12 مگاپیکسل دوربین اولتراواید: 12 مگاپیکسل دوربین تله‌‌فوتو: 12 مگاپیکسل رزولوشن دوربین پشت: 4K@24/30/60fps / 1080p@30/60/120/240fps ویژگی های دوربین پشت: قابلیت ProResحالت Cinematic/ضبط صدای استریو دوربین سلفی: 12 مگاپیکسل رزولوشن دوربین سلفی: 4K@24/25/30/60fps / 1080p@30/60/120fps ویژگی دوربین سلفی:لرزش‌گیر الکترونیکی تصویر-ژیروسکوپی مکان‌یاب (GPS) دارد تشخیص اثر انگشت دارد بلوتوث نگارش 5.0 سایر حسگرها حسگر تشخیص چهره سه‌بعدی, حسگر مجاورت, ژیروسکوپ, شتاب‌سنج, فشارسنج هوا, قطب‌نما",
+      "inventory": 3,
+      "category": "موبایل-آیفون",
+      "image": "https://www.upload.ee/image/17385362/Apple-iPhone-13-Pro-5.png",
+      "rating": {
+        "rate": 4,
+        "count": 433
+      },
+      "createdAt": "2024-11-13T18:23:02.897Z"
+    },
+    {
+      "id": "7077",
+      "title": "گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت ظرفیت 256 گیگابایت و رم 4 گیگابایت – نات اکتیو",
+      "price": 64500000,
+      "description": "رنگ آبی, سبز, سفید, صورتی, قرمز, مشکی کیفیت عکاسی دوربین دوم 12 مگاپیکسل نوع صفحه نمایش Super Retina XDR OLED وضوح تصویر 1170 در 2532 پیکسل تراکم پیکسلی ~460 پیکسل در اینچ پردازنده مرکزی (CPU) ۲x GHz Avalanche + ۴x GHz Blizzard پردازنده گرافیکی (GPU) Hexa-core (2×3.23 GHz Avalanche + 4×1.82 GHz Blizzard) تعداد هسته 6 هسته سیستم‌عامل iOS ورژن سیستم‌ عامل iOS 15 حافظه داخلی 256 گیگابایت حافظه RAM 4 گیگابایت تعداد سیم‌کارت دو سیم‌کارت نوع سیم‌کارت نانو شبکه مخابراتی 5G، 4G، 3G، 2G اتصال به شبکه بی‌سیم (Wi-Fi) Wi-Fi 6 (802.11ax) a/b/g/n/ac/ax مکان‌یاب (GPS) دارد درگاه اتصال Lightning جک 3.5 میلی‌متری صدا ندارد تشخیص اثر انگشت دارد",
+      "inventory": 1,
+      "category": "موبایل-آیفون",
+      "image": "https://www.upload.ee/image/17385367/apple-iphone-13-ch-2.png",
+      "rating": {
+        "rate": 5,
+        "count": 234
+      },
+      "createdAt": "2024-11-13T18:24:34.653Z"
+    },
+    {
+      "id": "6419",
+      "title": "گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت ظرفیت 128 گیگابایت و رم 4 گیگابایت – نات اکتیو",
+      "price": 50998000,
+      "description": "رنگ آبی, سبز, سفید, صورتی, قرمز, مشکی کیفیت عکاسی دوربین دوم 12 مگاپیکسل نوع صفحه نمایش Super Retina XDR OLED وضوح تصویر 1170 در 2532 پیکسل تراکم پیکسلی ~460 پیکسل در اینچ پردازنده مرکزی (CPU) ۲x GHz Avalanche + ۴x GHz Blizzard پردازنده گرافیکی (GPU) Hexa-core (2×3.23 GHz Avalanche + 4×1.82 GHz Blizzard) تعداد هسته 6 هسته سیستم‌عامل iOS ورژن سیستم‌ عامل iOS 15 حافظه داخلی 128 گیگابایت حافظه RAM 4 گیگابایت تعداد سیم‌کارت دو سیم‌کارت نوع سیم‌کارت نانو شبکه مخابراتی 5G، 4G، 3G، 2G اتصال به شبکه بی‌سیم (Wi-Fi) Wi-Fi 6 (802.11ax) a/b/g/n/ac/ax مکان‌یاب (GPS) دارد درگاه اتصال Lightning جک 3.5 میلی‌متری صدا ندارد تشخیص اثر انگشت دارد",
+      "inventory": 4,
+      "category": "موبایل-آیفون",
+      "image": "https://www.upload.ee/image/17385370/apple-iphone-13-ch-4.png",
+      "rating": {
+        "rate": 5,
+        "count": 356
+      },
+      "createdAt": "2024-11-13T18:25:53.392Z"
+    },
+    {
+      "id": "8017",
+      "title": "گوشی موبایل سامسونگ مدل Galaxy A06 دو سیم کارت ظرفیت 128 گیگابایت و رم 6 گیگابایت",
+      "price": 9298000,
+      "description": "وزن 189 گرم ابعاد 167.3 در 77.3 در 8 میلی‌متر رنگ آبی روشن, سبز, سورمه ای, طلایی, مشکی فلش دوربین اصلی LED مشخصات دوربین اصلی 50 مگاپیکسل رزولوشن و نرخ فریم ویدئو : 1080p@30/60fps کیفیت عکاسی دوربین دوم 8 مگاپیکسل نوع صفحه نمایش PLS LCD وضوح تصویر 720 در 1600 پیکسل تراکم پیکسلی ~262 پیکسل در اینچ مدل تراشه MediaTek MT6769V/CZ Helio G85 پردازنده مرکزی (CPU) Octa-core (2×2.0 GHz Cortex A75 & 6×1.8 GHz Cortex A55) پردازنده گرافیکی (GPU) Mali-G52 MC2 تعداد هسته هشت هسته فرکانس ۱.۸ – ۲.۰ گیگاهرتز سیستم‌عامل اندروید ورژن سیستم‌ عامل 14 رابط کاربری نامشخص حافظه داخلی 128 گیگابایت حافظه RAM 6 گیگابایت پشتیبانی از کارت حافظه دارد ظرفیت باتری 5000 میلی‌آمپر ساعت نوع باتری لیتیوم پلیمری قابلیت تعویض توسط کاربر ندارد امکان شارژ سریع دارد تعداد سیم‌کارت دو سیم‌کارت نوع سیم‌کارت نانو شبکه مخابراتی 4G، 3G، 2G اتصال به شبکه بی‌سیم (Wi-Fi) Wi-Fi 5 (802.11ac) a/b/g/n/ac, پشتیبانی می‌کند بلوتوث نگارش 5.3 مکان‌یاب (GPS) دارد درگاه اتصال USB Type-C 2.0 جک 3.5 میلی‌متری صدا دارد شتاب‌سنج دارد قطب‌نما ندارد تشخیص اثر انگشت ندارد سایر حسگرها حسگر مجاورت, حسگر نور محیط",
+      "inventory": 3,
+      "category": "موبایل-سامسونگ",
+      "image": "https://www.upload.ee/image/17385375/samsung-a06-1.png",
+      "rating": {
+        "rate": 3.5,
+        "count": 333
+      },
+      "createdAt": "2024-11-13T18:28:59.312Z"
+    },
+    {
+      "id": "5315",
+      "title": "گوشی موبایل سامسونگ مدل Galaxy A05 دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت",
+      "price": 6498000,
+      "description": "وزن 195 گرم ابعاد 168.8 در 78.2 در 8.8 میلی‌متر رنگ سبز, مشکی, نقره ای فلش دوربین اصلی LED کیفیت عکاسی دوربین دوم 8 مگاپیکسل نوع صفحه نمایش PLS LCD وضوح تصویر 720 در 1600 پیکسل تراکم پیکسلی ~262 پیکسل در اینچ مدل تراشه MediaTek MT6769V/CZ Helio G85 پردازنده مرکزی (CPU) Octa-core (2×2.0 GHz Cortex A75 & 6×1.8 GHz Cortex A55) تعداد هسته هشت هسته فرکانس ۱.۸ – ۲.۰ گیگاهرتز پردازنده گرافیکی (GPU) Mali-G52 MC2 سیستم‌عامل اندروید ورژن سیستم‌ عامل 13 رابط کاربری نامشخص حافظه داخلی 64 گیگابایت حافظه RAM 4 گیگابایت پشتیبانی از کارت حافظه دارد ظرفیت باتری 5000 میلی‌آمپر ساعت نوع باتری لیتیوم پلیمری قابلیت تعویض توسط کاربر ندارد امکان شارژ سریع دارد تعداد سیم‌کارت دو سیم‌کارت نوع سیم‌کارت نانو شبکه مخابراتی 4G، 3G، 2G اتصال به شبکه بی‌سیم (Wi-Fi) پشتیبانی می‌کند بلوتوث نگارش 5.3 مکان‌یاب (GPS) دارد درگاه اتصال USB Type-C 2.0 جک 3.5 میلی‌متری صدا دارد شتاب‌سنج دارد قطب‌نما ندارد تشخیص اثر انگشت ندارد",
+      "inventory": 2,
+      "category": "موبایل-سامسونگ",
+      "image": "https://www.upload.ee/image/17385383/samsung-galaxy-a05-6.png",
+      "rating": {
+        "rate": 3,
+        "count": 654
+      },
+      "createdAt": "2024-11-13T18:30:28.993Z"
+    },
+    {
+      "id": "8965",
+      "title": "گوشی موبایل سامسونگ مدل Galaxy A55 دو سیم کارت ظرفیت 128 گیگابایت و رم 8 گیگابایت – ویتنام",
+      "price": 22998000,
+      "description": "رنگ آبی روشن, سورمه ای, لیمویی, یاسی کیفیت عکاسی دوربین دوم 32 مگاپیکسل نوع صفحه نمایش Super AMOLED وضوح تصویر 1080 در 2340 پیکسل تراکم پیکسلی ~390 پیکسل در اینچ پردازنده مرکزی (CPU) 4 هسته 2.75 گیگاهرتز Cortex-A78 و 4 هسته 2.0 گیگاهرتز Cortex-A55 تعداد هسته هشت هسته پردازنده گرافیکی (GPU) Xclipse 530 سیستم‌عامل اندروید ورژن سیستم‌ عامل 14 حافظه داخلی 128 گیگابایت حافظه RAM 8 گیگابایت تعداد سیم‌کارت دو سیم‌کارت نوع سیم‌کارت نانو شبکه مخابراتی 5G، 4G، 3G، 2G اتصال به شبکه بی‌سیم (Wi-Fi) پشتیبانی می‌کند مکان‌یاب (GPS) دارد درگاه اتصال USB Type-C 2.0 جک 3.5 میلی‌متری صدا ندارد تشخیص اثر انگشت دارد",
+      "inventory": 2,
+      "category": "موبایل-سامسونگ",
+      "image": "https://www.upload.ee/image/17385386/samsung-a55-phone-1.png",
+      "rating": {
+        "rate": 4,
+        "count": 345
+      },
+      "createdAt": "2024-11-13T18:31:50.484Z"
+    },
+    {
+      "id": "6163",
+      "title": "گوشی موبایل سامسونگ مدل Galaxy S24 دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت – ویتنام",
+      "price": 62998000,
+      "description": "رنگ ارغوانی, بنفش, خاکستری, زرد, سبز, مشکی, نارنجی کیفیت عکاسی دوربین دوم 12 مگاپیکسل نوع صفحه نمایش Dynamic LTPO AMOLED 2X وضوح تصویر 1080 در 2340 پیکسل تراکم پیکسلی ~416 پیکسل در اینچ پردازنده مرکزی (CPU) 1 هسته 3.39 گیگاهرتز Cortex-X4 و 3 هسته 3.10 گیگاهرتز Cortex-A720 و 2 هسته 2.90 گیگاهرتز Cortex-A720 و 2 هسته 2.20 گیگاهرتز Cortex A520 تعداد هسته هشت هسته پردازنده گرافیکی (GPU) Adreno 750 (1 GHz) سیستم‌عامل اندروید ورژن سیستم‌ عامل 14 حافظه داخلی 256 گیگابایت حافظه RAM 8 گیگابایت تعداد سیم‌کارت دو سیم‌کارت نوع سیم‌کارت نانو شبکه مخابراتی 5G، 4G، 3G، 2G اتصال به شبکه بی‌سیم (Wi-Fi) پشتیبانی می‌کند مکان‌یاب (GPS) دارد درگاه اتصال USB Type-C 3.2 جک 3.5 میلی‌متری صدا ندارد تشخیص اثر انگشت دارد سایر حسگرها حسگر اثرانگشت شتاب‌سنج ژیروسکوپ حسگر مجاورت قطب‌نما فشارسنج هوا",
+      "inventory": 3,
+      "category": "موبایل-سامسونگ",
+      "image": "https://www.upload.ee/image/17385387/samsung-galaxy-s24-8.png",
+      "rating": {
+        "rate": 5,
+        "count": 322
+      },
+      "createdAt": "2024-11-13T18:33:00.222Z"
+    },
+    {
+      "id": "2311",
+      "title": "گوشی موبایل سامسونگ مدل Galaxy S23 Ultra دو سیم کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت – ویتنام",
+      "price": 64998000,
+      "description": "رنگ آبی, بنفش, خاکستری, سبز, قرمز, کرم, لیمویی, مشکی کیفیت عکاسی دوربین دوم 12 مگاپیکسل نوع صفحه نمایش Dynamic AMOLED 2X وضوح تصویر 1440 در 3088 پیکسل تراکم پیکسلی ~500 پیکسل در اینچ پردازنده مرکزی (CPU) Octa-core (1×3.36 GHz Cortex-X3 & 2×2.8 GHz Cortex-A715 & 2×2.8 GHz Cortex-A710 & 3×2.0 GHz Cortex-A510) تعداد هسته هشت هسته پردازنده گرافیکی (GPU) Adreno 740 سیستم‌عامل اندروید ورژن سیستم‌ عامل 13 حافظه داخلی 256 گیگابایت حافظه RAM 12 گیگابایت تعداد سیم‌کارت دو سیم‌کارت نوع سیم‌کارت نانو شبکه مخابراتی 5G، 4G، 3G، 2G اتصال به شبکه بی‌سیم (Wi-Fi) پشتیبانی می‌کند مکان‌یاب (GPS) دارد درگاه اتصال USB Type C جک 3.5 میلی‌متری صدا ندارد تشخیص اثر انگشت دارد سایر حسگرها حسگر اثرانگشت شتاب‌سنج ژیروسکوپ حسگر مجاورت قطب‌نما فشارسنج هوا",
+      "inventory": 3,
+      "category": "موبایل-سامسونگ",
+      "image": "https://www.upload.ee/image/17385390/samsung-s23-ultra-7.png",
+      "rating": {
+        "rate": 4.5,
+        "count": 222
+      },
+      "createdAt": "2024-11-13T18:33:55.411Z"
     }
   ],
   "users": [
@@ -644,6 +532,11 @@
       "id": "d64a",
       "username": "AdminUsers",
       "password": "AdminUsers"
+    },
+    {
+      "id": "b414",
+      "username": "AdminProducts",
+      "password": "AdminProducts"
     }
   ]
 }
