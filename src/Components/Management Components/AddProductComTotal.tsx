@@ -68,6 +68,14 @@ function AddProductComTotal() {
 
   const handleUpdate = async () => {
     if (selectedProduct) {
+      const originalProduct = products.find(
+        (product) => product.id === selectedProduct.id
+      );
+      if (JSON.stringify(originalProduct) === JSON.stringify(selectedProduct)) {
+        alert("هیچ تغییری ایجاد نشده است.");
+        return;
+      }
+
       try {
         await axios.put(
           `http://localhost:8001/products/${selectedProduct.id}`,
@@ -85,14 +93,18 @@ function AddProductComTotal() {
       }
     }
   };
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     if (selectedProduct) {
+      const value =
+        e.target.name === "price" || e.target.name === "inventory"
+          ? parseFloat(e.target.value)
+          : e.target.value;
+
       setSelectedProduct({
         ...selectedProduct,
-        [e.target.name]: e.target.value,
+        [e.target.name]: value,
       });
     }
   };
@@ -291,10 +303,10 @@ function AddProductComTotal() {
               </label>
               <input
                 type="number"
-                name="price"
-                value={selectedProduct.price}
+                name="inventory"
+                value={selectedProduct.inventory}
                 onChange={handleChange}
-                placeholder="قیمت"
+                placeholder="موجودی"
                 className="border border-gray-300 p-2 rounded w-80"
               />
             </div>
