@@ -9,8 +9,8 @@ function Checkout() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
+  const [phone, setPhone] = useState<number>(0);
+  const [address, setAddress] = useState<string>("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [zipCode, setZipCode] = useState("");
@@ -196,7 +196,7 @@ function Checkout() {
                       placeholder="Phone"
                       className="px-4 py-3 bg-gray-100 focus:bg-transparent text-gray-800 w-full text-sm rounded-md focus:outline-gray-600"
                       value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
+                      onChange={(e) => setPhone(+e.target.value)}
                     />
                   </div>
                 </div>

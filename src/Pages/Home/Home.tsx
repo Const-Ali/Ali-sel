@@ -13,14 +13,14 @@ function Home() {
       <ImageSlider />
       <div></div>
       <HomeComSix />
-      <div className="grid grid-rows-3 grid-flow-col gap-4 h-[1000px] p-20 bg-gray-50">
-        <div className="col-span-2 h-[440px] bg-white">
+      <div className="grid grid-3 grid-flow-col  h-fit mt-8">
+        <div className="col-span-2 h-full">
           <HomeComTwo />
         </div>
-        <div className="row-span-2 h-[391px] bg-white mt-44">
+        <div className="row-span-2 h-full">
           <HomeComTree />
         </div>
-        <div className="row-span-3 bg- h-[735px] mt-16 bg-white">
+        <div className="row-span-3 bg- h-full">
           <HomeComOne />
         </div>
       </div>

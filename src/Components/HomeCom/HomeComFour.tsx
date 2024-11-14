@@ -50,7 +50,7 @@ function HomeComFour() {
             >
               <div className="w-full h-24 overflow-hidden mx-auto aspect-w-16 aspect-h-8">
                 <img
-                  className="mx-auto my-2 object-contain rounded-md"
+                  className="mx-auto my-1 object-contain rounded-md max-h-full"
                   src={product.image}
                   alt={product.title}
                 />

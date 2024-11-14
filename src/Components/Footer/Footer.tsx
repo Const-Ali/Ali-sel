@@ -14,8 +14,17 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="bg-gradient-to-r from-gray-500 via-gray-400 to-gray-500  py-14 px-16 font-sans tracking-wide relative">
+      <footer className="text-right bg-gradient-to-r from-gray-500 via-gray-400 to-gray-500  py-14 px-16 font-sans tracking-wide relative">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="flex items-center lg:justify-center">
+            <a href="/">
+              <img
+                src="https://www.upload.ee/image/17269868/_-_Copy__2_-denoised_sharpened_width_400__light-100__wb-25__exposure_correction-removebg-preview.png"
+                alt="logo"
+                className="w-[450px] shadow-xl rounded-sm"
+              />
+            </a>
+          </div>{" "}
           <div>
             <h2 className="text-black text-lg font-semibold mb-4">
               Quick Links
@@ -47,7 +56,6 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-
           <div>
             <h2 className="text-black text-lg font-semibold mb-4">
               فضای مجازی
@@ -79,7 +87,6 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-
           <div>
             <h2 className="text-black text-lg font-semibold mb-4">تکنوسنتر</h2>
             <ul className="space-y-4">
@@ -108,16 +115,6 @@ const Footer: React.FC = () => {
                 </a>
               </li>
             </ul>
-          </div>
-
-          <div className="flex items-center lg:justify-center">
-            <a href="/">
-              <img
-                src="https://www.upload.ee/image/17269868/_-_Copy__2_-denoised_sharpened_width_400__light-100__wb-25__exposure_correction-removebg-preview.png"
-                alt="logo"
-                className="w-[450px] shadow-xl rounded-sm"
-              />
-            </a>
           </div>
         </div>
 

@@ -4,7 +4,7 @@ type TProduct_Item = IProduct;
 function Product_Item({ title, price, description, image }: TProduct_Item) {
   return (
     <>
-      <div className="bg-gray-100 rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
+      <div className="bg-gray-100 rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative h-full">
         <div className="bg-gray-100 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-4 right-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ function Product_Item({ title, price, description, image }: TProduct_Item) {
           <p className="text-gray-600 text-sm mt-2 line-clamp-2">
             {description}
           </p>
-          <div className="flex items-center mt-4 gap-2 line-clamp-1">
+          <div className="flex items-center mt-4 gap-2 line-clamp-1 ">
             <h1>تومان</h1>
             <h4 className="text-lg text-gray-800 font-bold ">
               {price.toLocaleString("fa-IR")}

@@ -136,6 +136,16 @@ function AddPro() {
       setShowAlert(true);
       setProductId(response.data.id);
 
+      // بازنشانی مقادیر اینپوت‌ها پس از ثبت موفق
+      setTitle("");
+      setPrice("");
+      setDescription("");
+      setInventory("");
+      setCategory("");
+      setImage("");
+      setRatingRate("");
+      setRatingCount("");
+
       setTimeout(() => {
         setShowAlert(false);
       }, 4000);

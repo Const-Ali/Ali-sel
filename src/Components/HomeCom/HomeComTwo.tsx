@@ -21,7 +21,7 @@ function HomeComTwo() {
           "http://localhost:8001/products"
         );
         const filteredProducts = response.data
-          .filter((product) => product.category === "jewelery")
+          .filter((product) => product.category === "هدفون-اپل")
           .sort(
             (a, b) =>
               new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
@@ -39,14 +39,14 @@ function HomeComTwo() {
   return (
     <div>
       <section>
-        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
-            <div className="grid place-content-center rounded bg-gray-100 p-6 sm:p-8">
-              <div className="mx-auto max-w-md text-center lg:text-left">
+        <div className="p-5 bg-gray-50">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+            <div className="grid rounded bg-gray-100 p-6 h-fit">
+              <div className="mx-auto max-w-md text-center lg:text-left ">
                 <header>
                   {products.length > 0 && (
                     <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
-                      {products[0].category}
+                      123{" "}
                     </h2>
                   )}
                   <p className="mt-4 text-gray-500">
@@ -66,19 +66,23 @@ function HomeComTwo() {
             <div className="lg:col-span-2 lg:py-8">
               <ul className="grid grid-cols-2 gap-4">
                 {products.map((product) => (
-                  <li key={product.id}>
+                  <li
+                    key={product.id}
+                    className="cursor-pointer shadow-sm rounded-md hover:scale-[1.03] transition-all"
+                  >
                     <a href="#" className="group block">
                       <img
                         src={product.image}
                         alt={product.title}
                         className="aspect-square w-full rounded object-cover"
                       />
-                      <div className="mt-3">
+                      <div className="mt-4">
                         <h3 className="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4">
                           {product.title}
                         </h3>
-                        <p className="mt-1 text-sm text-gray-700">
-                          ${product.price}
+                        <p className="flex gap-2 mt-4 text-lg pb-3 text-gray-700 text-right">
+                          <p>تومان</p>
+                          <p>{product.price.toLocaleString("fa-IR")}</p>
                         </p>
                       </div>
                     </a>

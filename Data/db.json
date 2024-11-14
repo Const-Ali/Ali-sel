@@ -225,9 +225,8 @@
       "createdAt": "2024-11-13T18:57:48.323Z"
     },
     {
-      "id": "6591",
       "title": "ساعت هوشمند سامسونگ مدل Galaxy Watch6 SM-R950 43mm",
-      "price": 12998000,
+      "price": 20998000,
       "description": "شکل ظاهری گرد مقاومت بدنه دارای گواهینامه IP68 برای مقاومت در برابر نفوذ آب, گواهی نظامی MIL-STD-810H, مقاوم در برابر فشار آب تا ۵۰ متر (۵ATM Water-resistance) رنگ طلایی, مشکی, نقره ای جنس بدنه استیل ضد زنگ نوع صفحه نمایش Super AMOLED وضوح تصویر (432 × 432) پیکسل تراکم پیکسلی 330 پیکسل در اینچ هشدارها – اعلام اعلان‌های دریافتی و نمایش پیام‌های متنی سایر حسگرها شتاب سنج (Accelerometer) | ژیروسکوپ (Gyroscope) | قطب نما (Compass) | روشنایی محیط (Ambient Light) | فشار سنج (Barometer) | حسگر تحلیل بیو الکتریکی (BIA Sensor)",
       "inventory": 3,
       "category": "ساعت-سامسونگ",
@@ -236,7 +235,64 @@
         "rate": 5,
         "count": 456
       },
-      "createdAt": "2024-11-13T18:58:57.129Z"
+      "createdAt": "2024-11-13T18:58:57.129Z",
+      "id": "6591"
+    },
+    {
+      "id": "4476",
+      "title": "هندزفری بی سیم اپل مدل AirPods 4",
+      "price": 12498000,
+      "description": "ابعاد 18.1 × 18.3 × 30.2 میلی‌متر (ایرباد), 21.2 × 46.2 × 50.1 میلی‌متر (محفظه شارژ) وزن 32.3 گرم (محفظه شارژ), 4.3 گرم (هر ایرباد) رنگ سفید مقاومت بدنه IP54 (مقاوم دربرابر گردوغبار و پاشش آب) نوع اتصال بی سیم درگاه اتصال Type-C, شارژ بی‌سیم Qi بلوتوث نگارش 5.3 شارژدهی حداکثر 5 ساعت حالت پخش صدا (تا 30 ساعت با محفظه شارژ) حداکثر 4.5 ساعت حالت مکالمه (تا 20 ساعت با محفظه شارژ) امکان استفاده 60 دقیقه‌ای تنها با 5 دقیقه شارژ سایر قابلیت ها و سنسورها شتاب‌سنج تشخیص حرکت شتاب‌سنج تشخیص گفتار میکروفون‌ دوگانه از نوع Beamforming پشتیبانی از فرامین صوتی Siri سنسور شناسایی وضعیت هدفون روی گوش با قابلیت توقف خودکار موزیک صدای فراگیر Spatial و ردیابی حرکات سر با سنسورهای شتاب‌سنج و ژیروسکوپ امکان به اشتراک‌گذاری محتوا با ایرپاد دیگر پشتیبانی از اکولایزر تطبیقی Adaptive EQ",
+      "inventory": 3,
+      "category": "هندزفری-اپل",
+      "image": "https://www.upload.ee/image/17388923/apple-air-pods-4-1.png",
+      "rating": {
+        "rate": 3.7,
+        "count": 435
+      },
+      "createdAt": "2024-11-14T15:52:57.693Z"
+    },
+    {
+      "id": "7034",
+      "title": "هندزفری بی سیم اپل مدل AirPods 3",
+      "price": 10098000,
+      "description": "ابعاد نامشخص وزن ایرپاد 4.25 گرم رنگ سفید مقاومت بدنه مقاوم در برابر آب با استاندارد IPX4 نوع اتصال بی سیم درگاه اتصال Lightning بلوتوث نگارش 5.0",
+      "inventory": 4,
+      "category": "هندزفری-اپل",
+      "image": "https://www.upload.ee/image/17388945/a0528a7dbede3dd696ccf9ffe5f78074b2ae9cc0_1637644102-e1667489395631.jpg",
+      "rating": {
+        "rate": 4.5,
+        "count": 123
+      },
+      "createdAt": "2024-11-14T15:57:18.522Z"
+    },
+    {
+      "id": "4884",
+      "title": "هدفون بلوتوثی اپل مدل AirPods Max",
+      "price": 36998000,
+      "description": "رنگ آبی, خاکستری, سبز, قرمز, نقره ای درگاه اتصال Lightning سایر کنترل‌کننده‌ی صدا و مکالمه : دارد توضیحات میکروفون : 9 عدد میکروفون / 8 میکروفون برای حذف نویز فعال / 3 میکروفون برای مکالمه (2 عدد مشترک با ANC) سازگاری با Siri و فرامین صوتی امکان استفاده 90 دقیقه‌ای تنها با 5 دقیقه شارژ اتصال سریع به دستگاه‌های آیفون و آیپد با قابلیت One-tap setup امکان اتصال همزمان به چند دستگاه و جابجایی بین آن‌ها با قابلیت Seamless switching امکان به اشتراک‌گذاری محتوا با ایرپاد دیگر اکولایزر تطبیق‌پذیر امکان تا کردن گوشی هدفون سنسور شناسایی وضعیت هدفون روی گوش با قابلیت توقف خودکار موزیک سنسور شناسایی اسمارت کیس برای ذخیره‌سازی باتری اتصال آهنربایی ایرپد به هدفون",
+      "inventory": 4,
+      "category": "هدفون-اپل",
+      "image": "https://www.upload.ee/image/17389095/AirPods-Max-13.png",
+      "rating": {
+        "rate": 3.2,
+        "count": 269
+      },
+      "createdAt": "2024-11-14T16:23:42.871Z"
+    },
+    {
+      "id": "5942",
+      "title": "هندزفری بلوتوثی هایلو مدل T15",
+      "price": 1198000,
+      "description": "وزن ۳۷ گرم رنگ مشکی",
+      "inventory": 7,
+      "category": "هندزفری-هایلو",
+      "image": "https://www.upload.ee/image/17389110/1a092f2ddbd86596175c5dcdfc947c3786183e4d-e1667486579647.jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 399
+      },
+      "createdAt": "2024-11-14T16:27:01.165Z"
     }
   ],
   "users": [
@@ -293,25 +349,6 @@
         "street": "پونک بلوار عدل شمالی ",
         "zipcode": "1476874206"
       }
-    },
-    {
-      "id": "83b4",
-      "imguser": "https://www.upload.ee/image/17363767/name.png",
-      "category": "User",
-      "email": "123opaliop123321@gmail.com",
-      "username": "Ali",
-      "password": "Aa123456",
-      "name": {
-        "firstname": "علی",
-        "lastname": "محمدی"
-      },
-      "phone": "09102479051",
-      "address": {
-        "city": "تهران",
-        "street": "تهران منطقه 5 پونک بلوار عدل بالاتر از میرزابابایی برج نگین عدل واحد393",
-        "zipcode": "1476874206"
-      },
-      "createdAt": "2024-11-07T16:01:27.321Z"
     }
   ],
   "orders": [
@@ -401,6 +438,37 @@
         "zipCode": "دمنوحکمک./"
       },
       "orderTime": "2024-11-10T17:07:13.108Z"
+    },
+    {
+      "id": "672c",
+      "category": "بسته شده",
+      "products": [
+        {
+          "id": 6163,
+          "qty": 2,
+          "title": "گوشی موبایل سامسونگ مدل Galaxy S24 دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت – ویتنام",
+          "image": "https://www.upload.ee/image/17385387/samsung-galaxy-s24-8.png"
+        },
+        {
+          "id": 2589,
+          "qty": 1,
+          "title": "ساعت هوشمند اپل واچ مدل Series 9 Aluminum 41mm M/L",
+          "image": "https://www.upload.ee/image/17385444/apple-watch-9-1.jpg"
+        }
+      ],
+      "user": {
+        "firstName": "علي",
+        "lastName": "محمدي",
+        "email": "iop098aliop098@gmail.com",
+        "phone": "09102790518"
+      },
+      "address": {
+        "line": "ssss",
+        "city": "تهران",
+        "state": "تهران",
+        "zipCode": "1476874751"
+      },
+      "orderTime": "2024-11-13T19:52:29.355Z"
     }
   ],
   "login": [
@@ -596,6 +664,81 @@
     },
     {
       "id": "0ce8",
+      "username": "AdminProducts",
+      "password": "AdminProducts"
+    },
+    {
+      "id": "a64e",
+      "username": "Test",
+      "password": "1234"
+    },
+    {
+      "id": "ddf2",
+      "username": "User",
+      "password": "User"
+    },
+    {
+      "id": "132f",
+      "username": "User",
+      "password": "User"
+    },
+    {
+      "id": "8638",
+      "username": "Ali",
+      "password": "Aa123456"
+    },
+    {
+      "id": "efd3",
+      "username": "Test",
+      "password": "1234"
+    },
+    {
+      "id": "9974",
+      "username": "Test",
+      "password": "1234"
+    },
+    {
+      "id": "7480",
+      "username": "Test",
+      "password": "1234"
+    },
+    {
+      "id": "47db",
+      "username": "Test",
+      "password": "1234"
+    },
+    {
+      "id": "bea7",
+      "username": "Test",
+      "password": "1234"
+    },
+    {
+      "id": "22d9",
+      "username": "Ali",
+      "password": "Aa123456"
+    },
+    {
+      "id": "5061",
+      "username": "Test",
+      "password": "1234"
+    },
+    {
+      "id": "d022",
+      "username": "Test",
+      "password": "1234"
+    },
+    {
+      "id": "8d16",
+      "username": "AdminProducts",
+      "password": "AdminProducts"
+    },
+    {
+      "id": "3609",
+      "username": "AdminUsers",
+      "password": "AdminUsers"
+    },
+    {
+      "id": "a2a3",
       "username": "AdminProducts",
       "password": "AdminProducts"
     }

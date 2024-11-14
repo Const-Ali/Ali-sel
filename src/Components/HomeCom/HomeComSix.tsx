@@ -7,7 +7,7 @@ function HomeComSix() {
         <Link to={`/${encodeURIComponent("CollectionOne")}`}>
           <div className="w-52">
             <div className="cursor-pointer bg-white shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl font-[sans-serif] overflow-hidden mx-auto transition-transform duration-300 transform hover:scale-105 hover:shadow-[0_8px_24px_-5px_rgba(0,0,0,0.4)] relative">
-              <div className="absolute top-1 left-6 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-lg transform -rotate-12">
+              <div className="absolute top-1 left-8 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-lg transform -rotate-12">
                 تخفیف
               </div>
 
@@ -17,7 +17,7 @@ function HomeComSix() {
               />
 
               <div className="p-6">
-                <h3 className="text-2xl text-gray-600 font-mono font-extrabold">
+                <h3 className="text-2xl text-gray-600 font-mono font-extrabold text-right">
                   تبلت
                 </h3>
                 <div className="mt-6 flex justify-end">
@@ -42,7 +42,7 @@ function HomeComSix() {
         <Link to="/ProCollectionOne">
           <div className="w-52">
             <div className="cursor-pointer bg-white shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl font-[sans-serif] overflow-hidden mx-auto transition-transform duration-300 transform hover:scale-105 hover:shadow-[0_8px_24px_-5px_rgba(0,0,0,0.4)] relative">
-              <div className="absolute top-1 left-5 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-lg transform -rotate-12">
+              <div className="absolute top-1 left-9 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-lg transform -rotate-12">
                 تخفیف
               </div>
 
@@ -52,7 +52,7 @@ function HomeComSix() {
               />
 
               <div className="p-6">
-                <h3 className="text-2xl text-gray-600 font-mono font-extrabold">
+                <h3 className="text-2xl text-gray-600 font-mono font-extrabold text-right">
                   شارژر
                 </h3>
                 <div className="mt-6 flex justify-end">
@@ -77,7 +77,7 @@ function HomeComSix() {
         <Link to="/ProCollectionOne">
           <div className="w-52">
             <div className="cursor-pointer bg-white shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl font-[sans-serif] overflow-hidden mx-auto transition-transform duration-300 transform hover:scale-105 hover:shadow-[0_8px_24px_-5px_rgba(0,0,0,0.4)] relative">
-              <div className="absolute top-1 left-6 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-lg transform -rotate-12">
+              <div className="absolute top-1 left-9 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-lg transform -rotate-12">
                 تخفیف
               </div>
 
@@ -87,7 +87,7 @@ function HomeComSix() {
               />
 
               <div className="p-6">
-                <h3 className="text-2xl text-gray-600 font-mono font-extrabold">
+                <h3 className="text-2xl text-gray-600 font-mono font-extrabold text-right">
                   هندزفری
                 </h3>
                 <div className="mt-6 flex justify-end">
@@ -112,7 +112,7 @@ function HomeComSix() {
         <Link to="/ProCollectionOne">
           <div className="w-52">
             <div className="cursor-pointer bg-white shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl font-[sans-serif] overflow-hidden mx-auto transition-transform duration-300 transform hover:scale-105 hover:shadow-[0_8px_24px_-5px_rgba(0,0,0,0.4)] relative">
-              <div className="absolute top-1 left-5 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-lg transform -rotate-12">
+              <div className="absolute top-1 left-9 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-lg transform -rotate-12">
                 تخفیف
               </div>
 
@@ -122,7 +122,7 @@ function HomeComSix() {
               />
 
               <div className="p-6">
-                <h3 className="text-2xl text-gray-600 font-mono font-extrabold">
+                <h3 className="text-2xl text-gray-600 font-mono font-extrabold text-right">
                   ساعت
                 </h3>
                 <div className="mt-6 flex justify-end">
@@ -147,7 +147,7 @@ function HomeComSix() {
         <Link to="/ProCollectionOne">
           <div className="w-52">
             <div className="cursor-pointer bg-white shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl font-[sans-serif] overflow-hidden mx-auto transition-transform duration-300 transform hover:scale-105 hover:shadow-[0_8px_24px_-5px_rgba(0,0,0,0.4)] relative">
-              <div className="absolute top-1 left-5 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-lg transform -rotate-12">
+              <div className="absolute top-1 left-9 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-lg transform -rotate-12">
                 تخفیف
               </div>
 
@@ -157,7 +157,7 @@ function HomeComSix() {
               />
 
               <div className="p-6">
-                <h3 className="text-2xl text-gray-600 font-mono font-extrabold">
+                <h3 className="text-2xl text-gray-600 font-mono font-extrabold text-right">
                   موبایل
                 </h3>
                 <div className="mt-6 flex justify-end">
@@ -182,7 +182,7 @@ function HomeComSix() {
         <Link to="/ProCollectionOne">
           <div className="w-52">
             <div className="cursor-pointer bg-white shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl font-[sans-serif] overflow-hidden mx-auto transition-transform duration-300 transform hover:scale-105 hover:shadow-[0_8px_24px_-5px_rgba(0,0,0,0.4)] relative">
-              <div className="absolute top-1 left-5 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-lg transform -rotate-12">
+              <div className="absolute top-1 left-9 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-lg transform -rotate-12">
                 تخفیف
               </div>
 
@@ -192,7 +192,7 @@ function HomeComSix() {
               />
 
               <div className="p-6">
-                <h3 className="text-2xl text-gray-600 font-mono font-extrabold">
+                <h3 className="text-2xl text-gray-600 font-mono font-extrabold text-right">
                   اسپیکر
                 </h3>
                 <div className="mt-6 flex justify-end">
