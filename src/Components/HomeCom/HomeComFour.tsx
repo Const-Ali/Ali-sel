@@ -59,8 +59,9 @@ function HomeComFour() {
                 <h3 className="text-sm font-bold text-gray-800">
                   {product.title}
                 </h3>
-                <h4 className="text-base text-gray-500 font-bold mt-2">
-                  {product.price} تومان
+                <h4 className="text-base text-gray-500 font-bold mt-3 flex justify-center">
+                  <p className="pr-2">تومان</p>{" "}
+                  {product.price.toLocaleString("fa-IR")}
                 </h4>
               </div>
             </div>
