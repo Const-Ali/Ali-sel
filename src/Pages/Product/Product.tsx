@@ -72,6 +72,12 @@ function Product() {
     setSelectedColor(color);
   };
 
+  const [isLiked, setIsLiked] = useState(false);
+
+  const toggleLike = () => {
+    setIsLiked(!isLiked);
+  };
+
   return (
     <>
       <Container>
@@ -253,21 +259,19 @@ function Product() {
                         <div className="flex gap-4">
                           <button
                             type="button"
-                            className="px-2.5 py-1.5 bg-pink-100 text-xs text-pink-600 rounded-md flex items-center"
+                            className={`px-2.5 py-1.5  text-xs text-gray-800 rounded-md flex items-center ${isLiked ? "bg-red-300 " : "bg-gray-100"}`}
+                            onClick={toggleLike}
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              width="12px"
-                              fill="currentColor"
-                              className="cursor-pointer font-medium transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring"
+                              width="16px"
+                              className={`cursor-pointer font-medium transition hover:scale-125 hover:shadow-xl focus:outline-none focus:ring ${isLiked ? "fill-red-700 " : "fill-gray-800"}`}
                               viewBox="0 0 64 64"
                             >
-                              <path
-                                d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
-                                data-original="#000000"
-                              ></path>
+                              <path d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"></path>
                             </svg>
                           </button>
+
                           <button
                             type="button"
                             className="px-2.5 py-1.5 bg-gray-100 text-xs text-gray-800 rounded-md flex items-center"
@@ -277,7 +281,7 @@ function Product() {
                               width="12px"
                               fill="currentColor"
                               viewBox="0 0 512 512"
-                              className="cursor-pointer font-medium transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring"
+                              className="cursor-pointer font-medium transition hover:scale-125 hover:shadow-xl focus:outline-none focus:ring"
                             >
                               <path
                                 d="M453.332 85.332c0 38.293-31.039 69.336-69.332 69.336s-69.332-31.043-69.332-69.336C314.668 47.043 345.707 16 384 16s69.332 31.043 69.332 69.332zm0 0"
@@ -413,7 +417,7 @@ function Product() {
                   </div>
 
                   <div className=" max-w-4xl ">
-                    <ul className="flex border-b">
+                    <ul className="flex border-b flex-row-reverse">
                       <li className="text-gray-800 font-semibold text-sm bg-gray-100 py-3 px-8 border-b-2 border-gray-800 cursor-pointer transition-all">
                         توضیحات
                       </li>
@@ -423,10 +427,10 @@ function Product() {
                     </ul>
 
                     <div className="mt-8">
-                      <h3 className="text-xl font-bold text-gray-800">
+                      <h3 className="text-xl font-bold text-gray-800 text-right">
                         توضیحات محصول
                       </h3>
-                      <p className="text-sm text-gray-500 mt-4">
+                      <p className="text-sm text-gray-500 mt-4 text-right">
                         {product?.description}
                       </p>
                     </div>

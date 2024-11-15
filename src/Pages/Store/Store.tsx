@@ -11,7 +11,9 @@ function Store() {
   const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [sortOption, setSortOption] = useState("جدید ترین");
-  const [selectedCategory, setSelectedCategory] = useState("همه");
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([
+    "همه",
+  ]);
 
   useEffect(() => {
     setIsLoading(true);
@@ -50,35 +52,102 @@ function Store() {
     }
   };
 
-  const sortedProducts = sortProducts(filteredProducts);
+  const handleCategoryChange = (category: string) => {
+    if (category === "همه") {
+      setSelectedCategories(["همه"]);
+    } else {
+      setSelectedCategories((prevCategories) =>
+        prevCategories.includes(category)
+          ? prevCategories.filter((cat) => cat !== category)
+          : [...prevCategories.filter((cat) => cat !== "همه"), category]
+      );
+    }
+  };
+
+  const displayedProducts = selectedCategories.includes("همه")
+    ? sortProducts(filteredProducts)
+    : sortProducts(filteredProducts).filter((product) =>
+        selectedCategories.includes(product.category)
+      );
+
   const categories = [
     "همه",
     ...new Set(products.map((product) => product.category)),
   ];
-  const displayedProducts =
-    selectedCategory === "همه"
-      ? sortedProducts
-      : sortedProducts.filter(
-          (product) => product.category === selectedCategory
-        );
 
   return (
     <Container>
       <div className="flex flex-row-reverse">
-        <aside className="w-1/4 p-4 border-l border-gray-300 text-right">
-          <h2 className="text-xl font-bold mb-4">دسته‌بندی‌ها</h2>
-          <ul className="space-y-2">
-            {categories.map((category) => (
-              <li key={category}>
-                <button
-                  className={`w-full text-right p-2 rounded-lg ${category === selectedCategory ? "bg-gray-200 font-bold" : ""}`}
-                  onClick={() => setSelectedCategory(category)}
+        <aside className="w-1/4 p-4 border-l border-gray-300 text-right flex flex-col gap-5 pt-10">
+          <details className="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex cursor-pointer items-center justify-between flex-row-reverse gap-2 p-4 text-gray-900 transition">
+              <span className="text-sm font-medium"> دسته‌بندی ها </span>
+              <span className="transition group-open:-rotate-180">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="size-4"
                 >
-                  {category}
-                </button>
-              </li>
-            ))}
-          </ul>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </span>
+            </summary>
+
+            <ul className="space-y-1 border-t border-gray-200 p-4">
+              {categories.map((category) => (
+                <li key={category} className="flex gap-2 ">
+                  <button
+                    className={`w-full text-right p-2 rounded-lg ${
+                      selectedCategories.includes(category)
+                        ? "font-bold bg-gradient-to-r from-gray-100 via-gray-50 to-gray-100"
+                        : ""
+                    }`}
+                    onClick={() => handleCategoryChange(category)}
+                  >
+                    {category}
+                  </button>
+                  <label className="inline-flex items-center gap-2 ">
+                    <input
+                      type="checkbox"
+                      checked={selectedCategories.includes(category)}
+                      onChange={() => handleCategoryChange(category)}
+                      className="size-5 rounded border-gray-300"
+                    />
+                  </label>
+                </li>
+              ))}
+            </ul>
+          </details>
+          <details className="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex cursor-pointer items-center justify-between flex-row-reverse gap-2 p-4 text-gray-900 transition">
+              <span className="text-sm font-medium">برند ها</span>
+              <span className="transition group-open:-rotate-180">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="size-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </span>
+            </summary>
+
+            <ul className="space-y-1 border-t border-gray-200 p-4">132</ul>
+          </details>
         </aside>
 
         <div className="w-3/4 p-4">
@@ -130,7 +199,10 @@ function Store() {
               <Spinner />
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-4 text-right">
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-4 text-right"
+              style={{ direction: "rtl" }}
+            >
               {displayedProducts.map((item) => (
                 <Link key={item.id} to={`/product/${item.id}`}>
                   <Product_Item {...item} />

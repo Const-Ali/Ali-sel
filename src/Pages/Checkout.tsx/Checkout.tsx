@@ -104,10 +104,10 @@ function Checkout() {
   return (
     <Container>
       <div className="font-[sans-serif] bg-white py-10">
-        <div className="flex max-sm:flex-col gap-12 max-lg:gap-4 h-full">
-          <div className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 h-full sm:sticky sm:top-0 lg:min-w-[370px] sm:min-w-[300px]">
-            <div className="relative h-full">
-              <div className="px-4 py-8 sm:overflow-auto sm:h-[calc(100vh-60px)]">
+        <div className="flex max-sm:flex-col gap-12 max-lg:gap-4">
+          <div className="flex flex-col rounded bg-gradient-to-r from-gray-500 via-gray-400 to-gray-500 sm:sticky sm:top-0 lg:min-w-[370px] sm:min-w-[300px]">
+            <div className="flex h-full">
+              <div className="px-4 py-8 sm:overflow-auto mb-16">
                 {productsData.map((product, index) => (
                   <div
                     key={index}

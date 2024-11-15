@@ -37,7 +37,7 @@ function HomeComFour() {
   }, []);
 
   return (
-    <div className="font-sans bg-gray-50 px-4 py-8">
+    <div className="font-sans bg-gradient-to-r from-gray-100 via-gray-50 to-gray-100 px-4 py-8">
       <div className="mx-auto lg:max-w-6xl md:max-w-4xl">
         <h2 className="text-5xl font-extrabold text-gray-700 text-center mb-12">
           پربازدید ترین ها
@@ -46,7 +46,7 @@ function HomeComFour() {
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-white p-3 cursor-pointer shadow-sm rounded-md hover:scale-[1.03] transition-all"
+              className="bg-gray-50 p-3 cursor-pointer shadow-sm rounded-md hover:scale-[1.03] transition-all"
             >
               <div className="w-full h-24 overflow-hidden mx-auto aspect-w-16 aspect-h-8">
                 <img
@@ -60,7 +60,7 @@ function HomeComFour() {
                   {product.title}
                 </h3>
                 <h4 className="text-base text-gray-500 font-bold mt-3 flex justify-center">
-                  <p className="pr-2">تومان</p>{" "}
+                  <p className="pr-2">تومان</p>
                   {product.price.toLocaleString("fa-IR")}
                 </h4>
               </div>

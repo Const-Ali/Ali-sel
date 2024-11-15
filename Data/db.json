@@ -849,6 +849,11 @@
       "id": "7bdf",
       "username": "AdminProducts",
       "password": "AdminProducts"
+    },
+    {
+      "id": "2c6e",
+      "username": "User",
+      "password": "User"
     }
   ]
 }

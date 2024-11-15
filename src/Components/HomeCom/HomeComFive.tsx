@@ -1,9 +1,9 @@
 function HomeComFive() {
   return (
     <div>
-      <div className="bg-gray-800 px-4 py-16 font-sans">
+      <div className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 px-4 py-16 font-sans">
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-x-6 gap-y-12 lg:max-w-7xl sm:max-w-2xl max-w-sm mx-auto">
-          <div className="text-center bg-gray-700 px-4 py-6 border-b-4 border-orange-600 rounded-md">
+          <div className="text-center bg-gradient-to-r from-gray-600 via-gray-500 to-gray-600 px-4 py-6 border-b-4 border-orange-600 rounded-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="fill-orange-600 w-10 inline-block"
@@ -23,7 +23,7 @@ function HomeComFive() {
               بازدید کنندگان سایت
             </p>
           </div>
-          <div className="text-center bg-gray-700 px-4 py-6 border-b-4 border-orange-600 rounded-md">
+          <div className="text-center bg-gradient-to-r from-gray-600 via-gray-500 to-gray-600 px-4 py-6 border-b-4 border-orange-600 rounded-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="fill-orange-600 w-10 inline-block"
@@ -41,7 +41,7 @@ function HomeComFive() {
               مجموع خرید از سایت
             </p>
           </div>
-          <div className="text-center bg-gray-700 px-4 py-6 border-b-4 border-orange-600 rounded-md">
+          <div className="text-center bg-gradient-to-r from-gray-600 via-gray-500 to-gray-600 px-4 py-6 border-b-4 border-orange-600 rounded-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="fill-orange-600 w-10 inline-block"
@@ -56,7 +56,7 @@ function HomeComFive() {
             <h3 className="text-white text-4xl font-bold mt-4">500+</h3>
             <p className="text-gray-400 font-semibold mt-2">رضایت مشتری ها </p>
           </div>
-          <div className="text-center bg-gray-700 px-4 py-6 border-b-4 border-orange-600 rounded-md">
+          <div className="text-center bg-gradient-to-r from-gray-600 via-gray-500 to-gray-600 px-4 py-6 border-b-4 border-orange-600 rounded-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="fill-orange-600 w-10 inline-block"

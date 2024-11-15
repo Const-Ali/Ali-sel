@@ -164,11 +164,11 @@ function Nav_Bar() {
               </li>
             </ul>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center gap-6">
             <Link className="relative " to="/Cart">
-              <button>
+              <button className="group relative overflow-hidden">
                 <svg
-                  className="w-7 h-7"
+                  className="w-7 h-7 transition-transform duration-200 group-hover:scale-110 group-hover:shadow-lg group-hover:fill-red-800"
                   xmlns="http://www.w3.org/2000/svg"
                   version="1.1"
                   width="256"
@@ -180,7 +180,7 @@ function Nav_Bar() {
                     <path
                       d="M 72.975 58.994 H 31.855 c -1.539 0 -2.897 -1.005 -3.347 -2.477 L 15.199 13.006 H 3.5 c -1.933 0 -3.5 -1.567 -3.5 -3.5 s 1.567 -3.5 3.5 -3.5 h 14.289 c 1.539 0 2.897 1.005 3.347 2.476 l 13.309 43.512 h 36.204 l 10.585 -25.191 H 45 c -1.933 0 -3.5 -1.567 -3.5 -3.5 s 1.567 -3.5 3.5 -3.5 h 41.5 c 1.172 0 2.267 0.587 2.915 1.563 s 0.766 2.212 0.312 3.293 L 76.201 56.85 C 75.655 58.149 74.384 58.994 72.975 58.994 z"
                       transform=" matrix(1 0 0 1 0 0) "
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                     />
                     <circle
                       cx="28.88"
@@ -197,9 +197,27 @@ function Nav_Bar() {
                   </g>
                 </svg>
               </button>
+
               <span className="absolute w-6 h-6 bg-red-700 flex justify-center items-center rounded-lg text-white -top-3 -right-4">
                 {cartQty}
               </span>
+            </Link>
+            <Link className="relative" to="#">
+              <button className="group relative overflow-hidden -top-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="35"
+                  height="35"
+                  viewBox="0 0 1200 1200"
+                  className="transition-transform duration-200 group-hover:scale-95 group-hover:shadow-lg"
+                >
+                  <path
+                    fill="#5c5a5e"
+                    d="M600 0C268.629 0 0 268.629 0 600s268.629 600 600 600s600-268.629 600-600S931.371 0 600 0m132.789 343.503c71.295-1.114 135.772 37.646 166.337 103.724c28.273 87.356 4.612 176.225-45.251 243.199c-32.912 45.417-72.247 84.584-112.462 118.807c-36.997 34.439-119.808 102.591-141.755 104.483c-19.397-3.708-41.173-25.678-56.573-36.968c-86.534-65.781-179.667-145.742-226.899-233.207c-39.601-83.97-39.673-187.864 21.96-252.241c79.917-72.048 200.39-57.946 261.512 17.325c16.415-21.295 36.605-38.066 60.562-50.267c24.279-9.69 48.803-14.483 72.569-14.855"
+                    className="transition-colors duration-200 group-hover:fill-pink-500"
+                  />
+                </svg>
+              </button>
             </Link>
           </div>
         </header>

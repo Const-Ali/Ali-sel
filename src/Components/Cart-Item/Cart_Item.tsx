@@ -32,19 +32,6 @@ function Cart_Item({ id, qty }: ICart_Item) {
     fetchProduct();
   }, [id, qty]);
 
-  const handleIncrease = () => {
-    if (product && qty >= product.inventory) {
-      const errorMessage = ` . کافی نمیباشد  ${product.title} موجودی محصول`;
-      setStockError(errorMessage);
-      setTimeout(() => {
-        setStockError(null);
-      }, 3000000);
-    } else {
-      setStockError(null);
-      handleIncreaseProductQty(id);
-    }
-  };
-
   return (
     <>
       <div className="font-sans max-w-7xl max-md:max-w-xl mx-auto p-1">
@@ -93,7 +80,7 @@ function Cart_Item({ id, qty }: ICart_Item) {
                       {qty}
                     </span>
                     <button
-                      onClick={handleIncrease}
+                      onClick={() => handleIncreaseProductQty(id)}
                       type="button"
                       className="flex items-center justify-center w-5 h-5 bg-gray-400 outline-none rounded-full"
                     >
