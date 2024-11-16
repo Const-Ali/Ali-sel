@@ -5,5 +5,12 @@ module.exports = {
   theme: {
     extend: {},
   },
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Nazanin", "sans-serif"],
+      },
+    },
+  },
   plugins: [],
 };

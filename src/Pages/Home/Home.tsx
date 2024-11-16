@@ -13,7 +13,7 @@ function Home() {
       <ImageSlider />
       <div></div>
       <HomeComSix />
-      <div className="grid grid-3 grid-flow-col  h-fit mt-8">
+      <div className="grid grid-3 grid-flow-col h-fit mt-8 p-10 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200">
         <div className="col-span-2 h-full">
           <HomeComTwo />
         </div>

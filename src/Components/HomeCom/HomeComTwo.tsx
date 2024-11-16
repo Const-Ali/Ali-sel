@@ -39,7 +39,7 @@ function HomeComTwo() {
   return (
     <div>
       <section>
-        <div className="p-5 bg-gray-50">
+        <div className="">
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
             <div className="grid rounded bg-gray-100 p-6 h-fit">
               <div className="mx-auto max-w-md text-center lg:text-left ">

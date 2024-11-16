@@ -37,7 +37,7 @@ function HomeComFour() {
   }, []);
 
   return (
-    <div className="font-sans bg-gradient-to-r from-gray-100 via-gray-50 to-gray-100 px-4 py-8">
+    <div className="font-sans bg-gradient-to-r from-gray-200 via-gray-50 to-gray-200 px-4 py-8">
       <div className="mx-auto lg:max-w-6xl md:max-w-4xl">
         <h2 className="text-5xl font-extrabold text-gray-700 text-center mb-12">
           پربازدید ترین ها

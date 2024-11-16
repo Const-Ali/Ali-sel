@@ -26,7 +26,7 @@ function Product_Item({ title, price, description, image }: TProduct_Item) {
         </div>
 
         <div className="line-clamp-4">
-          <h3 className="text-lg font-extrabold text-gray-800 line-clamp-2">
+          <h3 className="text-lg font-extrabold text-gray-800 line-clamp-2 ">
             {title}
           </h3>
 
