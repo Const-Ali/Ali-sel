@@ -240,7 +240,7 @@ function CollectionOne() {
                     </details>
                     <details className="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden">
                       <summary className="flex cursor-pointer items-center justify-between gap-2 p-4 text-gray-900 transition">
-                        <span className="text-sm font-medium"> Colors </span>
+                        <span className="text-sm font-medium"> رنگ ها </span>
 
                         <span className="transition group-open:-rotate-180">
                           <svg
@@ -263,14 +263,14 @@ function CollectionOne() {
                       <div className="border-t border-gray-200 bg-white">
                         <header className="flex items-center justify-between p-4">
                           <span className="text-sm text-gray-700">
-                            0 Selected
+                            0 انتخاب
                           </span>
 
                           <button
                             type="button"
                             className="text-sm text-gray-900 underline underline-offset-4"
                           >
-                            Reset
+                            حذف
                           </button>
                         </header>
 
@@ -287,7 +287,7 @@ function CollectionOne() {
                               />
 
                               <span className="text-sm font-medium text-gray-700">
-                                Red
+                                قرمز
                               </span>
                             </label>
                           </li>
@@ -304,7 +304,7 @@ function CollectionOne() {
                               />
 
                               <span className="text-sm font-medium text-gray-700">
-                                Blue
+                                آبی
                               </span>
                             </label>
                           </li>
@@ -321,7 +321,7 @@ function CollectionOne() {
                               />
 
                               <span className="text-sm font-medium text-gray-700">
-                                Green
+                                سبز
                               </span>
                             </label>
                           </li>
@@ -338,7 +338,7 @@ function CollectionOne() {
                               />
 
                               <span className="text-sm font-medium text-gray-700">
-                                Orange
+                                نارنجی
                               </span>
                             </label>
                           </li>
@@ -355,7 +355,7 @@ function CollectionOne() {
                               />
 
                               <span className="text-sm font-medium text-gray-700">
-                                Purple
+                                بنفش
                               </span>
                             </label>
                           </li>
@@ -372,7 +372,7 @@ function CollectionOne() {
                               />
 
                               <span className="text-sm font-medium text-gray-700">
-                                Teal
+                                زرد
                               </span>
                             </label>
                           </li>
@@ -384,7 +384,10 @@ function CollectionOne() {
               </div>
 
               <div className="lg:col-span-3">
-                <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <ul
+                  className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+                  style={{ direction: "rtl" }}
+                >
                   {sortedProducts.map((item) => (
                     <Link key={item.id} to={`/product/${item.id}`}>
                       <Product_Item {...item} />
