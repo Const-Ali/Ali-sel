@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const client = axios.create({
+  // baseURL: "https://ali-sel-api.vercel.app/api",
   baseURL: "http://localhost:8001",
 });
 // "به جای استفاده از یوز افکت از این فانکشن استفاده میکنیم"
