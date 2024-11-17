@@ -5,6 +5,8 @@ import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
 import { getProduct } from "../../Services/Api";
 import Spinner from "../../Components/Spinner/Spinner";
 import { useNavigate } from "react-router-dom";
+import CodeOk from "../../Components/Alert/CodeOk";
+import CodeNotOk from "../../Components/Alert/CodeNotOk";
 
 function Cart() {
   const { CartItems } = useShop_Card_Cont();
@@ -12,6 +14,8 @@ function Cart() {
   const [loading, setLoading] = useState(true);
   const [discountCode, setDiscountCode] = useState("");
   const [discount, setDiscount] = useState(0);
+  const [isCodeOk, setIsCodeOk] = useState(false);
+  const [isCodeNotOk, setIsCodeNotOk] = useState(false);
 
   useEffect(() => {
     const fetchPrices = async () => {
@@ -39,19 +43,23 @@ function Cart() {
   const finalPrice = (totalPrice - discount).toFixed(2).toLocaleString();
 
   const handleApplyDiscount = () => {
-    if (discountCode === "Ali10") {
-      setDiscount(100000);
-    } else if (discountCode === "Ali20") {
-      setDiscount(200000);
-    } else if (discountCode === "Ali30") {
-      setDiscount(300000);
-    } else if (discountCode === "Ali40") {
-      setDiscount(400000);
-    } else if (discountCode === "Ali50") {
-      setDiscount(500000);
+    if (["Ali10", "Ali20", "Ali30", "Ali40", "Ali50"].includes(discountCode)) {
+      const discountAmount = parseInt(discountCode.replace("Ali", "")) * 10000;
+      setDiscount(discountAmount);
+      setIsCodeOk(true);
+
+      setTimeout(() => {
+        setIsCodeOk(false);
+      }, 2000);
     } else {
       setDiscount(0);
-      alert("کد تخفیف نامعتبر است");
+      setTimeout(() => {
+        setIsCodeOk(false);
+      }, 200);
+      setIsCodeNotOk(true);
+      setTimeout(() => {
+        setIsCodeNotOk(false);
+      }, 2000);
     }
   };
 
@@ -176,6 +184,22 @@ function Cart() {
           )}
         </div>
       </Container>
+      {isCodeOk && (
+        <div
+          role="alert"
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+        >
+          <CodeOk />
+        </div>
+      )}{" "}
+      {isCodeNotOk && (
+        <div
+          role="alert"
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+        >
+          <CodeNotOk />
+        </div>
+      )}
     </div>
   );
 }
