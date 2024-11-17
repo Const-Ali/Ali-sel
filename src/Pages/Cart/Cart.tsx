@@ -94,21 +94,21 @@ function Cart() {
                     <span className="ml-auto font-bold">
                       {Number(totalPrice).toLocaleString("fa-IR")}
                     </span>
-                    ریال
+                    تومان
                   </li>
                   <li className="flex flex-wrap gap-4 text-sm">
                     تخفیف
                     <span className="ml-auto font-bold">
                       {Number(discount).toLocaleString("fa-IR")}
                     </span>
-                    ریال
+                    تومان
                   </li>
                   <li className="flex flex-wrap gap-4 text-sm">
                     مالیات
                     <span className="ml-auto font-bold">
                       {Number(totalPrice * 0.1).toLocaleString("fa-IR")}
                     </span>
-                    ریال
+                    تومان
                   </li>
                   <hr className="border-gray-300" />
                   <li className="flex flex-wrap gap-4 text-sm font-bold">
@@ -118,7 +118,7 @@ function Cart() {
                         Number(finalPrice) + Number(totalPrice) * 0.1
                       ).toLocaleString("fa-IR")}
                     </span>
-                    ریال
+                    تومان
                   </li>
                 </ul>
 
