@@ -531,6 +531,90 @@
         "count": 459
       },
       "createdAt": "2024-11-17T15:15:00.500Z"
+    },
+    {
+      "id": "7125",
+      "title": "پاور بانک باسئوس مدل PPBD050402 ظرفیت 300000 میلی آمپر ساعت",
+      "price": 2318000,
+      "description": "رنگ سفید, مشکی ابعاد 153*68.8*41.7 میلی‌متر وزن 460 گرم خروجی USB output 1: 5V/3A, 9V/2A, 12V/1.5A (18.0W max) USB output 2: 5V/3A, 9V/2A, 12V/1.5A (18.0W max) USB-C output: 5V/3A, 9V/2.22A, 12V/1.5A (20W max.) تعداد ورودی Input: 1x micro USB 1x USB-C ویژگی ها دارای صفحه نمایش ظرفیت باتری 30000 میلی‌آمپر ساعت نوع باتری لیتیوم پلیمری",
+      "inventory": 4,
+      "category": "پاوربانک-باسئوس",
+      "image": "https://www.upload.ee/image/17401257/baseus-power-bank-PPBD050402-33.png",
+      "rating": {
+        "rate": 4.2,
+        "count": 579
+      },
+      "createdAt": "2024-11-17T17:16:42.325Z"
+    },
+    {
+      "id": "6054",
+      "title": "پاور بانک باسئوس مدل PPBD050501 ظرفیت 20000 میلی آمپر ساعت",
+      "price": 1668000,
+      "description": "رنگ سفید, مشکی ابعاد 153 x 68.8 x 29.5 میلی‌متر وزن 460 گرم خروجی USB1/USB2: 5V/3A Type-C: 5V/3A USB + Type-C: 5V/3A Max تعداد ورودی Micro: 5V/2A Type-C: 5V/3A ویژگی ها دارای صفحه نمایش ظرفیت باتری 20000 میلی‌آمپر ساعت نوع باتری لیتیوم پلیمری",
+      "inventory": 4,
+      "category": "پاوربانک-باسئوس",
+      "image": "https://www.upload.ee/image/17401266/baseus-power-bank-ppbd050501-3.png",
+      "rating": {
+        "rate": 4.8,
+        "count": 498
+      },
+      "createdAt": "2024-11-17T17:19:11.080Z"
+    },
+    {
+      "id": "6501",
+      "title": "پاوربانک بی سیم انکر مدل A1611 ظرفیت 5000 میلی آمپر ساعت",
+      "price": 1888000,
+      "description": "رنگ آبی, سفید, مشکی ابعاد 10.4 × 6.65 × 1.27 سانتیمتر وزن 141 گرم خروجی شدت جریان خروجی : ۱.۰ آمپر ولتاژ خروجی : ۵.۰ ولت درگاه خروجی : یک عدد ورودی ولتاژ ورودی : ۵ ولت درگاه ورودی: یک عدد نوع باتری لیتیوم یونی",
+      "inventory": 4,
+      "category": "پاوربانک-انکر",
+      "image": "https://www.upload.ee/image/17401272/anker-622-maggo-5000mah-2.png",
+      "rating": {
+        "rate": 4.9,
+        "count": 479
+      },
+      "createdAt": "2024-11-17T17:21:04.700Z"
+    },
+    {
+      "id": "1092",
+      "title": "شارژر بی‌سیم ۴ در ۱ پاورولوژی مدل Fast Charging Power Dock 4 in 1",
+      "price": 3518000,
+      "description": "ابعاد 10.5x21x4 cm وزن ۳۰۰ گرم رنگ مشکی جنس بدنه ABS (پلاستیک مقاوم) ورودی 20.3V/3A, USB Type-C خروجی خروجی ۲۴ وات USB-A, خروجی ساعت : 5W, دو عدد پد شارژ بی‌سیم با توان ۱۰ وات, مجموع توان خروجی شارژر 49 وات سایر مشخصات شارژر اپل واچ با تأییدیه اپل دارای استاندارد QC مناسب شارژ هم‌زمان آیفون، اپل‌واچ و ایرپاد",
+      "inventory": 7,
+      "category": "شارژر",
+      "image": "https://www.upload.ee/image/17401284/powerology-4in1-fast-sharger-dock-1.png",
+      "rating": {
+        "rate": 4.7,
+        "count": 459
+      },
+      "createdAt": "2024-11-17T17:25:56.327Z"
+    },
+    {
+      "id": "3870",
+      "title": "هاب 7 پورت تایپ سی بلکین Connect – مدل belkin AVC009btSGY",
+      "price": 3588000,
+      "description": "رنگ خاکستری جنس بدنه آلومینیوم وزن 108.86 گرم ابعاد 15.74 × 10.16 × 3.30 سانتیمتر",
+      "inventory": 4,
+      "category": "لوازم جانبی",
+      "image": "https://www.upload.ee/image/17401290/avc009btsgy-1.png",
+      "rating": {
+        "rate": 4.2,
+        "count": 410
+      },
+      "createdAt": "2024-11-17T17:28:39.070Z"
+    },
+    {
+      "id": "4029",
+      "title": "کابل تبدیل USB به USB-C بیاند مدل BA-309 طول 2 متر",
+      "price": 178000,
+      "description": "رنگ مشکی طول 2 متر نوع کانتکتور Type-C جنس رابط فلز – پلاستیک جنس روکش کابل روکش بافته شده از الیاف نایلون شدت جریان خروجی 2 آمپر فست شارژ دارد قابلیت ها – تکنولوژی هوشمند در شارژ سریع و انتقال اطلاعات – روکش پارچه‌ای از الیاف نایلون – ساخته شده از رشته‌های مسی با کیفیت – انعطاف پذیری بسیار بالا – استحکام فوق‌العاده – مقاوم در برابر کشیدن، خم شدن و گره خوردن-امکان انتقال اطلاعات",
+      "inventory": 4,
+      "category": "کابل ها",
+      "image": "https://www.upload.ee/image/17401299/3564608-600x600.jpg",
+      "rating": {
+        "rate": 3.2,
+        "count": 127
+      },
+      "createdAt": "2024-11-17T17:30:28.248Z"
     }
   ],
   "users": [
@@ -623,7 +707,7 @@
     },
     {
       "id": "0f7f",
-      "category": "ارسال شده",
+      "category": "در حال پردازش",
       "products": [
         {
           "id": 8286,
@@ -707,6 +791,31 @@
         "zipCode": "1476874751"
       },
       "orderTime": "2024-11-13T19:52:29.355Z"
+    },
+    {
+      "id": "2d50",
+      "category": "بسته شده",
+      "products": [
+        {
+          "id": 4814,
+          "qty": 10,
+          "title": "لپتاپ",
+          "image": "https://www.upload.ee/image/17401299/3564608-600x600.jpg"
+        }
+      ],
+      "user": {
+        "firstName": "علي",
+        "lastName": "محمدي",
+        "email": "iop098aliop098@gmail.com",
+        "phone": 0
+      },
+      "address": {
+        "line": "sdvdsdf",
+        "city": "تهران",
+        "state": "تهران",
+        "zipCode": "432343242"
+      },
+      "orderTime": "2024-11-17T18:20:04.835Z"
     }
   ],
   "login": [
@@ -997,6 +1106,36 @@
     },
     {
       "id": "7a29",
+      "username": "AdminProducts",
+      "password": "AdminProducts"
+    },
+    {
+      "id": "55bb",
+      "username": "AdminProducts",
+      "password": "AdminProducts"
+    },
+    {
+      "id": "070e",
+      "username": "AdminUsers",
+      "password": "AdminUsers"
+    },
+    {
+      "id": "8e19",
+      "username": "AdminProducts",
+      "password": "AdminProducts"
+    },
+    {
+      "id": "8808",
+      "username": "AdminProducts",
+      "password": "AdminProducts"
+    },
+    {
+      "id": "379c",
+      "username": "AdminProducts",
+      "password": "AdminProducts"
+    },
+    {
+      "id": "da18",
       "username": "AdminProducts",
       "password": "AdminProducts"
     }
