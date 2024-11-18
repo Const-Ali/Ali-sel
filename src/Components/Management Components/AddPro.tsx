@@ -5,6 +5,7 @@ import Addok from "../Alert/Addok";
 import AddProNot from "../Alert/AddProNot";
 import AddInput from "../AddInput/AddInput";
 import TextTitle from "../Text/TextTitle";
+import CategoryModal from "../Alert/CategoryModal";
 
 interface IProduct {
   id: string;
@@ -38,25 +39,36 @@ function AddPro() {
   const [showErrorAlert, setShowErrorAlert] = useState(false);
   const [productId, setProductId] = useState<string | null>(null);
   const [newCategory, setNewCategory] = useState("");
+  const [isCategoryModalOpen, setIsCategoryModalOpen] = useState(false);
 
   useEffect(() => {
     const fetchCategories = async () => {
       try {
         const response = await fetch("http://localhost:8001/products");
         const data: IProduct[] = await response.json();
-
         const uniqueCategories = Array.from(
           new Set(data.map((cat) => cat.category))
         ).map((category) => ({ category }));
-
         setCategories(uniqueCategories);
       } catch (error) {
         console.error("Error fetching categories:", error);
       }
     };
-
     fetchCategories();
   }, []);
+
+  const openCategoryModal = () => {
+    setIsCategoryModalOpen(true);
+  };
+
+  const closeCategoryModal = () => {
+    setIsCategoryModalOpen(false);
+  };
+
+  const selectCategory = (selectedCategory: string) => {
+    setCategory(selectedCategory);
+    closeCategoryModal();
+  };
 
   const checkDuplicateProduct = async (newProduct: any) => {
     try {
@@ -135,8 +147,6 @@ function AddPro() {
       );
       setShowAlert(true);
       setProductId(response.data.id);
-
-      // بازنشانی مقادیر اینپوت‌ها پس از ثبت موفق
       setTitle("");
       setPrice("");
       setDescription("");
@@ -198,6 +208,13 @@ function AddPro() {
           <AddProNot idset={productId} />
         </div>
       )}
+      {isCategoryModalOpen && (
+        <CategoryModal
+          categories={categories}
+          onSelect={selectCategory}
+          onClose={closeCategoryModal}
+        />
+      )}
       <div className="pb-7">
         <TextTitle value="ثبت کالای جدید" />
       </div>
@@ -229,11 +246,11 @@ function AddPro() {
         </div>
         <div className="flex justify-center items-center gap-24">
           <div className="flex flex-col mb-4 rounded-md border border-gray-200 p-2 text-right ">
-            <label
+            {/* <label
               htmlFor="HeadlineAct"
               className=" mb-1  text-sm font-medium text-gray-900 "
             >
-              : دسته بندی
+              دسته بندی
             </label>
 
             <select
@@ -249,7 +266,22 @@ function AddPro() {
                   {cat.category}
                 </option>
               ))}
-            </select>
+            </select> */}
+            <div className="flex justify-center items-center gap-24">
+              {/* دکمه باز کردن مودال انتخاب دسته‌بندی */}
+              <button
+                type="button"
+                onClick={openCategoryModal}
+                className="px-4 py-2 bg-blue-500 text-white rounded"
+              >
+                انتخاب دسته‌بندی
+              </button>
+              {category && (
+                <span className="ml-2 text-gray-700">
+                  دسته‌بندی: {category}
+                </span>
+              )}
+            </div>
             <div className="flex mt-2 gap-2">
               <input
                 type="text"
