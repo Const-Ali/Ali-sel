@@ -6,37 +6,37 @@ function Pro4item() {
     <div className="w-full h-24 px-96">
       <div className="flex justify-between items-center pt-8">
         <div
-          className="cursor-pointer transition transform hover:scale-105 hover:shadow-xl p-4 rounded-lg"
+          className="cursor-pointer transition transform hover:scale-105 hover:shadow-xl p-4 rounded-lg w-44 pl-8"
           onClick={() => navigate("/Pro4itemsOne")}
         >
           <img
             className="pl-4 w-20"
             src="https://www.upload.ee/image/17325996/design__1_.png"
           />
-          <p className=" text-gray-500 text-sm "> پرداخت در محل</p>
+          <p className=" text-gray-500 text-sm pl-3"> پرداخت در محل</p>
         </div>
         <div
-          className="cursor-pointer transition transform hover:scale-105 hover:shadow-xl p-4 rounded-lg"
+          className="cursor-pointer transition transform hover:scale-105 hover:shadow-xl p-4 rounded-lg w-44 pl-10"
           onClick={() => navigate("/Pro4itemsTwo")}
         >
           <img
-            className="pl-6 "
+            className="pl-3"
             src="https://www.upload.ee/image/17325994/design__2_.png"
           />
           <p className=" text-gray-500 text-sm">ضمانت اصالت کالا</p>
         </div>
         <div
-          className="cursor-pointer transition transform hover:scale-105 hover:shadow-xl p-4 rounded-lg"
+          className="cursor-pointer transition transform hover:scale-105 hover:shadow-xl p-4 rounded-lg w-44 pl-12"
           onClick={() => navigate("/Pro4itemsThree")}
         >
           <img
-            className="pl-2"
+            className=""
             src="https://www.upload.ee/image/17325997/design.png"
           />
           <p className=" text-gray-500 text-sm">پرداخت قسطی</p>
         </div>
         <div
-          className="cursor-pointer transition transform hover:scale-105 hover:shadow-xl p-4 rounded-lg"
+          className="cursor-pointer transition transform hover:scale-105 hover:shadow-xl p-4 rounded-lg w-44"
           onClick={() => navigate("/Pro4itemsFour")}
         >
           <img
