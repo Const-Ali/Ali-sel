@@ -218,7 +218,9 @@ function AddProductComTotal() {
               <td className="border border-gray-300 p-2">
                 {product.inventory.toLocaleString("fa-IR")}
               </td>
-              <td className="border border-gray-300 p-2">{product.price}</td>
+              <td className="border border-gray-300 p-2">
+                {product?.price.toLocaleString("fa-IR")}
+              </td>
               <td className="border border-gray-300 p-2">{product.category}</td>
               <td className="border border-gray-300 p-2">{product.title}</td>
               <td className="border border-gray-300 p-2">
