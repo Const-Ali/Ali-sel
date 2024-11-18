@@ -227,13 +227,13 @@ function ManagementPanel() {
                 </button>
                 <button
                   onClick={() => setSelectedComponent("AddPro")}
-                  className={`px-4 py-2 rounded ${selectedComponent === "AddPro" ? "bg-green-800 text-white" : "bg-green-300"}`}
+                  className={`px-4 py-2 rounded ${selectedComponent === "AddPro" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
                 >
                   افزودن کالا
                 </button>
                 <button
                   onClick={() => setSelectedComponent("EditPro")}
-                  className={`px-4 py-2 rounded ${selectedComponent === "EditPro" ? "bg-orange-600 text-white" : "bg-orange-300"}`}
+                  className={`px-4 py-2 rounded ${selectedComponent === "EditPro" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
                 >
                   ویرایش کالا
                 </button>

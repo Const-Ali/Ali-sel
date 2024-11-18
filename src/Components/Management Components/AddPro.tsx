@@ -268,13 +268,12 @@ function AddPro() {
               ))}
             </select> */}
             <div className="flex justify-center items-center gap-24">
-              {/* دکمه باز کردن مودال انتخاب دسته‌بندی */}
               <button
                 type="button"
                 onClick={openCategoryModal}
-                className="px-4 py-2 bg-blue-500 text-white rounded"
+                className="px-4 py-2 bg-gray-500 text-white rounded"
               >
-                انتخاب دسته‌بندی
+                انتخاب دسته‌ بندی
               </button>
               {category && (
                 <span className="ml-2 text-gray-700">
@@ -293,7 +292,7 @@ function AddPro() {
               <button
                 type="button"
                 onClick={addNewCategory}
-                className="px-4 py-1 bg-blue-600 text-white rounded-lg"
+                className="px-4 py-1 bg-gray-600 text-white rounded-lg"
               >
                 افزودن دسته‌بندی
               </button>

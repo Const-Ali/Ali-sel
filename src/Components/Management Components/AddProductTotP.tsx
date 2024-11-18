@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import TextTitle from "../Text/TextTitle";
 import { IOrders, IProduct } from "../../Types/servers_type";
+import ModalFactorCom from "../Alert/ModalFactorCom";
 
 function AddProductTotS() {
   const [orders, setOrders] = useState<IOrders[]>([]);
@@ -12,16 +13,27 @@ function AddProductTotS() {
   const [selectedOrder, setSelectedOrder] = useState<IOrders | null>(null);
 
   useEffect(() => {
-    const fetchOrders = async () => {
+    const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8001/orders");
-        setOrders(response.data);
+        const [ordersResponse, productsResponse] = await Promise.all([
+          axios.get("http://localhost:8001/orders"),
+          axios.get("http://localhost:8001/products"),
+        ]);
+        setOrders(ordersResponse.data);
+        setProducts(productsResponse.data);
+        console.log("Orders:", ordersResponse.data);
+        console.log("Products:", productsResponse.data);
       } catch (error) {
-        console.error("Error fetching orders:", error);
+        console.error("Error fetching data:", error);
       }
     };
-    fetchOrders();
+    fetchData();
   }, []);
+
+  const getProductDetails = (productId: number) => {
+    console.log("Searching for product ID:", productId);
+    return products.find((product) => product.id === productId);
+  };
 
   const handleStatusChange = async () => {
     if (selectedOrderId) {
@@ -45,6 +57,11 @@ function AddProductTotS() {
     }
   };
 
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedOrder(null);
+  };
+
   const handleProcessingStatusChange = async (orderId: string) => {
     if (orderId) {
       try {
@@ -66,39 +83,11 @@ function AddProductTotS() {
     }
   };
 
-  const getProductDetails = (productId: number) => {
-    console.log("Searching for product ID:", productId);
-    return products.find((product) => product.id === productId);
-  };
-
   const handleShowInvoice = (order: IOrders) => {
     console.log("Selected Order:", order);
     setSelectedOrder(order);
+    setIsModalOpen(true);
   };
-
-  useEffect(() => {
-    const fetchOrders = async () => {
-      try {
-        const response = await axios.get("http://localhost:8001/orders");
-        setOrders(response.data);
-        console.log("Orders:", response.data);
-      } catch (error) {
-        console.error("Error fetching orders:", error);
-      }
-    };
-    fetchOrders();
-
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get("http://localhost:8001/products");
-        setProducts(response.data);
-        console.log("Products:", response.data);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
-    };
-    fetchProducts();
-  }, []);
 
   return (
     <div className="container mx-auto">
@@ -126,7 +115,7 @@ function AddProductTotS() {
                     className="bg-blue-500 text-white px-4 py-2 rounded mx-1"
                     onClick={() => {
                       setSelectedOrderId(order.id);
-                      setIsModalOpen(true);
+                      setIsProcessingModalOpen(true);
                     }}
                   >
                     وضعیت به بسته شده
@@ -149,7 +138,18 @@ function AddProductTotS() {
                 </td>
                 <td className="border border-gray-300 p-2">در حال ارسال</td>
                 <td className="border border-gray-300 p-2">
-                  {new Date(order.orderTime).toLocaleString()}
+                  <p>
+                    {new Date(order.orderTime).toLocaleString("fa-IR", {
+                      year: "numeric",
+                      month: "2-digit",
+                      day: "numeric",
+                    })}
+                  </p>
+                  {new Date(order.orderTime).toLocaleString("fa-IR", {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit",
+                  })}{" "}
                 </td>
                 <td className="border border-gray-300 p-2">
                   {order.user.firstName} {order.user.lastName}
@@ -209,7 +209,108 @@ function AddProductTotS() {
           </div>
         </div>
       )}
-      {selectedOrder && (
+
+      <ModalFactorCom isOpen={isModalOpen} onClose={handleCloseModal}>
+        {selectedOrder && (
+          <div className="mt-8 p-6 border-2 border-gray-300 rounded-lg shadow-lg bg-white">
+            <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
+              جزئیات فاکتور
+            </h3>
+            <p className="text-lg text-gray-700 mb-2 flex justify-end items-center gap-x-2">
+              <p> {selectedOrder.id}</p> <strong>: شماره سفارش</strong>
+            </p>
+            <p className="text-lg text-gray-700 mb-2 flex justify-end items-center gap-x-2">
+              <p> {selectedOrder.category}</p> <strong>:وضعیت سفارش</strong>
+            </p>
+            <p className="text-lg text-gray-700 mb-2 flex justify-end items-center gap-x-2">
+              <p>
+                {new Date(selectedOrder.orderTime).toLocaleString("fa-IR", {
+                  year: "numeric",
+                  month: "2-digit",
+                  day: "numeric",
+                })}
+              </p>{" "}
+              <p>
+                {new Date(selectedOrder.orderTime).toLocaleString("fa-IR", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  second: "2-digit",
+                })}
+              </p>
+              <strong>: زمان ثبت سفارش</strong>
+            </p>
+            <p className="text-lg text-gray-700 mb-2 flex justify-end items-center gap-x-2">
+              <p> {selectedOrder.user?.lastName}</p>
+              <p>{selectedOrder.user?.firstName}</p>
+
+              <strong>: نام و نام خانوادگی</strong>
+            </p>
+
+            {selectedOrder.products && selectedOrder.products.length > 0 && (
+              <div className="mt-4">
+                <h4 className="text-xl font-bold text-gray-800 mb-4 text-center">
+                  محصولات سفارش
+                </h4>
+                <table className="w-full table-auto border-collapse border border-gray-300">
+                  <thead>
+                    <tr>
+                      <th className="border border-gray-300 p-2">
+                        شناسه محصول
+                      </th>
+                      <th className="border border-gray-300 p-2">تعداد</th>
+                      <th className="border border-gray-300 p-2">
+                        عنوان محصول
+                      </th>
+                      <th className="border border-gray-300 p-2">
+                        تصویر محصول
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {selectedOrder.products.map((product) => {
+                      console.log("Order Product ID:", product.id);
+                      getProductDetails(product.id);
+
+                      return (
+                        <tr key={product.id} className="text-center">
+                          <td className="border border-gray-300 p-2">
+                            {product.id}
+                          </td>
+                          <td className="border border-gray-300 p-2">
+                            {product.qty}
+                          </td>
+                          <td className="border border-gray-300 p-2">
+                            {product.title}
+                          </td>
+                          <td className="border border-gray-300 p-2 ">
+                            <img
+                              className="w-24 "
+                              src={
+                                product.image instanceof URL
+                                  ? product.image.toString()
+                                  : product.image
+                              }
+                              alt={product.title}
+                            />
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        )}
+      </ModalFactorCom>
+    </div>
+  );
+}
+
+export default AddProductTotS;
+
+{
+  /* {selectedOrder && (
         <div className="mt-8 p-6 border-2 border-gray-300 rounded-lg shadow-lg bg-white">
           <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
             جزئیات فاکتور
@@ -288,9 +389,5 @@ function AddProductTotS() {
             </div>
           )}
         </div>
-      )}
-    </div>
-  );
+      )} */
 }
-
-export default AddProductTotS;

@@ -81,10 +81,14 @@ function AddProductTotS() {
                 </td>
                 <td className="border border-gray-300 p-2">بسته شده</td>
                 <td className="border border-gray-300 p-2">
+                  <p>
+                    {new Date(order.orderTime).toLocaleString("fa-IR", {
+                      year: "numeric",
+                      month: "2-digit",
+                      day: "numeric",
+                    })}
+                  </p>
                   {new Date(order.orderTime).toLocaleString("fa-IR", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
                     hour: "2-digit",
                     minute: "2-digit",
                     second: "2-digit",
@@ -114,8 +118,12 @@ function AddProductTotS() {
               <p>
                 {new Date(selectedOrder.orderTime).toLocaleString("fa-IR", {
                   year: "numeric",
-                  month: "long",
+                  month: "2-digit",
                   day: "numeric",
+                })}
+              </p>{" "}
+              <p>
+                {new Date(selectedOrder.orderTime).toLocaleString("fa-IR", {
                   hour: "2-digit",
                   minute: "2-digit",
                   second: "2-digit",
@@ -124,8 +132,9 @@ function AddProductTotS() {
               <strong>: زمان ثبت سفارش</strong>
             </p>
             <p className="text-lg text-gray-700 mb-2 flex justify-end items-center gap-x-2">
-              {selectedOrder.user?.firstName}
-              {selectedOrder.user?.lastName}
+              <p> {selectedOrder.user?.lastName}</p>
+              <p>{selectedOrder.user?.firstName}</p>
+
               <strong>: نام و نام خانوادگی</strong>
             </p>
 

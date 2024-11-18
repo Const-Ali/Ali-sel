@@ -121,7 +121,18 @@ function AddProductTotS() {
                 </td>
                 <td className="border border-gray-300 p-2">در حال پردازش</td>
                 <td className="border border-gray-300 p-2">
-                  {new Date(order.orderTime).toLocaleString()}
+                  <p>
+                    {new Date(order.orderTime).toLocaleString("fa-IR", {
+                      year: "numeric",
+                      month: "2-digit",
+                      day: "numeric",
+                    })}
+                  </p>
+                  {new Date(order.orderTime).toLocaleString("fa-IR", {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit",
+                  })}{" "}
                 </td>
                 <td className="border border-gray-300 p-2">
                   {order.user.firstName} {order.user.lastName}

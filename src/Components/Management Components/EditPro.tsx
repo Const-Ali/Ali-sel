@@ -266,7 +266,7 @@ function EditPro() {
               htmlFor="HeadlineAct"
               className=" mb-1  text-sm font-medium text-gray-900 "
             >
-              : دسته بندی
+              دسته بندی
             </label>
 
             <select
