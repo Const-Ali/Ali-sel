@@ -3,12 +3,10 @@ interface TextTitleProps {
 }
 
 const TextTitle: React.FC<TextTitleProps> = ({ value }) => (
-  <div className="relative">
-    <span className="relative flex justify-center">
-      <div className="absolute inset-x-0 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-gray-500 to-transparent opacity-75"></div>
-
-      <span className="relative z-10 px-6 text-xl font-bold pt-3">{value}</span>
-    </span>
+  <div className="flex items-center justify-center">
+    <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-gray-600 via-slate-400 to-stone-600 font-thin">
+      {value}{" "}
+    </h1>
   </div>
 );
 
