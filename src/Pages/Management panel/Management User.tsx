@@ -4,6 +4,7 @@ import EditUser from "../../Components/Management User/EditUser";
 import UserComTotal from "../../Components/Management User/UserComTotal";
 import Container from "../../Components/Container/Container";
 import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
+import UserComInformation from "../../Components/Management User/UserComInformation";
 
 function ManagementUser() {
   const [selectedComponent, setSelectedComponent] = useState("UserComTotal");
@@ -13,6 +14,8 @@ function ManagementUser() {
     switch (selectedComponent) {
       case "UserComTotal":
         return <UserComTotal />;
+      case "UserComInformation":
+        return <UserComInformation />;
       case "AddUser":
         return <AddUser />;
       case "EditUser":
@@ -179,13 +182,23 @@ function ManagementUser() {
               }`}
             >
               اطلاعات کاربران
+            </button>{" "}
+            <button
+              onClick={() => setSelectedComponent("UserComInformation")}
+              className={`px-4 py-2 rounded ${
+                selectedComponent === "UserComInformation"
+                  ? "bg-gray-800 text-white"
+                  : "bg-gray-300"
+              }`}
+            >
+              اطلاعات حساس
             </button>
             <button
               onClick={() => setSelectedComponent("AddUser")}
               className={`px-4 py-2 rounded ${
                 selectedComponent === "AddUser"
-                  ? "bg-green-800 text-white"
-                  : "bg-green-300"
+                  ? "bg-gray-800 text-white"
+                  : "bg-gray-300"
               }`}
             >
               افزودن کاربر
@@ -194,8 +207,8 @@ function ManagementUser() {
               onClick={() => setSelectedComponent("EditUser")}
               className={`px-4 py-2 rounded ${
                 selectedComponent === "EditUser"
-                  ? "bg-orange-600 text-white"
-                  : "bg-orange-300"
+                  ? "bg-gray-800 text-white"
+                  : "bg-gray-300"
               }`}
             >
               ویرایش کاربر
