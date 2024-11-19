@@ -98,7 +98,7 @@ export function Shop_Card_Pro({ children }: Shop_Card_Pro) {
     password: string,
     category: string
   ) => {
-    login(username, password).finally(() => {
+    login(username, password, category).finally(() => {
       let token = "eyJhbGciOiJIUzI1NiIsInR";
       localStorage.setItem("token", token);
       setIsLogin(true);
