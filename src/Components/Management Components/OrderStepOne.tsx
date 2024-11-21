@@ -3,7 +3,7 @@ import axios from "axios";
 import TextTitle from "../Text/TextTitle";
 import { IOrders, IProduct } from "../../Types/servers_type";
 
-function AddProductTotS() {
+function OrderStepOne() {
   const [orders, setOrders] = useState<IOrders[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedOrderId, setSelectedOrderId] = useState<string | null>(null);
@@ -251,4 +251,4 @@ function AddProductTotS() {
   );
 }
 
-export default AddProductTotS;
+export default OrderStepOne;

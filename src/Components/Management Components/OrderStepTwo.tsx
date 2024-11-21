@@ -4,7 +4,7 @@ import TextTitle from "../Text/TextTitle";
 import { IOrders, IProduct } from "../../Types/servers_type";
 import ModalFactorCom from "../Alert/ModalFactorCom";
 
-function AddProductTotS() {
+function OrderStepTwo() {
   const [orders, setOrders] = useState<IOrders[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isProcessingModalOpen, setIsProcessingModalOpen] = useState(false);
@@ -307,7 +307,7 @@ function AddProductTotS() {
   );
 }
 
-export default AddProductTotS;
+export default OrderStepTwo;
 
 {
   /* {selectedOrder && (

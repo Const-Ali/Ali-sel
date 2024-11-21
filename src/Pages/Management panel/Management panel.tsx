@@ -1,10 +1,10 @@
 import { useState } from "react";
-import AddProductTotS from "../../Components/Management Components/AddProductTotS";
-import AddProductTotE from "../../Components/Management Components/AddProductTotE";
-import AddProductComTotal from "../../Components/Management Components/AddProductComTotal";
+import OrderStepOne from "../../Components/Management Components/OrderStepOne";
+import OrderStepThree from "../../Components/Management Components/OrderStepThree";
+import ProductComTotal from "../../Components/Management Components/ProductComTotal";
 import AddPro from "../../Components/Management Components/AddPro";
 import EditPro from "../../Components/Management Components/EditPro";
-import AddProductTotP from "../../Components/Management Components/AddProductTotP";
+import OrderStepTwo from "../../Components/Management Components/OrderStepTwo";
 import Container from "../../Components/Container/Container";
 import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
 
@@ -16,14 +16,14 @@ function ManagementPanel() {
 
   const renderComponent = () => {
     switch (selectedComponent) {
-      case "AddProductTotS":
-        return <AddProductTotS />;
-      case "AddProductTotE":
-        return <AddProductTotE />;
-      case "AddProductComTotal":
-        return <AddProductComTotal />;
-      case "AddProductTotP":
-        return <AddProductTotP />;
+      case "OrderStepOne":
+        return <OrderStepOne />;
+      case "OrderStepThree":
+        return <OrderStepThree />;
+      case "ProductComTotal":
+        return <ProductComTotal />;
+      case "OrderStepTwo":
+        return <OrderStepTwo />;
       case "AddPro":
         return <AddPro />;
       case "EditPro":
@@ -199,20 +199,20 @@ function ManagementPanel() {
             {selectedGroup === "orders" ? (
               <>
                 <button
-                  onClick={() => setSelectedComponent("AddProductTotE")}
-                  className={`px-4 py-2 rounded ${selectedComponent === "AddProductTotE" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
+                  onClick={() => setSelectedComponent("OrderStepThree")}
+                  className={`px-4 py-2 rounded ${selectedComponent === "OrderStepThree" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
                 >
                   سفارشات بسته شده
                 </button>
                 <button
-                  onClick={() => setSelectedComponent("AddProductTotP")}
-                  className={`px-4 py-2 rounded ${selectedComponent === "AddProductTotP" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
+                  onClick={() => setSelectedComponent("OrderStepTwo")}
+                  className={`px-4 py-2 rounded ${selectedComponent === "OrderStepTwo" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
                 >
                   سفارشات درحال ارسال
                 </button>
                 <button
-                  onClick={() => setSelectedComponent("AddProductTotS")}
-                  className={`px-4 py-2 rounded ${selectedComponent === "AddProductTotS" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
+                  onClick={() => setSelectedComponent("OrderStepOne")}
+                  className={`px-4 py-2 rounded ${selectedComponent === "OrderStepOne" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
                 >
                   سفارشات درحال پیگیری
                 </button>
@@ -220,8 +220,8 @@ function ManagementPanel() {
             ) : (
               <>
                 <button
-                  onClick={() => setSelectedComponent("AddProductComTotal")}
-                  className={`px-4 py-2 rounded ${selectedComponent === "AddProductComTotal" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
+                  onClick={() => setSelectedComponent("ProductComTotal")}
+                  className={`px-4 py-2 rounded ${selectedComponent === "ProductComTotal" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
                 >
                   اطلاعات محصول
                 </button>

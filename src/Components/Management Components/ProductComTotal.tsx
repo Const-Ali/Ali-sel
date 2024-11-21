@@ -3,8 +3,10 @@ import axios from "axios";
 import { getProducts } from "../../Services/Api";
 import { IProduct } from "../../Types/servers_type";
 import TextTitle from "../Text/TextTitle";
+import DeleteSvg from "../SVG/DeleteSvg";
+import EditSvg from "../SVG/EditSvg";
 
-function AddProductComTotal() {
+function ProductComTotal() {
   interface ICategory {
     category: string;
   }
@@ -202,17 +204,11 @@ function AddProductComTotal() {
           {filteredProducts.map((product, index) => (
             <tr key={product.id || index} className="text-center">
               <td className="border border-gray-300 p-2">
-                <button
-                  className="bg-red-500 text-white px-2 py-1 rounded"
-                  onClick={() => handleDelete(Number(product.id))}
-                >
-                  حذف
+                <button onClick={() => handleDelete(Number(product.id))}>
+                  <DeleteSvg />
                 </button>
-                <button
-                  className="bg-orange-400 text-white px-2 py-1 rounded mx-2"
-                  onClick={() => handleEdit(Number(product.id))}
-                >
-                  ویرایش
+                <button onClick={() => handleEdit(Number(product.id))}>
+                  <EditSvg />
                 </button>
               </td>
               <td className="border border-gray-300 p-2">
@@ -346,4 +342,4 @@ function AddProductComTotal() {
   );
 }
 
-export default AddProductComTotal;
+export default ProductComTotal;
