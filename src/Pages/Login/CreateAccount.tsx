@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Container from "../../Components/Container/Container";
 import axios from "axios";
-import AddUserOk from "../../Components/Alert/AddUserOk";
 import AddUserNot from "../../Components/Alert/AddUserNot";
 import AddInput from "../../Components/AddInput/AddInput";
+import CreatUserOk from "../../Components/Alert/CreatUserOk";
 
 interface IAddress {
   city: string;
@@ -26,6 +26,11 @@ interface IUser {
 }
 
 function CreateAccount() {
+  const [alertVisible, setAlertVisible] = useState(false);
+  const [errorVisible, setErrorVisible] = useState(false);
+  const [usernameError, setUsernameError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+  const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
   const [userId, setUserId] = useState<string | null>(null);
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
@@ -38,12 +43,6 @@ function CreateAccount() {
     street: "",
     zipcode: "",
   });
-
-  const [alertVisible, setAlertVisible] = useState(false);
-  const [errorVisible, setErrorVisible] = useState(false);
-
-  const [usernameError, setUsernameError] = useState("");
-  const [phoneError, setPhoneError] = useState("");
 
   const isFormValid = () => {
     const isUsernameValid = username.length >= 3;
@@ -123,8 +122,6 @@ function CreateAccount() {
     }
   };
 
-  const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
-
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setIsCheckboxChecked(e.target.checked);
   };
@@ -150,7 +147,7 @@ function CreateAccount() {
               />
 
               <h1 className="mt-32 text-lg font-bold text-gray-900 sm:text-xl md:text-xl text-center">
-                . تکنو سنتر همراه مطمئن شما در دنیای تکنولوژی
+                تکنو سنتر همراه مطمئن شما در دنیای تکنولوژی
               </h1>
 
               <p className="mt-4 leading-relaxed text-gray-500 text-right">
@@ -167,7 +164,7 @@ function CreateAccount() {
                       role="alert"
                       className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
                     >
-                      <AddUserOk idset={userId} />
+                      <CreatUserOk />
                     </div>
                   )}
 
@@ -311,12 +308,8 @@ function CreateAccount() {
 
                 <div className="col-span-6">
                   <p className="text-sm text-gray-700">
-                    ورود شما به منزله پذیرش
-                    <a href="#" className="text-gray-500 underline mx-2">
-                      شرایط
-                    </a>
-                    تکنوسنتر و
-                    <a href="#" className="text-gray-500 underline mx-2">
+                    ورود شما به منزله پذیرش شرایط تکنوسنتر و
+                    <a href="Terms" className="text-gray-500 underline mx-2">
                       قوانین حریم‌ خصوصی
                     </a>
                     است
@@ -337,7 +330,7 @@ function CreateAccount() {
                   </button>
                   <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                     ! حساب کاربری دارید
-                    <a href="login" className="text-gray-700 underline">
+                    <a href="login" className="text-gray-700 underline p-1">
                       وارد شوید
                     </a>
                   </p>
