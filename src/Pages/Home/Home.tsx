@@ -1,10 +1,10 @@
 import Container from "../../Components/Container/Container";
-import HomeComFive from "../../Components/HomeCom/HomeComFive";
-import HomeComFour from "../../Components/HomeCom/HomeComFour";
-import HomeComOne from "../../Components/HomeCom/HomeComOne";
-import HomeComSix from "../../Components/HomeCom/HomeComSix";
-import HomeComTree from "../../Components/HomeCom/HomeComTree";
-import HomeComTwo from "../../Components/HomeCom/HomeComTwo";
+import HomeComFive from "../../Components/HomeComponents/HomeComFive";
+import HomeComFour from "../../Components/HomeComponents/HomeComFour";
+import HomeComOne from "../../Components/HomeComponents/HomeComOne";
+import HomeComSix from "../../Components/HomeComponents/HomeComSix";
+import HomeComTree from "../../Components/HomeComponents/HomeComTree";
+import HomeComTwo from "../../Components/HomeComponents/HomeComTwo";
 import ImageSlider from "../../Components/ImageSlider/ImageSlider";
 
 function Home() {
