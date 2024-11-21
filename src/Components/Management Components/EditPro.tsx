@@ -8,6 +8,7 @@ import NotChanges from "../Alert/NotChanges";
 import AddInput from "../AddInput/AddInput";
 import CheckInputs from "../Alert/CheckInputs";
 import TextTitle from "../Text/TextTitle";
+import Button from "../Button/Button";
 
 interface IProduct {
   id: string;
@@ -225,12 +226,9 @@ function EditPro() {
           value={productId}
           onChange={(e) => setProductId(e.target.value)}
         />
-        <button
-          className="bg-green-500 text-white px-4 py-2 rounded mt-2 w-24"
-          onClick={loadCheck}
-        >
+        <Button variant="Btn-1" onClick={loadCheck}>
           بررسی
-        </button>
+        </Button>
       </div>
       <form onSubmit={handleSubmit} className="space-y-4 rtl">
         <div className="flex flex-col mb-4">
