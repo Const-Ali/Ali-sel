@@ -24,10 +24,10 @@ const Footer: React.FC = () => {
                 className="w-[450px] shadow-xl rounded-sm"
               />
             </a>
-          </div>{" "}
+          </div>
           <div>
             <h2 className="text-black text-lg font-semibold mb-4">
-              Quick Links
+              دسترسی سریع
             </h2>
             <ul className="space-y-4">
               <li>
@@ -35,23 +35,23 @@ const Footer: React.FC = () => {
                   href="javascript:void(0)"
                   className="text-gray-800 hover:text-white text-sm transition-all"
                 >
-                  Newsroom
+                  محصولات
                 </a>
               </li>
               <li>
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   className="text-gray-800 hover:text-white text-sm transition-all"
                 >
-                  Tailwind CSS
+                  فروشگاه
                 </a>
               </li>
               <li>
                 <a
-                  href="javascript:void(0)"
+                  href="/Pro4itemsOne"
                   className="text-gray-800 hover:text-white text-sm transition-all"
                 >
-                  Careers
+                  روش ها و هزینه های ارسال
                 </a>
               </li>
             </ul>
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
                   href="https://github.com/Const-Ali"
                   className="text-gray-800 hover:text-white text-sm transition-all"
                 >
-                  Github
+                  گیت هاب
                 </a>
               </li>
               <li>
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                   href="javascript:void(0)"
                   className="text-gray-800 hover:text-white text-sm transition-all"
                 >
-                  linkedin
+                  لینکدین
                 </a>
               </li>
               <li>
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
                   href="https://www.instagram.com/ali_mohammadi.2003"
                   className="text-gray-800 hover:text-white text-sm transition-all"
                 >
-                  instagram
+                  اینستاگرام
                 </a>
               </li>
             </ul>
