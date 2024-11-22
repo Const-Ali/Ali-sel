@@ -50,7 +50,6 @@ function App() {
         <Route path="/CollectionWatch" element={<CollectionWatch />} />
         <Route path="/CollectionSpeaker" element={<CollectionSpeaker />} />
         <Route path="/CollectionPhone" element={<CollectionPhone />} />
-        <Route path="/CollectionCharger" element={<CollectionCharger />} />
         <Route path="/Test" element={<Test />} />
         <Route
           path="/login"

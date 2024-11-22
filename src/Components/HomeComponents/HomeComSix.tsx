@@ -62,34 +62,6 @@ function HomeComSix() {
             SrcImg="https://www.upload.ee/image/17349053/sp2.png"
           />
         </Link>{" "}
-        <Link to={`/${encodeURIComponent("CollectionSpeaker")}`}>
-          <ProCol
-            TitleOne="تخفیف"
-            TitleTwo="اسپیکر"
-            SrcImg="https://www.upload.ee/image/17349053/sp2.png"
-          />
-        </Link>{" "}
-        <Link to={`/${encodeURIComponent("CollectionSpeaker")}`}>
-          <ProCol
-            TitleOne="تخفیف"
-            TitleTwo="اسپیکر"
-            SrcImg="https://www.upload.ee/image/17349053/sp2.png"
-          />
-        </Link>{" "}
-        <Link to={`/${encodeURIComponent("CollectionSpeaker")}`}>
-          <ProCol
-            TitleOne="تخفیف"
-            TitleTwo="اسپیکر"
-            SrcImg="https://www.upload.ee/image/17349053/sp2.png"
-          />
-        </Link>{" "}
-        <Link to={`/${encodeURIComponent("CollectionSpeaker")}`}>
-          <ProCol
-            TitleOne="تخفیف"
-            TitleTwo="اسپیکر"
-            SrcImg="https://www.upload.ee/image/17349053/sp2.png"
-          />
-        </Link>
       </div>
     </Container>
   );

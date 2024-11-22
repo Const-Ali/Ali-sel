@@ -238,7 +238,8 @@ const Footer: React.FC = () => {
           </div>
 
           <p className="text-gray-900 text-sm">
-            © ReadymadeUI. All rights reserved.
+            «© تمامی حقوق محفوظ است. این سایت توسط تیم توسعه آماده طراحی شده
+            است.»
           </p>
         </div>
       </footer>

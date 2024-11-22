@@ -308,7 +308,8 @@ function Product() {
                         </div>
                         <div className="flex flex-col items-end">
                           <h2 className="text-2xl font-bold text-gray-800 text-right">
-                            {product?.title}
+                            {product?.title.replace(/[A-Za-z]/g, "").trim()}
+                            {product?.title.replace(/[^A-Za-z]/g, "").trim()}
                           </h2>
                           <p className="text-sm text-gray-500 mt-2">
                             {product?.category}
