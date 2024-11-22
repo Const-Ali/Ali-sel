@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { getProducts } from "../../Services/Api";
 import { IProduct } from "../../Types/servers_type";
-import TextTitle from "../Text/TextTitle";
+import TextTitle from "../PropComponents/TextTitle";
 import DeleteSvg from "../SVG/DeleteSvg";
 import EditSvg from "../SVG/EditSvg";
 

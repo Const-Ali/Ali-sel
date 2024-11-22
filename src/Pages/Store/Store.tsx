@@ -92,138 +92,140 @@ function Store() {
     <Container>
       <div className="flex flex-row-reverse">
         <aside className="w-1/4 p-4 border-l border-gray-300 text-right flex flex-col gap-5 pt-10">
-          <details className="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden">
-            <summary className="flex cursor-pointer items-center justify-between flex-row-reverse gap-2 p-4 text-gray-900 transition">
-              <span className="text-sm font-medium">برند ها</span>
-              <span className="transition group-open:-rotate-180">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="size-4"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
-              </span>
-            </summary>
-            <ul className="space-y-1 border-t border-gray-200 p-4">
-              <li className="flex gap-2">
-                <button className="w-full text-right p-2 rounded-lg">
-                  همه
-                </button>
-              </li>
-              <li className="flex gap-2">
-                <button className="w-full text-right p-2 rounded-lg">
-                  سامسونگ
-                </button>
-              </li>
-              <li className="flex gap-2">
-                <button className="w-full text-right p-2 rounded-lg">
-                  اپل
-                </button>
-              </li>
-              <li className="flex gap-2">
-                <button className="w-full text-right p-2 rounded-lg">
-                  شیائومی
-                </button>
-              </li>
-              <li className="flex gap-2">
-                <button className="w-full text-right p-2 rounded-lg">
-                  لنوو
-                </button>
-              </li>
-            </ul>
-          </details>
-
-          <details className="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden">
-            <summary className="flex cursor-pointer items-center justify-between flex-row-reverse gap-2 p-4 text-gray-900 transition">
-              <span className="text-sm font-medium">محصولات</span>
-              <span className="transition group-open:-rotate-180">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="size-4"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
-              </span>
-            </summary>
-            <ul className="space-y-1 border-t border-gray-200 p-4">
-              {brands.map((brand) => (
-                <li key={brand} className="flex gap-2">
-                  <button
-                    className={`w-full text-right p-2 rounded-lg ${
-                      selectedBrand === brand
-                        ? "font-bold bg-gradient-to-r from-gray-100 via-gray-50 to-gray-100"
-                        : ""
-                    }`}
-                    onClick={() => setSelectedBrand(brand)}
+          <div className="sticky top-44">
+            <details className="mb-6 overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer items-center justify-between flex-row-reverse gap-2 p-4 text-gray-900 transition">
+                <span className="text-sm font-medium">برند ها</span>
+                <span className="transition group-open:-rotate-180">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-4"
                   >
-                    {brand}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </details>
-          <details className="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden">
-            <summary className="flex cursor-pointer items-center justify-between flex-row-reverse gap-2 p-4 text-gray-900 transition">
-              <span className="text-sm font-medium"> دسته‌بندی ها </span>
-              <span className="transition group-open:-rotate-180">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="size-4"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
-              </span>
-            </summary>
-
-            <ul className="space-y-1 border-t border-gray-200 p-4">
-              {categories.map((category) => (
-                <li key={category} className="flex gap-2 ">
-                  <button
-                    className={`w-full text-right p-2 rounded-lg ${
-                      selectedCategories.includes(category)
-                        ? "font-bold bg-gradient-to-r from-gray-100 via-gray-50 to-gray-100"
-                        : ""
-                    }`}
-                    onClick={() => handleCategoryChange(category)}
-                  >
-                    {category}
-                  </button>
-                  <label className="inline-flex items-center gap-2 ">
-                    <input
-                      type="checkbox"
-                      checked={selectedCategories.includes(category)}
-                      onChange={() => handleCategoryChange(category)}
-                      className="size-5 rounded border-gray-300"
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                     />
-                  </label>
+                  </svg>
+                </span>
+              </summary>
+              <ul className="space-y-1 border-t border-gray-200 p-4">
+                <li className="flex gap-2">
+                  <button className="w-full text-right p-2 rounded-lg">
+                    همه
+                  </button>
                 </li>
-              ))}
-            </ul>
-          </details>
+                <li className="flex gap-2">
+                  <button className="w-full text-right p-2 rounded-lg">
+                    سامسونگ
+                  </button>
+                </li>
+                <li className="flex gap-2">
+                  <button className="w-full text-right p-2 rounded-lg">
+                    اپل
+                  </button>
+                </li>
+                <li className="flex gap-2">
+                  <button className="w-full text-right p-2 rounded-lg">
+                    شیائومی
+                  </button>
+                </li>
+                <li className="flex gap-2">
+                  <button className="w-full text-right p-2 rounded-lg">
+                    لنوو
+                  </button>
+                </li>
+              </ul>
+            </details>
+
+            <details className="mb-6 overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer items-center justify-between flex-row-reverse gap-2 p-4 text-gray-900 transition">
+                <span className="text-sm font-medium">محصولات</span>
+                <span className="transition group-open:-rotate-180">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </summary>
+              <ul className="space-y-1 border-t border-gray-200 p-4">
+                {brands.map((brand) => (
+                  <li key={brand} className="flex gap-2">
+                    <button
+                      className={`w-full text-right p-2 rounded-lg ${
+                        selectedBrand === brand
+                          ? "font-bold bg-gradient-to-r from-gray-100 via-gray-50 to-gray-100"
+                          : ""
+                      }`}
+                      onClick={() => setSelectedBrand(brand)}
+                    >
+                      {brand}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </details>
+            <details className="mb-6 overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer items-center justify-between flex-row-reverse gap-2 p-4 text-gray-900 transition">
+                <span className="text-sm font-medium"> دسته‌بندی ها </span>
+                <span className="transition group-open:-rotate-180">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <ul className="space-y-1 border-t border-gray-200 p-4">
+                {categories.map((category) => (
+                  <li key={category} className="flex gap-2 ">
+                    <button
+                      className={`w-full text-right p-2 rounded-lg ${
+                        selectedCategories.includes(category)
+                          ? "font-bold bg-gradient-to-r from-gray-100 via-gray-50 to-gray-100"
+                          : ""
+                      }`}
+                      onClick={() => handleCategoryChange(category)}
+                    >
+                      {category}
+                    </button>
+                    <label className="inline-flex items-center gap-2 ">
+                      <input
+                        type="checkbox"
+                        checked={selectedCategories.includes(category)}
+                        onChange={() => handleCategoryChange(category)}
+                        className="size-5 rounded border-gray-300"
+                      />
+                    </label>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          </div>
         </aside>
 
         <div className="w-3/4 p-4">

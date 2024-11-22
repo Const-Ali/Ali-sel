@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import DocumentSvg from "../SVG/DocumentSvg";
 
 interface LoginData {
   id: string;
@@ -87,7 +88,8 @@ const UserComInformation: React.FC = () => {
         <table className="table-auto w-full text-right">
           <thead>
             <tr>
-              <th className="px-4 py-2">ردیف </th>
+              <th className="px-4 py-2">ردیف</th>
+              <th className="px-4 py-2">شناسه</th>
               <th className="px-4 py-2">نام کاربری</th>
               <th className="px-4 py-2">رمز عبور</th>
               <th className="px-4 py-2">دسته بندی</th>
@@ -98,16 +100,14 @@ const UserComInformation: React.FC = () => {
             {userData.map((user, index) => (
               <tr key={user.id}>
                 <td className="px-4 py-2">{index + 1}</td>
+                <td className="px-4 py-2">{user.id}</td>
                 <td className="px-4 py-2">{user.username}</td>
                 <td className="px-4 py-2">{user.password}</td>
                 <td className="px-4 py-2">{user.category}</td>
                 <td className="px-4 py-2">
-                  <button
-                    className="bg-blue-500 text-white px-4 py-2 rounded-md"
-                    onClick={() => handleShowModal(user)}
-                  >
-                    نمایش جزئیات
-                  </button>{" "}
+                  <button onClick={() => handleShowModal(user)}>
+                    <DocumentSvg />
+                  </button>
                   <button onClick={() => handleDeleteUser(user.id)}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +175,7 @@ const UserComInformation: React.FC = () => {
                 <tr>
                   <th className="text-left font-medium">موقعیت جغرافیایی:</th>
                   <td className="text-left">
-                    عرض جغرافیایی: {selectedUser.lat}, طول جغرافیایی:{" "}
+                    عرض جغرافیایی: {selectedUser.lat}, طول جغرافیایی:
                     {selectedUser.lon}
                   </td>
                 </tr>

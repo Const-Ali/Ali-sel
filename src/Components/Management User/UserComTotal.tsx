@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { getUsers } from "../../Services/Api";
-import TextTitle from "../Text/TextTitle";
+import TextTitle from "../PropComponents/TextTitle";
 import DeleteSvg from "../SVG/DeleteSvg";
 import EditSvg from "../SVG/EditSvg";
 

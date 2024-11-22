@@ -35,7 +35,7 @@ function CodeOk() {
 
           <div className="flex-1 p-6 ">
             <strong className="flex justify-center items-center font-medium text-gray-900 text-2xl ">
-              کد تخفیف اعمال شد{" "}
+              کد تخفیف اعمال شد
             </strong>
           </div>
 

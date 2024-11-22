@@ -4,7 +4,7 @@ import axios from "axios";
 import AddUserOk from "../Alert/AddUserOk";
 import AddUserNot from "../Alert/AddUserNot";
 import AddInput from "../AddInput/AddInput";
-import TextTitle from "../Text/TextTitle";
+import TextTitle from "../PropComponents/TextTitle";
 
 interface IAddress {
   city: string;

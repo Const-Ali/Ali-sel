@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import TextTitle from "../Text/TextTitle";
+import TextTitle from "../PropComponents/TextTitle";
 import { IOrders, IProduct } from "../../Types/servers_type";
 import ModalFactorCom from "../Alert/ModalFactorCom";
+import InvoicSvg from "../SVG/InvoicSvg";
 
 function OrderStepThree() {
   const [orders, setOrders] = useState<IOrders[]>([]);
@@ -72,11 +73,8 @@ function OrderStepThree() {
             .map((order) => (
               <tr key={order.id} className="text-center">
                 <td className="border border-gray-300 p-2">
-                  <button
-                    className="bg-blue-500 text-white px-4 py-2 rounded mx-1"
-                    onClick={() => handleShowInvoice(order)}
-                  >
-                    نمایش فاکتور
+                  <button onClick={() => handleShowInvoice(order)}>
+                    <InvoicSvg />
                   </button>
                 </td>
                 <td className="border border-gray-300 p-2">بسته شده</td>
@@ -121,7 +119,7 @@ function OrderStepThree() {
                   month: "2-digit",
                   day: "numeric",
                 })}
-              </p>{" "}
+              </p>
               <p>
                 {new Date(selectedOrder.orderTime).toLocaleString("fa-IR", {
                   hour: "2-digit",

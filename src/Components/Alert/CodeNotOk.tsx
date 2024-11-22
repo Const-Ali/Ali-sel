@@ -34,7 +34,7 @@ function CodeNotOk() {
 
           <div className="flex-1 p-6 ">
             <strong className="flex justify-center items-center font-medium text-gray-900 text-2xl mb-6">
-              کد تخفیف نادرست وارد شده است یا منقضی شده است{" "}
+              کد تخفیف نادرست وارد شده است یا منقضی شده است
             </strong>
           </div>
 

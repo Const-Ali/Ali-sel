@@ -1,14 +1,20 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import TextTitle from "../Text/TextTitle";
+import TextTitle from "../PropComponents/TextTitle";
 import { IOrders, IProduct } from "../../Types/servers_type";
+import InvoicSvg from "../SVG/InvoicSvg";
+import ModalFactorCom from "../Alert/ModalFactorCom";
 
 function OrderStepOne() {
   const [orders, setOrders] = useState<IOrders[]>([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
   const [selectedOrderId, setSelectedOrderId] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const [products, setProducts] = useState<IProduct[]>([]);
   const [selectedOrder, setSelectedOrder] = useState<IOrders | null>(null);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [orderToDelete, setOrderToDelete] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -22,6 +28,20 @@ function OrderStepOne() {
     fetchOrders();
   }, []);
 
+  const handleDeleteOrder = async () => {
+    if (orderToDelete) {
+      try {
+        await axios.delete(`http://localhost:8001/orders/${orderToDelete}`);
+        setOrders((prevOrders) =>
+          prevOrders.filter((order) => order.id !== orderToDelete)
+        );
+        setIsDeleteModalOpen(false);
+        setOrderToDelete(null);
+      } catch (error) {
+        console.error("Error deleting order:", error);
+      }
+    }
+  };
   const handleStatusChange = async () => {
     if (selectedOrderId) {
       try {
@@ -38,8 +58,9 @@ function OrderStepOne() {
       } catch (error) {
         console.error("Error updating order status:", error);
       } finally {
-        setIsModalOpen(false);
+        setIsOrderModalOpen(false);
         setSelectedOrderId(null);
+        setIsModalOpen(false);
       }
     }
   };
@@ -77,6 +98,10 @@ function OrderStepOne() {
     console.log("Searching for product ID:", productId);
     return products.find((product) => product.id === productId);
   };
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedOrder(null);
+  };
 
   return (
     <div className="container mx-auto">
@@ -104,19 +129,22 @@ function OrderStepOne() {
                     className="bg-blue-500 text-white px-4 py-2 rounded mx-1"
                     onClick={() => {
                       setSelectedOrderId(order.id);
-                      setIsModalOpen(true);
+                      setIsOrderModalOpen(true);
                     }}
                   >
                     وضعیت به ارسال شده
                   </button>
-                  <button className="bg-red-500 text-white px-4 py-2 rounded mx-1">
-                    حذف
+                  <button onClick={() => handleShowInvoice(order)}>
+                    <InvoicSvg />
                   </button>
                   <button
-                    className="bg-blue-500 text-white px-4 py-2 rounded mx-1"
-                    onClick={() => handleShowInvoice(order)}
+                    className="bg-red-500 text-white px-4 py-2 rounded mx-1"
+                    onClick={() => {
+                      setOrderToDelete(order.id);
+                      setIsDeleteModalOpen(true);
+                    }}
                   >
-                    نمایش فاکتور
+                    حذف سفارش
                   </button>
                 </td>
                 <td className="border border-gray-300 p-2">در حال پردازش</td>
@@ -132,7 +160,7 @@ function OrderStepOne() {
                     hour: "2-digit",
                     minute: "2-digit",
                     second: "2-digit",
-                  })}{" "}
+                  })}
                 </td>
                 <td className="border border-gray-300 p-2">
                   {order.user.firstName} {order.user.lastName}
@@ -142,8 +170,30 @@ function OrderStepOne() {
             ))}
         </tbody>
       </table>
+      {isDeleteModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded shadow-md">
+            <h2 className="text-lg font-bold mb-4">تایید حذف</h2>
+            <p>آیا مطمئن هستید که می‌خواهید این سفارش را حذف کنید؟</p>
+            <div className="mt-4 flex justify-end">
+              <button
+                className="bg-gray-300 px-4 py-2 rounded mx-2"
+                onClick={() => setIsDeleteModalOpen(false)}
+              >
+                انصراف
+              </button>
+              <button
+                className="bg-red-500 text-white px-4 py-2 rounded"
+                onClick={handleDeleteOrder}
+              >
+                حذف
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
-      {isModalOpen && (
+      {isOrderModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
           <div className="bg-white p-6 rounded shadow-lg">
             <p>
@@ -158,7 +208,7 @@ function OrderStepOne() {
                 تایید
               </button>
               <button
-                onClick={() => setIsModalOpen(false)}
+                onClick={() => setIsOrderModalOpen(false)}
                 className="bg-gray-500 text-white px-4 py-2 rounded mx-2"
               >
                 انصراف
@@ -167,86 +217,99 @@ function OrderStepOne() {
           </div>
         </div>
       )}
-      {selectedOrder && (
-        <div className="mt-8 p-6 border-2 border-gray-300 rounded-lg shadow-lg bg-white">
-          <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
-            جزئیات فاکتور
-          </h3>
-          <p className="text-lg text-gray-700 mb-2 flex justify-end items-center gap-x-2">
-            <p> {selectedOrder.id}</p> <strong>: شماره سفارش</strong>
-          </p>
-          <p className="text-lg text-gray-700 mb-2 flex justify-end items-center gap-x-2">
-            <p> {selectedOrder.category}</p> <strong>:وضعیت سفارش</strong>
-          </p>
-          <p className="text-lg text-gray-700 mb-2 flex justify-end items-center gap-x-2">
-            <p>
-              {new Date(selectedOrder.orderTime).toLocaleString("fa-IR", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-                hour: "2-digit",
-                minute: "2-digit",
-                second: "2-digit",
-              })}
+      <ModalFactorCom isOpen={isModalOpen} onClose={handleCloseModal}>
+        {selectedOrder && (
+          <div className="mt-8 p-6 border-2 border-gray-300 rounded-lg shadow-lg bg-white">
+            <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
+              جزئیات فاکتور
+            </h3>
+            <p className="text-lg text-gray-700 mb-2 flex justify-end items-center gap-x-2">
+              <p> {selectedOrder.id}</p> <strong>: شماره سفارش</strong>
             </p>
-            <strong>: زمان ثبت سفارش</strong>
-          </p>
-          <p className="text-lg text-gray-700 mb-2 flex justify-end items-center gap-x-2">
-            {selectedOrder.user?.firstName}
-            {selectedOrder.user?.lastName}
-            <strong>: نام و نام خانوادگی</strong>
-          </p>
+            <p className="text-lg text-gray-700 mb-2 flex justify-end items-center gap-x-2">
+              <p> {selectedOrder.category}</p> <strong>:وضعیت سفارش</strong>
+            </p>
+            <p className="text-lg text-gray-700 mb-2 flex justify-end items-center gap-x-2">
+              <p>
+                {new Date(selectedOrder.orderTime).toLocaleString("fa-IR", {
+                  year: "numeric",
+                  month: "2-digit",
+                  day: "numeric",
+                })}
+              </p>
+              <p>
+                {new Date(selectedOrder.orderTime).toLocaleString("fa-IR", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  second: "2-digit",
+                })}
+              </p>
+              <strong>: زمان ثبت سفارش</strong>
+            </p>
+            <p className="text-lg text-gray-700 mb-2 flex justify-end items-center gap-x-2">
+              <p> {selectedOrder.user?.lastName}</p>
+              <p>{selectedOrder.user?.firstName}</p>
 
-          {selectedOrder.products && selectedOrder.products.length > 0 && (
-            <div className="mt-4">
-              <h4 className="text-xl font-bold text-gray-800 mb-4 text-center">
-                محصولات سفارش
-              </h4>
-              <table className="w-full table-auto border-collapse border border-gray-300">
-                <thead>
-                  <tr>
-                    <th className="border border-gray-300 p-2">شناسه محصول</th>
-                    <th className="border border-gray-300 p-2">تعداد</th>
-                    <th className="border border-gray-300 p-2">عنوان محصول</th>
-                    <th className="border border-gray-300 p-2">تصویر محصول</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {selectedOrder.products.map((product) => {
-                    console.log("Order Product ID:", product.id);
-                    getProductDetails(product.id);
+              <strong>: نام و نام خانوادگی</strong>
+            </p>
 
-                    return (
-                      <tr key={product.id} className="text-center">
-                        <td className="border border-gray-300 p-2">
-                          {product.id}
-                        </td>
-                        <td className="border border-gray-300 p-2">
-                          {product.qty}
-                        </td>
-                        <td className="border border-gray-300 p-2">
-                          {product.title}
-                        </td>
-                        <td className="border border-gray-300 p-2 ">
-                          <img
-                            className="w-24 "
-                            src={
-                              product.image instanceof URL
-                                ? product.image.toString()
-                                : product.image
-                            }
-                            alt={product.title}
-                          />
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          )}
-        </div>
-      )}
+            {selectedOrder.products && selectedOrder.products.length > 0 && (
+              <div className="mt-4">
+                <h4 className="text-xl font-bold text-gray-800 mb-4 text-center">
+                  محصولات سفارش
+                </h4>
+                <table className="w-full table-auto border-collapse border border-gray-300">
+                  <thead>
+                    <tr>
+                      <th className="border border-gray-300 p-2">
+                        شناسه محصول
+                      </th>
+                      <th className="border border-gray-300 p-2">تعداد</th>
+                      <th className="border border-gray-300 p-2">
+                        عنوان محصول
+                      </th>
+                      <th className="border border-gray-300 p-2">
+                        تصویر محصول
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {selectedOrder.products.map((product) => {
+                      console.log("Order Product ID:", product.id);
+                      getProductDetails(product.id);
+
+                      return (
+                        <tr key={product.id} className="text-center">
+                          <td className="border border-gray-300 p-2">
+                            {product.id}
+                          </td>
+                          <td className="border border-gray-300 p-2">
+                            {product.qty}
+                          </td>
+                          <td className="border border-gray-300 p-2">
+                            {product.title}
+                          </td>
+                          <td className="border border-gray-300 p-2 ">
+                            <img
+                              className="w-24 "
+                              src={
+                                product.image instanceof URL
+                                  ? product.image.toString()
+                                  : product.image
+                              }
+                              alt={product.title}
+                            />
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        )}
+      </ModalFactorCom>
     </div>
   );
 }

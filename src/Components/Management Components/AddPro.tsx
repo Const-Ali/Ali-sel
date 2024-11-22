@@ -4,7 +4,7 @@ import axios from "axios";
 import Addok from "../Alert/Addok";
 import AddProNot from "../Alert/AddProNot";
 import AddInput from "../AddInput/AddInput";
-import TextTitle from "../Text/TextTitle";
+import TextTitle from "../PropComponents/TextTitle";
 import CategoryModal from "../Alert/CategoryModal";
 
 interface IProduct {

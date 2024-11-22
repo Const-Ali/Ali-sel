@@ -534,7 +534,7 @@
     },
     {
       "id": "7125",
-      "title": "پاور بانک باسئوس مدل PPBD050402 ظرفیت 300000 میلی آمپر ساعت",
+      "title": "پاوربانک باسئوس مدل PPBD050402 ظرفیت 300000 میلی آمپر ساعت",
       "price": 2318000,
       "description": "رنگ سفید, مشکی ابعاد 153*68.8*41.7 میلی‌متر وزن 460 گرم خروجی USB output 1: 5V/3A, 9V/2A, 12V/1.5A (18.0W max) USB output 2: 5V/3A, 9V/2A, 12V/1.5A (18.0W max) USB-C output: 5V/3A, 9V/2.22A, 12V/1.5A (20W max.) تعداد ورودی Input: 1x micro USB 1x USB-C ویژگی ها دارای صفحه نمایش ظرفیت باتری 30000 میلی‌آمپر ساعت نوع باتری لیتیوم پلیمری",
       "inventory": 4,
@@ -545,20 +545,6 @@
         "count": 579
       },
       "createdAt": "2024-11-17T17:16:42.325Z"
-    },
-    {
-      "id": "6054",
-      "title": "پاور بانک باسئوس مدل PPBD050501 ظرفیت 20000 میلی آمپر ساعت",
-      "price": 1668000,
-      "description": "رنگ سفید, مشکی ابعاد 153 x 68.8 x 29.5 میلی‌متر وزن 460 گرم خروجی USB1/USB2: 5V/3A Type-C: 5V/3A USB + Type-C: 5V/3A Max تعداد ورودی Micro: 5V/2A Type-C: 5V/3A ویژگی ها دارای صفحه نمایش ظرفیت باتری 20000 میلی‌آمپر ساعت نوع باتری لیتیوم پلیمری",
-      "inventory": 4,
-      "category": "پاوربانک-باسئوس",
-      "image": "https://www.upload.ee/image/17401266/baseus-power-bank-ppbd050501-3.png",
-      "rating": {
-        "rate": 4.8,
-        "count": 498
-      },
-      "createdAt": "2024-11-17T17:19:11.080Z"
     },
     {
       "id": "6501",
@@ -574,6 +560,22 @@
       },
       "createdAt": "2024-11-17T17:21:04.700Z"
     },
+
+    {
+      "id": "6054",
+      "title": "پاوربانک باسئوس مدل PPBD050501 ظرفیت 20000 میلی آمپر ساعت",
+      "price": 1668000,
+      "description": "رنگ سفید, مشکی ابعاد 153 x 68.8 x 29.5 میلی‌متر وزن 460 گرم خروجی USB1/USB2: 5V/3A Type-C: 5V/3A USB + Type-C: 5V/3A Max تعداد ورودی Micro: 5V/2A Type-C: 5V/3A ویژگی ها دارای صفحه نمایش ظرفیت باتری 20000 میلی‌آمپر ساعت نوع باتری لیتیوم پلیمری",
+      "inventory": 4,
+      "category": "پاوربانک-باسئوس",
+      "image": "https://www.upload.ee/image/17401266/baseus-power-bank-ppbd050501-3.png",
+      "rating": {
+        "rate": 4.8,
+        "count": 498
+      },
+      "createdAt": "2024-11-17T17:19:11.080Z"
+    },
+
     {
       "id": "1092",
       "title": "شارژر بی‌سیم ۴ در ۱ پاورولوژی مدل Fast Charging Power Dock 4 in 1",
@@ -629,11 +631,25 @@
       },
       "createdAt": "2024-11-18T18:37:19.538Z",
       "id": "5593"
+    },
+    {
+      "id": "2543",
+      "title": "فلش مموری سن دیسک مدل CRUZER GLIDE SDCZ600 ظرفیت 16 گیگابایت",
+      "price": 278000,
+      "description": "رنگ قرمز, مشکی جنس بدنه پلاستیک وزن 10 گرم ابعاد 59.44×21.84×8.38 میلی‌متر محدوده دمای مجاز 0 تا 35 درجه سانتی‌گراد حافظه داخلی 16 گیگابایت LED ندارد سرعت انتقال فایل سرعت رابط USB3.0 به 5گیگابایت بر ثانیه می‌رسد که البته این سرعت در عمل متفاوت است و به عوامل زیادی بستگی دارد.",
+      "inventory": 3,
+      "category": "ذخیره ساز-فلش",
+      "image": "https://www.upload.ee/image/17417653/sandisk-sdcz600-g35-cruzer-glide-1-4.jpg",
+      "rating": {
+        "rate": 4.3,
+        "count": 397
+      },
+      "createdAt": "2024-11-21T13:39:25.581Z"
     }
   ],
   "users": [
     {
-      "category": "User",
+      "category": "user",
       "imguser": "https://www.upload.ee/image/17364437/template_0.jpg",
       "email": "kevin@gmail.com",
       "username": "User",
@@ -648,7 +664,8 @@
         "street": "تهران تهرانسر بلوار گلها",
         "zipcode": "1316145845"
       },
-      "id": "9ce3"
+      "id": "9ce3",
+      "createdAt": "2024-10-21T13:22:23.388Z"
     },
     {
       "category": "AdminUsers",
@@ -666,7 +683,8 @@
         "street": "پونک بلوار عدل شمالی ",
         "zipcode": "1476874716"
       },
-      "id": "56a6"
+      "id": "56a6",
+      "createdAt": "2024-10-21T13:22:23.388Z"
     },
     {
       "imguser": "https://www.upload.ee/image/17363767/name.png",
@@ -684,25 +702,27 @@
         "city": "تهران",
         "street": "پونک بلوار عدل شمالی ",
         "zipcode": "1476874206"
-      }
+      },
+      "createdAt": "2024-10-21T13:22:23.388Z"
     },
     {
-      "id": "f331",
-      "category": "user",
+      "id": "a06f",
+      "category": "User",
+      "imguser": "https://www.upload.ee/image/17363767/name.png",
       "email": "Test@gmail.com",
-      "username": "Test",
+      "username": "tser",
       "password": "1234",
       "name": {
         "firstname": "sdvdsdf",
         "lastname": "تهران"
       },
-      "phone": "09102690518",
+      "phone": "09103590518",
       "address": {
         "city": "تهران",
         "street": "تهران منطقه 5 پونک بلوار عدل بالاتر از میرزابابایی برج نگین عدل واحد393",
         "zipcode": "1476874206"
       },
-      "createdAt": "2024-11-21T12:43:31.645Z"
+      "createdAt": "2024-11-21T13:22:23.388Z"
     }
   ],
   "orders": [
@@ -943,6 +963,26 @@
       "lon": -74.0068,
       "timezone": "Asia/Tehran",
       "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "language": "en-US",
+      "platform": "Win32",
+      "screenResolution": "1920x1080",
+      "colorScheme": "dark"
+    },
+    {
+      "id": "40eb",
+      "username": "User",
+      "password": "User",
+      "category": "user",
+      "createdAt": "2024-11-21T13:35:47.182Z",
+      "ip": "116.203.176.85",
+      "isp": "Hetzner Online GmbH",
+      "country": "Germany",
+      "city": "Nuremberg",
+      "region": "Bavaria",
+      "lat": 49.4527,
+      "lon": 11.0783,
+      "timezone": "Asia/Tehran",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0",
       "language": "en-US",
       "platform": "Win32",
       "screenResolution": "1920x1080",

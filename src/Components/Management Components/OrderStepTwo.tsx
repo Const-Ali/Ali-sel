@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import TextTitle from "../Text/TextTitle";
+import TextTitle from "../PropComponents/TextTitle";
 import { IOrders, IProduct } from "../../Types/servers_type";
 import ModalFactorCom from "../Alert/ModalFactorCom";
+import InvoicSvg from "../SVG/InvoicSvg";
 
 function OrderStepTwo() {
   const [orders, setOrders] = useState<IOrders[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isOederModalOpen, setIsOrderModalOpen] = useState(false);
   const [isProcessingModalOpen, setIsProcessingModalOpen] = useState(false);
   const [selectedOrderId, setSelectedOrderId] = useState<string | null>(null);
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -34,52 +36,52 @@ function OrderStepTwo() {
     console.log("Searching for product ID:", productId);
     return products.find((product) => product.id === productId);
   };
-
-  const handleStatusChange = async () => {
-    if (selectedOrderId) {
-      try {
-        await axios.patch(`http://localhost:8001/orders/${selectedOrderId}`, {
-          category: "بسته شده",
-        });
-        setOrders((prevOrders) =>
-          prevOrders.map((order) =>
-            order.id === selectedOrderId
-              ? { ...order, category: "ارسال شده" }
-              : order
-          )
-        );
-      } catch (error) {
-        console.error("Error updating order status:", error);
-      } finally {
-        setIsModalOpen(false);
-        setSelectedOrderId(null);
-      }
-    }
-  };
-
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedOrder(null);
   };
 
-  const handleProcessingStatusChange = async (orderId: string) => {
-    if (orderId) {
-      try {
-        await axios.patch(`http://localhost:8001/orders/${orderId}`, {
-          category: "در حال پردازش",
-        });
-        setOrders((prevOrders) =>
-          prevOrders.map((order) =>
-            order.id === orderId
-              ? { ...order, category: "در حال پردازش" }
-              : order
-          )
-        );
-      } catch (error) {
-        console.error("Error updating order status to processing:", error);
-      } finally {
-        setIsProcessingModalOpen(false);
-      }
+  const handleStatusChange = async () => {
+    if (!selectedOrderId) return;
+
+    try {
+      await axios.patch(`http://localhost:8001/orders/${selectedOrderId}`, {
+        category: "بسته شده",
+      });
+      setOrders((prevOrders) =>
+        prevOrders.map((order) =>
+          order.id === selectedOrderId
+            ? { ...order, category: "بسته شده" }
+            : order
+        )
+      );
+    } catch (error) {
+      console.error("Error updating order status:", error);
+    } finally {
+      setIsOrderModalOpen(false);
+      setSelectedOrderId(null);
+    }
+  };
+
+  const handleProcessingStatusChange = async () => {
+    if (!selectedOrderId) return;
+
+    try {
+      await axios.patch(`http://localhost:8001/orders/${selectedOrderId}`, {
+        category: "در حال پردازش",
+      });
+      setOrders((prevOrders) =>
+        prevOrders.map((order) =>
+          order.id === selectedOrderId
+            ? { ...order, category: "در حال پردازش" }
+            : order
+        )
+      );
+    } catch (error) {
+      console.error("Error updating order status to processing:", error);
+    } finally {
+      setIsProcessingModalOpen(false);
+      setSelectedOrderId(null);
     }
   };
 
@@ -115,10 +117,13 @@ function OrderStepTwo() {
                     className="bg-blue-500 text-white px-4 py-2 rounded mx-1"
                     onClick={() => {
                       setSelectedOrderId(order.id);
-                      setIsProcessingModalOpen(true);
+                      setIsOrderModalOpen(true);
                     }}
                   >
-                    وضعیت به بسته شده
+                    تغییر به بسته شده
+                  </button>
+                  <button onClick={() => handleShowInvoice(order)}>
+                    <InvoicSvg />
                   </button>
                   <button
                     className="bg-red-500 text-white px-4 py-2 rounded mx-1"
@@ -127,15 +132,10 @@ function OrderStepTwo() {
                       setIsProcessingModalOpen(true);
                     }}
                   >
-                    وضعیت به درحال پردازش
-                  </button>
-                  <button
-                    className="bg-blue-500 text-white px-4 py-2 rounded mx-1"
-                    onClick={() => handleShowInvoice(order)}
-                  >
-                    نمایش فاکتور
+                    تغییر به در حال پردازش
                   </button>
                 </td>
+
                 <td className="border border-gray-300 p-2">در حال ارسال</td>
                 <td className="border border-gray-300 p-2">
                   <p>
@@ -149,7 +149,7 @@ function OrderStepTwo() {
                     hour: "2-digit",
                     minute: "2-digit",
                     second: "2-digit",
-                  })}{" "}
+                  })}
                 </td>
                 <td className="border border-gray-300 p-2">
                   {order.user.firstName} {order.user.lastName}
@@ -160,7 +160,7 @@ function OrderStepTwo() {
         </tbody>
       </table>
 
-      {isModalOpen && (
+      {isOederModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
           <div className="bg-white p-6 rounded shadow-lg">
             <p>
@@ -175,7 +175,7 @@ function OrderStepTwo() {
                 تایید
               </button>
               <button
-                onClick={() => setIsModalOpen(false)}
+                onClick={() => setIsOrderModalOpen(false)}
                 className="bg-gray-500 text-white px-4 py-2 rounded mx-2"
               >
                 انصراف
@@ -194,7 +194,7 @@ function OrderStepTwo() {
             </p>
             <div className="mt-4">
               <button
-                onClick={() => handleProcessingStatusChange(selectedOrderId!)}
+                onClick={handleProcessingStatusChange}
                 className="bg-blue-500 text-white px-4 py-2 rounded mx-2"
               >
                 تایید
@@ -229,7 +229,7 @@ function OrderStepTwo() {
                   month: "2-digit",
                   day: "numeric",
                 })}
-              </p>{" "}
+              </p>
               <p>
                 {new Date(selectedOrder.orderTime).toLocaleString("fa-IR", {
                   hour: "2-digit",

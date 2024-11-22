@@ -6,7 +6,7 @@ import Checkidok from "../Alert/Checkidok";
 import Checkiderror from "../Alert/Checkiderror";
 import NotChanges from "../Alert/NotChanges";
 import AddInput from "../AddInput/AddInput";
-import TextTitle from "../Text/TextTitle";
+import TextTitle from "../PropComponents/TextTitle";
 
 interface IAddress {
   city: string;

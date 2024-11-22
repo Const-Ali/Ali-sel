@@ -7,7 +7,7 @@ import Checkiderror from "../Alert/Checkiderror";
 import NotChanges from "../Alert/NotChanges";
 import AddInput from "../AddInput/AddInput";
 import CheckInputs from "../Alert/CheckInputs";
-import TextTitle from "../Text/TextTitle";
+import TextTitle from "../PropComponents/TextTitle";
 import Button from "../Button/Button";
 
 interface IProduct {

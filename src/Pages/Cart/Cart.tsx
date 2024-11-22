@@ -191,7 +191,7 @@ function Cart() {
         >
           <CodeOk />
         </div>
-      )}{" "}
+      )}
       {isCodeNotOk && (
         <div
           role="alert"

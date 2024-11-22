@@ -46,7 +46,7 @@ function HomeComTwo() {
                 <header>
                   {products.length > 0 && (
                     <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
-                      123{" "}
+                      123
                     </h2>
                   )}
                   <p className="mt-4 text-gray-500">

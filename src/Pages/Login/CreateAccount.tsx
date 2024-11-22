@@ -4,6 +4,7 @@ import axios from "axios";
 import AddUserNot from "../../Components/Alert/AddUserNot";
 import AddInput from "../../Components/AddInput/AddInput";
 import CreatUserOk from "../../Components/Alert/CreatUserOk";
+import { useNavigate } from "react-router-dom";
 
 interface IAddress {
   city: string;
@@ -43,6 +44,7 @@ function CreateAccount() {
     street: "",
     zipcode: "",
   });
+  const navigate = useNavigate();
 
   const isFormValid = () => {
     const isUsernameValid = username.length >= 3;
@@ -66,7 +68,8 @@ function CreateAccount() {
     const currentDateTime = new Date().toISOString();
 
     const newUser = {
-      category: "user",
+      category: "User",
+      imguser: "https://www.upload.ee/image/17363767/name.png",
       email,
       username,
       password,
@@ -119,6 +122,10 @@ function CreateAccount() {
     } catch (error) {
       console.error("Error adding user:", error);
       alert("خطا در اضافه کردن کاربر.");
+    } finally {
+      setTimeout(() => {
+        navigate("/login");
+      }, 4000);
     }
   };
 

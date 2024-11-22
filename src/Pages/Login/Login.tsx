@@ -161,15 +161,23 @@ function Login() {
             </div>
             {error && <p className="text-red-500">{error}</p>}
             <div className="flex items-center justify-between">
-              <p className="text-sm text-gray-500">
-                حساب کاربری ندارید ؟
-                <a className="underline " href="/CreateAccount">
-                  ساخت حساب کاربری
-                </a>
-              </p>
+              <div>
+                <p className="text-sm text-gray-500 mb-3">
+                  حساب کاربری ندارید ؟
+                  <a className="pr-2 underline" href="/CreateAccount">
+                    ساخت حساب کاربری
+                  </a>
+                </p>
+                <p className="text-sm text-gray-500">
+                  رمز عبور خود را فراموش کردید ؟
+                  <a className="pr-2 underline" href="#">
+                    فراموشی رمز عبور
+                  </a>
+                </p>
+              </div>
               <button
                 type="submit"
-                className="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
+                className="inline-block rounded-lg bg-gray-600 px-5 py-3 text-sm font-medium text-white"
               >
                 ورود
               </button>
@@ -179,7 +187,6 @@ function Login() {
 
         <div className="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
           <img
-            alt=""
             src="https://www.upload.ee/image/17332422/gg.jpg"
             className="absolute inset-0 h-full w-full object-cover"
           />

@@ -39,14 +39,14 @@ function HomeComTwo() {
   return (
     <div>
       <section>
-        <div className="">
+        <div>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
             <div className="grid rounded bg-gray-100 p-6 h-fit">
               <div className="mx-auto max-w-md text-center lg:text-left ">
                 <header>
                   {products.length > 0 && (
                     <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
-                      123{" "}
+                      123
                     </h2>
                   )}
                   <p className="mt-4 text-gray-500">

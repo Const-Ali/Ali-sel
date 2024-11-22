@@ -182,7 +182,7 @@ function ManagementUser() {
               }`}
             >
               اطلاعات کاربران
-            </button>{" "}
+            </button>
             <button
               onClick={() => setSelectedComponent("UserComInformation")}
               className={`px-4 py-2 rounded ${
