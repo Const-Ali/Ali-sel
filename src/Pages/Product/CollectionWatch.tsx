@@ -5,7 +5,7 @@ import { IProduct } from "../../Types/servers_type";
 import Product_Item from "../../Components/Product_Item/Product_Item";
 import Spinner from "../../Components/Spinner/Spinner";
 
-function CollectionOne() {
+function CollectionWatch() {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [sortOption, setSortOption] = useState("جدید ترین");
@@ -20,8 +20,8 @@ function CollectionOne() {
       .then((result) => {
         const tabletProducts = result.filter(
           (product: IProduct) =>
-            product.category === "تبلت-سامسونگ" ||
-            product.category === "تبلت-لنوو"
+            product.category === "ساعت-اپل" ||
+            product.category === "ساعت-سامسونگ"
         );
         setProducts(tabletProducts);
         setIsLoading(false);
@@ -404,4 +404,4 @@ function CollectionOne() {
   );
 }
 
-export default CollectionOne;
+export default CollectionWatch;

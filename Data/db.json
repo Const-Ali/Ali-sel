@@ -560,7 +560,6 @@
       },
       "createdAt": "2024-11-17T17:21:04.700Z"
     },
-
     {
       "id": "6054",
       "title": "پاوربانک باسئوس مدل PPBD050501 ظرفیت 20000 میلی آمپر ساعت",
@@ -575,7 +574,6 @@
       },
       "createdAt": "2024-11-17T17:19:11.080Z"
     },
-
     {
       "id": "1092",
       "title": "شارژر بی‌سیم ۴ در ۱ پاورولوژی مدل Fast Charging Power Dock 4 in 1",
@@ -983,6 +981,46 @@
       "lon": 11.0783,
       "timezone": "Asia/Tehran",
       "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0",
+      "language": "en-US",
+      "platform": "Win32",
+      "screenResolution": "1920x1080",
+      "colorScheme": "dark"
+    },
+    {
+      "id": "66e0",
+      "username": "AdminProducts",
+      "password": "AdminProducts",
+      "category": "AdminProducts",
+      "createdAt": "2024-11-22T18:22:49.286Z",
+      "ip": "156.146.59.37",
+      "isp": "DataCamp Limited",
+      "country": "United States",
+      "city": "New York",
+      "region": "New York",
+      "lat": 40.7123,
+      "lon": -74.0068,
+      "timezone": "Asia/Tehran",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "language": "en-US",
+      "platform": "Win32",
+      "screenResolution": "1920x1080",
+      "colorScheme": "dark"
+    },
+    {
+      "id": "305d",
+      "username": "AdminProducts",
+      "password": "AdminProducts",
+      "category": "AdminProducts",
+      "createdAt": "2024-11-22T19:05:02.812Z",
+      "ip": "156.146.59.37",
+      "isp": "DataCamp Limited",
+      "country": "United States",
+      "city": "New York",
+      "region": "New York",
+      "lat": 40.7123,
+      "lon": -74.0068,
+      "timezone": "Asia/Tehran",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
       "language": "en-US",
       "platform": "Win32",
       "screenResolution": "1920x1080",

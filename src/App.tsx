@@ -21,7 +21,12 @@ import CreateAccount from "./Pages/Login/CreateAccount";
 import ProCollectionOne from "./Pages/Product/ProCollectionOne";
 import ConectUs from "./Pages/Aboute/ConectUs";
 import Terms from "./Pages/Aboute/Terms";
-import CollectionOne from "./Pages/Product/CollectionOne";
+import CollectionTablet from "./Pages/Product/CollectionTablet";
+import CollectionCharger from "./Pages/Product/CollectionCharger";
+import CollectionAirPods from "./Pages/Product/CollectionAirPods";
+import CollectionWatch from "./Pages/Product/CollectionWatch";
+import CollectionSpeaker from "./Pages/Product/CollectionSpeaker";
+import CollectionPhone from "./Pages/Product/CollectionPhone";
 
 function App() {
   const { isLogin } = useShop_Card_Cont();
@@ -39,7 +44,13 @@ function App() {
         <Route path="/ProCollectionOne" element={<ProCollectionOne />} />
         <Route path="/ConectUs" element={<ConectUs />} />
         <Route path="/Terms" element={<Terms />} />
-        <Route path="/CollectionOne" element={<CollectionOne />} />
+        <Route path="/CollectionTablet" element={<CollectionTablet />} />
+        <Route path="/CollectionCharger" element={<CollectionCharger />} />
+        <Route path="/CollectionAirPods" element={<CollectionAirPods />} />
+        <Route path="/CollectionWatch" element={<CollectionWatch />} />
+        <Route path="/CollectionSpeaker" element={<CollectionSpeaker />} />
+        <Route path="/CollectionPhone" element={<CollectionPhone />} />
+        <Route path="/CollectionCharger" element={<CollectionCharger />} />
         <Route path="/Test" element={<Test />} />
         <Route
           path="/login"
