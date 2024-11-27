@@ -1,5 +1,4 @@
 import Container from "../../Components/Container/Container";
-import HomeComEight from "../../Components/HomeComponents/HomeComEight";
 import HomeComFive from "../../Components/HomeComponents/HomeComFive";
 import HomeComFour from "../../Components/HomeComponents/HomeComFour";
 import HomeComOne from "../../Components/HomeComponents/HomeComOne";
@@ -16,7 +15,7 @@ function Home() {
       <HomeComSix />
       <div className="flex justify-between items-center">
         <HomeComSeven />
-        <HomeComEight />
+        <HomeComSeven />
       </div>
 
       <div className="grid grid-3 grid-flow-col h-fit mt-8 p-10 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200">
