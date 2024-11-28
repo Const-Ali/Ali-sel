@@ -61,7 +61,7 @@ function HomeComOne() {
             >
               <a
                 href="#"
-                className="group relative block transition transform duration-300 hover:scale-105 hover:shadow-lg" // افکت هاور اضافه شد
+                className="group relative block transition transform duration-300 hover:scale-105 hover:shadow-lg"
                 onClick={() => navigate(`/product/${product.id}`)}
               >
                 <img

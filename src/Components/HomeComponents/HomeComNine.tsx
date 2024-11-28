@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function HomeComTwo() {
+function HomeComNine() {
   interface Product {
     id: string;
     category: string;
@@ -21,7 +21,7 @@ function HomeComTwo() {
           "http://localhost:8001/products"
         );
         const filteredProducts = response.data
-          .filter((product) => product.category === "هدفون-اپل")
+          .filter((product) => product.category === "اسپیکر-انکر")
           .sort(
             (a, b) =>
               new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
@@ -38,27 +38,27 @@ function HomeComTwo() {
 
   return (
     <div>
-      <section>
+      <section className="p-20">
         <div>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-            <div className="grid rounded bg-gray-100 p-6 h-fit">
+            <div className="grid rounded bg-gray-100 p-6 h-full">
               <div className="mx-auto max-w-md text-center lg:text-left ">
                 <header>
                   {products.length > 0 && (
-                    <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
-                      123
+                    <h2 className="text-xl text-right font-bold text-gray-900 sm:text-3xl">
+                      اسپیکر ها
                     </h2>
                   )}
-                  <p className="mt-4 text-gray-500">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Quas rerum quam amet provident nulla error!
+                  <p className="mt-4 text-gray-500 text-xl text-right">
+                    با اسپیکرهای حرفه‌ای و مدرن، تجربه صدای بی‌نظیر و طراحی شیک
+                    را به خانه یا سفر خود بیاورید
                   </p>
                 </header>
                 <a
                   href="#"
                   className="mt-8 inline-block rounded border border-gray-900 bg-gray-900 px-12 py-3 text-sm font-medium text-white transition hover:shadow focus:outline-none focus:ring"
                 >
-                  Shop All
+                  مشاهده اسپیکر ها
                 </a>
               </div>
             </div>
@@ -97,4 +97,4 @@ function HomeComTwo() {
   );
 }
 
-export default HomeComTwo;
+export default HomeComNine;

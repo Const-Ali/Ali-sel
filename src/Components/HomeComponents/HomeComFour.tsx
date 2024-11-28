@@ -42,29 +42,31 @@ function HomeComFour() {
         <h2 className="text-5xl font-extrabold text-gray-700 text-center mb-12">
           پربازدید ترین ها
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 ">
           {products.map((product) => (
-            <div
-              key={product.id}
-              className="bg-gray-50 p-3 cursor-pointer shadow-sm rounded-md hover:scale-[1.03] transition-all"
-            >
-              <div className="w-full h-24 overflow-hidden mx-auto aspect-w-16 aspect-h-8">
-                <img
-                  className="mx-auto my-1 object-contain rounded-md max-h-full"
-                  src={product.image}
-                  alt={product.title}
-                />
+            <a href={`/product/${product.id}`}>
+              <div
+                key={product.id}
+                className="bg-gray-50 p-3 cursor-pointer shadow-sm rounded-md hover:scale-[1.03] transition-all h-full"
+              >
+                <div className="w-full h-24 overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+                  <img
+                    className="mx-auto my-1 object-contain rounded-md max-h-full"
+                    src={product.image}
+                    alt={product.title}
+                  />
+                </div>
+                <div className="text-center mt-4">
+                  <h3 className="text-sm font-bold text-gray-800">
+                    {product.title}
+                  </h3>
+                  <h4 className="text-base text-gray-500 font-bold mt-3 flex justify-center">
+                    <p className="pr-2">تومان</p>
+                    {product.price.toLocaleString("fa-IR")}
+                  </h4>
+                </div>
               </div>
-              <div className="text-center mt-4">
-                <h3 className="text-sm font-bold text-gray-800">
-                  {product.title}
-                </h3>
-                <h4 className="text-base text-gray-500 font-bold mt-3 flex justify-center">
-                  <p className="pr-2">تومان</p>
-                  {product.price.toLocaleString("fa-IR")}
-                </h4>
-              </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

@@ -70,7 +70,7 @@ function HomeComTwo() {
                     key={product.id}
                     className="cursor-pointer shadow-sm rounded-md hover:scale-[1.03] transition-all"
                   >
-                    <a href="#" className="group block">
+                    <a href={`/product/${product.id}`} className="group block">
                       <img
                         src={product.image}
                         alt={product.title}

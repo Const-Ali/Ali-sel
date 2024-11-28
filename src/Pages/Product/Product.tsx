@@ -64,7 +64,7 @@ function Product() {
   const colors = [
     { name: "مشکی", code: "black" },
     { name: "خاکستری", code: "gray-400" },
-    { name: "نارنجی", code: "orange-400" },
+    { name: "نارنجی", code: "orange-500" },
     { name: "قرمز", code: "red-500" },
   ];
 
