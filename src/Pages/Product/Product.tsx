@@ -7,7 +7,7 @@ import { IProduct } from "../../Types/servers_type";
 import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
 import Spinner from "../../Components/Spinner/Spinner";
 import Pro4item from "../../Components/Product_Item/Pro4item";
-import SimilarProducts from "../../Components/Product_Item/RateProPage";
+import SimilarProducts from "../../Components/Product_Item/SimilarProducts";
 
 function Product() {
   const params = useParams<{ id: string }>();
