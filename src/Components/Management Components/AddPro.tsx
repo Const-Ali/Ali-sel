@@ -246,27 +246,6 @@ function AddPro() {
         </div>
         <div className="flex justify-center items-center gap-24">
           <div className="flex flex-col mb-4 rounded-md border border-gray-200 p-2 text-right ">
-            {/* <label
-              htmlFor="HeadlineAct"
-              className=" mb-1  text-sm font-medium text-gray-900 "
-            >
-              دسته بندی
-            </label>
-
-            <select
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-              name="HeadlineAct"
-              id="HeadlineAct"
-              className="text-right mt-1.5  h-10 rounded-lg border-gray-300 text-gray-700 sm:text-sm w-96"
-            >
-              <option value="">انتخاب کنید</option>
-              {categories.map((cat, index) => (
-                <option key={index} value={cat.category}>
-                  {cat.category}
-                </option>
-              ))}
-            </select> */}
             <div className="flex justify-center items-center gap-24">
               <button
                 type="button"

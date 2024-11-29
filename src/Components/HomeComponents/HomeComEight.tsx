@@ -6,8 +6,8 @@ interface HomeComEightProps {
 
 const HomeComEight: React.FC<HomeComEightProps> = ({ SrcImg }) => (
   <Container>
-    <div className="flex justify-between items-center ">
-      <img src={SrcImg} />
+    <div className="flex justify-between items-center m-1">
+      <img src={SrcImg} className="rounded-lg" />
     </div>
   </Container>
 );
