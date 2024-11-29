@@ -8,6 +8,7 @@ import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
 import Spinner from "../../Components/Spinner/Spinner";
 import Pro4item from "../../Components/Product_Item/Pro4item";
 import SimilarProducts from "../../Components/Product_Item/SimilarProducts";
+import RandomProduct from "../../Components/Product_Item/RandomProduct";
 
 function Product() {
   const params = useParams<{ id: string }>();
@@ -439,13 +440,14 @@ function Product() {
                 </div>
               </div>
             </div>
-
             <div className="pb-10">
               <Pro4item />
             </div>
             <div className="pt-10">
               <SimilarProducts />
+              <RandomProduct />
             </div>
+            <div></div>
           </>
         )}
       </Container>
