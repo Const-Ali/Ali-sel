@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import SadSvg from "../SVG/SadSvg";
 
-function RateProPage() {
+function SimilarProducts() {
   interface Product {
     id: string;
     category: string;
@@ -88,4 +88,4 @@ function RateProPage() {
   );
 }
 
-export default RateProPage;
+export default SimilarProducts;

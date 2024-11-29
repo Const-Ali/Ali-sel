@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import { IProduct } from "../../Types/servers_type";
 import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
 import Spinner from "../../Components/Spinner/Spinner";
-import RateProPage from "../../Components/RateProPage/RateProPage";
 import Pro4item from "../../Components/Product_Item/Pro4item";
+import SimilarProducts from "../../Components/Product_Item/RateProPage";
 
 function Product() {
   const params = useParams<{ id: string }>();
@@ -444,7 +444,7 @@ function Product() {
               <Pro4item />
             </div>
             <div className="pt-10">
-              <RateProPage />
+              <SimilarProducts />
             </div>
           </>
         )}
