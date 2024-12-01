@@ -288,8 +288,8 @@ function ProductComTotal() {
                 required
               >
                 <option>انتخاب کنید</option>
-                {categories.map((cat, index) => (
-                  <option key={index} value={cat.category}>
+                {categories.map((cat) => (
+                  <option key={cat.category} value={cat.category}>
                     {cat.category}
                   </option>
                 ))}
@@ -315,7 +315,7 @@ function ProductComTotal() {
               <input
                 type="number"
                 name="inventory"
-                value={selectedProduct.inventory.toLocaleString("fa-IR")}
+                value={selectedProduct.inventory}
                 onChange={handleChange}
                 placeholder="موجودی"
                 className="border border-gray-300 p-2 rounded w-80"
