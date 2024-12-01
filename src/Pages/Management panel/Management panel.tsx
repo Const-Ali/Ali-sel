@@ -7,6 +7,7 @@ import EditPro from "../../Components/Management Components/EditPro";
 import OrderStepTwo from "../../Components/Management Components/OrderStepTwo";
 import Container from "../../Components/Container/Container";
 import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
+import ProductOrderPoint from "../../Components/Management Components/ProductOrderPoint";
 
 function ManagementPanel() {
   const [selectedComponent, setSelectedComponent] =
@@ -28,8 +29,10 @@ function ManagementPanel() {
         return <AddPro />;
       case "EditPro":
         return <EditPro />;
+      case "ProductOrderPoint":
+        return <ProductOrderPoint />;
       default:
-        return null;
+        return <ProductComTotal />;
     }
   };
 
@@ -193,6 +196,12 @@ function ManagementPanel() {
             >
               کالا ها
             </button>
+            <button
+              onClick={() => setSelectedGroup("OrderPoint")}
+              className={`px-4 py-2 rounded ${selectedGroup === "OrderPoint" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
+            >
+              نقطه سفارش
+            </button>
           </div>
 
           <div className="flex gap-4 mb-8 justify-center items-center">
@@ -217,7 +226,7 @@ function ManagementPanel() {
                   سفارشات درحال پیگیری
                 </button>
               </>
-            ) : (
+            ) : selectedGroup === "products" ? (
               <>
                 <button
                   onClick={() => setSelectedComponent("ProductComTotal")}
@@ -238,6 +247,13 @@ function ManagementPanel() {
                   ویرایش کالا
                 </button>
               </>
+            ) : (
+              <button
+                onClick={() => setSelectedComponent("ProductOrderPoint")}
+                className={`px-4 py-2 rounded ${selectedComponent === "ProductOrderPoint" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
+              >
+                لیست کالا های مورد نیاز{" "}
+              </button>
             )}
           </div>
 
