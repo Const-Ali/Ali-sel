@@ -223,7 +223,7 @@ function ManagementPanel() {
                   onClick={() => setSelectedComponent("OrderStepOne")}
                   className={`px-4 py-2 rounded ${selectedComponent === "OrderStepOne" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
                 >
-                  سفارشات درحال پیگیری
+                  سفارشات درحال پردازش
                 </button>
               </>
             ) : selectedGroup === "products" ? (

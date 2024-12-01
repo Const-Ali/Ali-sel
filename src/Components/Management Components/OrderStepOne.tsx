@@ -106,7 +106,7 @@ function OrderStepOne() {
   return (
     <div className="container mx-auto">
       <div className="pb-7">
-        <TextTitle value="سفارشات در حال پیگیری" />
+        <TextTitle value="سفارشات در حال پردازش" />
       </div>
 
       <table className="w-full border-collapse border border-gray-300">
