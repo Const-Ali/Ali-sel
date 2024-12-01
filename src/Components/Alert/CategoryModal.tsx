@@ -44,7 +44,7 @@ const CategoryModal: React.FC<CategoryModalProps> = ({
         <div className="relative w-full pb-5">
           <input
             className="block w-full p-4 pe-10 text-sm text-gray-600 border border-gray-400 rounded-lg"
-            placeholder="جستجوی محصولات"
+            placeholder="جستجوی دسته بندی ها"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
