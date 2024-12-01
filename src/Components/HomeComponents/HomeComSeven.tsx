@@ -86,7 +86,7 @@ const RandomProducts = () => {
                 {product.price.toLocaleString("fa-IR")} تومان
               </p>
               <p className="text-center text-xl mt-1 text-red-500 font-bold">
-                {(product.price * (1 - discount / 100)).toLocaleString("fa-IR")}{" "}
+                {(product.price * (1 - discount / 100)).toLocaleString("fa-IR")}
                 تومان
               </p>
             </Link>

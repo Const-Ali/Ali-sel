@@ -34,7 +34,7 @@ function ErrorPage() {
             to="/"
             className="mt-6 inline-block rounded bg-gray-700 px-5 py-3 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring"
           >
-            بازگشت به خانه{" "}
+            بازگشت به خانه
           </Link>
         </div>
       </div>

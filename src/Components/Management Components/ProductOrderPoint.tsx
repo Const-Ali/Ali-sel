@@ -2,14 +2,18 @@ import { useState, useEffect } from "react";
 import { getProducts } from "../../Services/Api";
 import { IProduct } from "../../Types/servers_type";
 import TextTitle from "../PropComponents/TextTitle";
-import DeleteSvg from "../SVG/DeleteSvg";
-import EditSvg from "../SVG/EditSvg";
+import Button from "../Button/Button";
 
 function ProductOrderPoint() {
   const [products, setProducts] = useState<IProduct[]>([]);
-
   const [search, setSearch] = useState("");
   const [sortOption, setSortOption] = useState("جدیدترین");
+  const [minInventory, setMinInventory] = useState<number>(0);
+  const [maxInventory, setMaxInventory] = useState<number>(100);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<IProduct | null>(null);
+  const [newInventory, setNewInventory] = useState<number>(0);
 
   useEffect(() => {
     const fetchProductsAndCategories = async () => {
@@ -47,13 +51,37 @@ function ProductOrderPoint() {
     }
   };
 
-  const filteredProducts = sortedProducts().filter((product) =>
-    product.title.toLowerCase().includes(search.toLowerCase())
+  const filteredProducts = sortedProducts().filter(
+    (product) =>
+      product.inventory >= minInventory &&
+      product.inventory <= maxInventory &&
+      product.title.toLowerCase().includes(search.toLowerCase())
   );
+
+  const handleAddProductClick = (product: IProduct) => {
+    setSelectedProduct(product);
+    setNewInventory(product.inventory);
+    setIsModalOpen(true);
+  };
+
+  const handleUpdateInventory = () => {
+    if (selectedProduct) {
+      const updatedProduct = {
+        ...selectedProduct,
+        inventory: newInventory,
+      };
+      setProducts((prevProducts) =>
+        prevProducts.map((product) =>
+          product.id === updatedProduct.id ? updatedProduct : product
+        )
+      );
+      setIsModalOpen(false);
+    }
+  };
 
   return (
     <div className="container mx-auto">
-      <TextTitle value="لیست کالاهای سایت" />
+      <TextTitle value="لیست کالاهای به نقطه سفارش رسیده" />
 
       <form className="max-w-md mx-auto w-full p-5">
         <div className="flex items-center gap-6 flex-row">
@@ -64,23 +92,6 @@ function ProductOrderPoint() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
-            <div className="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
-              <svg
-                className="w-4 h-4 text-gray-500"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                />
-              </svg>
-            </div>
           </div>
           <select
             className="p-2 border border-gray-400 rounded-lg"
@@ -93,6 +104,32 @@ function ProductOrderPoint() {
             <option value="پرفروش‌ترین">پرفروش‌ترین</option>
             <option value="پربازدیدترین">پربازدیدترین</option>
           </select>
+        </div>
+
+        <div className="mt-5">
+          <label className="text-sm text-gray-600 mb-2">موجودی (از - تا)</label>
+          <div className="flex justify-between">
+            <span>{minInventory}</span>
+            <span>{maxInventory}</span>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            value={minInventory}
+            onChange={(e) => setMinInventory(Number(e.target.value))}
+            className="w-full my-2"
+          />
+          <input
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            value={maxInventory}
+            onChange={(e) => setMaxInventory(Number(e.target.value))}
+            className="w-full my-2"
+          />
         </div>
       </form>
 
@@ -112,12 +149,12 @@ function ProductOrderPoint() {
           {filteredProducts.map((product, index) => (
             <tr key={product.id || index} className="text-center">
               <td className="border border-gray-300 p-2">
-                <button>
-                  <DeleteSvg />
-                </button>
-                <button>
-                  <EditSvg />
-                </button>
+                <Button
+                  variant="Btn-1"
+                  onClick={() => handleAddProductClick(product)}
+                >
+                  اضافه کردن محصول
+                </Button>
               </td>
               <td className="border border-gray-300 p-2">
                 {product.inventory.toLocaleString("fa-IR")}
@@ -135,6 +172,42 @@ function ProductOrderPoint() {
           ))}
         </tbody>
       </table>
+
+      {isModalOpen && selectedProduct && (
+        <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-1/3">
+            <h2 className="text-xl mb-4 text-center">بروزرسانی موجودی</h2>
+            <div>
+              <label className="block text-sm text-gray-600 mb-2 text-right">
+                موجودی فعلی
+              </label>
+              <input
+                type="text"
+                value={selectedProduct.inventory}
+                readOnly
+                className="w-full p-2 mb-4 border border-gray-300 rounded text-right"
+              />
+            </div>
+            <div>
+              <label className="block text-sm text-gray-600 mb-2 text-right">
+                موجودی جدید
+              </label>
+              <input
+                type="number"
+                value={newInventory}
+                onChange={(e) => setNewInventory(Number(e.target.value))}
+                className="w-full p-2 mb-4 border border-gray-300 rounded text-right"
+              />
+            </div>
+            <div className="flex justify-end">
+              <Button onClick={handleUpdateInventory}>بروزرسانی</Button>
+              <Button variant="Btn-1" onClick={() => setIsModalOpen(false)}>
+                بستن
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

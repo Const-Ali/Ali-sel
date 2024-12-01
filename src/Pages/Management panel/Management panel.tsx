@@ -252,7 +252,7 @@ function ManagementPanel() {
                 onClick={() => setSelectedComponent("ProductOrderPoint")}
                 className={`px-4 py-2 rounded ${selectedComponent === "ProductOrderPoint" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
               >
-                لیست کالا های مورد نیاز{" "}
+                لیست کالا های مورد نیاز
               </button>
             )}
           </div>
