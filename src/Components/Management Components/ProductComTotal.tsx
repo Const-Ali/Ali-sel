@@ -26,10 +26,14 @@ function ProductComTotal() {
     const fetchProductsAndCategories = async () => {
       try {
         const productsData: IProduct[] = await getProducts();
-        setProducts(productsData);
+        const normalizedProducts = productsData.map((product) => ({
+          ...product,
+          id: Number(product.id),
+        }));
+        setProducts(normalizedProducts);
 
         const uniqueCategories = Array.from(
-          new Set(productsData.map((product) => product.category))
+          new Set(normalizedProducts.map((product) => product.category))
         ).map((category) => ({ category }));
         setCategories(uniqueCategories);
       } catch (error) {
@@ -64,8 +68,12 @@ function ProductComTotal() {
 
   const handleEdit = (id: number) => {
     const productToEdit = products.find((product) => product.id === id);
-    setSelectedProduct(productToEdit || null);
-    setShowEditModal(true);
+    if (productToEdit) {
+      setSelectedProduct(productToEdit);
+      setShowEditModal(true);
+    } else {
+      console.error("Product not found");
+    }
   };
 
   const handleUpdate = async () => {
@@ -95,18 +103,18 @@ function ProductComTotal() {
       }
     }
   };
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (selectedProduct) {
-      const value =
-        e.target.name === "price" || e.target.name === "inventory"
-          ? parseFloat(e.target.value)
-          : e.target.value;
+      const { name, value } = e.target;
+
+      const updatedValue =
+        name === "price" || name === "inventory"
+          ? parseFloat(value.replace(/,/g, ""))
+          : value;
 
       setSelectedProduct({
         ...selectedProduct,
-        [e.target.name]: value,
+        [name]: updatedValue,
       });
     }
   };
@@ -260,80 +268,83 @@ function ProductComTotal() {
       )}
 
       {showEditModal && selectedProduct && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-sm"></div>
-          <div className="flex flex-col p-4 relative items-center justify-center bg-gray-800 border border-gray-800 shadow-lg rounded-2xl w-96">
-            <h2 className="text-xl font-bold py-4 text-gray-200">
-              ویرایش محصول
-            </h2>
-            <div className="mb-4">
-              <label htmlFor="title" className="block text-gray-400 mb-4">
-                عنوان محصول
-              </label>
-              <input
-                type="text"
-                name="title"
-                value={selectedProduct.title}
-                onChange={handleChange}
-                placeholder="عنوان محصول"
-                className="border border-gray-300 p-2 rounded w-80"
-              />
-            </div>
-            <div className="flex flex-col mb-4">
-              <label className="block text-gray-400 mb-4">دسته‌بندی:</label>
-              <select
-                value={selectedProduct.category}
-                onChange={handleCategoryChange}
-                className="border border-gray-300 p-2 rounded w-80"
-                required
-              >
-                <option>انتخاب کنید</option>
-                {categories.map((cat) => (
-                  <option key={cat.category} value={cat.category}>
-                    {cat.category}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="mb-4">
-              <label htmlFor="price" className="block text-gray-400 mb-4">
-                قیمت
-              </label>
-              <input
-                type="number"
-                name="inventory"
-                value={selectedProduct.inventory}
-                onChange={handleChange}
-                placeholder="موجودی"
-                className="border border-gray-300 p-2 rounded w-80"
-              />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="inventory" className="block text-gray-400 mb-4">
-                موجودی
-              </label>
-              <input
-                type="number"
-                name="inventory"
-                value={selectedProduct.inventory}
-                onChange={handleChange}
-                placeholder="موجودی"
-                className="border border-gray-300 p-2 rounded w-80"
-              />
-            </div>
-            <div className="p-3 mt-2 text-center space-x-4">
-              <button
-                className="bg-gray-700 px-4 py-1 text-sm font-medium tracking-wider border-2 border-gray-600 hover:border-gray-700 text-gray-300 rounded-full hover:bg-gray-800 transition ease-in duration-300"
-                onClick={() => setShowEditModal(false)}
-              >
-                لغو
-              </button>
-              <button
-                className="bg-blue-400 hover:bg-blue-500 px-4 py-1 text-sm font-medium tracking-wider border-2 border-blue-300 hover:border-blue-500 text-white rounded-full transition ease-in duration-300"
-                onClick={handleUpdate}
-              >
-                به‌روزرسانی
-              </button>
+        <div className="modal">
+          <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-sm"></div>
+            <div className="flex flex-col p-4 relative items-center justify-center bg-gray-800 border border-gray-800 shadow-lg rounded-2xl w-96">
+              <h2 className="text-xl font-bold py-4 text-gray-200">
+                ویرایش محصول
+              </h2>
+              <div className="mb-4">
+                <label htmlFor="title" className="block text-gray-400 mb-4">
+                  عنوان محصول
+                </label>
+                <input
+                  type="text"
+                  name="title"
+                  value={selectedProduct.title}
+                  onChange={handleChange}
+                  placeholder="عنوان محصول"
+                  className="border border-gray-300 p-2 rounded w-80"
+                />
+              </div>
+              <div className="flex flex-col mb-4">
+                <label className="block text-gray-400 mb-4">دسته‌بندی:</label>
+                <select
+                  value={selectedProduct.category}
+                  onChange={handleCategoryChange}
+                  className="border border-gray-300 p-2 rounded w-80"
+                  required
+                >
+                  <option>انتخاب کنید</option>
+                  {categories.map((cat) => (
+                    <option key={cat.category} value={cat.category}>
+                      {cat.category}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="mb-4">
+                <label htmlFor="price" className="block text-gray-400 mb-4">
+                  قیمت
+                </label>
+                <input
+                  type="number"
+                  name="price"
+                  value={selectedProduct?.price || ""}
+                  onChange={handleChange}
+                  placeholder="قیمت"
+                  className="border border-gray-300 p-2 rounded w-80"
+                />
+              </div>
+
+              <div className="mb-4">
+                <label htmlFor="inventory" className="block text-gray-400 mb-4">
+                  موجودی
+                </label>
+                <input
+                  type="number"
+                  name="inventory"
+                  value={selectedProduct.inventory}
+                  onChange={handleChange}
+                  placeholder="موجودی"
+                  className="border border-gray-300 p-2 rounded w-80"
+                />
+              </div>
+              <div className="p-3 mt-2 text-center space-x-4">
+                <button
+                  className="bg-gray-700 px-4 py-1 text-sm font-medium tracking-wider border-2 border-gray-600 hover:border-gray-700 text-gray-300 rounded-full hover:bg-gray-800 transition ease-in duration-300"
+                  onClick={() => setShowEditModal(false)}
+                >
+                  لغو
+                </button>
+                <button
+                  className="bg-blue-400 hover:bg-blue-500 px-4 py-1 text-sm font-medium tracking-wider border-2 border-blue-300 hover:border-blue-500 text-white rounded-full transition ease-in duration-300"
+                  onClick={handleUpdate}
+                >
+                  به‌روزرسانی
+                </button>
+              </div>
             </div>
           </div>
         </div>
