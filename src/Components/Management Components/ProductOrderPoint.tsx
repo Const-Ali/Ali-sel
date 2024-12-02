@@ -6,8 +6,6 @@ import Button from "../Button/Button";
 
 function ProductOrderPoint() {
   const [products, setProducts] = useState<IProduct[]>([]);
-  const [search, setSearch] = useState("");
-  const [sortOption, setSortOption] = useState("جدیدترین");
   const [minInventory, setMinInventory] = useState<number>(0);
   const [maxInventory, setMaxInventory] = useState<number>(100);
 
@@ -32,30 +30,9 @@ function ProductOrderPoint() {
     fetchProductsAndCategories();
   }, []);
 
-  const sortedProducts = () => {
-    switch (sortOption) {
-      case "جدیدترین":
-        return [...products].sort((a, b) =>
-          a.createdAt < b.createdAt ? 1 : -1
-        );
-      case "ارزان‌ترین":
-        return [...products].sort((a, b) => a.price - b.price);
-      case "گران‌ترین":
-        return [...products].sort((a, b) => b.price - a.price);
-      case "پرفروش‌ترین":
-        return [...products].sort((a, b) => b.rating.rate - a.rating.rate);
-      case "پربازدیدترین":
-        return [...products].sort((a, b) => b.rating.count - a.rating.count);
-      default:
-        return products;
-    }
-  };
-
-  const filteredProducts = sortedProducts().filter(
+  const filteredProducts = products.filter(
     (product) =>
-      product.inventory >= minInventory &&
-      product.inventory <= maxInventory &&
-      product.title.toLowerCase().includes(search.toLowerCase())
+      product.inventory >= minInventory && product.inventory <= maxInventory
   );
 
   const handleAddProductClick = (product: IProduct) => {
@@ -84,28 +61,6 @@ function ProductOrderPoint() {
       <TextTitle value="لیست کالاهای به نقطه سفارش رسیده" />
 
       <form className="max-w-md mx-auto w-full p-5">
-        <div className="flex items-center gap-6 flex-row">
-          <div className="relative w-full">
-            <input
-              className="block w-full p-4 pe-10 text-sm text-gray-600 border border-gray-400 rounded-lg"
-              placeholder="جستجوی محصولات"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </div>
-          <select
-            className="p-2 border border-gray-400 rounded-lg"
-            value={sortOption}
-            onChange={(e) => setSortOption(e.target.value)}
-          >
-            <option value="جدیدترین">جدیدترین</option>
-            <option value="ارزان‌ترین">ارزان‌ترین</option>
-            <option value="گران‌ترین">گران‌ترین</option>
-            <option value="پرفروش‌ترین">پرفروش‌ترین</option>
-            <option value="پربازدیدترین">پربازدیدترین</option>
-          </select>
-        </div>
-
         <div className="mt-5">
           <label className="text-sm text-gray-600 mb-2">موجودی (از - تا)</label>
           <div className="flex justify-between">
