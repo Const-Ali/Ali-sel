@@ -9,12 +9,12 @@ import AddInput from "../AddInput/AddInput";
 import CheckInputs from "../Alert/CheckInputs";
 import TextTitle from "../PropComponents/TextTitle";
 import Button from "../Button/Button";
+import CategoryModal from "../Alert/CategoryModal";
 
 interface IProduct {
   id: string;
   title: string;
   price: number;
-  inventory: number;
   description: string;
   category: string;
   image: string;
@@ -23,6 +23,7 @@ interface IProduct {
     count: number;
   };
   createdAt: string;
+  inventory: number;
 }
 
 interface Category {
@@ -44,6 +45,20 @@ function EditPro() {
   const [notChangesVisible, setNotChangesVisible] = useState(false);
   const [originalProduct, setOriginalProduct] = useState<IProduct | null>(null);
   const [checkInputsVisible, setCheckInputsVisible] = useState(false);
+  const [isCategoryModalOpen, setIsCategoryModalOpen] = useState(false);
+
+  const openCategoryModal = () => {
+    setIsCategoryModalOpen(true);
+  };
+
+  const closeCategoryModal = () => {
+    setIsCategoryModalOpen(false);
+  };
+
+  const selectCategory = (selectedCategory: string) => {
+    setCategory(selectedCategory);
+    closeCategoryModal();
+  };
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -55,9 +70,14 @@ function EditPro() {
           new Set(data.map((cat) => cat.category))
         ).map((category) => ({ category }));
 
+        if (uniqueCategories.length === 0) {
+          alert("هیچ دسته‌بندی موجود نیست.");
+        }
+
         setCategories(uniqueCategories);
       } catch (error) {
         console.error("Error fetching categories:", error);
+        alert("خطا در دریافت دسته‌بندی‌ها.");
       }
     };
 
@@ -65,16 +85,31 @@ function EditPro() {
   }, []);
 
   const isFormValid = () => {
-    return (
-      title &&
-      price &&
-      description &&
-      inventory &&
-      category &&
-      image &&
-      ratingRate &&
-      ratingCount
-    );
+    if (
+      !title ||
+      !price ||
+      !description ||
+      !category ||
+      !image ||
+      !inventory ||
+      !ratingRate ||
+      !ratingCount
+    ) {
+      return false;
+    }
+    if (
+      parseFloat(price) <= 0 ||
+      parseFloat(ratingRate) < 0 ||
+      parseInt(ratingCount, 10) < 0
+    ) {
+      alert("مقادیر عددی باید مثبت باشند.");
+      return false;
+    }
+    if (!/^https?:\/\/.+\.(jpg|jpeg|png|webp|gif|svg)$/.test(image)) {
+      alert("لطفاً یک آدرس تصویر معتبر وارد کنید.");
+      return false;
+    }
+    return true;
   };
 
   const [isProductLoaded, setIsProductLoaded] = useState<null | boolean>(null);
@@ -146,6 +181,7 @@ function EditPro() {
         originalProduct.image !== updatedProduct.image ||
         originalProduct.rating.rate !== updatedProduct.rating.rate ||
         originalProduct.rating.count !== updatedProduct.rating.count);
+
     if (!hasChanges) {
       console.error("No changes detected!");
       setNotChangesVisible(true);
@@ -188,7 +224,6 @@ function EditPro() {
           <NotChanges />
         </div>
       )}
-
       {isProductLoaded === true && (
         <div
           role="alert"
@@ -205,7 +240,6 @@ function EditPro() {
           <Checkiderror />
         </div>
       )}
-
       {alertVisible && (
         <div
           role="alert"
@@ -213,14 +247,20 @@ function EditPro() {
         >
           <SaveChanges />
         </div>
+      )}{" "}
+      {isCategoryModalOpen && (
+        <CategoryModal
+          categories={categories}
+          onSelect={selectCategory}
+          onClose={closeCategoryModal}
+        />
       )}
       <div className="pb-7">
         <TextTitle value="ویرایش کالا" />
       </div>
-
       <div className="pl-36 pr-36 pb-8">
         <AddInput
-          id="productTitle"
+          id="productIdInput"
           type="text"
           labelText="شناسه محصول"
           value={productId}
@@ -234,7 +274,7 @@ function EditPro() {
         <div className="flex flex-col mb-4">
           <div className="pl-36 pr-36">
             <AddInput
-              id="productTitle"
+              id="productTitleInput"
               type="text"
               labelText="عنوان محصول"
               value={title}
@@ -250,38 +290,20 @@ function EditPro() {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
-          <AddInput
-            id="productInventory"
-            type="number"
-            labelText="موجودی محصول"
-            value={inventory}
-            onChange={(e) => setInventory(e.target.value)}
-          />
+          <div className="flex justify-center items-center gap-24">
+            <button
+              type="button"
+              onClick={openCategoryModal}
+              className="px-4 py-2 bg-gray-500 text-white rounded"
+            >
+              انتخاب دسته‌ بندی
+            </button>
+            {category && (
+              <span className="ml-2 text-gray-700">دسته‌بندی: {category}</span>
+            )}
+          </div>
         </div>
         <div className="flex justify-center items-center gap-24">
-          <div className="flex flex-col mb-4 rounded-md border border-gray-200 p-2 text-right ">
-            <label
-              htmlFor="HeadlineAct"
-              className=" mb-1  text-sm font-medium text-gray-900 "
-            >
-              دسته بندی
-            </label>
-
-            <select
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-              name="HeadlineAct"
-              id="HeadlineAct"
-              className="text-right mt-1.5  h-10 rounded-lg border-gray-300 text-gray-700 sm:text-sm w-96"
-            >
-              <option value="">انتخاب کنید</option>
-              {categories.map((cat, index) => (
-                <option key={index} value={cat.category}>
-                  {cat.category}
-                </option>
-              ))}
-            </select>
-          </div>
           <AddInput
             id="productRate"
             type="number"
@@ -336,3 +358,29 @@ function EditPro() {
 }
 
 export default EditPro;
+
+{
+  /* <div className="flex flex-col mb-4 rounded-md border border-gray-200 p-2 text-right ">
+            <label
+              htmlFor="HeadlineAct"
+              className=" mb-1  text-sm font-medium text-gray-900 "
+            >
+              دسته بندی
+            </label>
+
+            <select
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              name="HeadlineAct"
+              id="HeadlineAct"
+              className="text-right mt-1.5  h-10 rounded-lg border-gray-300 text-gray-700 sm:text-sm w-96"
+            >
+              <option value="">انتخاب کنید</option>
+              {categories.map((cat, index) => (
+                <option key={index} value={cat.category}>
+                  {cat.category}
+                </option>
+              ))}
+            </select>
+          </div> */
+}
