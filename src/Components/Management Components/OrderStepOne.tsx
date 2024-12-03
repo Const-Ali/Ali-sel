@@ -10,7 +10,6 @@ function OrderStepOne() {
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
   const [selectedOrderId, setSelectedOrderId] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const [products, setProducts] = useState<IProduct[]>([]);
   const [selectedOrder, setSelectedOrder] = useState<IOrders | null>(null);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
@@ -66,8 +65,12 @@ function OrderStepOne() {
   };
 
   const handleShowInvoice = (order: IOrders) => {
-    console.log("Selected Order:", order);
     setSelectedOrder(order);
+    setIsModalOpen(true);
+  };
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedOrder(null);
   };
 
   useEffect(() => {
@@ -97,10 +100,6 @@ function OrderStepOne() {
   const getProductDetails = (productId: number) => {
     console.log("Searching for product ID:", productId);
     return products.find((product) => product.id === productId);
-  };
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedOrder(null);
   };
 
   return (
@@ -261,9 +260,6 @@ function OrderStepOne() {
                 <table className="w-full table-auto border-collapse border border-gray-300">
                   <thead>
                     <tr>
-                      <th className="border border-gray-300 p-2">
-                        شناسه محصول
-                      </th>
                       <th className="border border-gray-300 p-2">تعداد</th>
                       <th className="border border-gray-300 p-2">
                         عنوان محصول
@@ -271,18 +267,19 @@ function OrderStepOne() {
                       <th className="border border-gray-300 p-2">
                         تصویر محصول
                       </th>
+                      <th className="border border-gray-300 p-2">
+                        شناسه محصول
+                      </th>
+                      <th className="border border-gray-300 p-2">ردیف </th>
                     </tr>
                   </thead>
                   <tbody>
-                    {selectedOrder.products.map((product) => {
+                    {selectedOrder.products.map((product, index) => {
                       console.log("Order Product ID:", product.id);
                       getProductDetails(product.id);
 
                       return (
-                        <tr key={product.id} className="text-center">
-                          <td className="border border-gray-300 p-2">
-                            {product.id}
-                          </td>
+                        <tr key={product.id || index} className="text-center">
                           <td className="border border-gray-300 p-2">
                             {product.qty}
                           </td>
@@ -299,6 +296,12 @@ function OrderStepOne() {
                               }
                               alt={product.title}
                             />
+                          </td>
+                          <td className="border border-gray-300 p-2">
+                            {product.id}
+                          </td>
+                          <td className="border border-gray-300 p-2 ">
+                            {index + 1}
                           </td>
                         </tr>
                       );

@@ -254,9 +254,6 @@ function OrderStepTwo() {
                 <table className="w-full table-auto border-collapse border border-gray-300">
                   <thead>
                     <tr>
-                      <th className="border border-gray-300 p-2">
-                        شناسه محصول
-                      </th>
                       <th className="border border-gray-300 p-2">تعداد</th>
                       <th className="border border-gray-300 p-2">
                         عنوان محصول
@@ -264,18 +261,19 @@ function OrderStepTwo() {
                       <th className="border border-gray-300 p-2">
                         تصویر محصول
                       </th>
+                      <th className="border border-gray-300 p-2">
+                        شناسه محصول
+                      </th>
+                      <th className="border border-gray-300 p-2">ردیف </th>
                     </tr>
                   </thead>
                   <tbody>
-                    {selectedOrder.products.map((product) => {
+                    {selectedOrder.products.map((product, index) => {
                       console.log("Order Product ID:", product.id);
                       getProductDetails(product.id);
 
                       return (
-                        <tr key={product.id} className="text-center">
-                          <td className="border border-gray-300 p-2">
-                            {product.id}
-                          </td>
+                        <tr key={product.id || index} className="text-center">
                           <td className="border border-gray-300 p-2">
                             {product.qty}
                           </td>
@@ -292,6 +290,12 @@ function OrderStepTwo() {
                               }
                               alt={product.title}
                             />
+                          </td>
+                          <td className="border border-gray-300 p-2">
+                            {product.id}
+                          </td>
+                          <td className="border border-gray-300 p-2 ">
+                            {index + 1}
                           </td>
                         </tr>
                       );
