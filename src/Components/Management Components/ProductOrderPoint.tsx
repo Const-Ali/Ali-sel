@@ -95,8 +95,9 @@ function ProductOrderPoint() {
             <th className="border border-gray-300 p-2">موجودی</th>
             <th className="border border-gray-300 p-2">قیمت</th>
             <th className="border border-gray-300 p-2">دسته‌بندی</th>
-            <th className="border border-gray-300 p-2">عنوان محصول</th>
+            <th className="border border-gray-300 p-2">عنوان کالا</th>
             <th className="border border-gray-300 p-2">شناسه</th>
+            <th className="border border-gray-300 p-2">تصویر کالا</th>
             <th className="border border-gray-300 p-2">ردیف</th>
           </tr>
         </thead>
@@ -121,6 +122,9 @@ function ProductOrderPoint() {
               <td className="border border-gray-300 p-2">{product.title}</td>
               <td className="border border-gray-300 p-2">
                 {product.id || "ناشناخته"}
+              </td>
+              <td className="border border-gray-300 p-2 ">
+                <img className="w-20" src={product.image} />
               </td>
               <td className="border border-gray-300 p-2">{index + 1}</td>
             </tr>
