@@ -197,10 +197,7 @@ function Nav_Bar() {
                               : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
                           }`}
                         >
-                          <p className="font-extrabold text-lg">
-                            {" "}
-                            دسته بندی ها
-                          </p>
+                          <p className="font-extrabold text-lg">دسته بندی ها</p>
                         </Link>
 
                         <Link

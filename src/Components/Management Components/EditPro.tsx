@@ -247,7 +247,7 @@ function EditPro() {
         >
           <SaveChanges />
         </div>
-      )}{" "}
+      )}
       {isCategoryModalOpen && (
         <CategoryModal
           categories={categories}
