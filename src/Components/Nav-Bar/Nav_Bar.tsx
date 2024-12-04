@@ -5,12 +5,15 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { IProduct } from "../../Types/servers_type";
 import ProfNav from "./ProfNav";
+import CartSvg from "../SVG/CartSvg";
+import LikeSvg from "../SVG/LikeSvg";
+import LogoSvg from "../SVG/LogoSvg.Png";
 
 function Nav_Bar() {
   const { cartQty } = useShop_Card_Cont();
   const [search, setSearch] = useState("");
   const [products, setProducts] = useState<IProduct[]>([]);
-
+  const [activeTab, setActiveTab] = useState<string>("Settings");
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -141,13 +144,7 @@ function Nav_Bar() {
             <div className="flex items-center pl-10 ">
               <div className="flex p-1">
                 <div className="flex items-center">
-                  <a href="/">
-                    <img
-                      src="https://www.upload.ee/image/17269868/_-_Copy__2_-denoised_sharpened_width_400__light-100__wb-25__exposure_correction-removebg-preview.png"
-                      className="h-12 "
-                      alt="Logo"
-                    />
-                  </a>
+                  <LogoSvg />
                 </div>
               </div>
             </div>
@@ -156,67 +153,99 @@ function Nav_Bar() {
         <header className="flex justify-between flex-row-reverse">
           <div className="flex justify-between flex-row-reverse">
             <ul className="flex">
-              <li className="ml-4 font-semibold text-2xl">
-                <Link to="/store">محصولات</Link>
-              </li>
-              <li className="ml-4 font-semibold text-2xl">
-                <Link to="/">خانه</Link>
+              <li>
+                <div>
+                  <div className="sm:hidden">
+                    <label htmlFor="Tab" className="sr-only">
+                      Tab
+                    </label>
+
+                    <select
+                      id="Tab"
+                      className="w-full rounded-md border-gray-300"
+                      value={activeTab}
+                      onChange={(e) => setActiveTab(e.target.value)}
+                    >
+                      <option>Settings</option>
+                      <option>Messages</option>
+                      <option>Archive</option>
+                      <option>Notifications</option>
+                    </select>
+                  </div>
+
+                  <div className="hidden sm:block">
+                    <div className="border-b border-gray-300">
+                      <nav className="flex gap-6 justify-center py-2">
+                        <Link
+                          to="#"
+                          onClick={() => setActiveTab("Settings")}
+                          className={`shrink-0 p-3 text-sm font-medium transition-all duration-300 ease-in-out ${
+                            activeTab === "Settings"
+                              ? "border-b-4 border-blue-600 text-blue-600"
+                              : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
+                          }`}
+                        >
+                          <p className="font-extrabold text-lg">تنظیمات</p>
+                        </Link>
+
+                        <Link
+                          to="#"
+                          onClick={() => setActiveTab("Categories")}
+                          className={`shrink-0 p-3 text-sm font-medium transition-all duration-300 ease-in-out ${
+                            activeTab === "Categories"
+                              ? "border-b-4 border-blue-600 text-blue-600"
+                              : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
+                          }`}
+                        >
+                          <p className="font-extrabold text-lg">
+                            {" "}
+                            دسته بندی ها
+                          </p>
+                        </Link>
+
+                        <Link
+                          to="/store"
+                          onClick={() => setActiveTab("Products")}
+                          className={`shrink-0 p-3 text-sm font-medium transition-all duration-300 ease-in-out ${
+                            activeTab === "Products"
+                              ? "border-b-4 border-blue-600 text-blue-600"
+                              : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
+                          }`}
+                        >
+                          <p className="font-extrabold text-lg">محصولات</p>
+                        </Link>
+
+                        <Link
+                          to="/"
+                          onClick={() => setActiveTab("Home")}
+                          className={`shrink-0 p-3 text-sm font-medium transition-all duration-300 ease-in-out ${
+                            activeTab === "Home"
+                              ? "border-b-4 border-blue-600 text-blue-600"
+                              : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
+                          }`}
+                        >
+                          <p className="font-extrabold text-lg">خانه</p>
+                        </Link>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
           <div className="flex items-center gap-6">
             <Link className="relative " to="/Cart">
               <button className="group relative overflow-hidden">
-                <svg
-                  className="w-7 h-7 transition-transform duration-200 group-hover:scale-110 group-hover:shadow-lg group-hover:fill-red-800"
-                  xmlns="http://www.w3.org/2000/svg"
-                  version="1.1"
-                  width="256"
-                  height="256"
-                  viewBox="0 0 256 256"
-                >
-                  <defs></defs>
-                  <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-                    <path
-                      d="M 72.975 58.994 H 31.855 c -1.539 0 -2.897 -1.005 -3.347 -2.477 L 15.199 13.006 H 3.5 c -1.933 0 -3.5 -1.567 -3.5 -3.5 s 1.567 -3.5 3.5 -3.5 h 14.289 c 1.539 0 2.897 1.005 3.347 2.476 l 13.309 43.512 h 36.204 l 10.585 -25.191 H 45 c -1.933 0 -3.5 -1.567 -3.5 -3.5 s 1.567 -3.5 3.5 -3.5 h 41.5 c 1.172 0 2.267 0.587 2.915 1.563 s 0.766 2.212 0.312 3.293 L 76.201 56.85 C 75.655 58.149 74.384 58.994 72.975 58.994 z"
-                      transform=" matrix(1 0 0 1 0 0) "
-                      strokeLinecap="round"
-                    />
-                    <circle
-                      cx="28.88"
-                      cy="74.33"
-                      r="6.16"
-                      transform="  matrix(1 0 0 1 0 0) "
-                    />
-                    <circle
-                      cx="74.59"
-                      cy="74.33"
-                      r="6.16"
-                      transform="  matrix(1 0 0 1 0 0) "
-                    />
-                  </g>
-                </svg>
+                <CartSvg />
               </button>
 
               <span className="absolute w-6 h-6 bg-red-700 flex justify-center items-center rounded-lg text-white -top-3 -right-4">
                 {cartQty}
               </span>
             </Link>
-            <Link className="relative" to="#">
+            <Link className="relative" to="/Like">
               <button className="group relative overflow-hidden -top-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="35"
-                  height="35"
-                  viewBox="0 0 1200 1200"
-                  className="transition-transform duration-200 group-hover:scale-95 group-hover:shadow-lg"
-                >
-                  <path
-                    fill="#5c5a5e"
-                    d="M600 0C268.629 0 0 268.629 0 600s268.629 600 600 600s600-268.629 600-600S931.371 0 600 0m132.789 343.503c71.295-1.114 135.772 37.646 166.337 103.724c28.273 87.356 4.612 176.225-45.251 243.199c-32.912 45.417-72.247 84.584-112.462 118.807c-36.997 34.439-119.808 102.591-141.755 104.483c-19.397-3.708-41.173-25.678-56.573-36.968c-86.534-65.781-179.667-145.742-226.899-233.207c-39.601-83.97-39.673-187.864 21.96-252.241c79.917-72.048 200.39-57.946 261.512 17.325c16.415-21.295 36.605-38.066 60.562-50.267c24.279-9.69 48.803-14.483 72.569-14.855"
-                    className="transition-colors duration-200 group-hover:fill-pink-500"
-                  />
-                </svg>
+                <LikeSvg />
               </button>
             </Link>
           </div>
