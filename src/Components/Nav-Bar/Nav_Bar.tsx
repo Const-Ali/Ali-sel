@@ -8,12 +8,14 @@ import ProfNav from "./ProfNav";
 import CartSvg from "../SVG/CartSvg";
 import LikeSvg from "../SVG/LikeSvg";
 import LogoSvg from "../SVG/LogoSvg.Png";
+import CategoriesMobileModal from "../PropComponents/CategoriesMobileModal";
 
 function Nav_Bar() {
   const { cartQty } = useShop_Card_Cont();
   const [search, setSearch] = useState("");
   const [products, setProducts] = useState<IProduct[]>([]);
   const [activeTab, setActiveTab] = useState<string>("Settings");
+  const [showCategoriesModal, setShowCategoriesModal] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -155,24 +157,6 @@ function Nav_Bar() {
             <ul className="flex">
               <li>
                 <div>
-                  <div className="sm:hidden">
-                    <label htmlFor="Tab" className="sr-only">
-                      Tab
-                    </label>
-
-                    <select
-                      id="Tab"
-                      className="w-full rounded-md border-gray-300"
-                      value={activeTab}
-                      onChange={(e) => setActiveTab(e.target.value)}
-                    >
-                      <option>Settings</option>
-                      <option>Messages</option>
-                      <option>Archive</option>
-                      <option>Notifications</option>
-                    </select>
-                  </div>
-
                   <div className="hidden sm:block">
                     <div className="border-b border-gray-300">
                       <nav className="flex gap-6 justify-center py-2">
@@ -181,7 +165,7 @@ function Nav_Bar() {
                           onClick={() => setActiveTab("Settings")}
                           className={`shrink-0 p-3 text-sm font-medium transition-all duration-300 ease-in-out ${
                             activeTab === "Settings"
-                              ? "border-b-4 border-blue-600 text-blue-600"
+                              ? "border-b-4 border-gray-700 text-gray-950"
                               : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
                           }`}
                         >
@@ -190,22 +174,28 @@ function Nav_Bar() {
 
                         <Link
                           to="#"
-                          onClick={() => setActiveTab("Categories")}
+                          onMouseEnter={() => setShowCategoriesModal(true)}
                           className={`shrink-0 p-3 text-sm font-medium transition-all duration-300 ease-in-out ${
                             activeTab === "Categories"
-                              ? "border-b-4 border-blue-600 text-blue-600"
+                              ? "border-b-4 border-gray-700 text-gray-950"
                               : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
                           }`}
                         >
-                          <p className="font-extrabold text-lg">دسته بندی ها</p>
+                          <p className="font-extrabold text-lg">گوشی موبایل</p>
                         </Link>
+
+                        <CategoriesMobileModal
+                          isVisible={showCategoriesModal}
+                          onMouseEnter={() => setShowCategoriesModal(true)}
+                          onMouseLeave={() => setShowCategoriesModal(false)}
+                        />
 
                         <Link
                           to="/store"
                           onClick={() => setActiveTab("Products")}
                           className={`shrink-0 p-3 text-sm font-medium transition-all duration-300 ease-in-out ${
                             activeTab === "Products"
-                              ? "border-b-4 border-blue-600 text-blue-600"
+                              ? "border-b-4 border-gray-700 text-gray-950"
                               : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
                           }`}
                         >
@@ -217,7 +207,7 @@ function Nav_Bar() {
                           onClick={() => setActiveTab("Home")}
                           className={`shrink-0 p-3 text-sm font-medium transition-all duration-300 ease-in-out ${
                             activeTab === "Home"
-                              ? "border-b-4 border-blue-600 text-blue-600"
+                              ? "border-b-4 border-gray-700 text-gray-950"
                               : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
                           }`}
                         >
