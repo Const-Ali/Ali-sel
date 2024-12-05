@@ -5,7 +5,7 @@ import { IProduct } from "../../Types/servers_type";
 import Product_Item from "../../Components/Product_Item/Product_Item";
 import Spinner from "../../Components/Spinner/Spinner";
 
-function CollectionWatch() {
+function CollectionLaptaps() {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [sortOption, setSortOption] = useState("جدید ترین");
@@ -20,8 +20,10 @@ function CollectionWatch() {
       .then((result) => {
         const tabletProducts = result.filter(
           (product: IProduct) =>
-            product.category === "ساعت-اپل" ||
-            product.category === "ساعت-سامسونگ"
+            product.category === "لپتاپ-لنوو" ||
+            product.category === "-اپل" ||
+            product.category === "-هایلو" ||
+            product.category === "هندزفری-"
         );
         setProducts(tabletProducts);
         setIsLoading(false);
@@ -90,15 +92,14 @@ function CollectionWatch() {
           <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
             <header>
               <h2 className="text-3xl font-semibold text-gray-800 mt-8 mb-8">
-                ساعت‌های هوشمند و کلاسیک برای هر سلیقه
+                لپ‌تاپ‌های قدرتمند برای کار و بازی
               </h2>
 
               <p className="mt-4 max-w-md text-gray-500">
-                انتخاب ساعت مناسب می‌تواند به استایل شما جلوه‌ای ویژه ببخشد. چه
-                به دنبال یک ساعت هوشمند برای پیگیری سلامتی و فعالیت‌های روزانه
-                باشید، چه یک ساعت کلاسیک برای تکمیل ظاهرتان، ما ساعت‌هایی با
-                طراحی‌های متنوع و امکانات پیشرفته داریم که هر کدام را به انتخابی
-                منحصر به فرد تبدیل می‌کند.
+                با لپ‌تاپ‌های ما، شما می‌توانید به راحتی از انجام کارهای روزمره
+                گرفته تا پردازش‌های پیچیده و بازی‌های حرفه‌ای لذت ببرید. از
+                مدل‌های سبک و پرقدرت گرفته تا لپ‌تاپ‌های مخصوص گیمینگ، ما بهترین
+                گزینه‌ها را برای هر نوع نیاز و سبک کاری فراهم کرده‌ایم.
               </p>
             </header>
 
@@ -406,4 +407,4 @@ function CollectionWatch() {
   );
 }
 
-export default CollectionWatch;
+export default CollectionLaptaps;
