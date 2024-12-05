@@ -27,6 +27,7 @@ import CollectionAirPods from "./Pages/Product/CollectionAirPods";
 import CollectionWatch from "./Pages/Product/CollectionWatch";
 import CollectionSpeaker from "./Pages/Product/CollectionSpeaker";
 import CollectionPhone from "./Pages/Product/CollectionPhone";
+import CollectionLaptaps from "./Pages/Product/CollectionLaptaps";
 
 function App() {
   const { isLogin } = useShop_Card_Cont();
@@ -50,6 +51,7 @@ function App() {
         <Route path="/CollectionWatch" element={<CollectionWatch />} />
         <Route path="/CollectionSpeaker" element={<CollectionSpeaker />} />
         <Route path="/CollectionPhone" element={<CollectionPhone />} />
+        <Route path="/CollectionLaptaps" element={<CollectionLaptaps />} />
         <Route path="/Test" element={<Test />} />
         <Route
           path="/login"
