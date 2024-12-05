@@ -48,6 +48,12 @@ function HomeComSix() {
       titleTwo: "اسپیکر",
       srcImg: "https://www.upload.ee/image/17349053/sp2.png",
     },
+    {
+      path: `/${encodeURIComponent("CollectionLaptaps")}`,
+      titleOne: "تخفیف",
+      titleTwo: "لپتاپ",
+      srcImg: "https://www.upload.ee/image/17473918/name.jpg",
+    },
   ];
 
   const [visibleLinks, setVisibleLinks] = useState<LinkItem[]>(initialLinks);
