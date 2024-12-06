@@ -18,7 +18,6 @@ const CategoriesMobileModal: React.FC<CategoriesMobileModalProps> = ({
   useEffect(() => {
     getProducts()
       .then((result: IProduct[]) => {
-        // Explicitly type the result as IProduct array
         const filteredProducts = result.filter(
           (product: IProduct) =>
             product.category === "اسپیکر-جی بی ال" ||
