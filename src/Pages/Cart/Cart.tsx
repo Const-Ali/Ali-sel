@@ -88,7 +88,7 @@ function Cart() {
             </div>
           )}
         </div>
-        <div className="">
+        <div>
           {loading ? (
             <div className="absolute inset-0 flex items-end justify-center bg-gray-300 opacity-60">
               <Spinner />

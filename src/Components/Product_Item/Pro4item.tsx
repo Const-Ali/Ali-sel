@@ -29,10 +29,7 @@ function Pro4item() {
           className="cursor-pointer transition transform hover:scale-105 hover:shadow-xl p-4 rounded-lg w-44 pl-12"
           onClick={() => navigate("/Pro4itemsThree")}
         >
-          <img
-            className=""
-            src="https://www.upload.ee/image/17325997/design.png"
-          />
+          <img src="https://www.upload.ee/image/17325997/design.png" />
           <p className=" text-gray-500 text-sm">پرداخت قسطی</p>
         </div>
         <div
