@@ -8,6 +8,8 @@ import OrderStepTwo from "../../Components/Management Product/OrderStepTwo";
 import Container from "../../Components/Container/Container";
 import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
 import ProductOrderPoint from "../../Components/Management Product/ProductOrderPoint";
+import UnitofMeasurement from "../../Components/Management Product/Unit-of-Measurement";
+import Classification from "../../Components/Management Product/Classification";
 
 function ManagementPanel() {
   const [selectedComponent, setSelectedComponent] =
@@ -31,6 +33,10 @@ function ManagementPanel() {
         return <EditPro />;
       case "ProductOrderPoint":
         return <ProductOrderPoint />;
+      case "Classification":
+        return <Classification />;
+      case "Unit-of-Measurement":
+        return <UnitofMeasurement />;
       default:
         return <ProductComTotal />;
     }
@@ -204,13 +210,13 @@ function ManagementPanel() {
             </button>
             <button
               onClick={() => setSelectedGroup("Classification")}
-              className={`px-4 py-2 rounded ${selectedGroup === "OrderPoint" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
+              className={`px-4 py-2 rounded ${selectedGroup === "Classification" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
             >
               طبقه بندی
             </button>
             <button
-              onClick={() => setSelectedGroup("OrderPoint")}
-              className={`px-4 py-2 rounded ${selectedGroup === "OrderPoint" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
+              onClick={() => setSelectedGroup("Unit-of-Measurement")}
+              className={`px-4 py-2 rounded ${selectedGroup === "Unit-of-Measurement" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
             >
               واحد سنجش
             </button>
@@ -259,12 +265,26 @@ function ManagementPanel() {
                   ویرایش کالا
                 </button>
               </>
-            ) : (
+            ) : selectedGroup === "OrderPoint" ? (
               <button
                 onClick={() => setSelectedComponent("ProductOrderPoint")}
                 className={`px-4 py-2 rounded ${selectedComponent === "ProductOrderPoint" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
               >
                 لیست کالا های مورد نیاز
+              </button>
+            ) : selectedGroup === "Classification" ? (
+              <button
+                onClick={() => setSelectedComponent("Classification")}
+                className={`px-4 py-2 rounded ${selectedComponent === "Classification" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
+              >
+                طبقه بندی
+              </button>
+            ) : (
+              <button
+                onClick={() => setSelectedComponent("Unit-of-Measurement")}
+                className={`px-4 py-2 rounded ${selectedComponent === "Unit-of-Measurement" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
+              >
+                واحد سنجش{" "}
               </button>
             )}
           </div>
