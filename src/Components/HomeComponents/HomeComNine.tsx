@@ -21,7 +21,7 @@ function HomeComNine() {
           "http://localhost:8001/products"
         );
         const filteredProducts = response.data
-          .filter((product) => product.category === "اسپیکر-انکر")
+          .filter((product) => product.category === "هندزفری-هایلو")
           .sort(
             (a, b) =>
               new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
@@ -46,19 +46,19 @@ function HomeComNine() {
                 <header>
                   {products.length > 0 && (
                     <h2 className="text-xl text-right font-bold text-gray-900 sm:text-3xl">
-                      اسپیکر ها
+                      هندزفری ها
                     </h2>
                   )}
                   <p className="mt-4 text-gray-500 text-xl text-right">
-                    با اسپیکرهای حرفه‌ای و مدرن، تجربه صدای بی‌نظیر و طراحی شیک
-                    را به خانه یا سفر خود بیاورید
+                    انتخاب بهترین هندزفری برای موسیقی، کار یا تماس‌های روزمره را
+                    آسان کنید
                   </p>
                 </header>
                 <a
-                  href="#"
-                  className="mt-8 inline-block rounded border border-gray-900 bg-gray-900 px-12 py-3 text-sm font-medium text-white transition hover:shadow focus:outline-none focus:ring"
+                  href="/CollectionAirPods"
+                  className="mt-52 inline-block rounded border border-gray-900 bg-gray-900 px-12 py-3 text-sm font-medium text-white transition hover:shadow focus:outline-none focus:ring"
                 >
-                  مشاهده اسپیکر ها
+                  مشاهده هندزفری ها
                 </a>
               </div>
             </div>

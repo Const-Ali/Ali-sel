@@ -56,7 +56,7 @@ function HomeComTwo() {
                 </header>
                 <a
                   href="/CollectionSpeaker"
-                  className="mt-8 inline-block rounded bg-gray-900 px-12 py-3 text-sm font-medium text-white"
+                  className="mt-28 inline-block rounded bg-gray-900 px-12 py-3 text-sm font-medium text-white"
                 >
                   همه اسپیکر ها
                 </a>

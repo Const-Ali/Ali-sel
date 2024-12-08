@@ -28,7 +28,7 @@ function Home() {
           <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </a>
         <a
-          href="CollectionPhone"
+          href="stor"
           className="group relative block overflow-hidden rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110 hover:rotate-1"
         >
           <HomeComEight SrcImg="https://www.upload.ee/image/17451743/13234.jpg" />
