@@ -77,7 +77,7 @@ function HomeComNine() {
                         className="aspect-square w-full rounded object-cover"
                       />
                       <div className="mt-4">
-                        <h3 className="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4">
+                        <h3 className="text-right font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4">
                           {product.title}
                         </h3>
                         <p className="flex gap-2 mt-4 text-lg pb-3 text-gray-700 text-right">

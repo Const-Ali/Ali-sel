@@ -45,20 +45,20 @@ function HomeComTwo() {
               <div className="mx-auto max-w-md text-center lg:text-left ">
                 <header>
                   {products.length > 0 && (
-                    <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
-                      123
+                    <h2 className="text-xl font-bold text-gray-900 sm:text-3xl text-right">
+                      ساعت ها
                     </h2>
                   )}
-                  <p className="mt-4 text-gray-500">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Quas rerum quam amet provident nulla error!
+                  <p className="mt-4 text-gray-500 text-lg text-right">
+                    با انتخاب ساعت‌های جذاب و خاص، استایل خود را تکمیل کنید و
+                    زمان را با دقت دنبال کنید
                   </p>
                 </header>
                 <a
-                  href="#"
-                  className="mt-8 inline-block rounded border border-gray-900 bg-gray-900 px-12 py-3 text-sm font-medium text-white transition hover:shadow focus:outline-none focus:ring"
+                  href="/CollectionWatch"
+                  className="mt-8 inline-block rounded bg-gray-900 px-12 py-3 text-sm font-medium text-white"
                 >
-                  Shop All
+                  همه ساعت ها
                 </a>
               </div>
             </div>
@@ -77,7 +77,7 @@ function HomeComTwo() {
                         className="aspect-square w-full rounded object-cover"
                       />
                       <div className="mt-4">
-                        <h3 className="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4">
+                        <h3 className="text-right font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4">
                           {product.title}
                         </h3>
                         <p className="flex gap-2 mt-4 text-lg pb-3 text-gray-700 text-right">
