@@ -5,14 +5,10 @@ import { IProduct } from "../../Types/servers_type";
 import TextTitle from "../PropComponents/TextTitle";
 import DeleteSvg from "../SVG/DeleteSvg";
 import EditSvg from "../SVG/EditSvg";
+import SerchSvg from "../SVG/SerchSvg";
 
 function ProductComTotal() {
-  interface ICategory {
-    category: string;
-  }
-
   const [products, setProducts] = useState<IProduct[]>([]);
-  const [categories, setCategories] = useState<ICategory[]>([]);
   const [showModal, setShowModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
   const [selectedProductId, setSelectedProductId] = useState<number | null>(
@@ -31,11 +27,6 @@ function ProductComTotal() {
           id: Number(product.id),
         }));
         setProducts(normalizedProducts);
-
-        const uniqueCategories = Array.from(
-          new Set(normalizedProducts.map((product) => product.category))
-        ).map((category) => ({ category }));
-        setCategories(uniqueCategories);
       } catch (error) {
         console.error("Error fetching products or categories:", error);
       }
@@ -119,15 +110,6 @@ function ProductComTotal() {
     }
   };
 
-  const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    if (selectedProduct) {
-      setSelectedProduct({
-        ...selectedProduct,
-        category: e.target.value,
-      });
-    }
-  };
-
   const sortedProducts = () => {
     switch (sortOption) {
       case "جدیدترین":
@@ -165,21 +147,7 @@ function ProductComTotal() {
               onChange={(e) => setSearch(e.target.value)}
             />
             <div className="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
-              <svg
-                className="w-4 h-4 text-gray-500"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                />
-              </svg>
+              <SerchSvg />
             </div>
           </div>
           <select
@@ -212,7 +180,7 @@ function ProductComTotal() {
         <tbody>
           {filteredProducts.map((product, index) => (
             <tr key={product.id || index} className="text-center">
-              <td className="border border-gray-300 p-2">
+              <td className="border border-gray-300 p-2 space-x-2">
                 <button onClick={() => handleDelete(Number(product.id))}>
                   <DeleteSvg />
                 </button>
@@ -292,22 +260,7 @@ function ProductComTotal() {
                   className="border border-gray-300 p-2 rounded w-80"
                 />
               </div>
-              <div className="flex flex-col mb-4">
-                <label className="block text-gray-400 mb-4">دسته‌بندی:</label>
-                <select
-                  value={selectedProduct.category}
-                  onChange={handleCategoryChange}
-                  className="border border-gray-300 p-2 rounded w-80"
-                  required
-                >
-                  <option>انتخاب کنید</option>
-                  {categories.map((cat) => (
-                    <option key={cat.category} value={cat.category}>
-                      {cat.category}
-                    </option>
-                  ))}
-                </select>
-              </div>
+
               <div className="mb-4">
                 <label htmlFor="price" className="block text-gray-400 mb-4">
                   قیمت
@@ -322,19 +275,6 @@ function ProductComTotal() {
                 />
               </div>
 
-              <div className="mb-4">
-                <label htmlFor="inventory" className="block text-gray-400 mb-4">
-                  موجودی
-                </label>
-                <input
-                  type="number"
-                  name="inventory"
-                  value={selectedProduct.inventory}
-                  onChange={handleChange}
-                  placeholder="موجودی"
-                  className="border border-gray-300 p-2 rounded w-80"
-                />
-              </div>
               <div className="p-3 mt-2 text-center space-x-4">
                 <button
                   className="bg-gray-700 px-4 py-1 text-sm font-medium tracking-wider border-2 border-gray-600 hover:border-gray-700 text-gray-300 rounded-full hover:bg-gray-800 transition ease-in duration-300"
