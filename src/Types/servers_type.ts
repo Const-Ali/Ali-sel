@@ -8,12 +8,20 @@ export interface IProduct {
   inventory: number;
   image: string;
   rating: IProductRating;
+  // در آپدیت های بعدی اضافه خواهد شد
+  // Categories: IProductCategories;
 }
 
 export interface IProductRating {
   rate: number;
   count: number;
 }
+
+// در آپدیت های بعدی اضافه خواهد شد
+// export interface IProductCategories {
+//   category: string;
+//   Subcategory: string;
+// }
 
 export interface IAddress {
   geolocation: {
