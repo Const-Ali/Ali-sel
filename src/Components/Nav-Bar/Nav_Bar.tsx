@@ -4,11 +4,13 @@ import { useShop_Card_Cont } from "../../Pages/context/Shop_Card_Cont";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { IProduct } from "../../Types/servers_type";
+import CategoriesMobileModal from "../PropComponents/CategoriesMobileModal";
 import ProfNav from "./ProfNav";
 import CartSvg from "../SVG/CartSvg";
 import LikeSvg from "../SVG/LikeSvg";
 import LogoSvg from "../SVG/LogoSvg.Png";
-import CategoriesMobileModal from "../PropComponents/CategoriesMobileModal";
+import SerchSvg from "../SVG/SerchSvg";
+import ListSvg from "../SVG/ListSvg";
 
 function Nav_Bar() {
   const { cartQty } = useShop_Card_Cont();
@@ -55,35 +57,22 @@ function Nav_Bar() {
                 ) : (
                   <div className="sm:flex sm:gap-4 ">
                     <Link to="/login">
-                      <a className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-gray-800 hover:bg-gray-900 text-white rounded-md">
+                      <h1 className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-gray-800 hover:bg-gray-900 text-white rounded-md">
                         ورود
-                      </a>
+                      </h1>
                     </Link>
                     <div className="hidden sm:flex">
                       <Link to="/CreateAccount">
-                        <a className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-gray-800 hover:bg-gray-900 text-white rounded-md">
+                        <h1 className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-gray-800 hover:bg-gray-900 text-white rounded-md">
                           ثبت نام
-                        </a>
+                        </h1>
                       </Link>
                     </div>
                   </div>
                 )}
                 <div className="block md:hidden">
                   <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M4 6h16M4 12h16M4 18h16"
-                      />
-                    </svg>
+                    <ListSvg />
                   </button>
                 </div>
               </div>
@@ -99,21 +88,7 @@ function Nav_Bar() {
               />
 
               <div className=" absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
-                <svg
-                  className="w-4 h-4 text-gray-500"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                  />
-                </svg>
+                <SerchSvg />
               </div>
               {search && (
                 <ul className="absolute w-full bg-white border border-gray-400 rounded-md mt-1 max-h-60 overflow-y-auto shadow-lg z-10">
@@ -158,7 +133,7 @@ function Nav_Bar() {
               <li>
                 <div>
                   <div className="hidden sm:block">
-                    <div className="border-b border-gray-300">
+                    <div>
                       <nav className="flex gap-6 justify-center py-2">
                         <Link
                           to="#"
