@@ -1,13 +1,13 @@
 import { useState } from "react";
-import OrderStepOne from "../../Components/Management Components/OrderStepOne";
-import OrderStepThree from "../../Components/Management Components/OrderStepThree";
-import ProductComTotal from "../../Components/Management Components/ProductComTotal";
-import AddPro from "../../Components/Management Components/AddPro";
-import EditPro from "../../Components/Management Components/EditPro";
-import OrderStepTwo from "../../Components/Management Components/OrderStepTwo";
+import OrderStepOne from "../../Components/Management Product/OrderStepOne";
+import OrderStepThree from "../../Components/Management Product/OrderStepThree";
+import ProductComTotal from "../../Components/Management Product/ProductComTotal";
+import AddPro from "../../Components/Management Product/AddPro";
+import EditPro from "../../Components/Management Product/EditPro";
+import OrderStepTwo from "../../Components/Management Product/OrderStepTwo";
 import Container from "../../Components/Container/Container";
 import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
-import ProductOrderPoint from "../../Components/Management Components/ProductOrderPoint";
+import ProductOrderPoint from "../../Components/Management Product/ProductOrderPoint";
 
 function ManagementPanel() {
   const [selectedComponent, setSelectedComponent] =
@@ -201,6 +201,18 @@ function ManagementPanel() {
               className={`px-4 py-2 rounded ${selectedGroup === "OrderPoint" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
             >
               نقطه سفارش
+            </button>
+            <button
+              onClick={() => setSelectedGroup("Classification")}
+              className={`px-4 py-2 rounded ${selectedGroup === "OrderPoint" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
+            >
+              طبقه بندی
+            </button>
+            <button
+              onClick={() => setSelectedGroup("OrderPoint")}
+              className={`px-4 py-2 rounded ${selectedGroup === "OrderPoint" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
+            >
+              واحد سنجش
             </button>
           </div>
 
