@@ -194,7 +194,7 @@ function UserComTotal() {
         <tbody>
           {sortedAndFilteredUsers.map((user) => (
             <tr key={user.id}>
-              <td className="border border-gray-300 p-2 text-center flex gap-1 justify-center items-center">
+              <td className="border border-gray-300 p-2 text-center space-x-2">
                 <button onClick={() => handleEdit(user.id)}>
                   <EditSvg />
                 </button>
