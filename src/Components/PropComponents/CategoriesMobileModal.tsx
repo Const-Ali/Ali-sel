@@ -43,7 +43,7 @@ const CategoriesMobileModal: React.FC<CategoriesMobileModalProps> = ({
       onMouseLeave={onMouseLeave}
     >
       <div className="bg-gray-50 text-black p-4">
-        <h3 className="text-lg font-semibold mb-4">دسته‌بندی موبایل‌های</h3>
+        <h3 className="text-lg font-semibold mb-4">دسته‌بندی های موبایل</h3>
         <ul className="space-y-2">
           {samsungMobiles.map((category) => (
             <li key={category} className="text-right">
