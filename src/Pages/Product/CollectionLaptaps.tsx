@@ -20,10 +20,10 @@ function CollectionLaptaps() {
       .then((result) => {
         const tabletProducts = result.filter(
           (product: IProduct) =>
-            product.category === "لپتاپ-لنوو" ||
-            product.category === "-اپل" ||
-            product.category === "-هایلو" ||
-            product.category === "هندزفری-"
+            product.category === "لپتاپ-اپل" ||
+            product.category === "لپتاپ-اچ پی" ||
+            product.category === "لپتاپ-ایسوس" ||
+            product.category === "لپتاپ-لنوو"
         );
         setProducts(tabletProducts);
         setIsLoading(false);
