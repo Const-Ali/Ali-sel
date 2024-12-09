@@ -21,6 +21,7 @@ import CreateAccount from "./Pages/Login/CreateAccount";
 import ProCollectionOne from "./Pages/Product/ProCollectionOne";
 import ConectUs from "./Pages/Aboute/ConectUs";
 import Terms from "./Pages/Aboute/Terms";
+import Like from "./Pages/Like/Like";
 import CollectionTablet from "./Pages/Product/CollectionTablet";
 import CollectionCharger from "./Pages/Product/CollectionCharger";
 import CollectionAirPods from "./Pages/Product/CollectionAirPods";
@@ -53,6 +54,8 @@ function App() {
         <Route path="/CollectionPhone" element={<CollectionPhone />} />
         <Route path="/CollectionLaptaps" element={<CollectionLaptaps />} />
         <Route path="/Test" element={<Test />} />
+        <Route path="/Like" element={<Like />} />
+
         <Route
           path="/login"
           element={isLogin ? <Navigate to="/" /> : <Login />}
