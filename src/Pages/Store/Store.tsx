@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { getProducts } from "../../Services/Api";
 import { IProduct } from "../../Types/servers_type";
 import Spinner from "../../Components/Spinner/Spinner";
+import SerchSvg from "../../Components/SVG/SerchSvg";
 
 function Store() {
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -15,6 +16,7 @@ function Store() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([
     "همه",
   ]);
+  const [categorySearch, setCategorySearch] = useState("");
 
   useEffect(() => {
     setIsLoading(true);
@@ -87,6 +89,10 @@ function Store() {
     : filteredByBrand.filter((product) =>
         selectedCategories.includes(product.category)
       );
+
+  const filteredCategories = categories.filter((category) =>
+    category.toLowerCase().includes(categorySearch.toLowerCase())
+  );
 
   return (
     <Container>
@@ -201,8 +207,23 @@ function Store() {
               </summary>
 
               <ul className="space-y-1 border-t border-gray-200 p-4">
-                {categories.map((category) => (
-                  <li key={category} className="flex gap-2 ">
+                <form className="max-w-md mx-auto w-full p-5">
+                  <div className="flex items-center gap-6 flex-row">
+                    <div className="relative w-full">
+                      <input
+                        className="block w-full p-4 pe-10 text-sm text-gray-600 border border-gray-400 rounded-lg"
+                        placeholder="جستجوی دسته‌بندی‌ها"
+                        value={categorySearch}
+                        onChange={(e) => setCategorySearch(e.target.value)}
+                      />
+                      <div className="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
+                        <SerchSvg />
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                {filteredCategories.map((category) => (
+                  <li key={category} className="flex gap-2">
                     <button
                       className={`w-full text-right p-2 rounded-lg ${
                         selectedCategories.includes(category)
@@ -213,7 +234,7 @@ function Store() {
                     >
                       {category}
                     </button>
-                    <label className="inline-flex items-center gap-2 ">
+                    <label className="inline-flex items-center gap-2">
                       <input
                         type="checkbox"
                         checked={selectedCategories.includes(category)}
