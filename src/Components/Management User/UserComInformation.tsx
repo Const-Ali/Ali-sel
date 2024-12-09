@@ -220,7 +220,11 @@ const UserComInformation: React.FC = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-md w-96">
             <h3 className="text-xl font-semibold mb-4">تایید حذف</h3>
-            <p>آیا از حذف کاربر {selectedUser.username} مطمئن هستید؟</p>
+            <p>
+              آیا از حذف اطلاعات حساس کاربر
+              {`${selectedUser.username}, ${selectedUser.id}`} مطمئن هستید؟
+            </p>
+
             <div className="flex justify-between mt-4">
               <button
                 className="bg-red-500 text-white px-4 py-2 rounded-md"
