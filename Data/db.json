@@ -897,7 +897,6 @@
       "createdAt": "2024-12-08T20:17:56.983Z"
     },
     {
-      "id": "1216",
       "title": "لپتاپ ایسوس 15.6 اینچی مدل Vivobook 15 X1504VA i3 1315U 12GB 512GB",
       "price": 25300000,
       "description": "سری لپتاپ : Vivobook نوع کاربری : عمومی/ مالتی مدیا ابعاد : 359.7x232.5x17.9 میلی متر وزن : 1.7 کیلوگرم ابعاد نمایشگر : 15.6 اینچ وضوح تصویر : 1920x1080 پیکسل - Full HD نوع پنل : TFT نرخ نوسازی : 60 هرتز نور پس‌ زمینه LED : دارد صفحه نمایش لمسی : ندارد میزان روشنایی صفحه نمایش : 250 نیت پوشش نمایشگر : مات نسبت تصویر : 16:9 سری پردازنده : Core i3 مدل پردازنده مرکزی : 1315U حافظه کش پردازنده : 10 مگابایت تعداد هسته : 6 تعداد رشته (Thread) : 8 سازنده پردازنده مرکزی : Intel نسل پردازنده مرکزی : 13 محدوده سرعت پردازنده : ۱.2 تا 4.5 گیگاهرتز ظرفیت حافظه RAM : 12 گیگابایت نوع حافظه RAM : DDR4 قابلیت ارتقای رم : دارد قابلیت ارتقا رم تا : 20 گیگابایت باس رم : 3200 سازنده پردازنده گرافیکی : Intel نوع پردازنده گرافیکی : پردازنده گرافیکی یکپارچه مدل پردازنده گرافیکی : UHD Graphics نوع حافظه ذخیره سازی : SSD ظرفیت حافظه HDD : ندارد ظرفیت حافظه SSD : 512 گیگابایت ظرفیت حافظه داخلی : 512 گیگابایت قابلیت ارتقای حافظه داخلی : دارد مشخصات حافظه داخلی : قابلیت ارتقای حافظه SSD تا 1 ترابایت M.2 NVMe PCIe 3.0 شبکه Wi-Fi : دارد ورژن شبکه Wi-Fi (وایرلس) : Wi-Fi 5(802.11ax) بلوتوث : دارد توضیحات بلوتوث : نسخه 5.1 درگاه شبکه LAN : ندارد تعداد درگاه USB 3.0 Type A و بالاتر : 2 عدد USB 3.2 Gen 1 تعداد درگاه USB 2.0 Type A : 1 عدد تعداد درگاه USB Type C : 1 عدد USB 3.2 Gen 1 جک هدفون/ میکروفن : دارد درگاه HDMI : دارد، نسخه 1.4 مشخصات اسپیکر : بلندگوهای داخلی Sonic Master اسپیکر : دارد وب‌ کم : دارد توضیحات وب کم : دوربین 720p HD با شاتر حریم خصوصی کیبورد با نور پس‌ زمینه : ندارد مشخصات تاچ پد : چند لمسی حسگر اثر انگشت : ندارد درایو نوری : ندارد باتری : 42 وات ساعت نوع باتری/ قابل تعویض توسط کاربر : 3 سلولی لیتیوم یونی توان شارژر : 45 وات",
@@ -908,7 +907,8 @@
         "rate": 4.5,
         "count": 419
       },
-      "createdAt": "2024-12-08T20:19:31.143Z"
+      "createdAt": "2024-12-08T20:19:31.143Z",
+      "id": "1216"
     }
   ],
   "users": [
@@ -1023,26 +1023,6 @@
     }
   ],
   "login": [
-    {
-      "id": "a502",
-      "username": "AdminProducts",
-      "password": "AdminProducts",
-      "category": "AdminProducts",
-      "createdAt": "2024-11-21T12:09:43.470Z",
-      "ip": "156.146.59.27",
-      "isp": "DataCamp Limited",
-      "country": "United States",
-      "city": "New York",
-      "region": "New York",
-      "lat": 40.7123,
-      "lon": -74.0068,
-      "timezone": "Asia/Tehran",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-      "language": "en-US",
-      "platform": "Win32",
-      "screenResolution": "1920x1080",
-      "colorScheme": "dark"
-    },
     {
       "id": "eaf5",
       "username": "AdminProducts",
@@ -2049,6 +2029,66 @@
       "password": "AdminProducts",
       "category": "AdminProducts",
       "createdAt": "2024-12-08T18:08:07.827Z",
+      "ip": "78.47.114.115",
+      "isp": "Hetzner Online GmbH",
+      "country": "Germany",
+      "city": "Nuremberg",
+      "region": "Bavaria",
+      "lat": 49.4527,
+      "lon": 11.0783,
+      "timezone": "Asia/Tehran",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0",
+      "language": "en-US",
+      "platform": "Win32",
+      "screenResolution": "1920x1080",
+      "colorScheme": "dark"
+    },
+    {
+      "id": "3fef",
+      "username": "AdminProducts",
+      "password": "AdminProducts",
+      "category": "AdminProducts",
+      "createdAt": "2024-12-09T06:26:43.203Z",
+      "ip": "78.47.114.115",
+      "isp": "Hetzner Online GmbH",
+      "country": "Germany",
+      "city": "Nuremberg",
+      "region": "Bavaria",
+      "lat": 49.4527,
+      "lon": 11.0783,
+      "timezone": "Asia/Tehran",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0",
+      "language": "en-US",
+      "platform": "Win32",
+      "screenResolution": "1920x1080",
+      "colorScheme": "dark"
+    },
+    {
+      "id": "2a21",
+      "username": "AdminUsers",
+      "password": "AdminUsers",
+      "category": "AdminUsers",
+      "createdAt": "2024-12-09T06:28:44.050Z",
+      "ip": "78.47.114.115",
+      "isp": "Hetzner Online GmbH",
+      "country": "Germany",
+      "city": "Nuremberg",
+      "region": "Bavaria",
+      "lat": 49.4527,
+      "lon": 11.0783,
+      "timezone": "Asia/Tehran",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0",
+      "language": "en-US",
+      "platform": "Win32",
+      "screenResolution": "1920x1080",
+      "colorScheme": "dark"
+    },
+    {
+      "id": "ae90",
+      "username": "AdminProducts",
+      "password": "AdminProducts",
+      "category": "AdminProducts",
+      "createdAt": "2024-12-09T07:01:04.618Z",
       "ip": "78.47.114.115",
       "isp": "Hetzner Online GmbH",
       "country": "Germany",
