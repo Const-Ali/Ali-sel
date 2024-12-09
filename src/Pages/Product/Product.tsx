@@ -14,6 +14,9 @@ function Product() {
   const params = useParams<{ id: string }>();
   const [product, setProduct] = useState<IProduct>();
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
+  const [isloding, setIsloding] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [isLiked, setIsLiked] = useState(false);
 
   const {
     handleDecreaseProductQty,
@@ -21,7 +24,6 @@ function Product() {
     getProductQty,
     handleRemoveProductQty,
   } = useShop_Card_Cont();
-  const [isloding, setIsloding] = useState(true);
 
   useEffect(() => {
     getProduct(params.id as string)
@@ -34,8 +36,6 @@ function Product() {
         setIsloding(false);
       });
   }, [params.id]);
-
-  const [error, setError] = useState<string | null>(null);
 
   const currentQty = getProductQty(parseInt(params.id as string));
   const inventory = product?.inventory || 0;
@@ -72,12 +72,45 @@ function Product() {
   const handleColorSelect = (color: string) => {
     setSelectedColor(color);
   };
-
-  const [isLiked, setIsLiked] = useState(false);
-
   const toggleLike = () => {
+    const userData = JSON.parse(localStorage.getItem("user") || "{}");
+    const userId = userData.id;
+
+    if (!userId) {
+      console.error("User is not logged in");
+      return;
+    }
+
+    const productId = params.id;
+
+    const storedLikes = localStorage.getItem("likes");
+    const likes = storedLikes ? JSON.parse(storedLikes) : [];
+
+    if (isLiked) {
+      const updatedLikes = likes.filter(
+        (item: { id: string; userId: string }) =>
+          !(item.id === productId && item.userId === userId)
+      );
+
+      localStorage.setItem("likes", JSON.stringify(updatedLikes));
+    } else {
+      likes.push({ id: productId, isLiked: true, userId });
+
+      localStorage.setItem("likes", JSON.stringify(likes));
+    }
+
     setIsLiked(!isLiked);
   };
+
+  useEffect(() => {
+    const productId = params.id as string;
+    const likeData = localStorage.getItem(`like_${productId}`);
+
+    if (likeData) {
+      const parsedData = JSON.parse(likeData);
+      setIsLiked(parsedData.liked);
+    }
+  }, [params.id]);
 
   return (
     <>
