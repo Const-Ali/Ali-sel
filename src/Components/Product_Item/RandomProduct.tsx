@@ -59,7 +59,7 @@ function RandomProduct() {
       <div className="font-sans bg-gradient-to-r from-gray-200 via-gray-50 to-gray-200 px-4  py-10">
         <div className="mx-auto lg:max-w-6xl md:max-w-4xl">
           <h2 className="text-5xl font-extrabold text-gray-700 text-right mb-12">
-            محصولات
+            محصولات تصادفی
           </h2>
 
           {visibleProducts.length === 0 ? (
