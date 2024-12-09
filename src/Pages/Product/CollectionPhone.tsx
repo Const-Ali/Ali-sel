@@ -21,6 +21,7 @@ function CollectionPhone() {
         const tabletProducts = result.filter(
           (product: IProduct) =>
             product.category === "موبایل-آیفون" ||
+            product.category === "موبایل-شیائومی" ||
             product.category === "موبایل-سامسونگ"
         );
         setProducts(tabletProducts);
