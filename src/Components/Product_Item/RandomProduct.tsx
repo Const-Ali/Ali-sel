@@ -26,7 +26,7 @@ function RandomProduct() {
           "http://localhost:8001/products"
         );
         setProducts(response.data);
-        setVisibleProducts(response.data.slice(0, 6));
+        setVisibleProducts(response.data.slice(0, 12));
       } catch (error) {
         console.error("Error fetching products:", error);
       }
@@ -70,7 +70,7 @@ function RandomProduct() {
             <div className="flex flex-wrap justify-between">
               {visibleProducts.map((product) => (
                 <a href={`/product/${product.id}`} key={product.id}>
-                  <div className="bg-gray-50 p-3 cursor-pointer shadow-sm rounded-md hover:scale-[1.03] transition-all w-44">
+                  <div className="bg-gray-50 my-3  p-3 cursor-pointer shadow-sm rounded-md hover:scale-[1.03] transition-all w-44">
                     <div className="w-full h-24 overflow-hidden mx-auto">
                       <img
                         className="mx-auto my-1 object-contain rounded-md max-h-full"
