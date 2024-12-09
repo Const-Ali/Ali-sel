@@ -11,13 +11,20 @@ import LikeSvg from "../SVG/LikeSvg";
 import LogoSvg from "../SVG/LogoSvg.Png";
 import SerchSvg from "../SVG/SerchSvg";
 import ListSvg from "../SVG/ListSvg";
+import CategoriesLaptopModal from "../PropComponents/CategoriesLaptopModal";
+import CategoriesWatchModal from "../PropComponents/CategoriesWatchModal";
 
 function Nav_Bar() {
   const { cartQty } = useShop_Card_Cont();
   const [search, setSearch] = useState("");
   const [products, setProducts] = useState<IProduct[]>([]);
   const [activeTab, setActiveTab] = useState<string>("Settings");
-  const [showCategoriesModal, setShowCategoriesModal] = useState(true);
+  const [showCategoriesModal, setShowCategoriesModal] = useState(false);
+  const [showWatchCategoriesModal, setShowWatchCategoriesModal] =
+    useState(false);
+  const [showLaptopCategoriesModal, setShowLaptopCategoriesModal] =
+    useState(false);
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -136,7 +143,7 @@ function Nav_Bar() {
                     <div>
                       <nav className="flex gap-6 justify-center py-2">
                         <Link
-                          to="#"
+                          to="Aboute"
                           onClick={() => setActiveTab("Settings")}
                           className={`shrink-0 p-3 text-sm font-medium transition-all duration-300 ease-in-out ${
                             activeTab === "Settings"
@@ -144,12 +151,33 @@ function Nav_Bar() {
                               : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
                           }`}
                         >
-                          <p className="font-extrabold text-lg">تنظیمات</p>
+                          <p className="font-extrabold text-lg">درباره ما</p>
                         </Link>
-
+                        <Link
+                          to="#"
+                          onMouseEnter={() => setShowWatchCategoriesModal(true)}
+                          onMouseLeave={() =>
+                            setShowWatchCategoriesModal(false)
+                          }
+                          className={`shrink-0 p-3 text-sm font-medium transition-all duration-300 ease-in-out ${
+                            activeTab === "Categories"
+                              ? "border-b-4 border-gray-700 text-gray-950"
+                              : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
+                          }`}
+                        >
+                          <p className="font-extrabold text-lg">ساعت</p>
+                        </Link>
+                        <CategoriesWatchModal
+                          isVisible={showWatchCategoriesModal}
+                          onMouseEnter={() => setShowWatchCategoriesModal(true)}
+                          onMouseLeave={() =>
+                            setShowWatchCategoriesModal(false)
+                          }
+                        />
                         <Link
                           to="#"
                           onMouseEnter={() => setShowCategoriesModal(true)}
+                          onMouseLeave={() => setShowCategoriesModal(false)}
                           className={`shrink-0 p-3 text-sm font-medium transition-all duration-300 ease-in-out ${
                             activeTab === "Categories"
                               ? "border-b-4 border-gray-700 text-gray-950"
@@ -158,13 +186,37 @@ function Nav_Bar() {
                         >
                           <p className="font-extrabold text-lg">گوشی موبایل</p>
                         </Link>
-
                         <CategoriesMobileModal
                           isVisible={showCategoriesModal}
                           onMouseEnter={() => setShowCategoriesModal(true)}
                           onMouseLeave={() => setShowCategoriesModal(false)}
                         />
 
+                        <Link
+                          to="#"
+                          onMouseEnter={() =>
+                            setShowLaptopCategoriesModal(true)
+                          }
+                          onMouseLeave={() =>
+                            setShowLaptopCategoriesModal(false)
+                          }
+                          className={`shrink-0 p-3 text-sm font-medium transition-all duration-300 ease-in-out ${
+                            activeTab === "Categories"
+                              ? "border-b-4 border-gray-700 text-gray-950"
+                              : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
+                          }`}
+                        >
+                          <p className="font-extrabold text-lg">لپتاپ</p>
+                        </Link>
+                        <CategoriesLaptopModal
+                          isVisible={showLaptopCategoriesModal}
+                          onMouseEnter={() =>
+                            setShowLaptopCategoriesModal(true)
+                          }
+                          onMouseLeave={() =>
+                            setShowLaptopCategoriesModal(false)
+                          }
+                        />
                         <Link
                           to="/store"
                           onClick={() => setActiveTab("Products")}
@@ -176,7 +228,6 @@ function Nav_Bar() {
                         >
                           <p className="font-extrabold text-lg">محصولات</p>
                         </Link>
-
                         <Link
                           to="/"
                           onClick={() => setActiveTab("Home")}
