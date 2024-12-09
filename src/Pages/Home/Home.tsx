@@ -9,6 +9,8 @@ import HomeComSix from "../../Components/HomeComponents/HomeComSix";
 import HomeComTree from "../../Components/HomeComponents/HomeComTree";
 import HomeComTwo from "../../Components/HomeComponents/HomeComTwo";
 import ImageSlider from "../../Components/ImageSlider/ImageSlider";
+import ProMobile from "../../Components/Product_Item/ProMobile";
+import RandomProduct from "../../Components/Product_Item/RandomProduct";
 
 function Home() {
   return (
@@ -35,7 +37,6 @@ function Home() {
           <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </a>
       </div>
-
       <div className="grid grid-3 grid-flow-col h-fit mt-8 p-10 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200">
         <div className="col-span-2 h-full">
           <HomeComTwo />
@@ -47,7 +48,9 @@ function Home() {
           <HomeComOne />
         </div>
       </div>
-
+      <div className="my-3">
+        <RandomProduct />
+      </div>
       <div className="flex py-5">
         <a
           href="CollectionWatch"
@@ -63,6 +66,9 @@ function Home() {
           <HomeComEight SrcImg="https://www.upload.ee/image/17451762/789456.jpg" />
           <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </a>
+      </div>
+      <div className="my-3">
+        <ProMobile />
       </div>
       <HomeComFour />
       <HomeComFive />
