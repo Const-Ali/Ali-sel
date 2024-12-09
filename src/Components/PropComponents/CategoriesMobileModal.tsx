@@ -20,9 +20,9 @@ const CategoriesMobileModal: React.FC<CategoriesMobileModalProps> = ({
       .then((result: IProduct[]) => {
         const filteredProducts = result.filter(
           (product: IProduct) =>
-            product.category === "اسپیکر-جی بی ال" ||
-            product.category === "اسپیکر-انکر" ||
-            product.category === "اسپیکر-هارمن"
+            product.category === "موبایل-آیفون" ||
+            product.category === "موبایل-سامسونگ" ||
+            product.category === "موبایل-شیائومی"
         );
         const uniqueCategories = [
           ...new Set(filteredProducts.map((product) => product.category)),
@@ -38,16 +38,21 @@ const CategoriesMobileModal: React.FC<CategoriesMobileModalProps> = ({
 
   return (
     <div
-      className="absolute bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-[1000px] max-w-max mt-14"
+      className="absolute bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-[1000px] max-w-max mt-14 mr-40"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div className="bg-gray-50 text-black p-4">
+      <div className="bg-gray-100 rounded-md text-black p-4">
         <h3 className="text-lg font-semibold mb-4">دسته‌بندی های موبایل</h3>
         <ul className="space-y-2">
           {samsungMobiles.map((category) => (
             <li key={category} className="text-right">
-              <span className="text-sm font-medium">{category}</span>
+              <a
+                href="CollectionPhone"
+                className="text-sm font-medium block px-4 py-2 rounded-md transition-all bg-gray-50 hover:bg-gray-200 hover:shadow-md"
+              >
+                {category}
+              </a>
             </li>
           ))}
         </ul>
