@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="/stor"
+                  href="/store"
                   className="text-gray-800 hover:text-white text-sm transition-all"
                 >
                   محصولات
