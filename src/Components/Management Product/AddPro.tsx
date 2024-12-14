@@ -3,7 +3,7 @@ import Container from "../Container/Container";
 import axios from "axios";
 import Addok from "../Alert/Addok";
 import AddProNot from "../Alert/AddProNot";
-import AddInput from "../AddInput/AddInput";
+import AddInput from "../PropComponents/AddInput";
 import TextTitle from "../PropComponents/TextTitle";
 import CategoryModal from "../Alert/CategoryModal";
 

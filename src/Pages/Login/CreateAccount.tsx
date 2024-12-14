@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Container from "../../Components/Container/Container";
 import axios from "axios";
 import AddUserNot from "../../Components/Alert/AddUserNot";
-import AddInput from "../../Components/AddInput/AddInput";
+import AddInput from "../../Components/PropComponents/AddInput";
 import CreatUserOk from "../../Components/Alert/CreatUserOk";
 import { useNavigate } from "react-router-dom";
 

@@ -5,7 +5,7 @@ import SaveChanges from "../Alert/SaveChanges";
 import Checkidok from "../Alert/Checkidok";
 import Checkiderror from "../Alert/Checkiderror";
 import NotChanges from "../Alert/NotChanges";
-import AddInput from "../AddInput/AddInput";
+import AddInput from "../PropComponents/AddInput";
 import CheckInputs from "../Alert/CheckInputs";
 import TextTitle from "../PropComponents/TextTitle";
 import Button from "../Button/Button";

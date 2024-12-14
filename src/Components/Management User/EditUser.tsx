@@ -5,7 +5,7 @@ import SaveChanges from "../Alert/SaveChanges";
 import Checkidok from "../Alert/Checkidok";
 import Checkiderror from "../Alert/Checkiderror";
 import NotChanges from "../Alert/NotChanges";
-import AddInput from "../AddInput/AddInput";
+import AddInput from "../PropComponents/AddInput";
 import TextTitle from "../PropComponents/TextTitle";
 
 interface IAddress {
