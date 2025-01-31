@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useShop_Card_Cont } from "../../Pages/context/Shop_Card_Cont";
 import NavComOne from "./NavComOne";
 
@@ -20,6 +20,28 @@ function ProfNav() {
     setIsModalOpen(false);
   };
 
+  const [currentTime, setCurrentTime] = useState(
+    new Date().toLocaleString("fa-IR", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    })
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(
+        new Date().toLocaleString("fa-IR", {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        })
+      );
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div>
       <div className="h-16 px-1 w-52 max-w-sm mx-auto rounded-xl shadow-2xl border border-gray-500 space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-4 bg-transparent">
@@ -36,10 +58,12 @@ function ProfNav() {
               role="menu"
             >
               <div className="p-2">
-                <strong className="block p-2 text-xs font-medium uppercase text-gray-400">
+                <div className="text-2xl font-bold rounded-lg bg-gray-600 text-gray-50">
+                  <h1 className="text-center">{currentTime}</h1>
+                </div>
+                <strong className="bg-gray-50 rounded-xl block p-2 text-xs font-medium uppercase text-gray-400">
                   عمومی
                 </strong>
-
                 <a
                   onClick={openModal}
                   className="cursor-pointer block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
@@ -64,7 +88,7 @@ function ProfNav() {
               </div>
 
               <div className="p-2">
-                <strong className="block p-2 text-xs font-medium uppercase text-gray-400">
+                <strong className="bg-gray-50 rounded-xl pb-2 block p-2 text-xs font-medium uppercase text-gray-400">
                   خروج از سایت
                 </strong>
 

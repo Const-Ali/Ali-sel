@@ -1,4 +1,15 @@
 {
   "welcome": "به وب‌سایت ما خوش آمدید",
-  "change_language": "تغییر زبان"
+  "change_language": "تغییر زبان",
+  "home": "خانه",
+  "products": "محصولات",
+  "about": "درباره ما",
+  "watches": "ساعت",
+  "mobiles": "گوشی موبایل",
+  "laptops": "لپتاپ",
+  "login": "ورود",
+  "signup": "ثبت نام",
+  "search_placeholder": "جستجوی محصولات",
+  "cart": "سبد خرید",
+  "like": "علاقه‌مندی‌ها"
 }

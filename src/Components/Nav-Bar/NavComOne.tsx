@@ -50,7 +50,7 @@ function NavComOne({ onClose }: NavComOneProps) {
       <div className="fixed inset-0 p-4 flex flex-wrap justify-center items-center w-full h-full z-[1000] before:fixed before:inset-0 before:w-full before:h-full before:bg-[rgba(0,0,0,0.5)] overflow-auto font-[sans-serif]">
         <div className="w-full max-w-lg bg-white shadow-lg rounded-lg p-8 relative">
           <div className="flex items-center">
-            <h3 className="text-blue-600 text-xl font-bold flex-1">
+            <h3 className="text-gray-600-600 text-xl font-bold flex-1">
               ویرایش اطلاعات کاربری
             </h3>
             <svg
@@ -72,7 +72,7 @@ function NavComOne({ onClose }: NavComOneProps) {
                 onChange={(e) =>
                   setUserData({ ...userData, imguser: e.target.value })
                 }
-                className="px-4 py-3 bg-gray-100 w-full text-gray-800 text-sm border-none focus:outline-blue-600 focus:bg-transparent rounded-lg"
+                className="px-4 py-3 bg-gray-100 w-full text-gray-800 text-sm border-none focus:outline-gray-600 focus:bg-transparent rounded-lg"
               />
             </div>
 
@@ -87,7 +87,7 @@ function NavComOne({ onClose }: NavComOneProps) {
                     name: { ...userData.name, firstname: e.target.value },
                   })
                 }
-                className="px-4 py-3 bg-gray-100 w-full text-gray-800 text-sm border-none focus:outline-blue-600 focus:bg-transparent rounded-lg"
+                className="px-4 py-3 bg-gray-100 w-full text-gray-800 text-sm border-none focus:outline-gray-600 focus:bg-transparent rounded-lg"
               />
             </div>
 
@@ -104,7 +104,7 @@ function NavComOne({ onClose }: NavComOneProps) {
                     name: { ...userData.name, lastname: e.target.value },
                   })
                 }
-                className="px-4 py-3 bg-gray-100 w-full text-gray-800 text-sm border-none focus:outline-blue-600 focus:bg-transparent rounded-lg"
+                className="px-4 py-3 bg-gray-100 w-full text-gray-800 text-sm border-none focus:outline-gray-600 focus:bg-transparent rounded-lg"
               />
             </div>
 
@@ -119,7 +119,7 @@ function NavComOne({ onClose }: NavComOneProps) {
               <button
                 type="button"
                 onClick={handleSave}
-                className="px-6 py-3 rounded-lg text-white text-sm border-none outline-none tracking-wide bg-blue-600 hover:bg-blue-700"
+                className="px-6 py-3 rounded-lg text-white text-sm border-none outline-none tracking-wide bg-gray-600 hover:bg-gray-700"
               >
                 ذخیره
               </button>

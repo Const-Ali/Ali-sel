@@ -11,20 +11,10 @@ import HomeComTwo from "../../Components/HomeComponents/HomeComTwo";
 import ImageSlider from "../../Components/ImageSlider/ImageSlider";
 import ProMobile from "../../Components/Product_Item/ProMobile";
 import RandomProduct from "../../Components/Product_Item/RandomProduct";
-import { useTranslation } from "react-i18next";
 
 const Home: React.FC = () => {
-  const { t, i18n } = useTranslation();
-  const changeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
   return (
     <Container>
-      <div>
-        <h1>{t("welcome")}</h1>
-        <button onClick={() => changeLanguage("en")}>🇬🇧 English</button>
-        <button onClick={() => changeLanguage("fa")}>🇮🇷 فارسی</button>
-      </div>
       <ImageSlider />
       <HomeComSix />
       <div className="flex justify-between items-center">

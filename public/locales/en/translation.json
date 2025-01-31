@@ -1,4 +1,15 @@
 {
   "welcome": "Welcome to our website",
-  "change_language": "Change Language"
+  "change_language": "Change Language",
+  "home": "Home",
+  "products": "Products",
+  "about": "About Us",
+  "watches": "Watches",
+  "mobiles": "Mobile Phones",
+  "laptops": "Laptops",
+  "login": "Login",
+  "signup": "Sign Up",
+  "search_placeholder": "Search for products",
+  "cart": "Cart",
+  "like": "Favorites"
 }

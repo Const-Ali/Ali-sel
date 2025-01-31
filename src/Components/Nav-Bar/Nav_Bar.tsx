@@ -13,6 +13,9 @@ import SerchSvg from "../SVG/SerchSvg";
 import ListSvg from "../SVG/ListSvg";
 import CategoriesLaptopModal from "../PropComponents/CategoriesLaptopModal";
 import CategoriesWatchModal from "../PropComponents/CategoriesWatchModal";
+import { useTranslation } from "react-i18next";
+import FlagUSSvg from "../SVG/Flag-US-Svg";
+import FlagIRSvg from "../SVG/Flag-IR-Svg";
 
 function Nav_Bar() {
   const { cartQty } = useShop_Card_Cont();
@@ -50,6 +53,10 @@ function Nav_Bar() {
 
   const token = localStorage.getItem("token");
 
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+  };
   return (
     <div className="h-40 border-b shadow-2xlxl flex items-center bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 sticky top-0 z-50">
       <Container>
@@ -81,6 +88,19 @@ function Nav_Bar() {
                   <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
                     <ListSvg />
                   </button>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="border-gray-600 border-2 rounded-xl py-1 px-3">
+                  <h1 className="flex justify-center">{t("welcome")}</h1>
+                  <div className="flex justify-center space-x-6">
+                    <button onClick={() => changeLanguage("en")}>
+                      <FlagUSSvg />
+                    </button>
+                    <button onClick={() => changeLanguage("fa")}>
+                      <FlagIRSvg />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
