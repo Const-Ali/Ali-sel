@@ -1,15 +1,25 @@
 import { useEffect, useState } from "react";
 import { useShop_Card_Cont } from "../../Pages/context/Shop_Card_Cont";
 import NavComOne from "./NavComOne";
+import NavComTwo from "./NavComTwo";
 
 function ProfNav() {
   const userLocal = JSON.parse(localStorage.getItem("user") || "null");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalTwoOpen, setIsModalTwoOpen] = useState(false);
   const { handleLogout } = useShop_Card_Cont();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const openModalTwo = () => {
+    setIsModalTwoOpen(true);
+  };
+
+  const closeModalTwo = () => {
+    setIsModalTwoOpen(false);
   };
 
   const openModal = () => {
@@ -72,8 +82,8 @@ function ProfNav() {
                   حساب کاربری
                 </a>
                 <a
-                  href="#"
-                  className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                  onClick={openModalTwo}
+                  className="cursor-pointer block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
                   role="menuitem"
                 >
                   سفارشات
@@ -123,6 +133,7 @@ function ProfNav() {
       </div>
 
       {isModalOpen && <NavComOne onClose={closeModal} />}
+      {isModalTwoOpen && <NavComTwo onClose={closeModalTwo} />}
     </div>
   );
 }
