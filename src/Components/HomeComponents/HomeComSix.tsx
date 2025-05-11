@@ -6,7 +6,6 @@ import ProCol from "../PropComponents/ProCol";
 interface LinkItem {
   path: string;
   titleOne: string;
-  titleTwo: string;
   srcImg: string;
 }
 
@@ -15,44 +14,44 @@ function HomeComSix() {
     {
       path: `/${encodeURIComponent("CollectionTablet")}`,
       titleOne: "تخفیف",
-      titleTwo: "تبلت",
-      srcImg: "https://www.upload.ee/image/17349048/12.png",
+      srcImg:
+        "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746901206/theme-copy-8-1_ixbtzj.webp",
     },
     {
       path: `/${encodeURIComponent("CollectionCharger")}`,
       titleOne: "تخفیف",
-      titleTwo: "شارژر",
-      srcImg: "https://www.upload.ee/image/17349049/113.png",
+      srcImg:
+        "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746901202/theme-copy-4_ccv1dy.webp",
     },
     {
       path: `/${encodeURIComponent("CollectionAirPods")}`,
       titleOne: "تخفیف",
-      titleTwo: "هندزفری",
-      srcImg: "https://www.upload.ee/image/17349050/hp-copy-1.png",
+      srcImg:
+        "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746901204/theme-copy-3_gqdrho.webp",
     },
     {
       path: `/${encodeURIComponent("CollectionWatch")}`,
       titleOne: "تخفیف",
-      titleTwo: "ساعت",
-      srcImg: "https://www.upload.ee/image/17349051/wa.png",
+      srcImg:
+        "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746901205/theme-copy-2_pxvcuv.webp",
     },
     {
       path: `/${encodeURIComponent("CollectionPhone")}`,
       titleOne: "تخفیف",
-      titleTwo: "موبایل",
-      srcImg: "https://www.upload.ee/image/17349052/mobile01__1_.png",
+      srcImg:
+        "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746901207/theme-copy-1_exlnnw.webp",
     },
     {
       path: `/${encodeURIComponent("CollectionSpeaker")}`,
       titleOne: "تخفیف",
-      titleTwo: "اسپیکر",
-      srcImg: "https://www.upload.ee/image/17349053/sp2.png",
+      srcImg:
+        "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746901203/theme-copy-5_gqvnta.webp",
     },
     {
       path: `/${encodeURIComponent("CollectionLaptaps")}`,
       titleOne: "تخفیف",
-      titleTwo: "لپتاپ",
-      srcImg: "https://www.upload.ee/image/17473918/name.jpg",
+      srcImg:
+        "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746901208/laptop_ks2jq4.webp",
     },
   ];
 
@@ -77,6 +76,9 @@ function HomeComSix() {
 
   return (
     <Container>
+      <h1 className="flex justify-center items-center p-4 text-2xl">
+        دسته بندی محصولات
+      </h1>
       <div className="flex justify-between items-center p-4 mx-20 overflow-hidden">
         <div
           className={`flex transition-transform gap-x-5 duration-500 ${
@@ -87,11 +89,7 @@ function HomeComSix() {
         >
           {visibleLinks.map((link, index) => (
             <Link to={link.path} key={index} className="flex-shrink-0">
-              <ProCol
-                TitleOne={link.titleOne}
-                TitleTwo={link.titleTwo}
-                SrcImg={link.srcImg}
-              />
+              <ProCol TitleOne={link.titleOne} SrcImg={link.srcImg} />
             </Link>
           ))}
         </div>

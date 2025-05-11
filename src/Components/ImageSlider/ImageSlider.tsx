@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 
 function ImageSlider() {
   const photos = [
-    "https://www.upload.ee/image/17340848/17242375283415.jpg",
-    "https://www.upload.ee/image/17340849/17242427078015.jpg",
-    "https://www.upload.ee/image/17340850/17257084691314.jpg",
-    "https://www.upload.ee/image/17340851/17271647441215.jpg",
-    "https://www.upload.ee/image/17349064/Slide1.JPG",
-    "https://www.upload.ee/image/17349065/Slide2.JPG",
-    "https://www.upload.ee/image/17340893/1458.jpg",
+    "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746900424/speaker_tbxium.jpg",
+    "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746900423/17271647441215_mdd7vs.webp",
+    "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746900423/mobile_ptlp0c.jpg",
+    "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746900423/17257084691314_xynba2.webp",
+    "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746900423/17242427078015_qngzah.webp",
+    "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746900423/17242375283415_z6fmfw.webp",
+    "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746900422/1458_xfudla.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
