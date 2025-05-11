@@ -5,6 +5,8 @@ import AddUserNot from "../../Components/Alert/AddUserNot";
 import AddInput from "../../Components/PropComponents/AddInput";
 import CreatUserOk from "../../Components/Alert/CreatUserOk";
 import { useNavigate } from "react-router-dom";
+import LogoSvg from "../../Components/SVG/LogoSvg.Png";
+import LoginImage from "../../Components/Image/LoginImage";
 
 interface IAddress {
   city: string;
@@ -69,7 +71,8 @@ function CreateAccount() {
 
     const newUser = {
       category: "User",
-      imguser: "https://www.upload.ee/image/17363767/name.png",
+      imguser:
+        "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746966117/OIP_ntj2gd.jpg",
       email,
       username,
       password,
@@ -138,20 +141,12 @@ function CreateAccount() {
       <section className="bg-white my-10 shadow-2xl">
         <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
           <aside className="relative block h-60 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
-            <img
-              alt=""
-              src="https://www.upload.ee/image/17332422/gg.jpg"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
+            <LoginImage />
           </aside>
 
           <main className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
             <div className="max-w-xl lg:max-w-3xl">
-              <img
-                src="https://www.upload.ee/image/17269868/_-_Copy__2_-denoised_sharpened_width_400__light-100__wb-25__exposure_correction-removebg-preview.png"
-                className="h-24"
-                alt="Logo"
-              />
+              <LogoSvg />
 
               <h1 className="mt-32 text-lg font-bold text-gray-900 sm:text-xl md:text-xl text-center">
                 تکنو سنتر همراه مطمئن شما در دنیای تکنولوژی

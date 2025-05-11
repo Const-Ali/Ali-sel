@@ -59,7 +59,8 @@ function AddUser() {
       return;
     }
     const currentDateTime = new Date().toISOString();
-    const imgUsers = "https://www.upload.ee/image/17363767/name.png";
+    const imgUsers =
+      "https://res.cloudinary.com/ds1yjxg7s/image/upload/v1746966117/OIP_ntj2gd.jpg";
 
     const newUser = {
       imguser: imgUsers,
