@@ -8,7 +8,7 @@ import HomeComSeven from "../../Components/HomeComponents/HomeComSeven";
 import HomeComSix from "../../Components/HomeComponents/HomeComSix";
 import HomeComTree from "../../Components/HomeComponents/HomeComTree";
 import HomeComTwo from "../../Components/HomeComponents/HomeComTwo";
-import ImageSlider from "../../Components/ImageSlider/ImageSlider";
+import ImageSlider from "../../Components/Image/ImageSlider";
 import ProMobile from "../../Components/Product_Item/ProMobile";
 import RandomProduct from "../../Components/Product_Item/RandomProduct";
 
