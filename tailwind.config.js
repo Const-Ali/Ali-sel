@@ -1,11 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Nazanin", "sans-serif"],
+        sans: ["Vazir", "sans-serif"],
       },
       animation: {
         shimmer: "shimmer 1.5s infinite",
