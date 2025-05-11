@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import LogoSvg from "../SVG/LogoSvg.Png";
 
 const Footer: React.FC = () => {
   const location = useLocation();
@@ -17,13 +18,7 @@ const Footer: React.FC = () => {
       <footer className="text-right bg-gradient-to-r from-gray-500 via-gray-400 to-gray-500  py-14 px-16 font-sans tracking-wide relative">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex items-center lg:justify-center">
-            <a href="/">
-              <img
-                src="https://www.upload.ee/image/17269868/_-_Copy__2_-denoised_sharpened_width_400__light-100__wb-25__exposure_correction-removebg-preview.png"
-                alt="logo"
-                className="w-[450px] shadow-xl rounded-sm"
-              />
-            </a>
+            <LogoSvg />
           </div>
           <div>
             <h2 className="text-black text-lg font-semibold mb-4">
