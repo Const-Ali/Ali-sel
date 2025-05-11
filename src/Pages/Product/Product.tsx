@@ -9,6 +9,8 @@ import Spinner from "../../Components/Spinner/Spinner";
 import Pro4item from "../../Components/Product_Item/Pro4item";
 import SimilarProducts from "../../Components/Product_Item/SimilarProducts";
 import RandomProduct from "../../Components/Product_Item/RandomProduct";
+import ImageWithSkeleton from "../../Components/Image/ImageWithSkeleton";
+import ColorSelector from "../../Components/Product_Item/ColorSelector";
 
 function Product() {
   const params = useParams<{ id: string }>();
@@ -64,13 +66,6 @@ function Product() {
       setError(null);
     }
   }, [currentQty, inventory]);
-
-  const colors = [
-    { name: "مشکی", code: "black" },
-    { name: "خاکستری", code: "gray-400" },
-    { name: "نارنجی", code: "orange-500" },
-    { name: "قرمز", code: "red-500" },
-  ];
 
   const handleColorSelect = (color: string) => {
     setSelectedColor(color);
@@ -425,32 +420,21 @@ function Product() {
 
                       <div className="flex flex-col items-end gap-4">
                         <h3 className="text-xl font-bold text-gray-800">
-                          رنگ {selectedColor && <span> : {selectedColor}</span>}
+                          رنگ {selectedColor && <span>: {selectedColor}</span>}
                         </h3>
-                        <div className="flex flex-wrap gap-4 mt-4">
-                          {colors.map((color) => (
-                            <button
-                              key={color.code}
-                              type="button"
-                              onClick={() => handleColorSelect(color.name)}
-                              className={`w-10 h-10 bg-${color.code} border-2 ${
-                                selectedColor === color.name
-                                  ? "border-gray-800"
-                                  : "border-white"
-                              } hover:border-gray-800 rounded-md shrink-0 inline-block px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500`}
-                            ></button>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="w-full lg:sticky top-0 text-center mb-">
-                      <div className="lg:h-auto">
-                        <img
-                          src={product?.image}
-                          alt="Product"
-                          className="lg:w-11/12 w-full h-full rounded-md object-cover object-top"
+                        <ColorSelector
+                          selectedColor={selectedColor}
+                          onSelect={handleColorSelect}
                         />
                       </div>
+                    </div>
+                    <div className="w-full lg:sticky top-0 text-center mb-4">
+                      <ImageWithSkeleton
+                        src={product?.image}
+                        alt={product?.title}
+                        className="w-full lg:w-[500px] h-auto rounded-md object-cover object-top"
+                        classNameWrapper="flex justify-center items-center"
+                      />
                     </div>
                   </div>
 
