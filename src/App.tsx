@@ -29,6 +29,7 @@ import CollectionWatch from "./Pages/Product/CollectionWatch";
 import CollectionSpeaker from "./Pages/Product/CollectionSpeaker";
 import CollectionPhone from "./Pages/Product/CollectionPhone";
 import CollectionLaptaps from "./Pages/Product/CollectionLaptaps";
+import "./Assets/Font/Font.css";
 
 const App: React.FC = () => {
   const { isLogin } = useShop_Card_Cont();
