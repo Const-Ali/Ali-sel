@@ -72,13 +72,13 @@ function Nav_Bar() {
                   <div className="sm:flex sm:gap-4 ">
                     <Link to="/login">
                       <h1 className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-gray-800 hover:bg-gray-900 text-white rounded-md">
-                        ورود
+                        {t("login")}
                       </h1>
                     </Link>
                     <div className="hidden sm:flex">
                       <Link to="/CreateAccount">
                         <h1 className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-gray-800 hover:bg-gray-900 text-white rounded-md">
-                          ثبت نام
+                          {t("signup")}
                         </h1>
                       </Link>
                     </div>
@@ -171,7 +171,9 @@ function Nav_Bar() {
                               : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
                           }`}
                         >
-                          <p className="font-extrabold text-lg">درباره ما</p>
+                          <p className="font-extrabold text-lg">
+                            {t("about_us")}
+                          </p>
                         </Link>
                         <Link
                           to="#"
@@ -185,7 +187,7 @@ function Nav_Bar() {
                               : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
                           }`}
                         >
-                          <p className="font-extrabold text-lg">ساعت</p>
+                          <p className="font-extrabold text-lg">{t("watch")}</p>
                         </Link>
                         <CategoriesWatchModal
                           isVisible={showWatchCategoriesModal}
@@ -204,7 +206,9 @@ function Nav_Bar() {
                               : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
                           }`}
                         >
-                          <p className="font-extrabold text-lg">گوشی موبایل</p>
+                          <p className="font-extrabold text-lg">
+                            {t("mobile")}
+                          </p>
                         </Link>
                         <CategoriesMobileModal
                           isVisible={showCategoriesModal}
@@ -226,7 +230,9 @@ function Nav_Bar() {
                               : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
                           }`}
                         >
-                          <p className="font-extrabold text-lg">لپتاپ</p>
+                          <p className="font-extrabold text-lg">
+                            {t("laptop")}
+                          </p>
                         </Link>
                         <CategoriesLaptopModal
                           isVisible={showLaptopCategoriesModal}
@@ -246,7 +252,9 @@ function Nav_Bar() {
                               : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
                           }`}
                         >
-                          <p className="font-extrabold text-lg">محصولات</p>
+                          <p className="font-extrabold text-lg">
+                            {t("products")}
+                          </p>
                         </Link>
                         <Link
                           to="/"
@@ -257,7 +265,7 @@ function Nav_Bar() {
                               : "border-b-4 border-transparent text-gray-600 hover:text-gray-700 hover:border-b-2 hover:border-black hover:w-auto"
                           }`}
                         >
-                          <p className="font-extrabold text-lg">خانه</p>
+                          <p className="font-extrabold text-lg"> {t("home")}</p>
                         </Link>
                       </nav>
                     </div>
