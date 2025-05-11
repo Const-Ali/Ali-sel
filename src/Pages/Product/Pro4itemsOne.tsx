@@ -61,7 +61,7 @@ function Pro4itemsOne() {
               </summary>
 
               <p className="mt-4 px-6 py-4 leading-relaxed text-gray-700 text-right bg-gray-100 border border-gray-300 rounded-lg shadow-sm">
-                سرویس ارسال سریع تکنولایف شامل مشتریان ساکن تهران و مناطق ۲۲
+                سرویس ارسال سریع تکنوسنتر شامل مشتریان ساکن تهران و مناطق ۲۲
                 گانه است. شما می‌توانید حین ثبت سفارش بازه زمانی تحویل سفارش را
                 انتخاب نمایید تا کالا مطابق با زمان انتخابی به شما تحویل گردد.
                 درصورت ثبت سفارش تا قبل از ساعت ۱۷:۰۰ کالا همان روز به شما تحویل
@@ -73,7 +73,7 @@ function Pro4itemsOne() {
             <details className="group [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex  flex-row-reverse cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-200 p-4 text-gray-900">
                 <h2 className="font-medium">
-                  ارسال عادی تکنولایف (برای مناطق 22 گانه شهر تهران)
+                  ارسال عادی تکنوسنتر (برای مناطق 22 گانه شهر تهران)
                 </h2>
 
                 <svg
@@ -93,7 +93,7 @@ function Pro4itemsOne() {
               </summary>
 
               <p className="mt-4 px-6 py-4 leading-relaxed text-gray-700 text-right bg-gray-100 border border-gray-300 rounded-lg shadow-sm">
-                سرویس ارسال عادی تکنولایف شامل مشتریان تهران و مناطق 22 گانه
+                سرویس ارسال عادی تکنوسنتر شامل مشتریان تهران و مناطق 22 گانه
                 است. با انتخاب این روش شما سفارش خود را تا ۲۴ ساعت بعد از ثبت،
                 دریافت خواهید کرد.این وضعیت ممکن است در روزهای تعطیل دستخوش
                 تغییرات شود
@@ -246,11 +246,11 @@ function Pro4itemsOne() {
             <h1 className="font-bold pb-3">: هزینه‌های بسته‌بندی و ارسال</h1>
             <ul className="text-gray-500 ">
               <li className="pb-4">
-                هزینه بسته‌بندی و ارسال سریع با روش تکنولایف: برای مناطق ۲۲ گانه
+                هزینه بسته‌بندی و ارسال سریع با روش تکنوسنتر: برای مناطق ۲۲ گانه
                 شهر تهران حداقل 65000 تومان است
               </li>
               <li className="pb-4">
-                هزینه بسته بندی و ارسال عادی با روش تکنولایف: برای مناطق ۲۲گانه
+                هزینه بسته بندی و ارسال عادی با روش تکنوسنتر: برای مناطق ۲۲گانه
                 شهر تهران حداقل ۴۵۰۰۰ تومان است
               </li>
               <li className="pb-4">
