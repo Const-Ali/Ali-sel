@@ -29,16 +29,9 @@ import CollectionWatch from "./Pages/Product/CollectionWatch";
 import CollectionSpeaker from "./Pages/Product/CollectionSpeaker";
 import CollectionPhone from "./Pages/Product/CollectionPhone";
 import CollectionLaptaps from "./Pages/Product/CollectionLaptaps";
-// import { useTranslation } from "react-i18next";
 
 const App: React.FC = () => {
   const { isLogin } = useShop_Card_Cont();
-
-  // const { i18n } = useTranslation();
-  // useEffect(() => {
-  //   document.documentElement.dir = i18n.language === "fa" ? "rtl" : "ltr";
-  // }, [i18n.language]);
-
   return (
     <Layout>
       <Routes>
