@@ -26,15 +26,18 @@ function Product() {
   } = useShop_Card_Cont();
 
   useEffect(() => {
-    getProduct(params.id as string)
-      .then((data) => {
+    const fetchData = async () => {
+      try {
+        const data = await getProduct(params.id as string);
         setProduct(data);
+      } catch (error) {
+        setError("محصول یافت نشد");
+      } finally {
         setIsloding(false);
-      })
-      .catch((error) => {
-        console.log(error);
-        setIsloding(false);
-      });
+      }
+    };
+
+    fetchData();
   }, [params.id]);
 
   const currentQty = getProductQty(parseInt(params.id as string));
