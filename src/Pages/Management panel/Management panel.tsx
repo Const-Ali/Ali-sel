@@ -284,7 +284,7 @@ function ManagementPanel() {
                 onClick={() => setSelectedComponent("Unit-of-Measurement")}
                 className={`px-4 py-2 rounded ${selectedComponent === "Unit-of-Measurement" ? "bg-gray-800 text-white" : "bg-gray-300"}`}
               >
-                واحد سنجش{" "}
+                واحد سنجش
               </button>
             )}
           </div>

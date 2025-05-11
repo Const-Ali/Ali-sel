@@ -110,7 +110,7 @@ function NavComOne({ onClose }: NavComOneProps) {
                     سفارش #{order.id} - {order.category}
                   </h4>
                   <p className="text-sm text-gray-500">
-                    <strong>تاریخ ثبت:</strong>{" "}
+                    <strong>تاریخ ثبت:</strong>
                     {new Date(order.orderTime).toLocaleDateString("fa-IR")}
                   </p>
 
@@ -157,7 +157,7 @@ function NavComOne({ onClose }: NavComOneProps) {
                       آدرس تحویل:
                     </h5>
                     <p className="text-gray-600">
-                      {order.address.line}, {order.address.city},{" "}
+                      {order.address.line}, {order.address.city},
                       {order.address.state}, {order.address.zipCode}
                     </p>
                   </div>
