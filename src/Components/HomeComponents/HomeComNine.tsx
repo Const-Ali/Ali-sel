@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ImageWithSkeleton from "../Image/ImageWithSkeleton";
 
 function HomeComNine() {
   interface Product {
@@ -71,10 +72,11 @@ function HomeComNine() {
                     className="cursor-pointer shadow-sm rounded-md hover:scale-[1.03] transition-all"
                   >
                     <a href={`/product/${product.id}`} className="group block">
-                      <img
+                      <ImageWithSkeleton
                         src={product.image}
                         alt={product.title}
-                        className="aspect-square w-full rounded object-cover"
+                        className="w-96 h-72 object-contain mx-auto"
+                        classNameWrapper="mx-auto"
                       />
                       <div className="mt-4">
                         <h3 className="text-right font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4">

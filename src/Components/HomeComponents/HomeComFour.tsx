@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ImageWithSkeleton from "../Image/ImageWithSkeleton";
 
 function HomeComFour() {
   interface Product {
@@ -50,10 +51,11 @@ function HomeComFour() {
                 className="bg-gray-50 p-3 cursor-pointer shadow-sm rounded-md hover:scale-[1.03] transition-all h-full"
               >
                 <div className="w-full h-24 overflow-hidden mx-auto aspect-w-16 aspect-h-8">
-                  <img
-                    className="mx-auto my-1 object-contain rounded-md max-h-full"
+                  <ImageWithSkeleton
                     src={product.image}
                     alt={product.title}
+                    className="w-96 h-72 object-contain mx-auto"
+                    classNameWrapper="h-full mx-auto"
                   />
                 </div>
                 <div className="text-center mt-4">

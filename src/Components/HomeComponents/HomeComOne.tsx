@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ImageWithSkeleton from "../Image/ImageWithSkeleton";
 
 function HomeComOne() {
   interface Product {
@@ -64,10 +65,11 @@ function HomeComOne() {
                 className="group relative block transition transform duration-300 hover:scale-105 hover:shadow-lg"
                 onClick={() => navigate(`/product/${product.id}`)}
               >
-                <img
+                <ImageWithSkeleton
                   src={product.image}
                   alt={product.title}
-                  className="pb-10 aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
+                  className="w-96 h-72 object-contain mx-auto "
+                  classNameWrapper="mx-auto"
                 />
                 <div className="absolute inset-1 flex flex-col justify-end">
                   <div>

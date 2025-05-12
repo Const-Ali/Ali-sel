@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ImageWithSkeleton from "../Image/ImageWithSkeleton";
 
 function ProMobile() {
   interface Product {
@@ -80,10 +81,11 @@ function ProMobile() {
                 <a href={`/product/${product.id}`} key={product.id}>
                   <div className="bg-gray-50 my-3  p-3 cursor-pointer shadow-sm rounded-md hover:scale-[1.03] transition-all w-44">
                     <div className="w-full h-24 overflow-hidden mx-auto">
-                      <img
-                        className="mx-auto my-1 object-contain rounded-md max-h-full"
+                      <ImageWithSkeleton
                         src={product.image}
                         alt={product.title}
+                        className="w-96 h-72 object-contain mx-auto"
+                        classNameWrapper="h-full mx-auto"
                       />
                     </div>
                     <div className="text-center mt-4">
