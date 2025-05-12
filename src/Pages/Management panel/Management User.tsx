@@ -5,6 +5,8 @@ import UserComTotal from "../../Components/Management User/UserComTotal";
 import Container from "../../Components/Container/Container";
 import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
 import UserComInformation from "../../Components/Management User/UserComInformation";
+import LogoSvg from "../../Components/SVG/LogoSvg.Png";
+import UserSvg from "../../Components/SVG/UserSvg";
 
 function ManagementUser() {
   const [selectedComponent, setSelectedComponent] = useState("UserComTotal");
@@ -30,11 +32,7 @@ function ManagementUser() {
       <div className="flex  flex-col justify-between border-e-4 bg-white">
         <div className="px-4 py-6">
           <div className="flex items-center ">
-            <img
-              src="https://www.upload.ee/image/17269868/_-_Copy__2_-denoised_sharpened_width_400__light-100__wb-25__exposure_correction-removebg-preview.png"
-              className="h-10"
-              alt="Logo"
-            />
+            <LogoSvg />
           </div>
 
           <ul className="mt-6 space-y-1">
@@ -150,11 +148,7 @@ function ManagementUser() {
             href="https://github.com/Const-Ali/Ali-sel"
             className="flex items-center gap-2 bg-white p-4 hover:bg-gray-50"
           >
-            <img
-              alt=""
-              src="https://www.upload.ee/image/17334210/5191.JPG"
-              className="size-10 rounded-full object-cover"
-            />
+            <UserSvg />
 
             <div>
               <p className="text-xs">
