@@ -26,14 +26,14 @@ const Home: React.FC = () => {
           href="CollectionPhone"
           className="group relative block overflow-hidden rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110 hover:rotate-1"
         >
-          <HomeComEight SrcImg="https://www.upload.ee/image/17451737/1233.jpg" />
+          <HomeComEight SrcImg="https://res.cloudinary.com/ds1yjxg7s/image/upload/v1747054057/Slide1_lnorrn.jpg" />
           <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </a>
         <a
           href="stor"
           className="group relative block overflow-hidden rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110 hover:rotate-1"
         >
-          <HomeComEight SrcImg="https://www.upload.ee/image/17451743/13234.jpg" />
+          <HomeComEight SrcImg="https://res.cloudinary.com/ds1yjxg7s/image/upload/v1747054057/Slide3_mb3j5n.jpg" />
           <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </a>
       </div>
@@ -56,14 +56,14 @@ const Home: React.FC = () => {
           href="CollectionWatch"
           className="group relative block overflow-hidden rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110 hover:rotate-1"
         >
-          <HomeComEight SrcImg="https://www.upload.ee/image/17451759/7896.jpg" />
+          <HomeComEight SrcImg="https://res.cloudinary.com/ds1yjxg7s/image/upload/v1747054057/Slide4_y4udeq.jpg" />
           <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </a>
         <a
           href="CollectionSpeaker"
           className="group relative block overflow-hidden rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110 hover:rotate-1"
         >
-          <HomeComEight SrcImg="https://www.upload.ee/image/17451762/789456.jpg" />
+          <HomeComEight SrcImg="https://res.cloudinary.com/ds1yjxg7s/image/upload/v1747054057/Slide2_fxkszw.jpg" />
           <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </a>
       </div>
