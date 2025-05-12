@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { IProduct } from "../../Types/servers_type";
 import TextTitle from "../PropComponents/TextTitle";
 import { Link } from "react-router-dom";
+import ImageWithSkeleton from "../Image/ImageWithSkeleton";
 
 const RandomProducts = () => {
   const [product, setProduct] = useState<IProduct | null>(null);
   const [fade, setFade] = useState(false);
   const [progress, setProgress] = useState(0);
   const [discount, setDiscount] = useState<number>(0);
-  let progressInterval: ReturnType<typeof setInterval>;
+  const progressIntervalRef = useRef<number | null>(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -21,7 +22,6 @@ const RandomProducts = () => {
 
         const intervalId = setInterval(() => {
           setFade(true);
-
           setTimeout(() => {
             const newProduct =
               shuffledProducts[
@@ -31,16 +31,17 @@ const RandomProducts = () => {
             setDiscount(Math.floor(Math.random() * 20) + 1);
             setFade(false);
             setProgress(0);
-          }, 1000);
+          }, 500);
         }, 5000);
 
-        progressInterval = setInterval(() => {
+        progressIntervalRef.current = setInterval(() => {
           setProgress((prev) => (prev < 100 ? prev + 100 / (9999 / 100) : 0));
         }, 100);
 
         return () => {
           clearInterval(intervalId);
-          clearInterval(progressInterval);
+          if (progressIntervalRef.current)
+            clearInterval(progressIntervalRef.current);
         };
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -48,8 +49,6 @@ const RandomProducts = () => {
     };
 
     fetchProducts();
-
-    return () => clearInterval(progressInterval);
   }, []);
 
   return (
@@ -71,13 +70,18 @@ const RandomProducts = () => {
                 ></div>
               </div>
               <div>
-                <h3 className="rounded-xl bg-red-500 text-white w-16 h-7 text-center">
+                <h3 className="rounded-2xl bg-red-500 text-white w-12 h-7 text-center">
                   % {discount}
                 </h3>
-                <img src={product.image} className="w-96" alt={product.title} />
+                <ImageWithSkeleton
+                  src={product.image}
+                  alt={product.title}
+                  className="w-96 h-72 object-contain mx-auto"
+                  classNameWrapper="mx-auto"
+                />
               </div>
 
-              <h3 className="text-xl text-gray-800 line-clamp-1 text-center">
+              <h3 className="text-xl text-gray-800 line-clamp-1 text-right">
                 {product.title.replace(/[A-Za-z]/g, "")}
                 {product.title.replace(/[^A-Za-z]/g, "")}
               </h3>
