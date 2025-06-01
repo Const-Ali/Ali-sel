@@ -1,15 +1,15 @@
 import { useState } from "react";
-import OrderStepOne from "../../Components/Management Product/OrderStepOne";
-import OrderStepThree from "../../Components/Management Product/OrderStepThree";
-import ProductComTotal from "../../Components/Management Product/ProductComTotal";
-import AddPro from "../../Components/Management Product/AddPro";
-import EditPro from "../../Components/Management Product/EditPro";
-import OrderStepTwo from "../../Components/Management Product/OrderStepTwo";
+import OrderStepOne from "../../Components/Management-Product/OrderStepOne";
+import OrderStepThree from "../../Components/Management-Product/OrderStepThree";
+import ProductComTotal from "../../Components/Management-Product/ProductComTotal";
+import AddPro from "../../Components/Management-Product/AddPro";
+import EditPro from "../../Components/Management-Product/EditPro";
+import OrderStepTwo from "../../Components/Management-Product/OrderStepTwo";
 import Container from "../../Components/Container/Container";
 import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
-import ProductOrderPoint from "../../Components/Management Product/ProductOrderPoint";
-import UnitofMeasurement from "../../Components/Management Product/Unit-of-Measurement";
-import Classification from "../../Components/Management Product/Classification";
+import ProductOrderPoint from "../../Components/Management-Product/ProductOrderPoint";
+import UnitofMeasurement from "../../Components/Management-Product/Unit-of-Measurement";
+import Classification from "../../Components/Management-Product/Classification";
 import LogoSvg from "../../Components/SVG/LogoSvg.Png";
 import UserSvg from "../../Components/SVG/UserSvg";
 

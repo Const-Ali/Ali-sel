@@ -1,10 +1,10 @@
 import { useState } from "react";
-import AddUser from "../../Components/Management User/AddUser";
-import EditUser from "../../Components/Management User/EditUser";
-import UserComTotal from "../../Components/Management User/UserComTotal";
+import AddUser from "../../Components/Management-User/AddUser";
+import EditUser from "../../Components/Management-User/EditUser";
+import UserComTotal from "../../Components/Management-User/UserComTotal";
 import Container from "../../Components/Container/Container";
 import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
-import UserComInformation from "../../Components/Management User/UserComInformation";
+import UserComInformation from "../../Components/Management-User/UserComInformation";
 import LogoSvg from "../../Components/SVG/LogoSvg.Png";
 import UserSvg from "../../Components/SVG/UserSvg";
 
