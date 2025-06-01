@@ -9,7 +9,7 @@ import { useShop_Card_Cont } from "../src/Pages/context/Shop_Card_Cont";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import Login from "./Pages/Login/Login";
 import Aboute from "./Pages/Aboute/Aboute";
-import Checkout from "./Pages/Checkout.tsx/Checkout";
+import Checkout from "./Pages/Checkout/Checkout";
 import ManagementPanel from "./Pages/Management panel/Management panel";
 import ErrorPage from "./Pages/Error/ErrorPage";
 import ManagementUser from "./Pages/Management panel/Management User";
