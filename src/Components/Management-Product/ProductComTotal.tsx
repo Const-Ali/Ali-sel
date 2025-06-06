@@ -274,6 +274,19 @@ function ProductComTotal() {
                   className="border border-gray-300 p-2 rounded w-80"
                 />
               </div>
+              <div className="mb-4">
+                <label htmlFor="image" className="block text-gray-400 mb-4">
+                  آدرس تصویر
+                </label>
+                <input
+                  type="text"
+                  name="image"
+                  value={selectedProduct.image}
+                  onChange={handleChange}
+                  placeholder="آدرس URL تصویر"
+                  className="border border-gray-300 p-2 rounded w-80"
+                />
+              </div>
 
               <div className="p-3 mt-2 text-center space-x-4">
                 <button
