@@ -11,7 +11,7 @@ function Pro4item() {
         >
           <img
             className="pl-4 w-20"
-            src="https://www.upload.ee/image/17325996/design__1_.png"
+            src="https://res.cloudinary.com/ds1yjxg7s/image/upload/v1749208763/static_pay-at-home_hm8xfw.svg"
           />
           <p className=" text-gray-500 text-sm pl-3"> پرداخت در محل</p>
         </div>
@@ -21,7 +21,7 @@ function Pro4item() {
         >
           <img
             className="pl-3"
-            src="https://www.upload.ee/image/17325994/design__2_.png"
+            src="https://res.cloudinary.com/ds1yjxg7s/image/upload/v1749208763/static_original-warranty_thbcl8.svg"
           />
           <p className=" text-gray-500 text-sm">ضمانت اصالت کالا</p>
         </div>
@@ -29,7 +29,7 @@ function Pro4item() {
           className="cursor-pointer transition transform hover:scale-105 hover:shadow-xl p-4 rounded-lg w-44 pl-12"
           onClick={() => navigate("/Pro4itemsThree")}
         >
-          <img src="https://www.upload.ee/image/17325997/design.png" />
+          <img src="https://res.cloudinary.com/ds1yjxg7s/image/upload/v1749208764/static_refund-money_gsmrzs.svg" />
           <p className=" text-gray-500 text-sm">پرداخت قسطی</p>
         </div>
         <div
@@ -38,7 +38,7 @@ function Pro4item() {
         >
           <img
             className="pl-10"
-            src="https://www.upload.ee/image/17325993/design__3_.png"
+            src="https://res.cloudinary.com/ds1yjxg7s/image/upload/v1749208764/static_payment-in-installments_pqk8m3.svg"
           />
           <div className="flex justify-end items-center ">
             <p className=" text-gray-500 text-sm"> روز ضمانت بازگشت کالا </p>
