@@ -123,7 +123,6 @@ function ProfNav() {
         <div className="text-center sm:text-left">
           <div className="space-y-0.5">
             <p className="text-lg text-black font-semibold flex">
-              {userLocal?.name.lastname}
               <p className="ml-2"> {userLocal?.name.firstname}</p>
             </p>
 

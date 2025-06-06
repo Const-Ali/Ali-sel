@@ -51,7 +51,7 @@ function Nav_Bar() {
     return null;
   }
 
-  const token = localStorage.getItem("token");
+  const { isLogin } = useShop_Card_Cont();
 
   const { t, i18n } = useTranslation();
   const changeLanguage = (lang: string) => {
@@ -64,26 +64,32 @@ function Nav_Bar() {
           <div className="flex h-24 items-center mr-36">
             <div className="md:flex md:items-center md:gap-12">
               <div className="flex items-center gap-4 ">
-                {token ? (
-                  <>
-                    <ProfNav />
-                  </>
+                {isLogin ? (
+                  <ProfNav />
                 ) : (
                   <div className="sm:flex sm:gap-4 ">
-                    <Link to="/login">
-                      <h1 className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-gray-800 hover:bg-gray-900 text-white rounded-md">
-                        {t("login")}
-                      </h1>
-                    </Link>
+                    <button
+                      onClick={() => {
+                        window.location.href = "/login";
+                      }}
+                      className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-gray-800 hover:bg-gray-900 text-white rounded-md"
+                    >
+                      {t("login")}
+                    </button>
+
                     <div className="hidden sm:flex">
-                      <Link to="/CreateAccount">
-                        <h1 className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-gray-800 hover:bg-gray-900 text-white rounded-md">
-                          {t("signup")}
-                        </h1>
-                      </Link>
+                      <button
+                        onClick={() => {
+                          window.location.href = "/CreateAccount";
+                        }}
+                        className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-gray-800 hover:bg-gray-900 text-white rounded-md"
+                      >
+                        {t("signup")}
+                      </button>
                     </div>
                   </div>
                 )}
+
                 <div className="block md:hidden">
                   <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
                     <ListSvg />
