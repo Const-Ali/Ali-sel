@@ -70,43 +70,51 @@ function Product() {
   const handleColorSelect = (color: string) => {
     setSelectedColor(color);
   };
+
   const toggleLike = () => {
     const userData = JSON.parse(localStorage.getItem("user") || "{}");
     const userId = userData.id;
 
-    if (!userId) {
-      console.error("User is not logged in");
+    if (!userId || !product) {
+      console.error("User or product not found");
       return;
     }
-
-    const productId = params.id;
 
     const storedLikes = localStorage.getItem("likes");
     const likes = storedLikes ? JSON.parse(storedLikes) : [];
 
-    if (isLiked) {
+    const isAlreadyLiked = likes.some(
+      (item: any) => item.id === String(product.id) && item.userId === userId
+    );
+
+    if (isAlreadyLiked) {
       const updatedLikes = likes.filter(
-        (item: { id: string; userId: string }) =>
-          !(item.id === productId && item.userId === userId)
+        (item: any) =>
+          !(item.id === String(product.id) && item.userId === userId)
       );
-
       localStorage.setItem("likes", JSON.stringify(updatedLikes));
+      setIsLiked(false);
     } else {
-      likes.push({ id: productId, isLiked: true, userId });
-
+      likes.push({
+        ...product,
+        userId,
+        isLiked: true,
+      });
       localStorage.setItem("likes", JSON.stringify(likes));
+      setIsLiked(true);
     }
-
-    setIsLiked(!isLiked);
   };
 
   useEffect(() => {
-    const productId = params.id as string;
-    const likeData = localStorage.getItem(`like_${productId}`);
+    const storedLikes = localStorage.getItem("likes");
+    const user = JSON.parse(localStorage.getItem("user") || "{}");
 
-    if (likeData) {
-      const parsedData = JSON.parse(likeData);
-      setIsLiked(parsedData.liked);
+    if (storedLikes && user?.id) {
+      const parsedLikes = JSON.parse(storedLikes);
+      const match = parsedLikes.find(
+        (item: any) => item.id === params.id && item.userId === user.id
+      );
+      setIsLiked(!!match);
     }
   }, [params.id]);
 
