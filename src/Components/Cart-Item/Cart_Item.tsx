@@ -3,6 +3,7 @@ import { getProduct } from "../../Services/Api";
 import { IProduct } from "../../Types/servers_type";
 import { useShop_Card_Cont } from "../../Pages/context/Shop_Card_Cont";
 import { Link } from "react-router-dom";
+import ImageWithSkeleton from "../Image/ImageWithSkeleton";
 
 interface ICart_Item {
   id: number;
@@ -41,9 +42,11 @@ function Cart_Item({ id, qty }: ICart_Item) {
               <div className="flex gap-4">
                 <div className="w-28 h-28 max-sm:w-24 max-sm:h-24 shrink-0">
                   <Link to={`/Product/${id}`}>
-                    <img
+                    <ImageWithSkeleton
                       src={product?.image}
+                      alt={product?.title}
                       className="w-full h-full object-contain"
+                      classNameWrapper="w-28 h-28 max-sm:w-24 max-sm:h-24 shrink-0"
                     />
                   </Link>
                 </div>
