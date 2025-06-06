@@ -39,7 +39,7 @@ function Login() {
     fetchUsers();
   }, []);
 
-  const handleCange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setuser({
       ...user,
@@ -95,7 +95,7 @@ function Login() {
               </label>
               <div className="relative">
                 <input
-                  onChange={handleCange}
+                  onChange={handleChange}
                   type="text"
                   name="username"
                   value={user.username}
@@ -126,7 +126,7 @@ function Login() {
               </label>
               <div className="relative">
                 <input
-                  onChange={handleCange}
+                  onChange={handleChange}
                   type="password"
                   name="password"
                   value={user.password}
