@@ -79,7 +79,7 @@ const Like = () => {
             item.userId === user.id &&
             item.isLiked === false
           )
-      ); // حذف از UI
+      );
 
     localStorage.setItem("likes", JSON.stringify(updatedLikes));
     setLikedProducts(
