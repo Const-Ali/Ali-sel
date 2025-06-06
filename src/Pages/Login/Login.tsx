@@ -2,7 +2,6 @@ import Container from "../../Components/Container/Container";
 import { useShop_Card_Cont } from "../context/Shop_Card_Cont";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Navigate } from "react-router-dom";
 import LogoSvg from "../../Components/SVG/LogoSvg.Png";
 import LoginImage from "../../Components/Image/LoginImage";
 
@@ -60,11 +59,10 @@ function Login() {
     );
 
     if (foundUser) {
+      console.log("User found and login triggered:", foundUser);
       localStorage.setItem("user", JSON.stringify(foundUser));
       handleLogin(user.username, user.password, foundUser.category || "");
-      return <Navigate to="/" />;
-    } else {
-      setError("! نام کاربری، ایمیل یا شماره تماس یا رمز عبور اشتباه است");
+      return;
     }
   };
   return (

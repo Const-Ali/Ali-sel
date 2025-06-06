@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { useLocalStorage } from "../../Hooks/useLocalStorage";
 import { login } from "../../Services/Api";
 import { useNavigate } from "react-router-dom";
@@ -88,7 +88,7 @@ export function Shop_Card_Pro({ children }: Shop_Card_Pro) {
 
   const cartQty = CartItems.reduce((totalQty, item) => totalQty + item.qty, 0);
 
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(() => !!localStorage.getItem("token"));
   const [role, setRole] = useState<string | null>(null);
 
   const navigate = useNavigate();
@@ -109,6 +109,7 @@ export function Shop_Card_Pro({ children }: Shop_Card_Pro) {
         navigate("/ManagementPanel");
       } else {
         navigate("/");
+        window.location.reload();
       }
     });
   };
@@ -121,14 +122,8 @@ export function Shop_Card_Pro({ children }: Shop_Card_Pro) {
     localStorage.removeItem("cartItems");
     localStorage.removeItem("likes");
     navigate("/");
+    window.location.reload();
   };
-
-  useEffect(() => {
-    let token = localStorage.getItem("token");
-    if (token) {
-      setIsLogin(true);
-    }
-  }, []);
 
   return (
     <Shop_Card_Cont.Provider
