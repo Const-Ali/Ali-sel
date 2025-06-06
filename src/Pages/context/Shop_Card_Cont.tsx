@@ -119,6 +119,7 @@ export function Shop_Card_Pro({ children }: Shop_Card_Pro) {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     localStorage.removeItem("cartItems");
+    localStorage.removeItem("likes");
     navigate("/");
   };
 
