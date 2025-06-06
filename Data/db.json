@@ -2718,6 +2718,26 @@
       "platform": "Win32",
       "screenResolution": "898x932",
       "colorScheme": "dark"
+    },
+    {
+      "id": "48ef",
+      "username": "User",
+      "password": "User",
+      "category": "User",
+      "createdAt": "2025-06-06T09:49:57.943Z",
+      "ip": "5.74.185.248",
+      "isp": "tic",
+      "country": "Iran",
+      "city": "Tehran",
+      "region": "Tehran",
+      "lat": 35.6824,
+      "lon": 51.4158,
+      "timezone": "Asia/Tehran",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0",
+      "language": "en-US",
+      "platform": "Win32",
+      "screenResolution": "1920x1080",
+      "colorScheme": "dark"
     }
   ]
 }

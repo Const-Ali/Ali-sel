@@ -20,5 +20,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/Components/SVG/.tsx"]
+  "include": ["src", "src/Components/SVG/.tsx", "Error"]
 }
