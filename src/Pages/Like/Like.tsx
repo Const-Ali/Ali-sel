@@ -99,25 +99,56 @@ const Like = () => {
         <p className="text-lg text-gray-500">هیچ محصولی لایک نشده است</p>
       ) : (
         <Container>
-          <div className="flex  justify-start gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {likedProducts.map((item) => (
               <div
                 key={item.id}
-                className="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition-all flex flex-col items-end w-full sm:w-[48%] lg:w-[31%]"
+                className="bg-white rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative flex flex-col h-full w-full sm:w-[48%] lg:w-[31%]"
               >
-                <ImageWithSkeleton
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-48 object-contain object-center rounded-lg bg-gray-200"
-                />
-                <h2 className="text-xl font-bold text-right text-gray-800 leading-relaxed line-clamp-2">
-                  {item.title}
-                </h2>
+                <div className="relative w-5/6 h-[210px] overflow-hidden mx-auto mb-4 rounded-xl">
+                  <div className="absolute top-3 right-3 z-20">
+                    <button
+                      onClick={() => {
+                        setSelectedProductId(item.id);
+                        setShowConfirmModal(true);
+                      }}
+                      className="bg-pink-100 w-9 h-9 flex items-center justify-center rounded-full hover:bg-pink-200 hover:scale-105 transition duration-200"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16px"
+                        className="fill-gray-800 hover:fill-red-600 transition duration-200"
+                        viewBox="0 0 64 64"
+                      >
+                        <path d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z" />
+                      </svg>
+                    </button>
+                  </div>
 
-                <p className="text-sm text-right text-gray-600 mt-2">
-                  قیمت: {item.price.toLocaleString("fa-IR")} تومان
-                </p>
-                <div className="flex flex-row-reverse gap-3 mt-4 w-full">
+                  <ImageWithSkeleton
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-contain"
+                    classNameWrapper="w-full h-full rounded-xl"
+                  />
+                </div>
+
+                <div className="line-clamp-4 flex flex-col justify-between h-full">
+                  <h3 className="text-lg font-extrabold text-gray-800 line-clamp-2 text-right">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mt-2 line-clamp-2 text-right">
+                    {item.description}
+                  </p>
+                  <div className="flex items-center mt-4 gap-2 line-clamp-1 justify-end">
+                    <h1>تومان</h1>
+                    <h4 className="text-lg text-gray-800 font-bold">
+                      {item.price.toLocaleString("fa-IR")}
+                    </h4>
+                  </div>
+                </div>
+
+                <div className="flex flex-row-reverse gap-3 mt-5 w-full">
                   <Link
                     to={`/product/${item.id}`}
                     className="flex-1 text-center text-sm px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition"
